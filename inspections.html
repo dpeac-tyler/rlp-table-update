@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inspections - RLP</title>
+<!-- Custom RLP Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <div class="header management">
+      <a class="usa-skipnav" href="#main-content">Skip to Main Content</a>
+
+      <header class="usa-header">
+        <div class="skinny-header-container">
+          <div class="grid-container">
+            <div class="welcome-agency usa-banner__header-text">
+              Welcome DNR! &nbsp;<a href="#"><u>Logout</u></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="border-bottom-2px border-base-lighter">
+        <div class="grid-container navigation">
+          <div class="grid-row">
+            <div class="tablet:grid-col-6 logo-flex">
+              <a class="agency-logo-link" href="index.html">
+                <img src="assets/il-logo.png"
+                     alt="Illinois Department of Natural Resources agency logo"
+                     class="agency-logo">
+              </a>
+              <a class="agency-name-link" href="index.html">
+                <div class="agency-name">Illinois Department of Natural Resources</div>
+              </a>
+            </div>
+            <div class="tablet:grid-col-6">
+              <nav class="grid-container">
+                <div class="grid-row header--nav-links">
+                  <div class="tablet:grid-col nav__item">
+                    <a class="usa-link" href="index.html">
+                      <img src="assets/rlp-logo.png"
+                           alt="RLP logo"
+                           class="margin-right-1"
+                           height="30">Home
+                    </a>
+                  </div>
+                  <div class="tablet:grid-col-auto nav__item">
+                    <a class="usa-link" href="search.html">
+                      <svg aria-hidden="true" focusable="false" class="svg-inline--fa fa-magnifying-glass fa-xl margin-right-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+                        <path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path>
+                      </svg>Search
+                    </a>
+                  </div>
+                  <div class="tablet:grid-col nav__item">
+                    <a class="usa-link" href="#" target="_blank">
+                      <svg aria-hidden="true" focusable="false" class="svg-inline--fa fa-life-ring fa-xl margin-right-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+                        <path fill="currentColor" d="M367.2 412.5C335.9 434.9 297.5 448 256 448s-79.9-13.1-111.2-35.5l58-58c15.8 8.6 34 13.5 53.3 13.5s37.4-4.9 53.3-13.5l58 58zm90.7 .8c33.8-43.4 54-98 54-157.3s-20.2-113.9-54-157.3c9-12.5 7.9-30.1-3.4-41.3S425.8 45 413.3 54C369.9 20.2 315.3 0 256 0S142.1 20.2 98.7 54c-12.5-9-30.1-7.9-41.3 3.4S45 86.2 54 98.7C20.2 142.1 0 196.7 0 256s20.2 113.9 54 157.3c-9 12.5-7.9 30.1 3.4 41.3S86.2 467 98.7 458c43.4 33.8 98 54 157.3 54s113.9-20.2 157.3-54c12.5 9 30.1 7.9 41.3-3.4s12.4-28.8 3.4-41.3zm-45.5-46.1l-58-58c8.6-15.8 13.5-34 13.5-53.3s-4.9-37.4-13.5-53.3l58-58C434.9 176.1 448 214.5 448 256s-13.1 79.9-35.5 111.2zM367.2 99.5l-58 58c-15.8-8.6-34-13.5-53.3-13.5s-37.4 4.9-53.3 13.5l-58-58C176.1 77.1 214.5 64 256 64s79.9 13.1 111.2 35.5zM157.5 309.3l-58 58C77.1 335.9 64 297.5 64 256s13.1-79.9 35.5-111.2l58 58c-8.6 15.8-13.5 34-13.5 53.3s4.9 37.4 13.5 53.3zM208 256a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z"></path>
+                      </svg>Help
+                    </a>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="horizontalNav main-menu">
+      <ul class="usa-nav__primary display-flex padding-left-0">
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="queues.html">Queues</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="my-tasks.html">My Tasks</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="license-types.html">License Types</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="applications.html">Applications</a></span>
+        </li>
+        <li class="usa-nav__primary-item active">
+          <span class="menuItem-inner"><a href="settings.html">Settings</a></span>
+        </li>
+      </ul>
+    </nav>
+
+    <main id="main-content" class="grid-container">
+      <nav class="usa-breadcrumb margin-top-2" aria-label="Breadcrumbs">
+        <ol class="usa-breadcrumb__list">
+          <li class="usa-breadcrumb__list-item">
+            <a href="settings.html" class="usa-breadcrumb__link">Settings</a>
+          </li>
+          <li class="usa-breadcrumb__list-item">
+            <a href="inspection-menu.html" class="usa-breadcrumb__link">Inspections</a>
+          </li>
+          <li class="usa-breadcrumb__list-item usa-current" aria-current="page">
+            <span>Inspection Types</span>
+          </li>
+        </ol>
+      </nav>
+
+      <h1 class="page-title page-title--underlined">Inspection Types</h1>
+
+      <div class="margin-top-2">
+        <div class="usa-accordion usa-accordion--bordered">
+          <h3 class="usa-accordion__heading">
+            <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="icon-key-content">
+              Icon Key
+            </button>
+          </h3>
+          <div id="icon-key-content" class="usa-accordion__content usa-prose" hidden="">
+            <p class="text-bold margin-0 margin-bottom-2">Options and Control Types</p>
+            <div class="icon-key-grid">
+              <div class="icon-key-item">
+                <img src="assets/eye-icon.png" alt="" width="24" height="24">
+                <span>- View Inspection</span>
+              </div>
+              <div class="icon-key-item">
+                <img src="assets/edit-icon.png" alt="" width="24" height="24">
+                <span>- Edit Inspection</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="margin-top-2">
+        <a href="add-inspection-type.html" class="usa-button">Add Inspection Type</a>
+      </div>
+
+      <div class="margin-top-2">
+        <div class="table-controls">
+          <div class="table-controls__left">
+            <strong>Showing 1 - 5 of 5 Entries</strong>
+          </div>
+          <div class="table-controls__right">
+            <label for="entries-per-page" class="table-controls__label">Show</label>
+            <select class="usa-select table-controls__select" id="entries-per-page" name="entries-per-page">
+              <option value="100" selected>100</option>
+              <option value="50">50</option>
+              <option value="25">25</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+        </div>
+
+        <table class="usa-table usa-table--borderless usa-table--striped">
+          <thead>
+            <tr>
+              <th scope="col" role="columnheader" aria-sort="none">Inspection Type <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader" aria-sort="none">Inspection Name <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader" aria-sort="none">Description <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader" aria-sort="none">Status <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader" aria-sort="none">Applies To <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader" aria-sort="none">Visibility <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader" aria-sort="none">Billable Type <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader">Controls</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Initial Shop</td>
+              <td>Fire Safety Inspection</td>
+              <td>Annual fire safety and compliance review</td>
+              <td><span class="status-active">Active</span></td>
+              <td>Application, Case</td>
+              <td>Public</td>
+              <td>Single Invoice</td>
+              <td>
+                <a href="#" class="icon-button" aria-label="View Inspection">
+                  <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button" aria-label="Edit Inspection">
+                  <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button" aria-label="Delete Inspection">
+                  <img src="assets/icon-delete.png" alt="" width="30" height="30">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Health & Safety</td>
+              <td>Water Quality Assessment</td>
+              <td></td>
+              <td><span class="status-active">Active</span></td>
+              <td>Routine</td>
+              <td>Internal</td>
+              <td>None</td>
+              <td>
+                <a href="#" class="icon-button" aria-label="View Inspection">
+                  <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button" aria-label="Edit Inspection">
+                  <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button" aria-label="Delete Inspection">
+                  <img src="assets/icon-delete.png" alt="" width="30" height="30">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Initial Shop</td>
+              <td>License Verification</td>
+              <td>Verify current license and permit status</td>
+              <td><span class="status-active">Active</span></td>
+              <td>Application</td>
+              <td>Public</td>
+              <td>Batch Invoice</td>
+              <td>
+                <a href="#" class="icon-button" aria-label="View Inspection">
+                  <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button" aria-label="Edit Inspection">
+                  <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button" aria-label="Delete Inspection">
+                  <img src="assets/icon-delete.png" alt="" width="30" height="30">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Health & Safety</td>
+              <td>Equipment Inspection</td>
+              <td>Inspect all equipment for proper operation</td>
+              <td><span class="status-inactive">Inactive</span></td>
+              <td>Case, Field Observation</td>
+              <td>Internal</td>
+              <td>None</td>
+              <td>
+                <a href="#" class="icon-button" aria-label="View Inspection">
+                  <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button" aria-label="Edit Inspection">
+                  <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button" aria-label="Delete Inspection">
+                  <img src="assets/icon-delete.png" alt="" width="30" height="30">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Health & Safety</td>
+              <td>Wildlife Habitat Review</td>
+              <td></td>
+              <td><span class="status-active">Active</span></td>
+              <td>Field Observation</td>
+              <td>Public</td>
+              <td>Single Invoice</td>
+              <td>
+                <a href="#" class="icon-button" aria-label="View Inspection">
+                  <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button" aria-label="Edit Inspection">
+                  <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button" aria-label="Delete Inspection">
+                  <img src="assets/icon-delete.png" alt="" width="30" height="30">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Success Notification -->
+  <div id="success-notification" class="notification" hidden>
+    <svg class="notification-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <circle cx="12" cy="12" r="10" fill="#00a91c" stroke="#00a91c" stroke-width="2"/>
+      <path d="M7 13l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="notification-text">Inspection Type deleted successfully</span>
+  </div>
+
+  <!-- Delete Confirmation Dialog -->
+  <div id="delete-confirmation-modal" class="modal" hidden>
+    <div class="modal-overlay"></div>
+    <div class="modal-content" style="max-width: 500px;">
+      <div class="modal-header">
+        <h2 class="modal-title">Delete Inspection Type</h2>
+        <button type="button" class="modal-close" aria-label="Close modal" id="delete-close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to delete this Inspection Type?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="usa-button" id="confirm-delete">Delete</button>
+        <button type="button" class="usa-button usa-button--secondary" id="cancel-delete">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Initiate Inspection Modal -->
+  <div id="inspection-modal" class="modal" hidden>
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Add Inspection Type</h2>
+        <button type="button" class="modal-close" aria-label="Close modal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="margin-bottom-4">Initialize inspection using the values below and click Submit.</p>
+
+        <div class="margin-bottom-4">
+          <label class="usa-label" for="inspection-category">Category <span class="field-required">Required</span></label>
+          <select class="usa-select" id="inspection-category" name="inspection-category" required>
+            <option value="">Please Select</option>
+            <option value="application">Application</option>
+            <option value="routine">Routine</option>
+            <option value="case">Case</option>
+            <option value="follow-up">Follow-Up</option>
+          </select>
+        </div>
+
+        <div class="margin-bottom-4">
+          <label class="usa-label" for="inspection-name">Name <span class="field-required">Required</span></label>
+          <input class="usa-input" id="inspection-name" name="inspection-name" type="text" required>
+        </div>
+
+        <div class="margin-bottom-4">
+          <label class="usa-label" for="inspection-description">Description</label>
+          <input class="usa-input" id="inspection-description" name="inspection-description" type="text">
+        </div>
+
+        <div class="margin-bottom-4">
+          <fieldset class="usa-fieldset">
+            <legend class="usa-label">Status <span class="field-required">Required</span></legend>
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="status-active" type="radio" name="status" value="active" checked>
+              <label class="usa-radio__label" for="status-active">Active</label>
+            </div>
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="status-inactive" type="radio" name="status" value="inactive">
+              <label class="usa-radio__label" for="status-inactive">Inactive</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="margin-bottom-4">
+          <fieldset class="usa-fieldset">
+            <legend class="usa-label">Visibility <span class="field-required">Required</span></legend>
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="visibility-internal" type="radio" name="visibility" value="internal" checked>
+              <label class="usa-radio__label" for="visibility-internal">Internal</label>
+            </div>
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="visibility-public" type="radio" name="visibility" value="public">
+              <label class="usa-radio__label" for="visibility-public">Public</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="margin-bottom-4">
+          <fieldset class="usa-fieldset">
+            <legend class="usa-label">Billable Type <span class="field-required">Required</span></legend>
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="billable-none" type="radio" name="billable-type" value="none" checked>
+              <label class="usa-radio__label" for="billable-none">None</label>
+            </div>
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="billable-single" type="radio" name="billable-type" value="single">
+              <label class="usa-radio__label" for="billable-single">Single Invoice</label>
+            </div>
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="billable-batch" type="radio" name="billable-type" value="batch">
+              <label class="usa-radio__label" for="billable-batch">Batch Invoice</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div id="scheduling-section" class="margin-bottom-4" hidden>
+          <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1.6rem;">Scheduling</h3>
+
+          <div class="margin-bottom-4">
+            <label class="usa-label" for="frequency">Frequency <span class="field-required">Required</span></label>
+            <select class="usa-select" id="frequency" name="frequency">
+              <option value="">Please Select</option>
+              <option value="days">Days</option>
+              <option value="months">Months</option>
+              <option value="annual">Annual</option>
+              <option value="biennial">Biennial</option>
+              <option value="quarterly">Quarterly</option>
+            </select>
+          </div>
+
+          <div class="grid-row grid-gap-2">
+            <div class="grid-col-6">
+              <label class="usa-label" for="schedule-start-date">Start Date <span class="field-required">Required</span></label>
+              <div class="date-picker-wrapper">
+                <input class="usa-input" id="schedule-start-date" name="schedule-start-date" type="text" placeholder="MM/DD/YYYY">
+                <button type="button" class="date-picker-button" aria-label="Select date">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="grid-col-6">
+              <label class="usa-label" for="schedule-end-date">End Date</label>
+              <div class="date-picker-wrapper">
+                <input class="usa-input" id="schedule-end-date" name="schedule-end-date" type="text" placeholder="MM/DD/YYYY">
+                <button type="button" class="date-picker-button" aria-label="Select date">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="usa-button modal-submit">Submit</button>
+        <button type="button" class="usa-button usa-button--secondary modal-cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Accordion functionality
+    document.querySelectorAll('.usa-accordion__button').forEach(button => {
+      button.addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        const content = document.getElementById(this.getAttribute('aria-controls'));
+
+        if (expanded) {
+          this.setAttribute('aria-expanded', 'false');
+          content.setAttribute('hidden', '');
+        } else {
+          this.setAttribute('aria-expanded', 'true');
+          content.removeAttribute('hidden');
+        }
+      });
+    });
+
+    // Modal functionality for editing
+    const modal = document.getElementById('inspection-modal');
+    const modalTitle = modal.querySelector('.modal-title');
+    const closeButton = modal.querySelector('.modal-close');
+    const cancelButton = modal.querySelector('.modal-cancel');
+    const submitButton = modal.querySelector('.modal-submit');
+    const modalOverlay = modal.querySelector('.modal-overlay');
+
+    let editingRow = null;
+
+    // Form fields
+    const categorySelect = document.getElementById('inspection-category');
+    const nameInput = document.getElementById('inspection-name');
+    const descriptionInput = document.getElementById('inspection-description');
+    const statusRadios = document.getElementsByName('status');
+    const visibilityRadios = document.getElementsByName('visibility');
+    const billableTypeRadios = document.getElementsByName('billable-type');
+    const schedulingSection = document.getElementById('scheduling-section');
+
+    // Show/hide scheduling section based on category
+    categorySelect.addEventListener('change', function() {
+      if (this.value === 'routine') {
+        schedulingSection.removeAttribute('hidden');
+      } else {
+        schedulingSection.setAttribute('hidden', '');
+      }
+    });
+
+    // Clear form function
+    function clearModalForm() {
+      categorySelect.value = '';
+      nameInput.value = '';
+      descriptionInput.value = '';
+      document.getElementById('status-active').checked = true;
+      document.getElementById('visibility-internal').checked = true;
+      document.getElementById('billable-none').checked = true;
+
+      // Clear and hide scheduling section
+      document.getElementById('frequency').value = '';
+      document.getElementById('schedule-start-date').value = '';
+      document.getElementById('schedule-end-date').value = '';
+      schedulingSection.setAttribute('hidden', '');
+    }
+
+    // Edit button functionality
+    document.querySelectorAll('a[aria-label="Edit Inspection"]').forEach(editButton => {
+      editButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        editingRow = this.closest('tr');
+        const cells = editingRow.querySelectorAll('td');
+
+        // Populate form with row data
+        const category = cells[0].textContent.trim();
+        const name = cells[1].textContent.trim();
+        const description = cells[2].textContent.trim();
+        const status = cells[3].textContent.trim().toLowerCase();
+        const visibility = cells[4].textContent.trim().toLowerCase();
+        const billableType = cells[5].textContent.trim();
+
+        // Set form values
+        categorySelect.value = category.toLowerCase();
+        nameInput.value = name;
+        descriptionInput.value = description;
+
+        // Set status radio
+        if (status === 'active') {
+          document.getElementById('status-active').checked = true;
+        } else {
+          document.getElementById('status-inactive').checked = true;
+        }
+
+        // Set visibility radio
+        if (visibility === 'internal') {
+          document.getElementById('visibility-internal').checked = true;
+        } else {
+          document.getElementById('visibility-public').checked = true;
+        }
+
+        // Set billable type radio
+        if (billableType === 'None') {
+          document.getElementById('billable-none').checked = true;
+        } else if (billableType === 'Single Invoice') {
+          document.getElementById('billable-single').checked = true;
+        } else if (billableType === 'Batch Invoice') {
+          document.getElementById('billable-batch').checked = true;
+        }
+
+        // Update modal title and open
+        modalTitle.textContent = 'Edit Inspection';
+        modal.removeAttribute('hidden');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    // Close modal function
+    function closeModal() {
+      modal.setAttribute('hidden', '');
+      document.body.style.overflow = '';
+      editingRow = null;
+    }
+
+    // Close modal on X button
+    closeButton.addEventListener('click', closeModal);
+
+    // Close modal on Cancel button
+    cancelButton.addEventListener('click', closeModal);
+
+    // Close modal on overlay click
+    modalOverlay.addEventListener('click', closeModal);
+
+    // Submit button
+    submitButton.addEventListener('click', function() {
+      // Get form values
+      const category = categorySelect.options[categorySelect.selectedIndex].text;
+      const name = nameInput.value;
+      const description = descriptionInput.value;
+      const status = document.querySelector('input[name="status"]:checked').value === 'active' ? 'Active' : 'Inactive';
+      const visibility = document.querySelector('input[name="visibility"]:checked').value === 'internal' ? 'Internal' : 'Public';
+
+      // Get billable type
+      const billableTypeValue = document.querySelector('input[name="billable-type"]:checked').value;
+      let billableType = 'None';
+      if (billableTypeValue === 'single') {
+        billableType = 'Single Invoice';
+      } else if (billableTypeValue === 'batch') {
+        billableType = 'Batch Invoice';
+      }
+
+      if (editingRow) {
+        // Update existing row
+        const cells = editingRow.querySelectorAll('td');
+        cells[0].textContent = category;
+        cells[1].textContent = name;
+        cells[2].textContent = description;
+        cells[3].textContent = status;
+        cells[4].textContent = visibility;
+        cells[5].textContent = billableType;
+      } else {
+        // Add new row logic here if needed
+        console.log('New inspection created');
+      }
+
+      closeModal();
+    });
+
+    // Delete confirmation functionality
+    const deleteModal = document.getElementById('delete-confirmation-modal');
+    const deleteCloseButton = document.getElementById('delete-close');
+    const confirmDeleteButton = document.getElementById('confirm-delete');
+    const cancelDeleteButton = document.getElementById('cancel-delete');
+    const deleteModalOverlay = deleteModal.querySelector('.modal-overlay');
+
+    let rowToDelete = null;
+
+    // Delete button functionality
+    document.querySelectorAll('a[aria-label="Delete Inspection"]').forEach(deleteButton => {
+      deleteButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        rowToDelete = this.closest('tr');
+
+        // Show delete confirmation modal
+        deleteModal.removeAttribute('hidden');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    // Close delete modal function
+    function closeDeleteModal() {
+      deleteModal.setAttribute('hidden', '');
+      document.body.style.overflow = '';
+      rowToDelete = null;
+    }
+
+    // Close delete modal on X button
+    deleteCloseButton.addEventListener('click', closeDeleteModal);
+
+    // Close delete modal on Cancel button
+    cancelDeleteButton.addEventListener('click', closeDeleteModal);
+
+    // Close delete modal on overlay click
+    deleteModalOverlay.addEventListener('click', closeDeleteModal);
+
+    // Confirm delete
+    confirmDeleteButton.addEventListener('click', function() {
+      if (rowToDelete) {
+        rowToDelete.remove();
+
+        // Update the entry count
+        const tbody = document.querySelector('.usa-table tbody');
+        const rowCount = tbody.querySelectorAll('tr').length;
+        document.querySelector('.table-controls__left strong').textContent = `Showing 1 - ${rowCount} of ${rowCount} Entries`;
+
+        // Show success notification
+        showNotification();
+      }
+      closeDeleteModal();
+    });
+
+    // Success notification functionality
+    function showNotification() {
+      const notification = document.getElementById('success-notification');
+      notification.removeAttribute('hidden');
+
+      // Trigger animation after a brief delay to ensure CSS transition works
+      setTimeout(() => {
+        notification.classList.add('show');
+      }, 10);
+
+      // Hide after 4 seconds
+      setTimeout(() => {
+        notification.classList.remove('show');
+        notification.classList.add('hide');
+
+        // Remove from DOM after animation completes
+        setTimeout(() => {
+          notification.classList.remove('hide');
+          notification.setAttribute('hidden', '');
+        }, 400);
+      }, 4000);
+    }
+  </script>
+</body>
+</html>

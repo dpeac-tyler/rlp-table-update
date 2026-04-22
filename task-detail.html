@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Detail - RLP</title>
+<!-- Custom RLP Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <div class="header management">
+      <a class="usa-skipnav" href="#main-content">Skip to Main Content</a>
+
+      <header class="usa-header">
+        <div class="skinny-header-container">
+          <div class="grid-container">
+            <div class="welcome-agency usa-banner__header-text">
+              Welcome DNR! &nbsp;<a href="#"><u>Logout</u></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="border-bottom-2px border-base-lighter">
+        <div class="grid-container navigation">
+          <div class="grid-row">
+            <div class="tablet:grid-col-6 logo-flex">
+              <a class="agency-logo-link" href="index.html">
+                <img src="assets/il-logo.png"
+                     alt="Illinois Department of Natural Resources agency logo"
+                     class="agency-logo">
+              </a>
+              <a class="agency-name-link" href="index.html">
+                <div class="agency-name">Illinois Department of Natural Resources</div>
+              </a>
+            </div>
+            <div class="tablet:grid-col-6">
+              <nav class="grid-container">
+                <div class="grid-row header--nav-links">
+                  <div class="tablet:grid-col nav__item">
+                    <a class="usa-link" href="index.html">
+                      <img src="assets/rlp-logo.png"
+                           alt="RLP logo"
+                           class="margin-right-1"
+                           height="30">Home
+                    </a>
+                  </div>
+                  <div class="tablet:grid-col-auto nav__item">
+                    <a class="usa-link" href="search.html">
+                      <svg aria-hidden="true" focusable="false" class="svg-inline--fa fa-magnifying-glass fa-xl margin-right-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+                        <path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path>
+                      </svg>Search
+                    </a>
+                  </div>
+                  <div class="tablet:grid-col nav__item">
+                    <a class="usa-link" href="#" target="_blank">
+                      <svg aria-hidden="true" focusable="false" class="svg-inline--fa fa-life-ring fa-xl margin-right-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+                        <path fill="currentColor" d="M367.2 412.5C335.9 434.9 297.5 448 256 448s-79.9-13.1-111.2-35.5l58-58c15.8 8.6 34 13.5 53.3 13.5s37.4-4.9 53.3-13.5l58 58zm90.7 .8c33.8-43.4 54-98 54-157.3s-20.2-113.9-54-157.3c9-12.5 7.9-30.1-3.4-41.3S425.8 45 413.3 54C369.9 20.2 315.3 0 256 0S142.1 20.2 98.7 54c-12.5-9-30.1-7.9-41.3 3.4S45 86.2 54 98.7C20.2 142.1 0 196.7 0 256s20.2 113.9 54 157.3c-9 12.5-7.9 30.1 3.4 41.3S86.2 467 98.7 458c43.4 33.8 98 54 157.3 54s113.9-20.2 157.3-54c12.5 9 30.1 7.9 41.3-3.4s12.4-28.8 3.4-41.3zm-45.5-46.1l-58-58c8.6-15.8 13.5-34 13.5-53.3s-4.9-37.4-13.5-53.3l58-58C434.9 176.1 448 214.5 448 256s-13.1 79.9-35.5 111.2zM367.2 99.5l-58 58c-15.8-8.6-34-13.5-53.3-13.5s-37.4 4.9-53.3 13.5l-58-58C176.1 77.1 214.5 64 256 64s79.9 13.1 111.2 35.5zM157.5 309.3l-58 58C77.1 335.9 64 297.5 64 256s13.1-79.9 35.5-111.2l58 58c-8.6 15.8-13.5 34-13.5 53.3s4.9 37.4 13.5 53.3zM208 256a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z"></path>
+                      </svg>Help
+                    </a>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="horizontalNav main-menu">
+      <ul class="usa-nav__primary display-flex padding-left-0">
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="queues.html">Queues</a></span>
+        </li>
+        <li class="usa-nav__primary-item active">
+          <span class="menuItem-inner"><a href="my-tasks.html">My Tasks</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="license-types.html">License Types</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="applications.html">Applications</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="settings.html">Settings</a></span>
+        </li>
+      </ul>
+    </nav>
+
+    <main id="main-content" class="grid-container">
+      <div class="breadcrumb-row margin-top-2">
+        <nav class="usa-breadcrumb" aria-label="Breadcrumbs">
+          <ol class="usa-breadcrumb__list">
+            <li class="usa-breadcrumb__list-item">
+              <a href="my-tasks.html" class="usa-breadcrumb__link">My Tasks</a>
+            </li>
+            <li class="usa-breadcrumb__list-item usa-current" aria-current="page">
+              <span id="breadcrumb-task-name">Task 1 of 1</span>
+            </li>
+          </ol>
+        </nav>
+        <div class="claimant-info">
+          <strong>Claimant - DNR AdminTwo</strong>
+        </div>
+      </div>
+
+      <div class="task-container margin-top-2">
+        <div class="task-header">
+          <div class="task-header-line"><strong>License Type:</strong> DNR Individual Line</div>
+          <div class="task-header-line"><strong>Application Title:</strong> <span id="header-application-title">Loading...</span></div>
+          <div class="task-header-line"><strong>Submission Number:</strong> <span id="submission-number">Loading...</span></div>
+        </div>
+
+        <div class="task-control-actions">
+          <div class="task-controls">
+            <button type="button" class="usa-button">Approve</button>
+            <button type="button" class="usa-button usa-button--outline">Deny</button>
+            <button type="button" class="usa-button usa-button--outline">Reject for Resubmission</button>
+            <span class="button-divider"></span>
+            <button type="button" class="usa-button usa-button--accent-warm">HFS Lookup</button>
+            <span class="button-divider"></span>
+            <a href="initiate-inspection.html" class="usa-button usa-button--accent-warm" id="initiate-inspection-btn">Initiate Inspection</a>
+            <button type="button" class="usa-button usa-button--accent-cool button-right">Unclaim Task</button>
+          </div>
+        </div>
+
+        <div class="task-content-section">
+          <h2><a href="#" style="text-decoration: underline;">Submitter Profile</a></h2>
+          <div class="grid-row grid-gap-2">
+            <div class="tablet:grid-col-4 text-left">
+              <strong>Customer Name:</strong> <span id="customer-name">Loading...</span>
+            </div>
+            <div class="tablet:grid-col-4 text-center">
+              <strong>Customer Number:</strong> <span id="customer-number">Loading...</span>
+            </div>
+            <div class="tablet:grid-col-4 text-right">
+              <strong>Username:</strong> <span id="username">Loading...</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="task-content-section">
+          <div class="usa-accordion usa-accordion--bordered">
+            <h3 class="usa-accordion__heading">
+              <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="personal-info-content">
+                Personal Information
+              </button>
+            </h3>
+            <div id="personal-info-content" class="usa-accordion__content usa-prose" hidden="">
+              <h2>Personal Information</h2>
+              <p><strong>First Name:</strong> <span id="first-name">Loading...</span></p>
+              <p><strong>Last Name:</strong> <span id="last-name">Loading...</span></p>
+            </div>
+
+            <h3 class="usa-accordion__heading">
+              <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="contact-info-content">
+                Contact Information
+              </button>
+            </h3>
+            <div id="contact-info-content" class="usa-accordion__content usa-prose" hidden="">
+              <h2>Contact Information</h2>
+              <p><strong>Email:</strong> <span id="email">Loading...</span></p>
+              <p><strong>Phone Number:</strong> <span id="phone">Loading...</span></p>
+            </div>
+
+            <h3 class="usa-accordion__heading">
+              <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="mailing-address-content">
+                Mailing Address
+              </button>
+            </h3>
+            <div id="mailing-address-content" class="usa-accordion__content usa-prose" hidden="">
+              <h2>Mailing Address</h2>
+              <p><strong>Street Address:</strong> <span id="street-address">Loading...</span></p>
+              <p><strong>City:</strong> <span id="city">Loading...</span></p>
+              <p><strong>State:</strong> <span id="state">Loading...</span></p>
+              <p><strong>Zip Code:</strong> <span id="zip-code">Loading...</span></p>
+            </div>
+
+            <h3 class="usa-accordion__heading">
+              <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="license-number-content">
+                Custom License Number
+              </button>
+            </h3>
+            <div id="license-number-content" class="usa-accordion__content usa-prose" hidden="">
+              <h2>Custom License Number</h2>
+              <p><strong>License Number:</strong> <span id="license-number">Loading...</span></p>
+              <p><strong>Issue Date:</strong> <span id="issue-date">Loading...</span></p>
+              <p><strong>Expiration Date:</strong> <span id="expiration-date">Loading...</span></p>
+            </div>
+
+            <h3 class="usa-accordion__heading">
+              <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="inspections-content">
+                Inspections
+              </button>
+            </h3>
+            <div id="inspections-content" class="usa-accordion__content usa-prose" hidden="">
+              <h2>Inspection Information</h2>
+              <div class="inspection-info">
+                <div class="inspection-info__item">
+                  <span class="inspection-info__label">ID:</span>
+                  <span class="inspection-info__value">INS-2026-A1B2C</span>
+                </div>
+                <div class="inspection-info__item">
+                  <span class="inspection-info__label">Type:</span>
+                  <span class="inspection-info__value">Initial</span>
+                </div>
+                <div class="inspection-info__item">
+                  <span class="inspection-info__label">Status:</span>
+                  <span class="inspection-info__value status-completed">Complete</span>
+                </div>
+                <div class="inspection-info__item">
+                  <span class="inspection-info__label">Outcome:</span>
+                  <span class="inspection-info__value status-approved">Passed</span>
+                </div>
+                <div class="inspection-info__item">
+                  <span class="inspection-info__label">Due Date:</span>
+                  <span class="inspection-info__value">03/15/2024</span>
+                </div>
+                <div class="inspection-info__item">
+                  <span class="inspection-info__label">Completion Date:</span>
+                  <span class="inspection-info__value">03/01/2024</span>
+                </div>
+                <div class="inspection-info__item">
+                  <span class="inspection-info__label">Inspection For:</span>
+                  <span class="inspection-info__value">Sarah Johnson</span>
+                </div>
+                <div class="inspection-info__item">
+                  <span class="inspection-info__label">Site:</span>
+                  <span class="inspection-info__value">100 Congress Ave, Austin, TX 78748</span>
+                </div>
+                <div class="inspection-info__item">
+                  <span class="inspection-info__label">Responsible Party:</span>
+                  <span class="inspection-info__value">Sarah Johnson</span>
+                </div>
+                <div class="inspection-info__item">
+                  <span class="inspection-info__label">Source:</span>
+                  <span class="inspection-info__value">Submission #: SUB-004321</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="task-content-section">
+          <div class="horizontal-tabs">
+            <button type="button" class="horizontal-tab active">Activity</button>
+            <button type="button" class="horizontal-tab">Submission</button>
+            <button type="button" class="horizontal-tab">Documents</button>
+          </div>
+
+          <div class="tab-content">
+            <div class="tab-panel active" id="activity-panel">
+              <label class="usa-label" for="task-comments">Task Comments</label>
+              <textarea class="usa-textarea" id="task-comments" name="task-comments" rows="8"></textarea>
+              <div class="character-counter">2500 characters available</div>
+              <button type="button" class="usa-button margin-top-2">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script>
+    // Task data - matches the table from my-tasks.html
+    const taskData = {
+      1: {
+        applicationTitle: "Professional Engineer License",
+        taskName: "Task 1 of 1",
+        constituentName: "John Smith",
+        submittedBy: "Sarah Johnson",
+        submittedDate: "03/15/2026",
+        claimedDate: "03/18/2026",
+        userGroup: "License Reviewers",
+        submissionNumber: "123456789",
+        customerNumber: "CUST-10001",
+        username: "jsmith2024"
+      },
+      2: {
+        applicationTitle: "Contractor License Renewal",
+        taskName: "Task 1 of 2",
+        constituentName: "Maria Garcia",
+        submittedBy: "Michael Chen",
+        submittedDate: "03/16/2026",
+        claimedDate: "03/19/2026",
+        userGroup: "Application Processors",
+        submissionNumber: "234567890",
+        customerNumber: "CUST-10002",
+        username: "mgarcia2024"
+      },
+      3: {
+        applicationTitle: "Professional Engineer License",
+        taskName: "Task 1 of 1",
+        constituentName: "Robert Williams",
+        submittedBy: "Sarah Johnson",
+        submittedDate: "03/17/2026",
+        claimedDate: "03/20/2026",
+        userGroup: "License Reviewers",
+        submissionNumber: "345678901",
+        customerNumber: "CUST-10003",
+        username: "rwilliams2024"
+      },
+      4: {
+        applicationTitle: "Contractor License Renewal",
+        taskName: "Task 2 of 2",
+        constituentName: "Jennifer Lee",
+        submittedBy: "Michael Chen",
+        submittedDate: "03/18/2026",
+        claimedDate: "03/21/2026",
+        userGroup: "License Reviewers",
+        submissionNumber: "456789012",
+        customerNumber: "CUST-10004",
+        username: "jlee2024"
+      },
+      5: {
+        applicationTitle: "Professional Engineer License",
+        taskName: "Task 1 of 1",
+        constituentName: "David Brown",
+        submittedBy: "Sarah Johnson",
+        submittedDate: "03/19/2026",
+        claimedDate: "03/22/2026",
+        userGroup: "Application Processors",
+        submissionNumber: "567890123",
+        customerNumber: "CUST-10005",
+        username: "dbrown2024"
+      }
+    };
+
+    // Get the task ID from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const taskId = urlParams.get('id');
+
+    // Load the task data
+    if (taskId && taskData[taskId]) {
+      const task = taskData[taskId];
+
+      // Update breadcrumb with task name
+      document.getElementById('breadcrumb-task-name').textContent = task.taskName;
+
+      // Update header information
+      document.getElementById('header-application-title').textContent = task.applicationTitle;
+      document.getElementById('submission-number').textContent = task.submissionNumber;
+
+      // Update submitter profile
+      document.getElementById('customer-name').textContent = task.constituentName;
+      document.getElementById('customer-number').textContent = task.customerNumber;
+      document.getElementById('username').textContent = task.username + ' (Active)';
+
+      // Parse and update personal information
+      const nameParts = task.constituentName.split(' ');
+      const firstName = nameParts[0] || '';
+      const lastName = nameParts.slice(1).join(' ') || '';
+      document.getElementById('first-name').textContent = firstName;
+      document.getElementById('last-name').textContent = lastName;
+
+      // Update contact information
+      document.getElementById('email').textContent = task.username.toLowerCase() + '@example.com';
+      document.getElementById('phone').textContent = '(555) 123-4567';
+
+      // Update mailing address
+      document.getElementById('street-address').textContent = '123 Main Street';
+      document.getElementById('city').textContent = 'Springfield';
+      document.getElementById('state').textContent = 'Illinois';
+      document.getElementById('zip-code').textContent = '62701';
+
+      // Update license number
+      document.getElementById('license-number').textContent = 'LIC-' + task.submissionNumber.substring(0, 6);
+      document.getElementById('issue-date').textContent = '01/15/2024';
+      document.getElementById('expiration-date').textContent = '01/15/2027';
+
+      // Open the Personal Information accordion by default
+      const accordionContent = document.getElementById('personal-info-content');
+      accordionContent.removeAttribute('hidden');
+
+      // Update Initiate Inspection link with task ID
+      const initiateInspectionBtn = document.getElementById('initiate-inspection-btn');
+      if (initiateInspectionBtn) {
+        initiateInspectionBtn.href = `initiate-inspection.html?id=${taskId}`;
+      }
+    }
+
+    // Accordion functionality
+    document.querySelectorAll('.usa-accordion__button').forEach(button => {
+      button.addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        const content = document.getElementById(this.getAttribute('aria-controls'));
+
+        if (expanded) {
+          this.setAttribute('aria-expanded', 'false');
+          content.setAttribute('hidden', '');
+        } else {
+          this.setAttribute('aria-expanded', 'true');
+          content.removeAttribute('hidden');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

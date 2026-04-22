@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Letter - RLP</title>
+  <!-- Custom RLP Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .status-generated { color: #8F5800; font-weight: bold; }
+    .status-mailed { color: #8F5800; font-weight: bold; }
+    .status-received { color: #417505; font-weight: bold; }
+    .status-returned { color: #80252A; font-weight: bold; }
+    .status-failed { color: #CD2026; font-weight: bold; }
+
+    .form-grid-3col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .form-field-full {
+      grid-column: 1 / -1;
+    }
+
+    @media (max-width: 1024px) {
+      .form-grid-3col {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .form-grid-3col {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <div class="header management">
+      <a class="usa-skipnav" href="#main-content">Skip to Main Content</a>
+
+      <header class="usa-header">
+        <div class="skinny-header-container">
+          <div class="grid-container">
+            <div class="welcome-agency usa-banner__header-text">
+              Welcome DNR! &nbsp;<a href="#"><u>Logout</u></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="border-bottom-2px border-base-lighter">
+        <div class="grid-container navigation">
+          <div class="grid-row">
+            <div class="tablet:grid-col-6 logo-flex">
+              <a class="agency-logo-link" href="index.html">
+                <img src="assets/il-logo.png"
+                     alt="Illinois Department of Natural Resources agency logo"
+                     class="agency-logo">
+              </a>
+              <a class="agency-name-link" href="index.html">
+                <div class="agency-name">Illinois Department of Natural Resources</div>
+              </a>
+            </div>
+            <div class="tablet:grid-col-6">
+              <nav class="grid-container">
+                <div class="grid-row header--nav-links">
+                  <div class="tablet:grid-col nav__item">
+                    <a class="usa-link" href="index.html">
+                      <img src="assets/rlp-logo.png"
+                           alt="RLP logo"
+                           class="margin-right-1"
+                           height="30">Home
+                    </a>
+                  </div>
+                  <div class="tablet:grid-col-auto nav__item">
+                    <a class="usa-link" href="search.html">
+                      <svg aria-hidden="true" focusable="false" class="svg-inline--fa fa-magnifying-glass fa-xl margin-right-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+                        <path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path>
+                      </svg>Search
+                    </a>
+                  </div>
+                  <div class="tablet:grid-col nav__item">
+                    <a class="usa-link" href="#" target="_blank">
+                      <svg aria-hidden="true" focusable="false" class="svg-inline--fa fa-life-ring fa-xl margin-right-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+                        <path fill="currentColor" d="M367.2 412.5C335.9 434.9 297.5 448 256 448s-79.9-13.1-111.2-35.5l58-58c15.8 8.6 34 13.5 53.3 13.5s37.4-4.9 53.3-13.5l58 58zm90.7 .8c33.8-43.4 54-98 54-157.3s-20.2-113.9-54-157.3c9-12.5 7.9-30.1-3.4-41.3S425.8 45 413.3 54C369.9 20.2 315.3 0 256 0S142.1 20.2 98.7 54c-12.5-9-30.1-7.9-41.3 3.4S45 86.2 54 98.7C20.2 142.1 0 196.7 0 256s20.2 113.9 54 157.3c-9 12.5-7.9 30.1 3.4 41.3S86.2 467 98.7 458c43.4 33.8 98 54 157.3 54s113.9-20.2 157.3-54c12.5 9 30.1 7.9 41.3-3.4s12.4-28.8 3.4-41.3zm-45.5-46.1l-58-58c8.6-15.8 13.5-34 13.5-53.3s-4.9-37.4-13.5-53.3l58-58C434.9 176.1 448 214.5 448 256s-13.1 79.9-35.5 111.2zM367.2 99.5l-58 58c-15.8-8.6-34-13.5-53.3-13.5s-37.4 4.9-53.3 13.5l-58-58C176.1 77.1 214.5 64 256 64s79.9 13.1 111.2 35.5zM157.5 309.3l-58 58C77.1 335.9 64 297.5 64 256s13.1-79.9 35.5-111.2l58 58c-8.6 15.8-13.5 34-13.5 53.3s4.9 37.4 13.5 53.3zM208 256a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z"></path>
+                      </svg>Help
+                    </a>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="horizontalNav main-menu">
+      <ul class="usa-nav__primary display-flex padding-left-0">
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="queues.html">Queues</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="my-tasks.html">My Tasks</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="license-types.html">License Types</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="applications.html">Applications</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="settings.html">Settings</a></span>
+        </li>
+      </ul>
+    </nav>
+
+    <main id="main-content" class="grid-container">
+      <nav class="usa-breadcrumb margin-top-2" aria-label="Breadcrumbs">
+        <ol class="usa-breadcrumb__list">
+          <li class="usa-breadcrumb__list-item">
+            <a href="search.html" class="usa-breadcrumb__link">Back to Submission Search Results</a>
+          </li>
+          <li class="usa-breadcrumb__list-item">
+            <a href="individual-profile.html" class="usa-breadcrumb__link">Sarah Johnson</a>
+          </li>
+          <li class="usa-breadcrumb__list-item usa-current" aria-current="page">
+            <span>Add Letter</span>
+          </li>
+        </ol>
+      </nav>
+
+      <div class="profile-header">
+        <h1 class="profile-header__title">Profile</h1>
+      </div>
+
+      <div class="profile-content">
+        <div class="profile-content__header">
+          <h2 class="profile-content__heading">Add Letter</h2>
+        </div>
+
+        <form id="add-letter-form">
+          <div class="form-grid-3col">
+            <!-- Visibility (full width fieldset) -->
+            <fieldset class="usa-fieldset form-field-full">
+              <legend class="usa-legend">Visibility <span class="field-required">Required</span></legend>
+              <div class="usa-radio">
+                <input class="usa-radio__input" id="letter-visibility-agency-only" type="radio" name="letter-visibility" value="Agency Only" required>
+                <label class="usa-radio__label" for="letter-visibility-agency-only">Agency Only</label>
+              </div>
+              <div class="usa-radio">
+                <input class="usa-radio__input" id="letter-visibility-public" type="radio" name="letter-visibility" value="Public" required>
+                <label class="usa-radio__label" for="letter-visibility-public">Public</label>
+              </div>
+            </fieldset>
+
+            <!-- Letter Template -->
+            <div class="usa-form-group">
+              <label class="usa-label" for="letter-type">Letter Template <span class="field-required">Required</span></label>
+              <select class="usa-select" id="letter-type" name="letter-type" required>
+                <option value="">Please Select</option>
+                <option value="Application Held">Application Held</option>
+                <option value="Compliance Letter">Compliance Letter</option>
+                <option value="Deficiency Notice">Deficiency Notice</option>
+                <option value="Enforcement Communications">Enforcement Communications</option>
+                <option value="Notice of Violation">Notice of Violation</option>
+              </select>
+            </div>
+
+            <!-- Letter Template Fields (dynamic, shown when template is selected) -->
+            <div id="letter-template-fields" style="display: none; grid-column: 1 / -1;">
+              <!-- Application Held Template Fields -->
+              <div id="application-held-fields" style="display: none;">
+                <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                  <label class="usa-label" for="template-date">Date Spelled</label>
+                  <input class="usa-input" id="template-date" name="template-date" type="text" readonly aria-readonly="true" style="background-color: #f0f0f0; color: #71767a;">
+                </div>
+
+                <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                  <label class="usa-label" for="template-contact-name">Contact Name</label>
+                  <input class="usa-input" id="template-contact-name" name="template-contact-name" type="text" value="Sarah Johnson" readonly aria-readonly="true" style="background-color: #f0f0f0; color: #71767a;">
+                </div>
+
+                <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                  <label class="usa-label" for="template-credential-name">Full Credential Name</label>
+                  <input class="usa-input" id="template-credential-name" name="template-credential-name" type="text" value="Sarah Johnson" readonly aria-readonly="true" style="background-color: #f0f0f0; color: #71767a;">
+                </div>
+
+                <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                  <label class="usa-label" for="template-application-type">Application Type <span class="field-required">Required</span></label>
+                  <select class="usa-select" id="template-application-type" name="template-application-type">
+                    <option value="">Please Select</option>
+                    <option value="Application Type 1">Application Type 1</option>
+                    <option value="Application Type 2">Application Type 2</option>
+                    <option value="Application Type 3">Application Type 3</option>
+                    <option value="Application Type 4">Application Type 4</option>
+                    <option value="Application Type 5">Application Type 5</option>
+                  </select>
+                </div>
+
+                <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                  <label class="usa-label" for="template-manager-name">Current Manager Name</label>
+                  <input class="usa-input" id="template-manager-name" name="template-manager-name" type="text" value="Jennifer Adams" readonly aria-readonly="true" style="background-color: #f0f0f0; color: #71767a;">
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                  <h3 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1rem;">Supervisor Mailing Address</h3>
+
+                  <div class="usa-form-group" style="margin-bottom: 1rem;">
+                    <label class="usa-label" for="template-address-line1">Address Line 1</label>
+                    <input class="usa-input" id="template-address-line1" name="template-address-line1" type="text" value="One Natural Resources Way" readonly aria-readonly="true" style="background-color: #f0f0f0; color: #71767a;">
+                  </div>
+
+                  <div class="usa-form-group" style="margin-bottom: 1rem;">
+                    <label class="usa-label" for="template-address-line2">Address Line 2</label>
+                    <input class="usa-input" id="template-address-line2" name="template-address-line2" type="text" value="Suite 300" readonly aria-readonly="true" style="background-color: #f0f0f0; color: #71767a;">
+                  </div>
+
+                  <div class="usa-form-group" style="margin-bottom: 1rem;">
+                    <label class="usa-label" for="template-city">City</label>
+                    <input class="usa-input" id="template-city" name="template-city" type="text" value="Springfield" readonly aria-readonly="true" style="background-color: #f0f0f0; color: #71767a;">
+                  </div>
+
+                  <div class="usa-form-group" style="margin-bottom: 1rem;">
+                    <label class="usa-label" for="template-state">State</label>
+                    <input class="usa-input" id="template-state" name="template-state" type="text" value="IL" readonly aria-readonly="true" style="background-color: #f0f0f0; color: #71767a;">
+                  </div>
+
+                  <div class="usa-form-group" style="margin-bottom: 1rem;">
+                    <label class="usa-label" for="template-zip">Zip Code</label>
+                    <input class="usa-input" id="template-zip" name="template-zip" type="text" value="62702" readonly aria-readonly="true" style="background-color: #f0f0f0; color: #71767a;">
+                  </div>
+                </div>
+
+                <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                  <label class="usa-label" for="template-user-signature">User Signature</label>
+                  <div style="background-color: #f0f0f0; border: 1px solid #dfe1e2; padding: 1rem; border-radius: 4px;">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='60'%3E%3Ctext x='10' y='40' font-family='Brush Script MT, cursive' font-size='24' fill='%23333'>Michael Rodriguez%3C/text%3E%3C/svg%3E" alt="User Signature" style="display: block; max-width: 200px;">
+                  </div>
+                  <input type="hidden" id="template-user-signature" name="template-user-signature" value="Michael Rodriguez">
+                </div>
+
+                <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                  <label class="usa-label" for="template-user-name">User Name</label>
+                  <input class="usa-input" id="template-user-name" name="template-user-name" type="text" value="Michael Rodriguez" readonly aria-readonly="true" style="background-color: #f0f0f0; color: #71767a;">
+                </div>
+
+                <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                  <label class="usa-label" for="template-user-email">User Email</label>
+                  <input class="usa-input" id="template-user-email" name="template-user-email" type="email" value="michael.rodriguez@dnr.illinois.gov" readonly aria-readonly="true" style="background-color: #f0f0f0; color: #71767a;">
+                </div>
+
+                <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                  <label class="usa-label" for="template-bg-number">BG Number</label>
+                  <input class="usa-input" id="template-bg-number" name="template-bg-number" type="text">
+                </div>
+
+                <div style="margin-top: 1.5rem;">
+                  <button type="button" id="preview-letter-btn" class="usa-button">Preview Letter</button>
+                </div>
+              </div>
+
+              <hr style="border: 0; border-top: 1px solid #dfe1e2; margin: 2rem 0;">
+            </div>
+
+            <!-- Delivery Method (full width fieldset) -->
+            <fieldset class="usa-fieldset form-field-full">
+              <legend class="usa-legend">Delivery Method <span class="field-required">Required</span></legend>
+              <div class="usa-radio">
+                <input class="usa-radio__input" id="letter-delivery-standard" type="radio" name="letter-delivery-method" value="Standard" required>
+                <label class="usa-radio__label" for="letter-delivery-standard">Standard</label>
+              </div>
+              <div class="usa-radio">
+                <input class="usa-radio__input" id="letter-delivery-certified" type="radio" name="letter-delivery-method" value="Certified" required>
+                <label class="usa-radio__label" for="letter-delivery-certified">Certified</label>
+              </div>
+            </fieldset>
+
+            <!-- License Type -->
+            <div class="usa-form-group">
+              <label class="usa-label" for="letter-license-type">License Type</label>
+              <select class="usa-select" id="letter-license-type" name="letter-license-type">
+                <option value="">Please Select</option>
+                <option value="Commercial Fishing">Commercial Fishing</option>
+                <option value="Hunting">Hunting</option>
+                <option value="Boating">Boating</option>
+              </select>
+            </div>
+
+            <!-- Record Type -->
+            <div class="usa-form-group">
+              <label class="usa-label" for="letter-record-type">Record Type</label>
+              <select class="usa-select" id="letter-record-type" name="letter-record-type">
+                <option value="">Please Select</option>
+                <option value="License">License</option>
+                <option value="Application">Application</option>
+                <option value="Case">Case</option>
+              </select>
+            </div>
+
+            <!-- Associated Record (appears in 3rd column when Record Type is selected) -->
+            <div class="usa-form-group" id="letter-associated-record-group" style="visibility: hidden;">
+              <label class="usa-label" for="letter-associated-record">Associated Record <span class="field-required">Required</span></label>
+              <select class="usa-select" id="letter-associated-record" name="letter-associated-record">
+                <option value="">Please Select</option>
+              </select>
+            </div>
+
+            <!-- Status (full width) -->
+            <div class="usa-form-group form-field-full">
+              <label class="usa-label" for="letter-status">Status <span class="field-required">Required</span></label>
+              <select class="usa-select" id="letter-status" name="letter-status" required>
+                <option value="">Please Select</option>
+                <option value="Generated">Generated</option>
+                <option value="Mailed">Mailed</option>
+                <option value="Received">Received</option>
+                <option value="Returned">Returned</option>
+                <option value="Failed">Failed</option>
+              </select>
+            </div>
+
+            <!-- Delivery Notes (full width) -->
+            <div class="usa-form-group form-field-full">
+              <label class="usa-label" for="letter-delivery-notes">Delivery Notes</label>
+              <textarea class="usa-textarea" id="letter-delivery-notes" name="letter-delivery-notes" maxlength="500" rows="4"></textarea>
+              <p style="font-size: 1.4rem; color: #71767a; margin-top: 0.5rem;">Maximum 500 characters</p>
+            </div>
+          </div>
+
+          <!-- Form Buttons -->
+          <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+            <button type="submit" class="usa-button">Save</button>
+            <button type="button" class="usa-button usa-button--secondary" id="cancel-add-letter">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <!-- Preview Letter Modal -->
+  <div id="preview-letter-modal" class="modal-overlay" hidden>
+    <div class="modal-content" style="max-width: 950px;">
+      <div class="modal-header">
+        <h2 class="modal-title">Letter Preview</h2>
+        <button type="button" class="modal-close" id="close-preview-modal" aria-label="Close modal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body" style="font-family: 'Times New Roman', serif; line-height: 1.6;">
+        <div id="letter-preview-content" style="padding: 2rem; background: white;">
+          <!-- Letter content will be inserted here -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="usa-button usa-button--secondary" id="close-preview-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Letter Template conditional logic
+    const letterTypeSelect = document.getElementById('letter-type');
+    const letterTemplateFields = document.getElementById('letter-template-fields');
+    const applicationHeldFields = document.getElementById('application-held-fields');
+    const templateDateInput = document.getElementById('template-date');
+
+    // Set today's date in spelled format (e.g., "21st of April 2026")
+    const today = new Date();
+    const day = today.getDate();
+    const month = today.toLocaleString('en-US', { month: 'long' });
+    const year = today.getFullYear();
+
+    // Add ordinal suffix (st, nd, rd, th)
+    function getOrdinalSuffix(day) {
+      if (day > 3 && day < 21) return 'th';
+      switch (day % 10) {
+        case 1: return 'st';
+        case 2: return 'nd';
+        case 3: return 'rd';
+        default: return 'th';
+      }
+    }
+
+    const todayFormatted = `${day}${getOrdinalSuffix(day)} of ${month} ${year}`;
+    templateDateInput.value = todayFormatted;
+
+    letterTypeSelect.addEventListener('change', function() {
+      const selectedTemplate = this.value;
+
+      // Hide all template fields first
+      letterTemplateFields.style.display = 'none';
+      applicationHeldFields.style.display = 'none';
+
+      // Show appropriate template fields
+      if (selectedTemplate === 'Application Held') {
+        letterTemplateFields.style.display = 'block';
+        applicationHeldFields.style.display = 'block';
+      }
+    });
+
+    // Record Type conditional logic
+    const recordTypeSelect = document.getElementById('letter-record-type');
+    const associatedRecordGroup = document.getElementById('letter-associated-record-group');
+    const associatedRecordSelect = document.getElementById('letter-associated-record');
+
+    recordTypeSelect.addEventListener('change', function() {
+      if (this.value) {
+        associatedRecordGroup.style.visibility = 'visible';
+        associatedRecordSelect.required = true;
+
+        // Populate options based on record type (placeholder data)
+        associatedRecordSelect.innerHTML = '<option value="">Please Select</option>';
+
+        if (this.value === 'License') {
+          associatedRecordSelect.innerHTML += '<option value="LIC-2024-001">LIC-2024-001 - Commercial Fishing</option>';
+          associatedRecordSelect.innerHTML += '<option value="LIC-2024-002">LIC-2024-002 - Hunting</option>';
+        } else if (this.value === 'Application') {
+          associatedRecordSelect.innerHTML += '<option value="APP-2024-001">APP-2024-001 - New License Application</option>';
+          associatedRecordSelect.innerHTML += '<option value="APP-2024-002">APP-2024-002 - Renewal Application</option>';
+        } else if (this.value === 'Case') {
+          associatedRecordSelect.innerHTML += '<option value="CASE-2024-001">CASE-2024-001 - Compliance Case</option>';
+          associatedRecordSelect.innerHTML += '<option value="CASE-2024-002">CASE-2024-002 - Enforcement Case</option>';
+        }
+      } else {
+        associatedRecordGroup.style.visibility = 'hidden';
+        associatedRecordSelect.required = false;
+        associatedRecordSelect.value = '';
+      }
+    });
+
+    // Form submission handler
+    document.getElementById('add-letter-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Get form values
+      const selectedLetterType = document.getElementById('letter-type').value;
+      const formData = {
+        id: 'LETTER-' + Date.now(), // Generate unique ID
+        visibility: document.querySelector('input[name="letter-visibility"]:checked').value,
+        letterType: selectedLetterType,
+        deliveryMethod: document.querySelector('input[name="letter-delivery-method"]:checked').value,
+        generatedDate: new Date().toISOString().split('T')[0], // Today's date
+        mailedDate: '',
+        licenseType: document.getElementById('letter-license-type').value || '-',
+        recordType: document.getElementById('letter-record-type').value || '-',
+        associatedRecord: document.getElementById('letter-associated-record').value || '',
+        trackingNumber: '',
+        deliveryAttempts: 0,
+        status: document.getElementById('letter-status').value,
+        deliveryNotes: document.getElementById('letter-delivery-notes').value || '',
+        templateFields: {}
+      };
+
+      // Add template-specific fields if Application Held is selected
+      if (selectedLetterType === 'Application Held') {
+        formData.templateFields = {
+          date: document.getElementById('template-date').value,
+          contactName: document.getElementById('template-contact-name').value,
+          credentialName: document.getElementById('template-credential-name').value,
+          applicationType: document.getElementById('template-application-type').value,
+          managerName: document.getElementById('template-manager-name').value,
+          addressLine1: document.getElementById('template-address-line1').value,
+          addressLine2: document.getElementById('template-address-line2').value,
+          city: document.getElementById('template-city').value,
+          state: document.getElementById('template-state').value,
+          zip: document.getElementById('template-zip').value,
+          userSignature: document.getElementById('template-user-signature').value,
+          userName: document.getElementById('template-user-name').value,
+          userEmail: document.getElementById('template-user-email').value,
+          bgNumber: document.getElementById('template-bg-number').value
+        };
+      }
+
+      // Get existing letters from localStorage or initialize empty array
+      let letters = JSON.parse(localStorage.getItem('letters') || '[]');
+
+      // Add new letter to the beginning of the array
+      letters.unshift(formData);
+
+      // Save back to localStorage
+      localStorage.setItem('letters', JSON.stringify(letters));
+
+      // Set flag to show notification
+      localStorage.setItem('showLetterNotification', 'true');
+
+      // Redirect back to profile page
+      window.location.href = 'individual-profile.html';
+    });
+
+    // Cancel button handler
+    document.getElementById('cancel-add-letter').addEventListener('click', function() {
+      if (confirm('Are you sure you want to cancel? Any unsaved changes will be lost.')) {
+        window.location.href = 'individual-profile.html';
+      }
+    });
+
+    // Preview Letter functionality
+    const previewLetterBtn = document.getElementById('preview-letter-btn');
+    const previewLetterModal = document.getElementById('preview-letter-modal');
+    const closePreviewModalBtn = document.getElementById('close-preview-modal');
+    const closePreviewBtn = document.getElementById('close-preview-btn');
+    const letterPreviewContent = document.getElementById('letter-preview-content');
+
+    if (previewLetterBtn) {
+      previewLetterBtn.addEventListener('click', function() {
+        // Get all template field values
+        const dateSpelled = document.getElementById('template-date').value;
+        const contactName = document.getElementById('template-contact-name').value;
+        const credentialName = document.getElementById('template-credential-name').value;
+        const applicationType = document.getElementById('template-application-type').value || '[Application Type]';
+        const managerName = document.getElementById('template-manager-name').value;
+        const addressLine1 = document.getElementById('template-address-line1').value;
+        const addressLine2 = document.getElementById('template-address-line2').value;
+        const city = document.getElementById('template-city').value;
+        const state = document.getElementById('template-state').value;
+        const zip = document.getElementById('template-zip').value;
+        const userName = document.getElementById('template-user-name').value;
+        const userEmail = document.getElementById('template-user-email').value;
+        const bgNumber = document.getElementById('template-bg-number').value || '[BG Number]';
+
+        // Create letter with background image overlay
+        const letterHTML = `
+          <div style="position: relative; width: 9in; min-height: 11in; background-image: url('assets/ar-state-police-blank.png'); background-size: cover; background-repeat: no-repeat; font-family: 'Times New Roman', serif;">
+            <!-- Date Spelled -->
+            <div style="position: absolute; top: 330px; left: 300px; font-size: 11pt;">
+              ${dateSpelled}
+            </div>
+
+            <!-- Address -->
+            <div style="position: absolute; top: 370px; left: 300px; font-size: 11pt; line-height: 1.4;">
+              ${addressLine1}<br>
+              ${addressLine2 ? addressLine2 + '<br>' : ''}
+              ${city}, ${state} ${zip}
+            </div>
+
+            <!-- Dear Line -->
+            <div style="position: absolute; top: 460px; left: 300px; font-size: 11pt;">
+              Dear ${managerName}:
+            </div>
+
+            <!-- First Paragraph -->
+            <div style="position: absolute; top: 500px; left: 300px; right: 50px; font-size: 11pt; line-height: 1.5; text-align: justify;">
+              The Arkansas State Police Private Investigators, Private Security, and Alarm Installation/Monitoring Section has received the <strong>${credentialName}</strong> <strong>${applicationType}</strong> application for <strong>${contactName}</strong>.
+            </div>
+
+            <!-- Second Paragraph -->
+            <div style="position: absolute; top: 570px; left: 300px; right: 50px; font-size: 11pt; line-height: 1.5; text-align: justify;">
+              The application will be placed on hold since <strong>${contactName}</strong>'s current credential is suspended. The <strong>${applicationType}</strong> application will be processed once the suspension has been lifted.
+            </div>
+
+            <!-- Third Paragraph -->
+            <div style="position: absolute; top: 640px; left: 300px; right: 50px; font-size: 11pt; line-height: 1.5; text-align: justify;">
+              <strong>${contactName}</strong> <strong>cannot be employed</strong> in a position that requires a license, credential, or commission issued by the Arkansas Private Investigators, Private Security, and Alarm Installation/Monitoring Licensing Section during the suspension period.
+            </div>
+
+            <!-- Fourth Paragraph -->
+            <div style="position: absolute; top: 730px; left: 300px; right: 50px; font-size: 11pt; line-height: 1.5; text-align: justify;">
+              If you have any questions related to this matter, you may contact a member of the staff at 501-618-8600. Please refer to the file number at the bottom of the letter.
+            </div>
+
+            <!-- Sincerely -->
+            <div style="position: absolute; top: 800px; left: 300px; font-size: 11pt;">
+              Sincerely,
+            </div>
+
+            <!-- Signature -->
+            <div style="position: absolute; top: 830px; left: 300px;">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='60'%3E%3Ctext x='0' y='40' font-family='Brush Script MT, cursive' font-size='24' fill='%23333'>Michael Rodriguez%3C/text%3E%3C/svg%3E" alt="Signature" style="display: block; max-width: 200px;">
+            </div>
+
+            <!-- User Name and Contact Info -->
+            <div style="position: absolute; top: 900px; left: 300px; font-size: 10pt; line-height: 1.4;">
+              ${userName}<br>
+              Administrative Coordinator<br>
+              PI & Security Licensing Section<br>
+              1 State Police Plaza Drive<br>
+              Little Rock, AR 72209<br>
+              ${userEmail}<br>
+              (501) 618-8600<br>
+              (501) 618-8125 fax
+            </div>
+
+            <!-- CC Line -->
+            <div style="position: absolute; top: 1040px; left: 300px; font-size: 11pt;">
+              cc: ${bgNumber}
+            </div>
+
+            <!-- CERTIFIED -->
+            <div style="position: absolute; top: 1090px; left: 320px; font-size: 11pt; font-weight: bold;">
+              CERTIFIED
+            </div>
+          </div>
+        `;
+
+        letterPreviewContent.innerHTML = letterHTML;
+        previewLetterModal.removeAttribute('hidden');
+        document.body.style.overflow = 'hidden';
+      });
+    }
+
+    function closePreviewModal() {
+      previewLetterModal.setAttribute('hidden', '');
+      document.body.style.overflow = '';
+    }
+
+    if (closePreviewModalBtn) {
+      closePreviewModalBtn.addEventListener('click', closePreviewModal);
+    }
+
+    if (closePreviewBtn) {
+      closePreviewBtn.addEventListener('click', closePreviewModal);
+    }
+
+    if (previewLetterModal) {
+      previewLetterModal.addEventListener('click', function(e) {
+        if (e.target === previewLetterModal) {
+          closePreviewModal();
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Initiate Inspection - RLP</title>
+<!-- Custom RLP Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <div class="header management">
+      <a class="usa-skipnav" href="#main-content">Skip to Main Content</a>
+
+      <header class="usa-header">
+        <div class="skinny-header-container">
+          <div class="grid-container">
+            <div class="welcome-agency usa-banner__header-text">
+              Welcome DNR! &nbsp;<a href="#"><u>Logout</u></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="border-bottom-2px border-base-lighter">
+        <div class="grid-container navigation">
+          <div class="grid-row">
+            <div class="tablet:grid-col-6 logo-flex">
+              <a class="agency-logo-link" href="index.html">
+                <img src="assets/il-logo.png"
+                     alt="Illinois Department of Natural Resources agency logo"
+                     class="agency-logo">
+              </a>
+              <a class="agency-name-link" href="index.html">
+                <div class="agency-name">Illinois Department of Natural Resources</div>
+              </a>
+            </div>
+            <div class="tablet:grid-col-6">
+              <nav class="grid-container">
+                <div class="grid-row header--nav-links">
+                  <div class="tablet:grid-col nav__item">
+                    <a class="usa-link" href="index.html">
+                      <img src="assets/rlp-logo.png"
+                           alt="RLP logo"
+                           class="margin-right-1"
+                           height="30">Home
+                    </a>
+                  </div>
+                  <div class="tablet:grid-col-auto nav__item">
+                    <a class="usa-link" href="search.html">
+                      <svg aria-hidden="true" focusable="false" class="svg-inline--fa fa-magnifying-glass fa-xl margin-right-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+                        <path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path>
+                      </svg>Search
+                    </a>
+                  </div>
+                  <div class="tablet:grid-col nav__item">
+                    <a class="usa-link" href="#" target="_blank">
+                      <svg aria-hidden="true" focusable="false" class="svg-inline--fa fa-life-ring fa-xl margin-right-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+                        <path fill="currentColor" d="M367.2 412.5C335.9 434.9 297.5 448 256 448s-79.9-13.1-111.2-35.5l58-58c15.8 8.6 34 13.5 53.3 13.5s37.4-4.9 53.3-13.5l58 58zm90.7 .8c33.8-43.4 54-98 54-157.3s-20.2-113.9-54-157.3c9-12.5 7.9-30.1-3.4-41.3S425.8 45 413.3 54C369.9 20.2 315.3 0 256 0S142.1 20.2 98.7 54c-12.5-9-30.1-7.9-41.3 3.4S45 86.2 54 98.7C20.2 142.1 0 196.7 0 256s20.2 113.9 54 157.3c-9 12.5-7.9 30.1 3.4 41.3S86.2 467 98.7 458c43.4 33.8 98 54 157.3 54s113.9-20.2 157.3-54c12.5 9 30.1 7.9 41.3-3.4s12.4-28.8 3.4-41.3zm-45.5-46.1l-58-58c8.6-15.8 13.5-34 13.5-53.3s-4.9-37.4-13.5-53.3l58-58C434.9 176.1 448 214.5 448 256s-13.1 79.9-35.5 111.2zM367.2 99.5l-58 58c-15.8-8.6-34-13.5-53.3-13.5s-37.4 4.9-53.3 13.5l-58-58C176.1 77.1 214.5 64 256 64s79.9 13.1 111.2 35.5zM157.5 309.3l-58 58C77.1 335.9 64 297.5 64 256s13.1-79.9 35.5-111.2l58 58c-8.6 15.8-13.5 34-13.5 53.3s4.9 37.4 13.5 53.3zM208 256a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z"></path>
+                      </svg>Help
+                    </a>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main id="main-content" class="grid-container">
+      <nav class="usa-breadcrumb margin-top-2" aria-label="Breadcrumbs">
+        <ol class="usa-breadcrumb__list">
+          <li class="usa-breadcrumb__list-item">
+            <a href="my-tasks.html" class="usa-breadcrumb__link">My Tasks</a>
+          </li>
+          <li class="usa-breadcrumb__list-item">
+            <a href="task-detail.html" class="usa-breadcrumb__link" id="task-breadcrumb">Task Detail</a>
+          </li>
+          <li class="usa-breadcrumb__list-item usa-current" aria-current="page">
+            <span>Initiate Inspection</span>
+          </li>
+        </ol>
+      </nav>
+
+      <div class="profile-header">
+        <h1 class="profile-header__title">Initiate Inspection</h1>
+      </div>
+
+      <!-- Error Alert -->
+      <div id="error-alert" class="usa-alert usa-alert--error" hidden>
+        <div class="usa-alert__body">
+          <h3 class="usa-alert__heading">Error status</h3>
+          <p class="usa-alert__text" id="error-message">Please correct the following errors:</p>
+        </div>
+      </div>
+
+      <div class="profile-content">
+        <div class="inspection-content">
+          <p class="margin-bottom-4">Initialize inspection using the values below and click Submit.</p>
+
+          <div class="margin-bottom-4" id="inspection-type-group">
+            <label class="usa-label" for="inspection-type">Inspection Type <span class="field-required">Required</span></label>
+            <span class="usa-error-message" id="inspection-type-error" hidden>Select an inspection type</span>
+            <select class="usa-select" id="inspection-type" name="inspection-type" required>
+              <option value="">Please Select</option>
+              <option value="application">Application</option>
+              <option value="case">Case</option>
+              <option value="routine-field-observation">Routine Field Observation</option>
+              <option value="routine">Routine</option>
+              <option value="field-observation">Field Observation</option>
+            </select>
+          </div>
+
+          <div class="margin-bottom-4" id="duration-group">
+            <label class="usa-label" for="duration">Duration <span class="field-required">Required</span></label>
+            <span class="usa-error-message" id="duration-error" hidden>Select a duration</span>
+            <select class="usa-select" id="duration" name="duration" required>
+              <option value="">Please Select</option>
+              <option value="30">30 minutes</option>
+              <option value="60">60 minutes</option>
+              <option value="90">90 minutes</option>
+            </select>
+          </div>
+
+          <div class="margin-bottom-4" id="due-date-group">
+            <label class="usa-label" for="due-date">Due Date <span class="field-required">Required</span></label>
+            <span class="usa-error-message" id="due-date-error" hidden>Enter a due date</span>
+            <div class="date-picker-wrapper">
+              <input class="usa-input" id="due-date" name="due-date" type="text" placeholder="MM/DD/YYYY" required>
+              <button type="button" class="date-picker-button" aria-label="Select date">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="margin-bottom-4">
+            <label class="usa-label" for="document-upload">Document Upload</label>
+            <input class="usa-input" id="document-upload" name="document-upload" type="file">
+          </div>
+
+          <div class="margin-bottom-4">
+            <label class="usa-label" for="inspection-notes">Notes</label>
+            <textarea class="usa-textarea" id="inspection-notes" name="inspection-notes" rows="6"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="margin-top-2">
+        <button type="button" class="usa-button" id="submit-button">Submit</button>
+        <a href="task-detail.html" class="usa-button usa-button--secondary" id="cancel-button">Cancel</a>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Get task ID from URL to maintain context
+    const urlParams = new URLSearchParams(window.location.search);
+    const taskId = urlParams.get('id');
+
+    // Update breadcrumb and buttons with task ID if present
+    if (taskId) {
+      const taskBreadcrumb = document.getElementById('task-breadcrumb');
+      const cancelButton = document.getElementById('cancel-button');
+
+      taskBreadcrumb.href = `task-detail.html?id=${taskId}`;
+      cancelButton.href = `task-detail.html?id=${taskId}`;
+    }
+
+    // Form validation
+    function validateForm() {
+      let isValid = true;
+      const errorAlert = document.getElementById('error-alert');
+
+      // Clear previous errors
+      clearErrors();
+
+      // Validate Inspection Type
+      const inspectionType = document.getElementById('inspection-type');
+      if (!inspectionType.value) {
+        showFieldError('inspection-type-group', 'inspection-type-error', 'inspection-type');
+        isValid = false;
+      }
+
+      // Validate Duration
+      const duration = document.getElementById('duration');
+      if (!duration.value) {
+        showFieldError('duration-group', 'duration-error', 'duration');
+        isValid = false;
+      }
+
+      // Validate Due Date
+      const dueDate = document.getElementById('due-date');
+      if (!dueDate.value) {
+        showFieldError('due-date-group', 'due-date-error', 'due-date');
+        isValid = false;
+      }
+
+      // Show or hide error alert
+      if (!isValid) {
+        errorAlert.removeAttribute('hidden');
+        // Scroll to top to show error alert
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        errorAlert.setAttribute('hidden', '');
+      }
+
+      return isValid;
+    }
+
+    function showFieldError(groupId, errorId, fieldId) {
+      const group = document.getElementById(groupId);
+      const error = document.getElementById(errorId);
+      const field = document.getElementById(fieldId);
+
+      group.classList.add('usa-form-group--error');
+      error.removeAttribute('hidden');
+      field.classList.add('usa-input--error', 'usa-select--error');
+    }
+
+    function clearErrors() {
+      // Clear all error states
+      document.querySelectorAll('.usa-form-group--error').forEach(group => {
+        group.classList.remove('usa-form-group--error');
+      });
+
+      document.querySelectorAll('.usa-error-message').forEach(error => {
+        error.setAttribute('hidden', '');
+      });
+
+      document.querySelectorAll('.usa-input--error, .usa-select--error').forEach(field => {
+        field.classList.remove('usa-input--error', 'usa-select--error');
+      });
+    }
+
+    // Clear errors when user starts fixing them
+    document.getElementById('inspection-type').addEventListener('change', function() {
+      if (this.value) {
+        document.getElementById('inspection-type-group').classList.remove('usa-form-group--error');
+        document.getElementById('inspection-type-error').setAttribute('hidden', '');
+        this.classList.remove('usa-select--error');
+      }
+    });
+
+    document.getElementById('duration').addEventListener('change', function() {
+      if (this.value) {
+        document.getElementById('duration-group').classList.remove('usa-form-group--error');
+        document.getElementById('duration-error').setAttribute('hidden', '');
+        this.classList.remove('usa-select--error');
+      }
+    });
+
+    document.getElementById('due-date').addEventListener('input', function() {
+      if (this.value) {
+        document.getElementById('due-date-group').classList.remove('usa-form-group--error');
+        document.getElementById('due-date-error').setAttribute('hidden', '');
+        this.classList.remove('usa-input--error');
+      }
+    });
+
+    // Submit button handler with validation
+    document.getElementById('submit-button').addEventListener('click', function() {
+      if (validateForm()) {
+        console.log('Inspection submitted');
+        // Redirect back to task detail
+        if (taskId) {
+          window.location.href = `task-detail.html?id=${taskId}`;
+        } else {
+          window.location.href = 'task-detail.html';
+        }
+      }
+    });
+  </script>
+</body>
+</html>

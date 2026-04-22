@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Queues - RLP</title>
+<!-- Custom RLP Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <div class="header management">
+      <a class="usa-skipnav" href="#main-content">Skip to Main Content</a>
+
+      <header class="usa-header">
+        <div class="skinny-header-container">
+          <div class="grid-container">
+            <div class="welcome-agency usa-banner__header-text">
+              Welcome DNR! &nbsp;<a href="#"><u>Logout</u></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="border-bottom-2px border-base-lighter">
+        <div class="grid-container navigation">
+          <div class="grid-row">
+            <div class="tablet:grid-col-6 logo-flex">
+              <a class="agency-logo-link" href="index.html">
+                <img src="assets/il-logo.png"
+                     alt="Illinois Department of Natural Resources agency logo"
+                     class="agency-logo">
+              </a>
+              <a class="agency-name-link" href="index.html">
+                <div class="agency-name">Illinois Department of Natural Resources</div>
+              </a>
+            </div>
+            <div class="tablet:grid-col-6">
+              <nav class="grid-container">
+                <div class="grid-row header--nav-links">
+                  <div class="tablet:grid-col nav__item">
+                    <a class="usa-link" href="index.html">
+                      <img src="assets/rlp-logo.png"
+                           alt="RLP logo"
+                           class="margin-right-1"
+                           height="30">Home
+                    </a>
+                  </div>
+                  <div class="tablet:grid-col-auto nav__item">
+                    <a class="usa-link" href="search.html">
+                      <svg aria-hidden="true" focusable="false" class="svg-inline--fa fa-magnifying-glass fa-xl margin-right-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+                        <path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path>
+                      </svg>Search
+                    </a>
+                  </div>
+                  <div class="tablet:grid-col nav__item">
+                    <a class="usa-link" href="#" target="_blank">
+                      <svg aria-hidden="true" focusable="false" class="svg-inline--fa fa-life-ring fa-xl margin-right-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+                        <path fill="currentColor" d="M367.2 412.5C335.9 434.9 297.5 448 256 448s-79.9-13.1-111.2-35.5l58-58c15.8 8.6 34 13.5 53.3 13.5s37.4-4.9 53.3-13.5l58 58zm90.7 .8c33.8-43.4 54-98 54-157.3s-20.2-113.9-54-157.3c9-12.5 7.9-30.1-3.4-41.3S425.8 45 413.3 54C369.9 20.2 315.3 0 256 0S142.1 20.2 98.7 54c-12.5-9-30.1-7.9-41.3 3.4S45 86.2 54 98.7C20.2 142.1 0 196.7 0 256s20.2 113.9 54 157.3c-9 12.5-7.9 30.1 3.4 41.3S86.2 467 98.7 458c43.4 33.8 98 54 157.3 54s113.9-20.2 157.3-54c12.5 9 30.1 7.9 41.3-3.4s12.4-28.8 3.4-41.3zm-45.5-46.1l-58-58c8.6-15.8 13.5-34 13.5-53.3s-4.9-37.4-13.5-53.3l58-58C434.9 176.1 448 214.5 448 256s-13.1 79.9-35.5 111.2zM367.2 99.5l-58 58c-15.8-8.6-34-13.5-53.3-13.5s-37.4 4.9-53.3 13.5l-58-58C176.1 77.1 214.5 64 256 64s79.9 13.1 111.2 35.5zM157.5 309.3l-58 58C77.1 335.9 64 297.5 64 256s13.1-79.9 35.5-111.2l58 58c-8.6 15.8-13.5 34-13.5 53.3s4.9 37.4 13.5 53.3zM208 256a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z"></path>
+                      </svg>Help
+                    </a>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="horizontalNav main-menu">
+      <ul class="usa-nav__primary display-flex padding-left-0">
+        <li class="usa-nav__primary-item active">
+          <span class="menuItem-inner"><a href="queues.html">Queues</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="my-tasks.html">My Tasks</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="license-types.html">License Types</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="applications.html">Applications</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="settings.html">Settings</a></span>
+        </li>
+      </ul>
+    </nav>
+
+    <main id="main-content" class="grid-container">
+      <nav class="usa-breadcrumb margin-top-2" aria-label="Breadcrumbs">
+        <ol class="usa-breadcrumb__list">
+          <li class="usa-breadcrumb__list-item">
+            <a href="queues.html" class="usa-breadcrumb__link">Queues</a>
+          </li>
+          <li class="usa-breadcrumb__list-item usa-current" aria-current="page">
+            <span>Open</span>
+          </li>
+        </ol>
+      </nav>
+
+      <h1 class="page-title page-title--underlined">Open Applications</h1>
+
+      <div class="margin-top-2">
+        <div class="usa-accordion usa-accordion--bordered">
+          <h3 class="usa-accordion__heading">
+            <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="icon-key-content">
+              Icon Key
+            </button>
+          </h3>
+          <div id="icon-key-content" class="usa-accordion__content usa-prose" hidden="">
+            <p class="text-bold margin-0 margin-bottom-2">Options and Control Types</p>
+            <div class="icon-key-grid">
+              <div class="icon-key-item">
+                <img src="assets/claim-task.png" alt="" width="24" height="24">
+                <span>- Claim Task</span>
+              </div>
+              <div class="icon-key-item">
+                <img src="assets/icon-delete.png" alt="" width="24" height="24">
+                <span>- Delete Search Category</span>
+              </div>
+              <div class="icon-key-item">
+                <img src="assets/unclaim-task.png" alt="" width="24" height="24">
+                <span>- Unclaim Task</span>
+              </div>
+              <div class="icon-key-item">
+                <img src="assets/eye-icon.png" alt="" width="24" height="24">
+                <span>- View Task</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="margin-top-2">
+        <div class="category-filter-row">
+          <div class="usa-button-group usa-button-group--segmented">
+            <ul class="usa-button-group__list">
+              <li class="usa-button-group__item">
+                <button type="button" class="usa-button usa-button--outline category-filter-btn active">Open</button>
+              </li>
+              <li class="usa-button-group__item">
+                <button type="button" class="usa-button usa-button--outline category-filter-btn">Pending</button>
+              </li>
+              <li class="usa-button-group__item">
+                <button type="button" class="usa-button usa-button--outline category-filter-btn">Closed</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="margin-top-2">
+        <form class="search-form">
+          <div class="grid-row grid-gap-2">
+            <div class="tablet:grid-col-4">
+              <label class="usa-label" for="application-title">Application Title</label>
+              <select class="usa-select" id="application-title" name="application-title">
+                <option value="">Please Select</option>
+              </select>
+            </div>
+            <div class="tablet:grid-col-4">
+              <label class="usa-label" for="task-name">Task Name</label>
+              <select class="usa-select" id="task-name" name="task-name">
+                <option value="">Please Select</option>
+                <option value="background-check">Background Check</option>
+                <option value="child-support-check">Child Support Check</option>
+              </select>
+            </div>
+            <div class="tablet:grid-col-4">
+              <label class="usa-label" for="constituent-name">Constituent Name</label>
+              <input class="usa-input" id="constituent-name" name="constituent-name" type="text">
+            </div>
+          </div>
+
+          <div class="grid-row grid-gap-2 margin-top-2">
+            <div class="tablet:grid-col-4">
+              <label class="usa-label" for="submitted-by">Submitted By</label>
+              <input class="usa-input" id="submitted-by" name="submitted-by" type="text">
+            </div>
+            <div class="tablet:grid-col-4">
+              <label class="usa-label" for="submitted-date">Submitted Date</label>
+              <input class="usa-input usa-date-picker" id="submitted-date" name="submitted-date" type="date">
+            </div>
+            <div class="tablet:grid-col-4">
+              <label class="usa-label" for="user-group">User Group</label>
+              <div class="multiselect-wrapper">
+                <button type="button" class="usa-select multiselect-button" id="user-group-button" aria-haspopup="listbox" aria-expanded="false">
+                  <span class="multiselect-button-text">Please Select</span>
+                  <span class="multiselect-arrow">▼</span>
+                </button>
+                <div class="multiselect-dropdown" id="user-group-dropdown" hidden>
+                  <div class="multiselect-options">
+                    <label class="multiselect-option">
+                      <input type="checkbox" name="user-group" value="Administrators">
+                      <span>Administrators</span>
+                    </label>
+                    <label class="multiselect-option">
+                      <input type="checkbox" name="user-group" value="All User Group">
+                      <span>All User Group</span>
+                    </label>
+                    <label class="multiselect-option">
+                      <input type="checkbox" name="user-group" value="Analyst Team Group">
+                      <span>Analyst Team Group</span>
+                    </label>
+                    <label class="multiselect-option">
+                      <input type="checkbox" name="user-group" value="Back office Supervisor">
+                      <span>Back office Supervisor</span>
+                    </label>
+                    <label class="multiselect-option">
+                      <input type="checkbox" name="user-group" value="Back Office Users">
+                      <span>Back Office Users</span>
+                    </label>
+                    <label class="multiselect-option">
+                      <input type="checkbox" name="user-group" value="Demo Group">
+                      <span>Demo Group</span>
+                    </label>
+                    <label class="multiselect-option">
+                      <input type="checkbox" name="user-group" value="Group 1">
+                      <span>Group 1</span>
+                    </label>
+                    <label class="multiselect-option">
+                      <input type="checkbox" name="user-group" value="Group A">
+                      <span>Group A</span>
+                    </label>
+                    <label class="multiselect-option">
+                      <input type="checkbox" name="user-group" value="MangersQA">
+                      <span>MangersQA</span>
+                    </label>
+                    <label class="multiselect-option">
+                      <input type="checkbox" name="user-group" value="Supervisors">
+                      <span>Supervisors</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="margin-top-2">
+            <button type="submit" class="usa-button">Search</button>
+            <button type="button" class="usa-button usa-button--outline">Clear</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="margin-top-2">
+        <div class="table-controls">
+          <div class="table-controls__left">
+            <strong>Showing 1 - 5 of 5 Entries</strong>
+          </div>
+          <div class="table-controls__right">
+            <label for="entries-per-page" class="table-controls__label">Show</label>
+            <select class="usa-select table-controls__select" id="entries-per-page" name="entries-per-page">
+              <option value="100" selected>100</option>
+              <option value="50">50</option>
+              <option value="25">25</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+        </div>
+
+        <table class="usa-table usa-table--borderless usa-table--striped">
+          <thead>
+            <tr>
+              <th scope="col" role="columnheader" aria-sort="none">Application Title <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader" aria-sort="none">Task Name <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader" aria-sort="none">Constituent Name <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader" aria-sort="none">Submitted By <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader" aria-sort="none">Submitted Date <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader" aria-sort="none">User Group <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader">Controls</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Business Application 123</td>
+              <td>Task 1 of 1</td>
+              <td>John Smith</td>
+              <td>Alan Jones</td>
+              <td>03/15/2026</td>
+              <td>License Reviewers</td>
+              <td>
+                <a href="task-detail.html?id=1" class="icon-button" aria-label="View Task">
+                  <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button" aria-label="Claim Task">
+                  <img src="assets/claim-task.png" alt="" width="30" height="30">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Professional Engineer Application</td>
+              <td>Task 1 of 2</td>
+              <td>Maria Garcia</td>
+              <td>Sarah Johnson</td>
+              <td>03/16/2026</td>
+              <td>Application Processors</td>
+              <td>
+                <a href="task-detail.html?id=2" class="icon-button" aria-label="View Task">
+                  <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button" aria-label="Claim Task">
+                  <img src="assets/claim-task.png" alt="" width="30" height="30">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Contractor License Renewal</td>
+              <td>Task 1 of 1</td>
+              <td>Robert Williams</td>
+              <td>Michael Chen</td>
+              <td>03/17/2026</td>
+              <td>License Reviewers</td>
+              <td>
+                <a href="task-detail.html?id=3" class="icon-button" aria-label="View Task">
+                  <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button" aria-label="Claim Task">
+                  <img src="assets/claim-task.png" alt="" width="30" height="30">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Business Application 456</td>
+              <td>Task 2 of 2</td>
+              <td>Jennifer Lee</td>
+              <td>Alan Jones</td>
+              <td>03/18/2026</td>
+              <td>Application Processors</td>
+              <td>
+                <a href="task-detail.html?id=4" class="icon-button" aria-label="View Task">
+                  <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button" aria-label="Claim Task">
+                  <img src="assets/claim-task.png" alt="" width="30" height="30">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Professional Engineer Application</td>
+              <td>Task 1 of 1</td>
+              <td>David Brown</td>
+              <td>Sarah Johnson</td>
+              <td>03/19/2026</td>
+              <td>License Reviewers</td>
+              <td>
+                <a href="task-detail.html?id=5" class="icon-button" aria-label="View Task">
+                  <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button" aria-label="Claim Task">
+                  <img src="assets/claim-task.png" alt="" width="30" height="30">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <nav aria-label="Pagination" class="usa-pagination" style="display: flex; justify-content: center; margin-top: 2rem;">
+          <ul class="usa-pagination__list">
+            <li class="usa-pagination__item usa-pagination__arrow">
+              <a href="#" class="usa-pagination__link usa-pagination__previous-page" aria-label="Previous page">
+                <span>‹</span>
+                <span class="usa-pagination__link-text">Previous</span>
+              </a>
+            </li>
+            <li class="usa-pagination__item usa-pagination__page-no">
+              <a href="#" class="usa-pagination__button usa-current" aria-label="Page 1" aria-current="page">1</a>
+            </li>
+            <li class="usa-pagination__item usa-pagination__page-no">
+              <a href="#" class="usa-pagination__button" aria-label="Page 2">2</a>
+            </li>
+            <li class="usa-pagination__item usa-pagination__page-no">
+              <a href="#" class="usa-pagination__button" aria-label="Page 3">3</a>
+            </li>
+            <li class="usa-pagination__item usa-pagination__page-no">
+              <a href="#" class="usa-pagination__button" aria-label="Page 4">4</a>
+            </li>
+            <li class="usa-pagination__item usa-pagination__page-no">
+              <a href="#" class="usa-pagination__button" aria-label="Page 5">5</a>
+            </li>
+            <li class="usa-pagination__item usa-pagination__arrow">
+              <a href="#" class="usa-pagination__link usa-pagination__next-page" aria-label="Next page">
+                <span class="usa-pagination__link-text">Next</span>
+                <span>›</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+    </main>
+  </div>
+
+  <script>
+    // Accordion functionality
+    document.querySelectorAll('.usa-accordion__button').forEach(button => {
+      button.addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        const content = document.getElementById(this.getAttribute('aria-controls'));
+
+        if (expanded) {
+          this.setAttribute('aria-expanded', 'false');
+          content.setAttribute('hidden', '');
+        } else {
+          this.setAttribute('aria-expanded', 'true');
+          content.removeAttribute('hidden');
+        }
+      });
+    });
+
+    // Multi-select functionality
+    (function() {
+      const button = document.getElementById('user-group-button');
+      const dropdown = document.getElementById('user-group-dropdown');
+      const buttonText = button.querySelector('.multiselect-button-text');
+      const checkboxes = dropdown.querySelectorAll('input[type="checkbox"]');
+
+      // Toggle dropdown
+      button.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+        if (isExpanded) {
+          this.setAttribute('aria-expanded', 'false');
+          dropdown.setAttribute('hidden', '');
+        } else {
+          this.setAttribute('aria-expanded', 'true');
+          dropdown.removeAttribute('hidden');
+        }
+      });
+
+      // Update button text when selections change
+      function updateButtonText() {
+        const selected = Array.from(checkboxes)
+          .filter(cb => cb.checked)
+          .map(cb => cb.value);
+
+        if (selected.length === 0) {
+          buttonText.textContent = 'Please Select';
+        } else if (selected.length === 1) {
+          buttonText.textContent = selected[0];
+        } else {
+          buttonText.textContent = `${selected.length} selected`;
+        }
+      }
+
+      // Handle checkbox changes
+      checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', updateButtonText);
+      });
+
+      // Prevent dropdown from closing when clicking inside
+      dropdown.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!button.contains(e.target) && !dropdown.contains(e.target)) {
+          button.setAttribute('aria-expanded', 'false');
+          dropdown.setAttribute('hidden', '');
+        }
+      });
+
+      // Handle clear button to reset multi-select
+      const clearButton = document.querySelector('.usa-button--outline');
+      if (clearButton) {
+        clearButton.addEventListener('click', function() {
+          checkboxes.forEach(cb => cb.checked = false);
+          updateButtonText();
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

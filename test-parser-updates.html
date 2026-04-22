@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Parser Updates Test</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .test-section {
+      margin-bottom: 3rem;
+      border: 1px solid #ddd;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+    }
+    .test-case {
+      background-color: #f9f9f9;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 0.3rem;
+    }
+    .pass { color: #00a000; font-weight: bold; }
+    .fail { color: #d00; font-weight: bold; }
+    code {
+      background-color: #f0f0f0;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.2rem;
+      font-family: monospace;
+    }
+    .result {
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 0.3rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Parser Updates Test - MS & ADDR</h1>
+
+  <div class="test-section">
+    <h2>Multi-Select (ms) Tests</h2>
+    <div id="ms-tests"></div>
+  </div>
+
+  <div class="test-section">
+    <h2>Address (addr) Tests</h2>
+    <div id="addr-tests"></div>
+  </div>
+
+  <script>
+    // Parser functions (copied from question-builder.js)
+
+    function fail(rowNumber, message) {
+      return {
+        ok: false,
+        error: `Row ${rowNumber}: ${message}`,
+        rowNumber
+      };
+    }
+
+    function parseMSLine(line, rowNumber) {
+      const tokens = line.split("|").map(t => t.trim());
+
+      if (tokens.length > 6) {
+        return fail(rowNumber, "Too many fields for ms. Expected 6 or fewer.");
+      }
+
+      const type = (tokens[0] || "").toLowerCase();
+      if (type !== "ms") {
+        return fail(rowNumber, `Unknown type "${tokens[0]}". Expected ms.`);
+      }
+
+      const question = tokens[1] || "";
+      if (!question) {
+        return fail(rowNumber, "Question text is required for ms.");
+      }
+
+      const requiredRaw = (tokens[2] || "").toLowerCase();
+      let required;
+      if (requiredRaw === "n" || requiredRaw === "no") {
+        required = false;
+      } else if (requiredRaw === "y" || requiredRaw === "yes") {
+        required = true;
+      } else if (requiredRaw === "") {
+        required = false;
+      } else {
+        return fail(rowNumber, "Required must be y or n.");
+      }
+
+      const choicesRaw = tokens[3] || "";
+      if (!choicesRaw) {
+        return fail(rowNumber, "Choices are required for ms.");
+      }
+
+      const choicesMatch = choicesRaw.match(/^choices\((.*)\)$/i);
+      if (!choicesMatch) {
+        return fail(rowNumber, "Choices must use choices(option1,option2,...).");
+      }
+
+      const choicesContent = choicesMatch[1];
+      if (!choicesContent || choicesContent.trim() === "") {
+        return fail(rowNumber, "Multi-Select must include at least 2 choices.");
+      }
+
+      const choices = choicesContent.split(',').map(c => c.trim());
+
+      if (choices.some(c => c === "")) {
+        return fail(rowNumber, "Choices cannot contain blank values.");
+      }
+
+      if (choices.length < 2) {
+        return fail(rowNumber, "Multi-Select must include at least 2 choices.");
+      }
+
+      let minSelections = null;
+      let maxSelections = null;
+      const minMaxRaw = tokens[4] || "";
+      if (minMaxRaw) {
+        const minMaxMatch = minMaxRaw.match(/^min\/max\((\d+)\/(\d+)\)$/i);
+        if (!minMaxMatch) {
+          return fail(rowNumber, "Min/max must use min/max(x/y).");
+        }
+
+        const minValue = minMaxMatch[1];
+        const maxValue = minMaxMatch[2];
+
+        const minNum = parseInt(minValue, 10);
+        const maxNum = parseInt(maxValue, 10);
+
+        if (isNaN(minNum) || isNaN(maxNum)) {
+          return fail(rowNumber, "Min/max values must be whole numbers.");
+        }
+
+        if (minNum < 0) {
+          return fail(rowNumber, "Minimum selections cannot be less than 0.");
+        }
+
+        if (maxNum < 1) {
+          return fail(rowNumber, "Maximum selections must be at least 1.");
+        }
+
+        if (minNum > maxNum) {
+          return fail(rowNumber, "Minimum selections cannot exceed maximum selections.");
+        }
+
+        if (maxNum > choices.length) {
+          return fail(rowNumber, "Maximum selections cannot exceed the number of choices.");
+        }
+
+        minSelections = minNum;
+        maxSelections = maxNum;
+      }
+
+      const instructions = tokens[5] || "";
+
+      return {
+        ok: true,
+        data: {
+          type: "ms",
+          question,
+          required: required ? "y" : "n",
+          choices,
+          minSelections,
+          maxSelections,
+          instructions,
+          rowNumber
+        }
+      };
+    }
+
+    function parseADDRLine(line, rowNumber) {
+      const tokens = line.split("|").map(t => t.trim());
+
+      if (tokens.length > 5) {
+        return fail(rowNumber, "Too many fields for addr. Expected 5 or fewer.");
+      }
+
+      const type = (tokens[0] || "").toLowerCase();
+      if (type !== "addr") {
+        return fail(rowNumber, `Unknown type "${tokens[0]}". Expected addr.`);
+      }
+
+      const question = tokens[1] || "";
+      if (!question) {
+        return fail(rowNumber, "Question text is required for addr.");
+      }
+
+      const requiredRaw = (tokens[2] || "").toLowerCase();
+      let required;
+      if (requiredRaw === "n" || requiredRaw === "no") {
+        required = false;
+      } else if (requiredRaw === "y" || requiredRaw === "yes") {
+        required = true;
+      } else if (requiredRaw === "") {
+        required = false;
+      } else {
+        return fail(rowNumber, "Required must be y or n.");
+      }
+
+      let repeatable = false;
+      const repeatRaw = tokens[3] || "";
+      if (repeatRaw) {
+        const repeatMatch = repeatRaw.match(/^repeat\((y|n)\)$/i);
+        if (!repeatMatch) {
+          return fail(rowNumber, "Repeat must use repeat(y) or repeat(n).");
+        }
+        repeatable = repeatMatch[1].toLowerCase() === 'y';
+      }
+
+      const instructions = tokens[4] || "";
+
+      // Compatibility layer: provide default field set for UI builder
+      const defaultFields = [
+        { name: 'First Name', required: 'n' },
+        { name: 'Last Name', required: 'n' },
+        { name: 'Address Line 1', required: 'n' },
+        { name: 'Address Line 2', required: 'n' },
+        { name: 'City/APO/DPO/FPO', required: 'n' },
+        { name: 'State', required: 'n' },
+        { name: 'Zip Code', required: 'n' }
+      ];
+
+      const minFieldSets = required ? "1" : "0";
+
+      return {
+        ok: true,
+        data: {
+          type: "addr",
+          question,
+          required: required ? "y" : "n",
+          repeatable,
+          instructions,
+          fields: defaultFields,
+          minFieldSets,
+          rowNumber
+        }
+      };
+    }
+
+    // Test cases
+    const msTestCases = [
+      {
+        name: "MS - Pass: With min/max and instructions",
+        input: "ms | Which types of assistance are you requesting? | y | choices(Rent assistance,Utility assistance,Food assistance,Transportation,Medical) | min/max(1/3) | Select up to 3",
+        shouldPass: true
+      },
+      {
+        name: "MS - Pass: Without min/max, with instructions",
+        input: "ms | Which documents are you submitting? | n | choices(ID,Lease agreement,Utility bill,Pay stubs,Bank statements) | | Select all that apply",
+        shouldPass: true
+      },
+      {
+        name: "MS - Fail: Only 1 choice (min 2 required)",
+        input: "ms | Which types of assistance are you requesting? | y | choices(Rent assistance) | min/max(1/1) | Select up to 3",
+        shouldPass: false
+      },
+      {
+        name: "MS - Fail: Blank choice value",
+        input: "ms | Which types of assistance are you requesting? | y | choices(Rent assistance,,Utility assistance) | min/max(1/2) | Select up to 2",
+        shouldPass: false
+      },
+      {
+        name: "MS - Fail: Min > Max",
+        input: "ms | Which types of assistance are you requesting? | y | choices(Rent assistance,Utility assistance) | min/max(3/2) | Invalid",
+        shouldPass: false
+      }
+    ];
+
+    const addrTestCases = [
+      {
+        name: "ADDR - Pass: Required, not repeatable",
+        input: "addr | Current address | y | repeat(n) |",
+        shouldPass: true
+      },
+      {
+        name: "ADDR - Pass: Optional, repeatable with instructions",
+        input: "addr | Previous addresses (last 2 years) | n | repeat(y) | Add all prior addresses",
+        shouldPass: true
+      },
+      {
+        name: "ADDR - Fail: Empty question",
+        input: "addr | | y | repeat(n) |",
+        shouldPass: false
+      },
+      {
+        name: "ADDR - Fail: Invalid repeat format",
+        input: "addr | Current address | y | y |",
+        shouldPass: false
+      }
+    ];
+
+    // Run tests
+    function runTests(testCases, parser, containerId) {
+      const container = document.getElementById(containerId);
+      testCases.forEach((test, index) => {
+        const result = parser(test.input, index + 1);
+        const passed = result.ok === test.shouldPass;
+
+        const testDiv = document.createElement('div');
+        testDiv.className = 'test-case';
+        testDiv.innerHTML = `
+          <div><strong>${test.name}</strong> <span class="${passed ? 'pass' : 'fail'}">${passed ? 'PASS' : 'FAIL'}</span></div>
+          <div><code>${test.input}</code></div>
+          <div class="result">
+            ${result.ok
+              ? `✓ Parsed successfully:<br><pre>${JSON.stringify(result.data, null, 2)}</pre>`
+              : `✗ Error: ${result.error}`
+            }
+          </div>
+        `;
+        container.appendChild(testDiv);
+      });
+    }
+
+    runTests(msTestCases, parseMSLine, 'ms-tests');
+    runTests(addrTestCases, parseADDRLine, 'addr-tests');
+  </script>
+</body>
+</html>

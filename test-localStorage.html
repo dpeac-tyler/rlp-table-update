@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test localStorage</title>
+</head>
+<body>
+  <h1>LocalStorage Test</h1>
+  <button id="save">Save Test Letter</button>
+  <button id="load">Load Letters</button>
+  <button id="clear">Clear Storage</button>
+  <div id="output"></div>
+
+  <script>
+    document.getElementById('save').addEventListener('click', function() {
+      const formData = {
+        id: 'LETTER-' + Date.now(),
+        visibility: 'Agency Only',
+        letterType: 'Test Letter',
+        deliveryMethod: 'Standard',
+        generatedDate: new Date().toISOString().split('T')[0],
+        mailedDate: '',
+        licenseType: 'Hunting',
+        recordType: 'License',
+        associatedRecord: '',
+        trackingNumber: '',
+        deliveryAttempts: 0,
+        status: 'Generated',
+        deliveryNotes: 'Test notes'
+      };
+
+      let letters = JSON.parse(localStorage.getItem('letters') || '[]');
+      letters.unshift(formData);
+      localStorage.setItem('letters', JSON.stringify(letters));
+      localStorage.setItem('showLetterNotification', 'true');
+
+      alert('Saved! Check console.');
+      console.log('Saved:', formData);
+    });
+
+    document.getElementById('load').addEventListener('click', function() {
+      const letters = JSON.parse(localStorage.getItem('letters') || '[]');
+      const showNotif = localStorage.getItem('showLetterNotification');
+      document.getElementById('output').innerHTML =
+        `<h2>Letters (${letters.length}):</h2>
+         <pre>${JSON.stringify(letters, null, 2)}</pre>
+         <h2>Show Notification: ${showNotif}</h2>`;
+      console.log('Letters:', letters);
+      console.log('Show notification:', showNotif);
+    });
+
+    document.getElementById('clear').addEventListener('click', function() {
+      localStorage.removeItem('letters');
+      localStorage.removeItem('showLetterNotification');
+      document.getElementById('output').innerHTML = '<p>Cleared!</p>';
+      console.log('Cleared localStorage');
+    });
+  </script>
+</body>
+</html>

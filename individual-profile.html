@@ -1,0 +1,2569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Individual Profile - RLP</title>
+<!-- Custom RLP Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .status-generated { color: #8F5800; }
+    .status-mailed { color: #8F5800; }
+    .status-received { color: #417505; }
+    .status-returned { color: #80252A; }
+    .status-failed { color: #CD2026; }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <div class="header management">
+      <a class="usa-skipnav" href="#main-content">Skip to Main Content</a>
+
+      <header class="usa-header">
+        <div class="skinny-header-container">
+          <div class="grid-container">
+            <div class="welcome-agency usa-banner__header-text">
+              Welcome DNR! &nbsp;<a href="#"><u>Logout</u></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="border-bottom-2px border-base-lighter">
+        <div class="grid-container navigation">
+          <div class="grid-row">
+            <div class="tablet:grid-col-6 logo-flex">
+              <a class="agency-logo-link" href="index.html">
+                <img src="assets/il-logo.png"
+                     alt="Illinois Department of Natural Resources agency logo"
+                     class="agency-logo">
+              </a>
+              <a class="agency-name-link" href="index.html">
+                <div class="agency-name">Illinois Department of Natural Resources</div>
+              </a>
+            </div>
+            <div class="tablet:grid-col-6">
+              <nav class="grid-container">
+                <div class="grid-row header--nav-links">
+                  <div class="tablet:grid-col nav__item">
+                    <a class="usa-link" href="index.html">
+                      <img src="assets/rlp-logo.png"
+                           alt="RLP logo"
+                           class="margin-right-1"
+                           height="30">Home
+                    </a>
+                  </div>
+                  <div class="tablet:grid-col-auto nav__item">
+                    <a class="usa-link" href="search.html">
+                      <svg aria-hidden="true" focusable="false" class="svg-inline--fa fa-magnifying-glass fa-xl margin-right-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+                        <path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path>
+                      </svg>Search
+                    </a>
+                  </div>
+                  <div class="tablet:grid-col nav__item">
+                    <a class="usa-link" href="#" target="_blank">
+                      <svg aria-hidden="true" focusable="false" class="svg-inline--fa fa-life-ring fa-xl margin-right-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+                        <path fill="currentColor" d="M367.2 412.5C335.9 434.9 297.5 448 256 448s-79.9-13.1-111.2-35.5l58-58c15.8 8.6 34 13.5 53.3 13.5s37.4-4.9 53.3-13.5l58 58zm90.7 .8c33.8-43.4 54-98 54-157.3s-20.2-113.9-54-157.3c9-12.5 7.9-30.1-3.4-41.3S425.8 45 413.3 54C369.9 20.2 315.3 0 256 0S142.1 20.2 98.7 54c-12.5-9-30.1-7.9-41.3 3.4S45 86.2 54 98.7C20.2 142.1 0 196.7 0 256s20.2 113.9 54 157.3c-9 12.5-7.9 30.1 3.4 41.3S86.2 467 98.7 458c43.4 33.8 98 54 157.3 54s113.9-20.2 157.3-54c12.5 9 30.1 7.9 41.3-3.4s12.4-28.8 3.4-41.3zm-45.5-46.1l-58-58c8.6-15.8 13.5-34 13.5-53.3s-4.9-37.4-13.5-53.3l58-58C434.9 176.1 448 214.5 448 256s-13.1 79.9-35.5 111.2zM367.2 99.5l-58 58c-15.8-8.6-34-13.5-53.3-13.5s-37.4 4.9-53.3 13.5l-58-58C176.1 77.1 214.5 64 256 64s79.9 13.1 111.2 35.5zM157.5 309.3l-58 58C77.1 335.9 64 297.5 64 256s13.1-79.9 35.5-111.2l58 58c-8.6 15.8-13.5 34-13.5 53.3s4.9 37.4 13.5 53.3zM208 256a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z"></path>
+                      </svg>Help
+                    </a>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="horizontalNav main-menu">
+      <ul class="usa-nav__primary display-flex padding-left-0">
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="queues.html">Queues</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="my-tasks.html">My Tasks</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="license-types.html">License Types</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="applications.html">Applications</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="settings.html">Settings</a></span>
+        </li>
+      </ul>
+    </nav>
+
+    <main id="main-content" class="grid-container">
+      <nav class="usa-breadcrumb margin-top-2" aria-label="Breadcrumbs">
+        <ol class="usa-breadcrumb__list">
+          <li class="usa-breadcrumb__list-item">
+            <a href="search.html" class="usa-breadcrumb__link">Back to Submission Search Results</a>
+          </li>
+          <li class="usa-breadcrumb__list-item usa-current" aria-current="page">
+            <span id="profile-name">Sarah Johnson</span>
+          </li>
+        </ol>
+      </nav>
+
+      <div class="profile-header">
+        <h1 class="profile-header__title">Profile</h1>
+      </div>
+
+      <div class="profile-content">
+        <div class="profile-content__header">
+          <h2 class="profile-content__heading">Individual Profile</h2>
+          <button type="button" class="usa-button usa-button--secondary profile-delete-btn">Delete Account</button>
+        </div>
+
+        <div class="profile-info">
+          <div class="profile-info__column">
+            <div class="profile-info__row">
+              <span class="profile-info__label">Customer Number:</span>
+              <span class="profile-info__value">000172601</span>
+            </div>
+            <div class="profile-info__row">
+              <span class="profile-info__label">First Name:</span>
+              <span class="profile-info__value">Sarah</span>
+            </div>
+            <div class="profile-info__row">
+              <span class="profile-info__label">Last Name:</span>
+              <span class="profile-info__value">Johnson</span>
+            </div>
+            <div class="profile-info__row">
+              <span class="profile-info__label">Email:</span>
+              <span class="profile-info__value">lisa.benavides@tylertech.com | <a href="#" class="usa-link">Change Email</a></span>
+            </div>
+            <div class="profile-info__row">
+              <span class="profile-info__label">Username:</span>
+              <span class="profile-info__value">qa.ind.10900 (Active)</span>
+            </div>
+          </div>
+
+          <div class="profile-info__column">
+            <div class="profile-info__row">
+              <span class="profile-info__label">Mailing Address Line 1:</span>
+              <span class="profile-info__value">648 East Rocky Old Road</span>
+            </div>
+            <div class="profile-info__row">
+              <span class="profile-info__label">Address Line 2:</span>
+              <span class="profile-info__value">Debitis in quos atqu</span>
+            </div>
+            <div class="profile-info__row">
+              <span class="profile-info__label">City:</span>
+              <span class="profile-info__value">Quae nobis sunt ut m</span>
+            </div>
+            <div class="profile-info__row">
+              <span class="profile-info__label">State:</span>
+              <span class="profile-info__value">WV</span>
+            </div>
+            <div class="profile-info__row">
+              <span class="profile-info__label">Zip Code:</span>
+              <span class="profile-info__value">95490</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-tabs">
+          <button type="button" class="profile-tab">Certificates</button>
+          <button type="button" class="profile-tab">Submissions</button>
+          <button type="button" class="profile-tab">Assets</button>
+          <button type="button" class="profile-tab">Documents</button>
+          <button type="button" class="profile-tab">Affiliations</button>
+          <button type="button" class="profile-tab">Invoices</button>
+          <button type="button" class="profile-tab">Inspections</button>
+          <button type="button" class="profile-tab">Files</button>
+          <button type="button" class="profile-tab active">Correspondence</button>
+        </div>
+
+        <div class="profile-tab-content">
+          <!-- Certificates Tab Content -->
+          <div id="certificates-tab" class="tab-panel">
+          <div class="usa-accordion usa-accordion--bordered margin-top-2">
+            <h3 class="usa-accordion__heading">
+              <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="profile-icon-key">
+                Icon Key
+              </button>
+            </h3>
+            <div id="profile-icon-key" class="usa-accordion__content usa-prose">
+              <p class="text-bold margin-0 margin-bottom-2">Options and Control Types</p>
+              <div class="icon-key-grid">
+                <div class="icon-key-item">
+                  <img src="assets/download-certificate.png" alt="" width="24" height="24">
+                  <span>- Download Certificate</span>
+                </div>
+                <div class="icon-key-item">
+                  <img src="assets/manage-agency-license-fields.png" alt="" width="24" height="24">
+                  <span>- Manage Agency License Fields</span>
+                </div>
+                <div class="icon-key-item">
+                  <img src="assets/manage-license.png" alt="" width="24" height="24">
+                  <span>- Manage License</span>
+                </div>
+                <div class="icon-key-item">
+                  <img src="assets/regenerate-certificate.png" alt="" width="24" height="24">
+                  <span>- Regenerate Certificate</span>
+                </div>
+                <div class="icon-key-item">
+                  <img src="assets/view-history.png" alt="" width="24" height="24">
+                  <span>- View History</span>
+                </div>
+                <div class="icon-key-item">
+                  <img src="assets/view-submission.png" alt="" width="24" height="24">
+                  <span>- View Submission</span>
+                </div>
+                <div class="icon-key-item">
+                  <img src="assets/create-invoice.png" alt="" width="24" height="24">
+                  <span>- Create Invoice</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="margin-top-2">
+            <div class="table-controls">
+              <div class="table-controls__left">
+                <strong>Showing 1 - 1 of 1 Entries</strong>
+              </div>
+              <div class="table-controls__right">
+                <label for="entries-per-page-profile" class="table-controls__label">Show</label>
+                <select class="usa-select table-controls__select" id="entries-per-page-profile" name="entries-per-page-profile">
+                  <option value="10" selected>10</option>
+                  <option value="25">25</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                </select>
+              </div>
+            </div>
+
+            <table class="usa-table usa-table--borderless usa-table--striped">
+              <thead>
+                <tr>
+                  <th scope="col" role="columnheader" aria-sort="none">License Type <span class="sort-arrows"></span></th>
+                  <th scope="col" role="columnheader" aria-sort="none">License Number <span class="sort-arrows"></span></th>
+                  <th scope="col" role="columnheader" aria-sort="none">Application Type <span class="sort-arrows"></span></th>
+                  <th scope="col" role="columnheader" aria-sort="none">Start Date <span class="sort-arrows"></span></th>
+                  <th scope="col" role="columnheader" aria-sort="none">Expiration Date <span class="sort-arrows"></span></th>
+                  <th scope="col" role="columnheader" aria-sort="none">Status <span class="sort-arrows"></span></th>
+                  <th scope="col" role="columnheader">Controls</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Eligibility flag test</td>
+                  <td>00000004</td>
+                  <td>Original (One)</td>
+                  <td>12/31/2022</td>
+                  <td>08/12/2025</td>
+                  <td><span class="status-active">Active</span></td>
+                  <td>
+                    <a href="#" class="icon-button" aria-label="Download Certificate">
+                      <img src="assets/download-certificate.png" alt="" width="30" height="30">
+                    </a>
+                    <a href="#" class="icon-button" aria-label="Manage Agency License Fields">
+                      <img src="assets/manage-agency-license-fields.png" alt="" width="30" height="30">
+                    </a>
+                    <a href="#" class="icon-button" aria-label="Manage License">
+                      <img src="assets/manage-license.png" alt="" width="30" height="30">
+                    </a>
+                    <a href="#" class="icon-button" aria-label="Regenerate Certificate">
+                      <img src="assets/regenerate-certificate.png" alt="" width="30" height="30">
+                    </a>
+                    <a href="#" class="icon-button" aria-label="View History">
+                      <img src="assets/view-history.png" alt="" width="30" height="30">
+                    </a>
+                    <a href="#" class="icon-button" aria-label="View Submission">
+                      <img src="assets/view-submission.png" alt="" width="30" height="30">
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>
+          <!-- End Certificates Tab -->
+
+          <!-- Inspections Tab Content -->
+          <div id="inspections-tab" class="tab-panel" hidden>
+            <div class="usa-accordion usa-accordion--bordered margin-top-2">
+              <h3 class="usa-accordion__heading">
+                <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="inspections-icon-key">
+                  Icon Key
+                </button>
+              </h3>
+              <div id="inspections-icon-key" class="usa-accordion__content usa-prose">
+                <p class="text-bold margin-0 margin-bottom-2">Options and Control Types</p>
+                <div class="icon-key-grid">
+                  <div class="icon-key-item">
+                    <img src="assets/eye-icon.png" alt="" width="24" height="24">
+                    <span>- View Inspection</span>
+                  </div>
+                  <div class="icon-key-item">
+                    <img src="assets/edit-icon.png" alt="" width="24" height="24">
+                    <span>- Manage Inspection (External Link)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="margin-top-2">
+              <div class="category-filter-row">
+                <div class="usa-button-group usa-button-group--segmented">
+                  <ul class="usa-button-group__list">
+                    <li class="usa-button-group__item">
+                      <button type="button" class="usa-button usa-button--outline category-filter-btn active" data-category="Application">Application</button>
+                    </li>
+                    <li class="usa-button-group__item">
+                      <button type="button" class="usa-button usa-button--outline category-filter-btn" data-category="Case">Case</button>
+                    </li>
+                    <li class="usa-button-group__item">
+                      <button type="button" class="usa-button usa-button--outline category-filter-btn" data-category="Field">Field</button>
+                    </li>
+                    <li class="usa-button-group__item">
+                      <button type="button" class="usa-button usa-button--outline category-filter-btn" data-category="Routine">Routine</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="table-controls">
+                <div class="table-controls__left">
+                  <strong id="inspection-count">Showing 1 - 2 of 2 Entries</strong>
+                </div>
+                <div class="table-controls__right">
+                  <label for="column-header-select" class="table-controls__label">Set Column Headers</label>
+                  <div class="column-header-dropdown">
+                    <button type="button" class="column-header-select" id="column-header-select">Please Select</button>
+                    <div class="column-header-menu" hidden>
+                      <label class="column-header-option">
+                        <input type="checkbox" class="column-checkbox" data-column="0" checked>
+                        <span>ID</span>
+                      </label>
+                      <label class="column-header-option">
+                        <input type="checkbox" class="column-checkbox" data-column="1" checked>
+                        <span>Type</span>
+                      </label>
+                      <label class="column-header-option">
+                        <input type="checkbox" class="column-checkbox" data-column="2" checked>
+                        <span>Outcome</span>
+                      </label>
+                      <label class="column-header-option">
+                        <input type="checkbox" class="column-checkbox" data-column="3" checked>
+                        <span>Due Date</span>
+                      </label>
+                      <label class="column-header-option">
+                        <input type="checkbox" class="column-checkbox" data-column="4" checked>
+                        <span>Completion Date</span>
+                      </label>
+                      <label class="column-header-option">
+                        <input type="checkbox" class="column-checkbox" data-column="5" checked>
+                        <span>Inspection Subject</span>
+                      </label>
+                      <label class="column-header-option">
+                        <input type="checkbox" class="column-checkbox" data-column="6">
+                        <span>Inspection Site</span>
+                      </label>
+                      <label class="column-header-option">
+                        <input type="checkbox" class="column-checkbox" data-column="7">
+                        <span>Origin</span>
+                      </label>
+                      <label class="column-header-option">
+                        <input type="checkbox" class="column-checkbox" data-column="8">
+                        <span>Related Record</span>
+                      </label>
+                      <label class="column-header-option">
+                        <input type="checkbox" class="column-checkbox" data-column="9" checked>
+                        <span>Status</span>
+                      </label>
+                    </div>
+                  </div>
+                  <label for="entries-per-page-inspections" class="table-controls__label">Show</label>
+                  <select class="usa-select table-controls__select" id="entries-per-page-inspections" name="entries-per-page-inspections">
+                    <option value="100" selected>100</option>
+                    <option value="50">50</option>
+                    <option value="25">25</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+              </div>
+
+              <table class="usa-table usa-table--borderless" id="inspections-table">
+                <thead>
+                  <tr>
+                    <th scope="col" role="columnheader" aria-sort="none">ID <span class="sort-arrows"></span></th>
+                    <th scope="col" role="columnheader" aria-sort="none">Type <span class="sort-arrows"></span></th>
+                    <th scope="col" role="columnheader" aria-sort="none">Outcome <span class="sort-arrows"></span></th>
+                    <th scope="col" role="columnheader" aria-sort="none">Due Date <span class="sort-arrows"></span></th>
+                    <th scope="col" role="columnheader" aria-sort="none">Completion Date <span class="sort-arrows"></span></th>
+                    <th scope="col" role="columnheader" aria-sort="none">Inspection Subject <span class="sort-arrows"></span></th>
+                    <th scope="col" role="columnheader" aria-sort="none" style="display: none;">Inspection Site <span class="sort-arrows"></span></th>
+                    <th scope="col" role="columnheader" aria-sort="none" style="display: none;">Origin <span class="sort-arrows"></span></th>
+                    <th scope="col" role="columnheader" aria-sort="none" style="display: none;">Related Record <span class="sort-arrows"></span></th>
+                    <th scope="col" role="columnheader" aria-sort="none">Status <span class="sort-arrows"></span></th>
+                    <th scope="col" role="columnheader">Controls</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-category="Application">
+                    <td>INS-2026-001</td>
+                    <td>Fire Safety</td>
+                    <td><span class="status-approved">Pass</span></td>
+                    <td>03/15/2026</td>
+                    <td>03/10/2026</td>
+                    <td>Sarah Johnson</td>
+                    <td style="display: none;">100 Congress Ave, Austin, TX 78748</td>
+                    <td style="display: none;">Application</td>
+                    <td style="display: none;">APP-2026-12345</td>
+                    <td><span class="status-completed">Completed</span></td>
+                    <td>
+                      <a href="view-inspection.html?tab=inspections" class="icon-button" aria-label="View Inspection">
+                        <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                      </a>
+                      <a href="#" class="icon-button" aria-label="Edit Inspection">
+                        <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                      </a>
+                    </td>
+                  </tr>
+                  <tr data-category="Routine">
+                    <td>INS-2026-002</td>
+                    <td>Water Quality</td>
+                    <td></td>
+                    <td>04/15/2026</td>
+                    <td></td>
+                    <td>Lake Springfield</td>
+                    <td style="display: none;">Lake Springfield, IL 62707</td>
+                    <td style="display: none;">Routine</td>
+                    <td style="display: none;">ROU-2026-Q2</td>
+                    <td><span class="status-in-progress">In Progress</span></td>
+                    <td>
+                      <a href="view-inspection.html?tab=inspections" class="icon-button" aria-label="View Inspection">
+                        <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                      </a>
+                      <a href="#" class="icon-button" aria-label="Edit Inspection">
+                        <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                      </a>
+                    </td>
+                  </tr>
+                  <tr data-category="Application">
+                    <td>INS-2026-003</td>
+                    <td>License Verification</td>
+                    <td></td>
+                    <td>04/20/2026</td>
+                    <td></td>
+                    <td>John Smith</td>
+                    <td style="display: none;">456 Oak Street, Springfield, IL 62701</td>
+                    <td style="display: none;">Application</td>
+                    <td style="display: none;">APP-2026-12346</td>
+                    <td><span class="status-assigned">Assigned</span></td>
+                    <td>
+                      <a href="view-inspection.html?tab=inspections" class="icon-button" aria-label="View Inspection">
+                        <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                      </a>
+                      <a href="#" class="icon-button" aria-label="Edit Inspection">
+                        <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                      </a>
+                    </td>
+                  </tr>
+                  <tr data-category="Case">
+                    <td>INS-2025-089</td>
+                    <td>Equipment</td>
+                    <td><span class="status-denied">Fail</span></td>
+                    <td>12/15/2025</td>
+                    <td>12/20/2025</td>
+                    <td>DNR Facility A</td>
+                    <td style="display: none;">200 Industrial Park, Chicago, IL 60601</td>
+                    <td style="display: none;">Case</td>
+                    <td style="display: none;">CAS-2025-0456</td>
+                    <td><span class="status-terminated">Terminated</span></td>
+                    <td>
+                      <a href="view-inspection.html?tab=inspections" class="icon-button" aria-label="View Inspection">
+                        <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                      </a>
+                      <a href="#" class="icon-button" aria-label="Edit Inspection">
+                        <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                      </a>
+                    </td>
+                  </tr>
+                  <tr data-category="Field">
+                    <td>INS-2026-004</td>
+                    <td>Wildlife Habitat</td>
+                    <td></td>
+                    <td>03/30/2026</td>
+                    <td></td>
+                    <td>Shawnee National Forest</td>
+                    <td style="display: none;">Shawnee National Forest, IL 62995</td>
+                    <td style="display: none;">Field</td>
+                    <td style="display: none;">FLD-2026-0078</td>
+                    <td><span class="status-in-review">In Review</span></td>
+                    <td>
+                      <a href="view-inspection.html?tab=inspections" class="icon-button" aria-label="View Inspection">
+                        <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                      </a>
+                      <a href="#" class="icon-button" aria-label="Edit Inspection">
+                        <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- End Inspections Tab -->
+
+          <!-- Files Tab Content -->
+          <div id="document-locker-tab" class="tab-panel" hidden>
+            <div class="usa-accordion usa-accordion--bordered margin-top-2">
+              <h3 class="usa-accordion__heading">
+                <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="document-locker-icon-key">
+                  Icon Key
+                </button>
+              </h3>
+              <div id="document-locker-icon-key" class="usa-accordion__content usa-prose">
+                <p class="text-bold margin-0 margin-bottom-2">Options and Control Types</p>
+                <div class="icon-key-grid">
+                  <div class="icon-key-item">
+                    <img src="assets/eye-icon.png" alt="" width="24" height="24">
+                    <span>- View File</span>
+                  </div>
+                  <div class="icon-key-item">
+                    <img src="assets/download-certificate.png" alt="" width="24" height="24">
+                    <span>- Download File</span>
+                  </div>
+                  <div class="icon-key-item">
+                    <img src="assets/print-icon.png" alt="" width="24" height="24">
+                    <span>- Print File</span>
+                  </div>
+                  <div class="icon-key-item">
+                    <img src="assets/edit-icon.png" alt="" width="24" height="24">
+                    <span>- Edit File Details</span>
+                  </div>
+                  <div class="icon-key-item">
+                    <img src="assets/icon-delete.png" alt="" width="24" height="24">
+                    <span>- Delete File</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="margin-top-2">
+              <div class="usa-form-group">
+                <label class="usa-label" for="document-search">Search</label>
+                <div style="display: flex; gap: 1rem;">
+                  <input class="usa-input" id="document-search" name="document-search" type="text" style="flex: 1;">
+                  <button type="button" class="usa-button">Search</button>
+                </div>
+              </div>
+
+              <button type="button" class="usa-button" id="upload-document-btn" style="margin-top: 15px;">Upload File</button>
+
+              <div class="table-controls margin-top-2">
+                <div class="table-controls__left">
+                  <strong id="document-locker-count">Showing 0 - 0 of 0 Entries</strong>
+                </div>
+                <div class="table-controls__right">
+                  <label for="entries-per-page-documents" class="table-controls__label">Show</label>
+                  <select class="usa-select table-controls__select" id="entries-per-page-documents" name="entries-per-page-documents">
+                    <option value="10" selected>10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                  </select>
+                </div>
+              </div>
+
+              <table class="usa-table usa-table--borderless usa-table--striped" id="document-locker-table">
+                <thead>
+                  <tr>
+                    <th scope="col" role="columnheader" aria-sort="none">Title <span class="sort-arrows"></span></th>
+                    <th scope="col" role="columnheader" aria-sort="none">File Type <span class="sort-arrows"></span></th>
+                    <th scope="col" role="columnheader" aria-sort="none">Visibility <span class="sort-arrows"></span></th>
+                    <th scope="col" role="columnheader" aria-sort="none">Uploaded By <span class="sort-arrows"></span></th>
+                    <th scope="col" role="columnheader" aria-sort="none">Uploaded Date <span class="sort-arrows"></span></th>
+                    <th scope="col" role="columnheader" aria-sort="none">License Type <span class="sort-arrows"></span></th>
+                    <th scope="col" role="columnheader" aria-sort="none">Record Type <span class="sort-arrows"></span></th>
+                    <th scope="col" role="columnheader">Controls</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Rows will be populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- End Files Tab -->
+
+          <!-- Correspondence Tab Content -->
+          <div id="correspondence-tab" class="tab-panel active">
+            <!-- Sub-tabs for Emails and Letters -->
+            <div class="horizontal-tabs">
+              <button type="button" class="horizontal-tab active" data-correspondence-tab="emails">Emails</button>
+              <button type="button" class="horizontal-tab" data-correspondence-tab="letters">Letters</button>
+            </div>
+
+            <!-- Emails Sub-tab Content -->
+            <div id="emails-subtab" class="correspondence-subtab-content active">
+              <div class="usa-accordion usa-accordion--bordered" style="margin-top: 15px;">
+                <h3 class="usa-accordion__heading">
+                  <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="emails-icon-key">
+                    Icon Key
+                  </button>
+                </h3>
+                <div id="emails-icon-key" class="usa-accordion__content usa-prose">
+                  <p class="text-bold margin-0 margin-bottom-2">Options and Control Types</p>
+                  <div class="icon-key-grid">
+                    <div class="icon-key-item">
+                      <img src="assets/eye-icon.png" alt="" width="24" height="24">
+                      <span>- View Email</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="margin-top-2">
+                <table class="usa-table usa-table--borderless usa-table--striped">
+                  <thead>
+                    <tr>
+                      <th scope="col" role="columnheader" aria-sort="none">Date <span class="sort-arrows"></span></th>
+                      <th scope="col" role="columnheader" aria-sort="none">Subject <span class="sort-arrows"></span></th>
+                      <th scope="col" role="columnheader" aria-sort="none">From <span class="sort-arrows"></span></th>
+                      <th scope="col" role="columnheader" aria-sort="none">To <span class="sort-arrows"></span></th>
+                      <th scope="col" role="columnheader">Controls</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Email rows will go here -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Letters Sub-tab Content -->
+            <div id="letters-subtab" class="correspondence-subtab-content" hidden>
+              <div class="usa-accordion usa-accordion--bordered" style="margin-top: 15px;">
+                <h3 class="usa-accordion__heading">
+                  <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="letters-icon-key">
+                    Icon Key
+                  </button>
+                </h3>
+                <div id="letters-icon-key" class="usa-accordion__content usa-prose">
+                  <p class="text-bold margin-0 margin-bottom-2">Options and Control Types</p>
+                  <div class="icon-key-grid">
+                    <div class="icon-key-item">
+                      <img src="assets/download-certificate.png" alt="" width="24" height="24">
+                      <span>- Download Letter</span>
+                    </div>
+                    <div class="icon-key-item">
+                      <img src="assets/edit-icon.png" alt="" width="24" height="24">
+                      <span>- Edit Letter</span>
+                    </div>
+                    <div class="icon-key-item">
+                      <img src="assets/print-icon.png" alt="" width="24" height="24">
+                      <span>- Print Letter</span>
+                    </div>
+                    <div class="icon-key-item">
+                      <img src="assets/eye-icon.png" alt="" width="24" height="24">
+                      <span>- View Information</span>
+                    </div>
+                    <div class="icon-key-item">
+                      <img src="assets/envelope-icon.png" alt="" width="24" height="24">
+                      <span>- View Letter</span>
+                    </div>
+                    <div class="icon-key-item">
+                      <img src="assets/lock.png" alt="" width="24" height="24">
+                      <span>- Visibility: Agency Only</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="margin-top-2">
+                <div class="usa-form-group">
+                  <label class="usa-label" for="letters-search">Search</label>
+                  <div style="display: flex; gap: 1rem;">
+                    <input class="usa-input" id="letters-search" name="letters-search" type="text" style="flex: 1;">
+                    <button type="button" class="usa-button">Search</button>
+                  </div>
+                </div>
+
+                <a href="add-letter.html" class="usa-button" style="margin-top: 15px;">Add Letter</a>
+
+                <div class="table-controls margin-top-2">
+                  <div class="table-controls__left">
+                    <strong id="letters-count">Showing 0 - 0 of 0 Entries</strong>
+                  </div>
+                  <div class="table-controls__right">
+                    <label for="entries-per-page-letters" class="table-controls__label">Show</label>
+                    <select class="usa-select table-controls__select" id="entries-per-page-letters" name="entries-per-page-letters">
+                      <option value="10" selected>10</option>
+                      <option value="25">25</option>
+                      <option value="50">50</option>
+                      <option value="100">100</option>
+                    </select>
+                  </div>
+                </div>
+
+                <table class="usa-table usa-table--borderless" id="letters-table">
+                  <thead>
+                    <tr>
+                      <th scope="col" role="columnheader" aria-sort="none" style="width: 15%;">Title <span class="sort-arrows"></span></th>
+                      <th scope="col" role="columnheader" aria-sort="none">Delivery Method <span class="sort-arrows"></span></th>
+                      <th scope="col" role="columnheader" aria-sort="none">Generated Date <span class="sort-arrows"></span></th>
+                      <th scope="col" role="columnheader" aria-sort="none">Mailed Date <span class="sort-arrows"></span></th>
+                      <th scope="col" role="columnheader" aria-sort="none">License Type <span class="sort-arrows"></span></th>
+                      <th scope="col" role="columnheader" aria-sort="none">Record Type <span class="sort-arrows"></span></th>
+                      <th scope="col" role="columnheader" aria-sort="none">Status <span class="sort-arrows"></span></th>
+                      <th scope="col" role="columnheader" style="width: 200px; white-space: nowrap;">Controls</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="no-letters-message" style="background-color: #fff;">
+                      <td colspan="8" style="text-align: center; padding: 2rem; color: #71767a; font-style: italic;">No data available</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- End Correspondence Tab -->
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Success Notification -->
+  <div id="success-notification" class="notification">
+    <div class="notification-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="#00a91c" stroke-width="2" fill="white"/>
+        <path d="M8 12l3 3 5-5" stroke="#00a91c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="notification-text" id="success-notification-text"></div>
+  </div>
+
+  <!-- Upload Letter Modal -->
+  <div id="upload-letter-modal" class="modal-overlay" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Upload Letter</h2>
+        <button type="button" class="modal-close" id="close-upload-letter-modal" aria-label="Close modal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="upload-letter-form">
+          <fieldset class="usa-fieldset margin-bottom-4">
+            <legend class="usa-legend">Visibility <span class="field-required">Required</span></legend>
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="letter-visibility-agency-only" type="radio" name="letter-visibility" value="Agency Only" required>
+              <label class="usa-radio__label" for="letter-visibility-agency-only">Agency Only</label>
+            </div>
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="letter-visibility-public" type="radio" name="letter-visibility" value="Public" required>
+              <label class="usa-radio__label" for="letter-visibility-public">Public</label>
+            </div>
+          </fieldset>
+
+          <div class="usa-form-group margin-bottom-4">
+            <label class="usa-label" for="letter-type">Letter <span class="field-required">Required</span></label>
+            <select class="usa-select" id="letter-type" name="letter-type" required>
+              <option value="">Please Select</option>
+              <option value="Deficiency Notice">Deficiency Notice</option>
+              <option value="Compliance Letter">Compliance Letter</option>
+              <option value="Enforcement Communications">Enforcement Communications</option>
+              <option value="Notice of Violation">Notice of Violation</option>
+            </select>
+          </div>
+
+          <fieldset class="usa-fieldset margin-bottom-4">
+            <legend class="usa-legend">Delivery Method <span class="field-required">Required</span></legend>
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="letter-delivery-standard" type="radio" name="letter-delivery-method" value="Standard" required>
+              <label class="usa-radio__label" for="letter-delivery-standard">Standard</label>
+            </div>
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="letter-delivery-certified" type="radio" name="letter-delivery-method" value="Certified" required>
+              <label class="usa-radio__label" for="letter-delivery-certified">Certified</label>
+            </div>
+          </fieldset>
+
+          <div style="display: flex; gap: 1.5rem; margin-bottom: 1.5rem;">
+            <div class="usa-form-group" style="flex: 1; margin-bottom: 0;">
+              <label class="usa-label" for="letter-mailed-date">Mailed Date</label>
+              <div class="usa-hint">mm/dd/yyyy</div>
+              <input class="usa-input date-input-custom" id="letter-mailed-date" name="letter-mailed-date" type="date">
+            </div>
+
+            <div class="usa-form-group" style="flex: 1; margin-bottom: 0;">
+              <label class="usa-label" for="letter-received-date">Received Date</label>
+              <div class="usa-hint">mm/dd/yyyy</div>
+              <input class="usa-input date-input-custom" id="letter-received-date" name="letter-received-date" type="date" disabled>
+            </div>
+          </div>
+
+          <div class="usa-form-group margin-bottom-4">
+            <label class="usa-label" for="letter-license-type">License Type</label>
+            <select class="usa-select" id="letter-license-type" name="letter-license-type">
+              <option value="">Please Select</option>
+              <option value="Commercial Fishing">Commercial Fishing</option>
+              <option value="Hunting">Hunting</option>
+              <option value="Boating">Boating</option>
+            </select>
+          </div>
+
+          <div style="display: flex; gap: 1.5rem; margin-bottom: 1.5rem;">
+            <div class="usa-form-group" style="flex: 1; margin-bottom: 0;">
+              <label class="usa-label" for="letter-record-type">Record Type</label>
+              <select class="usa-select" id="letter-record-type" name="letter-record-type">
+                <option value="">Please Select</option>
+                <option value="License">License</option>
+                <option value="Application">Application</option>
+                <option value="Case">Case</option>
+              </select>
+            </div>
+
+            <div class="usa-form-group" id="letter-associated-record-group" style="flex: 1; margin-bottom: 0; display: none;">
+              <label class="usa-label" for="letter-associated-record">Associated Record <span class="field-required">Required</span></label>
+              <select class="usa-select" id="letter-associated-record" name="letter-associated-record">
+                <option value="">Please Select</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 1.5rem; margin-bottom: 1.5rem;">
+            <div class="usa-form-group" style="flex: 1; margin-bottom: 0;">
+              <label class="usa-label" for="letter-tracking-number">Tracking Number</label>
+              <input class="usa-input" id="letter-tracking-number" name="letter-tracking-number" type="text">
+            </div>
+
+            <div class="usa-form-group" style="flex: 1; margin-bottom: 0;">
+              <label class="usa-label" for="letter-delivery-attempts">Delivery Attempts</label>
+              <input class="usa-input" id="letter-delivery-attempts" name="letter-delivery-attempts" type="number" min="0" max="3" value="0">
+            </div>
+          </div>
+
+          <div class="usa-form-group margin-bottom-4">
+            <label class="usa-label" for="letter-delivery-notes">Delivery Notes</label>
+            <textarea class="usa-textarea" id="letter-delivery-notes" name="letter-delivery-notes" maxlength="500" rows="4"></textarea>
+            <p style="font-size: 1.4rem; color: #71767a; margin-top: 0.5rem;">Maximum 500 characters</p>
+          </div>
+
+          <div class="usa-form-group margin-bottom-4">
+            <label class="usa-label" for="letter-status">Status <span class="field-required">Required</span></label>
+            <select class="usa-select" id="letter-status" name="letter-status" required>
+              <option value="">Please Select</option>
+              <option value="Generated">Generated</option>
+              <option value="Mailed">Mailed</option>
+              <option value="Received">Received</option>
+              <option value="Returned">Returned</option>
+              <option value="Failed">Failed</option>
+            </select>
+          </div>
+
+          <input type="hidden" id="letter-edit-index" value="">
+
+          <div class="modal-footer" style="padding-left: 0;">
+            <button type="submit" class="usa-button">Save</button>
+            <button type="button" class="usa-button usa-button--secondary" id="cancel-upload-letter">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- View Letter Information Modal -->
+  <div id="view-letter-info-modal" class="modal-overlay" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Letter Information</h2>
+        <button type="button" class="modal-close" id="close-view-letter-info-modal" aria-label="Close modal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div style="display: grid; gap: 1.5rem;">
+          <div>
+            <p style="margin: 0; font-weight: bold; font-size: 1.6rem;">Visibility</p>
+            <p id="view-visibility" style="margin: 0; font-size: 1.6rem;">-</p>
+          </div>
+
+          <div>
+            <p style="margin: 0; font-weight: bold; font-size: 1.6rem;">Letter Template</p>
+            <p id="view-letter-template" style="margin: 0; font-size: 1.6rem;">-</p>
+          </div>
+
+          <div>
+            <p style="margin: 0; font-weight: bold; font-size: 1.6rem;">Delivery Method</p>
+            <p id="view-delivery-method" style="margin: 0; font-size: 1.6rem;">-</p>
+          </div>
+
+          <div>
+            <p style="margin: 0; font-weight: bold; font-size: 1.6rem;">Generated Date</p>
+            <p id="view-generated-date" style="margin: 0; font-size: 1.6rem;">-</p>
+          </div>
+
+          <div>
+            <p style="margin: 0; font-weight: bold; font-size: 1.6rem;">Mailed Date</p>
+            <p id="view-mailed-date" style="margin: 0; font-size: 1.6rem;">-</p>
+          </div>
+
+          <div id="view-received-date-container">
+            <p style="margin: 0; font-weight: bold; font-size: 1.6rem;">Received Date</p>
+            <p id="view-received-date" style="margin: 0; font-size: 1.6rem;">-</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem;">
+            <div>
+              <p style="margin: 0; font-weight: bold; font-size: 1.6rem;">License Type</p>
+              <p id="view-license-type" style="margin: 0; font-size: 1.6rem;">-</p>
+            </div>
+            <div>
+              <p style="margin: 0; font-weight: bold; font-size: 1.6rem;">Record Type</p>
+              <p id="view-record-type" style="margin: 0; font-size: 1.6rem;">-</p>
+            </div>
+            <div>
+              <p style="margin: 0; font-weight: bold; font-size: 1.6rem;">Associated Record</p>
+              <p id="view-associated-record" style="margin: 0; font-size: 1.6rem;">-</p>
+            </div>
+          </div>
+
+          <div id="view-tracking-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            <div>
+              <p style="margin: 0; font-weight: bold; font-size: 1.6rem;">Tracking Number</p>
+              <p id="view-tracking-number" style="margin: 0; font-size: 1.6rem;">-</p>
+            </div>
+            <div>
+              <p style="margin: 0; font-weight: bold; font-size: 1.6rem;">Delivery Attempts</p>
+              <p id="view-delivery-attempts" style="margin: 0; font-size: 1.6rem;">-</p>
+            </div>
+          </div>
+
+          <div>
+            <p style="margin: 0; font-weight: bold; font-size: 1.6rem;">Status</p>
+            <p id="view-status" style="margin: 0; font-size: 1.6rem;">-</p>
+          </div>
+
+          <div>
+            <p style="margin: 0; font-weight: bold; font-size: 1.6rem;">Delivery Notes</p>
+            <p id="view-delivery-notes" style="margin: 0; font-size: 1.6rem;">-</p>
+          </div>
+
+          <!-- Template Fields Section -->
+          <div id="view-template-fields-container" style="display: none;">
+            <hr style="border: none; border-top: 2px solid #ddd; margin: 1rem 0;">
+            <h3 style="margin: 1rem 0; font-size: 1.8rem;">Letter Template Fields</h3>
+
+            <div>
+              <p style="margin: 0; font-weight: bold; font-size: 1.6rem;">Date Spelled</p>
+              <p id="view-template-date" style="margin: 0; font-size: 1.6rem;">-</p>
+            </div>
+
+            <div>
+              <p style="margin: 0; font-weight: bold; font-size: 1.6rem;">Contact Name</p>
+              <p id="view-template-contact-name" style="margin: 0; font-size: 1.6rem;">-</p>
+            </div>
+
+            <div>
+              <p style="margin: 0; font-weight: bold; font-size: 1.6rem;">Full Credential Name</p>
+              <p id="view-template-credential-name" style="margin: 0; font-size: 1.6rem;">-</p>
+            </div>
+
+            <div>
+              <p style="margin: 0; font-weight: bold; font-size: 1.6rem;">Application Type</p>
+              <p id="view-template-application-type" style="margin: 0; font-size: 1.6rem;">-</p>
+            </div>
+
+            <div>
+              <p style="margin: 0; font-weight: bold; font-size: 1.6rem;">Current Manager Name</p>
+              <p id="view-template-manager-name" style="margin: 0; font-size: 1.6rem;">-</p>
+            </div>
+
+            <div>
+              <p style="margin: 0; font-weight: bold; font-size: 1.6rem;">Supervisor Mailing Address</p>
+              <div style="margin-top: 0.5rem;">
+                <p id="view-template-address-line1" style="margin: 0; font-size: 1.6rem;">-</p>
+                <p id="view-template-address-line2" style="margin: 0; font-size: 1.6rem;"></p>
+                <p id="view-template-address-city-state-zip" style="margin: 0; font-size: 1.6rem;">-</p>
+              </div>
+            </div>
+
+            <div>
+              <p style="margin: 0; font-weight: bold; font-size: 1.6rem;">User Name</p>
+              <p id="view-template-user-name" style="margin: 0; font-size: 1.6rem;">-</p>
+            </div>
+
+            <div>
+              <p style="margin: 0; font-weight: bold; font-size: 1.6rem;">User Email</p>
+              <p id="view-template-user-email" style="margin: 0; font-size: 1.6rem;">-</p>
+            </div>
+
+            <div>
+              <p style="margin: 0; font-weight: bold; font-size: 1.6rem;">BG Number</p>
+              <p id="view-template-bg-number" style="margin: 0; font-size: 1.6rem;">-</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer" style="padding-left: 0; margin-top: 2rem;">
+          <button type="button" class="usa-button" id="close-view-letter-info-btn">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Upload File Modal -->
+  <div id="upload-document-modal" class="modal-overlay" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Upload File</h2>
+        <button type="button" class="modal-close" id="close-upload-modal" aria-label="Close modal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="upload-document-form">
+          <fieldset class="usa-fieldset margin-bottom-4">
+            <legend class="usa-legend">Visibility <span class="field-required">Required</span></legend>
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="visibility-agency-only" type="radio" name="document-visibility" value="Agency Only" required>
+              <label class="usa-radio__label" for="visibility-agency-only">Agency Only</label>
+            </div>
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="visibility-public" type="radio" name="document-visibility" value="Public" required>
+              <label class="usa-radio__label" for="visibility-public">Public</label>
+            </div>
+          </fieldset>
+
+          <div class="usa-form-group margin-bottom-4">
+            <label class="usa-label" for="document-title">File Title <span class="field-required">Required</span></label>
+            <input class="usa-input" id="document-title" name="document-title" type="text" required>
+          </div>
+
+          <div class="usa-form-group margin-bottom-4">
+            <label class="usa-label" for="document-type">File Type <span class="field-required">Required</span></label>
+            <select class="usa-select" id="document-type" name="document-type" required>
+              <option value="">Please Select</option>
+              <option value="Compliance">Compliance</option>
+              <option value="Court">Court</option>
+              <option value="Educational">Educational</option>
+              <option value="Training">Training</option>
+              <option value="Photo">Photo</option>
+            </select>
+          </div>
+
+          <div class="usa-form-group margin-bottom-4">
+            <label class="usa-label" for="document-license-type">License Type</label>
+            <select class="usa-select" id="document-license-type" name="document-license-type">
+              <option value="">Please Select</option>
+              <option value="License Type 1">License Type 1</option>
+              <option value="License Type 2">License Type 2</option>
+            </select>
+          </div>
+
+          <div style="display: flex; gap: 1.5rem; margin-bottom: 1.5rem;">
+            <div class="usa-form-group" style="flex: 1; margin-bottom: 0;">
+              <label class="usa-label" for="document-record-type">Record Type</label>
+              <select class="usa-select" id="document-record-type" name="document-record-type">
+                <option value="">Please Select</option>
+                <option value="License">License</option>
+                <option value="Application">Application</option>
+                <option value="Case">Case</option>
+              </select>
+            </div>
+
+            <div class="usa-form-group" id="associated-record-group" style="flex: 1; margin-bottom: 0; display: none;">
+              <label class="usa-label" for="document-associated-record">Associated Record <span class="field-required">Required</span></label>
+              <select class="usa-select" id="document-associated-record" name="document-associated-record">
+                <option value="">Please Select</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="usa-form-group margin-bottom-4">
+            <label class="usa-label" for="document-file">Upload File <span class="field-required">Required</span></label>
+            <p style="font-size: 1.4rem; color: #71767a; margin-bottom: 1rem;">File size and type limitations per attachment: 50 MB for txt, csv, png, jpg, jpeg, pdf, doc, xls, docx, xlsx</p>
+            <input class="usa-file-input" id="document-file" name="document-file" type="file" required>
+          </div>
+
+          <div class="usa-form-group margin-bottom-4">
+            <label class="usa-label" for="document-notes">File Notes</label>
+            <textarea class="usa-textarea" id="document-notes" name="document-notes" maxlength="500" rows="4"></textarea>
+            <p style="font-size: 1.4rem; color: #71767a; margin-top: 0.5rem;">Maximum 500 characters</p>
+          </div>
+
+          <div class="modal-footer" style="padding-left: 0;">
+            <button type="submit" class="usa-button">Save</button>
+            <button type="button" class="usa-button usa-button--secondary" id="cancel-upload">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit File Modal -->
+  <div id="edit-document-modal" class="modal-overlay" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Edit File</h2>
+        <button type="button" class="modal-close" id="close-edit-modal" aria-label="Close modal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="edit-document-form">
+          <div class="usa-form-group margin-bottom-4">
+            <label class="usa-label" for="edit-document-title">File Title <span class="field-required">Required</span></label>
+            <input class="usa-input" id="edit-document-title" name="edit-document-title" type="text" required>
+          </div>
+
+          <div class="usa-form-group margin-bottom-4">
+            <label class="usa-label" for="edit-document-type">File Type <span class="field-required">Required</span></label>
+            <select class="usa-select" id="edit-document-type" name="edit-document-type" required>
+              <option value="">Please Select</option>
+              <option value="Compliance">Compliance</option>
+              <option value="Court">Court</option>
+              <option value="Educational">Educational</option>
+              <option value="Training">Training</option>
+              <option value="Photo">Photo</option>
+            </select>
+          </div>
+
+          <fieldset class="usa-fieldset margin-bottom-4">
+            <legend class="usa-legend">Visibility <span class="field-required">Required</span></legend>
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="edit-visibility-agency-only" type="radio" name="edit-document-visibility" value="Agency Only" required>
+              <label class="usa-radio__label" for="edit-visibility-agency-only">Agency Only</label>
+            </div>
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="edit-visibility-public" type="radio" name="edit-document-visibility" value="Public" required>
+              <label class="usa-radio__label" for="edit-visibility-public">Public</label>
+            </div>
+          </fieldset>
+
+          <div class="modal-footer" style="padding-left: 0;">
+            <button type="submit" class="usa-button">Save</button>
+            <button type="button" class="usa-button usa-button--secondary" id="cancel-edit">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete Confirmation Modal -->
+  <div id="delete-document-modal" class="modal-overlay" hidden>
+    <div class="modal-content" style="max-width: 480px;">
+      <div class="modal-header">
+        <h2 class="modal-title">Delete File</h2>
+        <button type="button" class="modal-close" id="close-delete-modal" aria-label="Close modal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="delete-confirm-text" style="font-size: 1.6rem; margin-bottom: 2rem;"></p>
+        <div class="modal-footer" style="padding-left: 0;">
+          <button type="button" class="usa-button" id="confirm-delete-btn">Delete</button>
+          <button type="button" class="usa-button usa-button--secondary" id="cancel-delete-btn">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Accordion functionality
+    document.querySelectorAll('.usa-accordion__button').forEach(button => {
+      button.addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        const content = document.getElementById(this.getAttribute('aria-controls'));
+
+        if (expanded) {
+          this.setAttribute('aria-expanded', 'false');
+          content.setAttribute('hidden', '');
+        } else {
+          this.setAttribute('aria-expanded', 'true');
+          content.removeAttribute('hidden');
+        }
+      });
+    });
+
+    // Tab switching functionality
+    const tabs = document.querySelectorAll('.profile-tab');
+    const tabPanels = {
+      'Certificates': document.getElementById('certificates-tab'),
+      'Submissions': null,
+      'Assets': null,
+      'Documents': null,
+      'Affiliations': null,
+      'Invoices': null,
+      'Inspections': document.getElementById('inspections-tab'),
+      'Files': document.getElementById('document-locker-tab'),
+      'Correspondence': document.getElementById('correspondence-tab')
+    };
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        const tabName = this.textContent.trim();
+
+        // Remove active class from all tabs
+        tabs.forEach(t => t.classList.remove('active'));
+
+        // Add active class to clicked tab
+        this.classList.add('active');
+
+        // Hide all tab panels
+        Object.values(tabPanels).forEach(panel => {
+          if (panel) {
+            panel.classList.remove('active');
+            panel.setAttribute('hidden', '');
+          }
+        });
+
+        // Show selected tab panel
+        const selectedPanel = tabPanels[tabName];
+        if (selectedPanel) {
+          selectedPanel.classList.add('active');
+          selectedPanel.removeAttribute('hidden');
+        }
+      });
+    });
+
+    // Category filter functionality for Inspections tab
+    const categoryButtons = document.querySelectorAll('.category-filter-btn');
+    const inspectionRows = document.querySelectorAll('#inspections-table tbody tr');
+    const inspectionCount = document.getElementById('inspection-count');
+
+    function filterInspections(category) {
+      let visibleCount = 0;
+      let visibleIndex = 0;
+
+      inspectionRows.forEach(row => {
+        if (row.dataset.category === category) {
+          row.style.display = '';
+          // Reapply striping based on visible index
+          if (visibleIndex % 2 === 0) {
+            row.style.backgroundColor = '#fff';
+          } else {
+            row.style.backgroundColor = '#f0f0f0';
+          }
+          visibleCount++;
+          visibleIndex++;
+        } else {
+          row.style.display = 'none';
+        }
+      });
+
+      // Update count
+      inspectionCount.textContent = `Showing 1 - ${visibleCount} of ${visibleCount} Entries`;
+    }
+
+    categoryButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const category = this.dataset.category;
+
+        // Remove active class from all buttons
+        categoryButtons.forEach(btn => btn.classList.remove('active'));
+
+        // Add active class to clicked button
+        this.classList.add('active');
+
+        // Filter table
+        filterInspections(category);
+      });
+    });
+
+    // Initialize with Application filter
+    filterInspections('Application');
+
+    // Check URL for tab parameter and activate the correct tab
+    const urlParams = new URLSearchParams(window.location.search);
+    const activeTab = urlParams.get('tab');
+
+    if (activeTab && tabPanels[capitalizeFirst(activeTab)]) {
+      // Remove active class from all tabs
+      tabs.forEach(t => t.classList.remove('active'));
+
+      // Find and activate the correct tab
+      tabs.forEach(tab => {
+        if (tab.textContent.trim().toLowerCase() === activeTab.toLowerCase()) {
+          tab.classList.add('active');
+        }
+      });
+
+      // Hide all tab panels
+      Object.values(tabPanels).forEach(panel => {
+        if (panel) {
+          panel.classList.remove('active');
+          panel.setAttribute('hidden', '');
+        }
+      });
+
+      // Show selected tab panel
+      const selectedPanel = tabPanels[capitalizeFirst(activeTab)];
+      if (selectedPanel) {
+        selectedPanel.classList.add('active');
+        selectedPanel.removeAttribute('hidden');
+      }
+    }
+
+    // Helper function to capitalize first letter
+    function capitalizeFirst(str) {
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+    // Column header dropdown functionality
+    const columnHeaderSelect = document.querySelector('.column-header-select');
+    const columnHeaderMenu = document.querySelector('.column-header-menu');
+    const columnCheckboxes = document.querySelectorAll('.column-checkbox');
+    const inspectionsTable = document.getElementById('inspections-table');
+
+    // Toggle dropdown
+    columnHeaderSelect.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const isHidden = columnHeaderMenu.hasAttribute('hidden');
+      if (isHidden) {
+        columnHeaderMenu.removeAttribute('hidden');
+      } else {
+        columnHeaderMenu.setAttribute('hidden', '');
+      }
+    });
+
+    // Prevent dropdown from closing when clicking inside it
+    columnHeaderMenu.addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function() {
+      columnHeaderMenu.setAttribute('hidden', '');
+    });
+
+    // Handle column visibility
+    columnCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', function() {
+        const columnIndex = parseInt(this.dataset.column);
+        const isChecked = this.checked;
+
+        // Toggle header visibility
+        const headers = inspectionsTable.querySelectorAll('thead th');
+        if (headers[columnIndex]) {
+          headers[columnIndex].style.display = isChecked ? '' : 'none';
+        }
+
+        // Toggle cell visibility in all rows
+        const rows = inspectionsTable.querySelectorAll('tbody tr');
+        rows.forEach(row => {
+          const cells = row.querySelectorAll('td');
+          if (cells[columnIndex]) {
+            cells[columnIndex].style.display = isChecked ? '' : 'none';
+          }
+        });
+      });
+    });
+
+    // Upload File Modal functionality
+    const uploadDocumentBtn = document.getElementById('upload-document-btn');
+    const uploadDocumentModal = document.getElementById('upload-document-modal');
+    const closeModalBtn = document.getElementById('close-upload-modal');
+    const cancelUploadBtn = document.getElementById('cancel-upload');
+    const uploadDocumentForm = document.getElementById('upload-document-form');
+    const documentLockerTable = document.getElementById('document-locker-table');
+    const documentLockerCount = document.getElementById('document-locker-count');
+    const documentRecordType = document.getElementById('document-record-type');
+    const associatedRecordGroup = document.getElementById('associated-record-group');
+    const documentAssociatedRecord = document.getElementById('document-associated-record');
+
+    // Associated Record options by type
+    const associatedRecordOptions = {
+      'License': ['ABC-123'],
+      'Application': ['900600200'],
+      'Case': ['CPT-101', 'ENF-587', 'INV-123']
+    };
+
+    // Edit File Modal functionality
+    const editDocumentModal = document.getElementById('edit-document-modal');
+    const closeEditModalBtn = document.getElementById('close-edit-modal');
+    const cancelEditBtn = document.getElementById('cancel-edit');
+    const editDocumentForm = document.getElementById('edit-document-form');
+    const editDocumentTitle = document.getElementById('edit-document-title');
+    const editDocumentType = document.getElementById('edit-document-type');
+    const editVisibilityAgencyOnly = document.getElementById('edit-visibility-agency-only');
+    const editVisibilityPublic = document.getElementById('edit-visibility-public');
+
+    // Delete File Modal functionality
+    const deleteDocumentModal = document.getElementById('delete-document-modal');
+    const closeDeleteModalBtn = document.getElementById('close-delete-modal');
+    const cancelDeleteBtn = document.getElementById('cancel-delete-btn');
+    const confirmDeleteBtn = document.getElementById('confirm-delete-btn');
+    const deleteConfirmText = document.getElementById('delete-confirm-text');
+
+    // Success Notification
+    const successNotification = document.getElementById('success-notification');
+    const successNotificationText = document.getElementById('success-notification-text');
+
+    let rowToDelete = null;
+    let documentTitleToDelete = '';
+    let rowToEdit = null;
+
+    if (uploadDocumentBtn) {
+      uploadDocumentBtn.addEventListener('click', function() {
+        uploadDocumentModal.removeAttribute('hidden');
+        document.body.style.overflow = 'hidden';
+      });
+    }
+
+    // Handle Record Type change
+    if (documentRecordType) {
+      documentRecordType.addEventListener('change', function() {
+        const recordType = this.value;
+
+        if (recordType && associatedRecordOptions[recordType]) {
+          // Show the Associated Record field
+          associatedRecordGroup.style.display = 'block';
+
+          // Clear and populate options
+          documentAssociatedRecord.innerHTML = '<option value="">Please Select</option>';
+          associatedRecordOptions[recordType].forEach(function(option) {
+            const optionElement = document.createElement('option');
+            optionElement.value = option;
+            optionElement.textContent = option;
+            documentAssociatedRecord.appendChild(optionElement);
+          });
+
+          // Make it required
+          documentAssociatedRecord.setAttribute('required', 'required');
+        } else {
+          // Hide the Associated Record field
+          associatedRecordGroup.style.display = 'none';
+          documentAssociatedRecord.removeAttribute('required');
+          documentAssociatedRecord.value = '';
+        }
+      });
+    }
+
+    function closeUploadModal() {
+      uploadDocumentModal.setAttribute('hidden', '');
+      document.body.style.overflow = '';
+      uploadDocumentForm.reset();
+    }
+
+    if (closeModalBtn) {
+      closeModalBtn.addEventListener('click', closeUploadModal);
+    }
+
+    if (cancelUploadBtn) {
+      cancelUploadBtn.addEventListener('click', closeUploadModal);
+    }
+
+    // Close modal when clicking outside
+    if (uploadDocumentModal) {
+      uploadDocumentModal.addEventListener('click', function(e) {
+        if (e.target === uploadDocumentModal) {
+          closeUploadModal();
+        }
+      });
+    }
+
+    // Edit Modal Functions
+    function openEditModal(row) {
+      rowToEdit = row;
+      const cells = row.querySelectorAll('td');
+      const title = cells[0].textContent;
+      const documentType = cells[1].textContent;
+      const visibility = cells[2].textContent;
+
+      // Populate the form
+      editDocumentTitle.value = title;
+      editDocumentType.value = documentType;
+
+      // Set the correct radio button
+      if (visibility === 'Agency Only') {
+        editVisibilityAgencyOnly.checked = true;
+      } else if (visibility === 'Public') {
+        editVisibilityPublic.checked = true;
+      }
+
+      editDocumentModal.removeAttribute('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeEditModal() {
+      editDocumentModal.setAttribute('hidden', '');
+      document.body.style.overflow = '';
+      rowToEdit = null;
+      editDocumentForm.reset();
+    }
+
+    if (closeEditModalBtn) {
+      closeEditModalBtn.addEventListener('click', closeEditModal);
+    }
+
+    if (cancelEditBtn) {
+      cancelEditBtn.addEventListener('click', closeEditModal);
+    }
+
+    // Handle edit form submission
+    if (editDocumentForm) {
+      editDocumentForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        if (rowToEdit) {
+          const newTitle = editDocumentTitle.value;
+          const newDocumentType = editDocumentType.value;
+          const newVisibility = document.querySelector('input[name="edit-document-visibility"]:checked').value;
+          const cells = rowToEdit.querySelectorAll('td');
+
+          // Update the title, document type, and visibility cells
+          cells[0].textContent = newTitle;
+          cells[1].textContent = newDocumentType;
+          cells[2].textContent = newVisibility;
+
+          closeEditModal();
+          showSuccessAlert(`File "${newTitle}" has been successfully updated.`);
+        }
+      });
+    }
+
+    // Close edit modal when clicking outside
+    if (editDocumentModal) {
+      editDocumentModal.addEventListener('click', function(e) {
+        if (e.target === editDocumentModal) {
+          closeEditModal();
+        }
+      });
+    }
+
+    // Delete Modal Functions
+    function openDeleteModal(row, title) {
+      rowToDelete = row;
+      documentTitleToDelete = title;
+      deleteConfirmText.textContent = `Are you sure you want to delete ${title}?`;
+      deleteDocumentModal.removeAttribute('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDeleteModal() {
+      deleteDocumentModal.setAttribute('hidden', '');
+      document.body.style.overflow = '';
+      rowToDelete = null;
+      documentTitleToDelete = '';
+    }
+
+    if (closeDeleteModalBtn) {
+      closeDeleteModalBtn.addEventListener('click', closeDeleteModal);
+    }
+
+    if (cancelDeleteBtn) {
+      cancelDeleteBtn.addEventListener('click', closeDeleteModal);
+    }
+
+    if (confirmDeleteBtn) {
+      confirmDeleteBtn.addEventListener('click', function() {
+        if (rowToDelete) {
+          rowToDelete.remove();
+          updateDocumentCount();
+          closeDeleteModal();
+          showSuccessAlert(`File "${documentTitleToDelete}" has been successfully deleted.`);
+        }
+      });
+    }
+
+    // Close delete modal when clicking outside
+    if (deleteDocumentModal) {
+      deleteDocumentModal.addEventListener('click', function(e) {
+        if (e.target === deleteDocumentModal) {
+          closeDeleteModal();
+        }
+      });
+    }
+
+    // Success Notification Function
+    function showSuccessAlert(message) {
+      successNotificationText.textContent = message;
+      successNotification.classList.remove('hide');
+      successNotification.classList.add('show');
+
+      // Auto-hide after 3 seconds
+      setTimeout(function() {
+        successNotification.classList.remove('show');
+        successNotification.classList.add('hide');
+      }, 3000);
+    }
+
+    // Handle form submission
+    if (uploadDocumentForm) {
+      uploadDocumentForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Get form values
+        const visibility = document.querySelector('input[name="document-visibility"]:checked').value;
+        const title = document.getElementById('document-title').value;
+        const documentType = document.getElementById('document-type').value;
+        const licenseType = document.getElementById('document-license-type').value || '-';
+        const recordType = document.getElementById('document-record-type').value || '-';
+        const associatedRecord = document.getElementById('document-associated-record').value || '-';
+        const fileInput = document.getElementById('document-file');
+        const fileName = fileInput.files[0] ? fileInput.files[0].name : '';
+
+        // Get current date
+        const today = new Date();
+        const uploadedDate = (today.getMonth() + 1).toString().padStart(2, '0') + '/' +
+                            today.getDate().toString().padStart(2, '0') + '/' +
+                            today.getFullYear();
+
+        // Simulated logged-in user
+        const uploadedBy = 'John Smith';
+
+        // Combine Record Type and Associated Record for display
+        let recordTypeDisplay = recordType;
+        if (recordType !== '-' && associatedRecord !== '-') {
+          recordTypeDisplay = `${recordType}: ${associatedRecord}`;
+        }
+
+        // Add lock icon if Agency Only
+        const lockIcon = visibility === 'Agency Only' ? '<img src="assets/lock.png" alt="Agency Only" width="16" height="16" style="margin-right: 0.5rem; vertical-align: middle;">' : '';
+
+        // Create new table row
+        const tbody = documentLockerTable.querySelector('tbody');
+        const newRow = document.createElement('tr');
+        newRow.innerHTML = `
+          <td>${lockIcon}${title}</td>
+          <td>${documentType}</td>
+          <td>${visibility}</td>
+          <td>${uploadedBy}</td>
+          <td>${uploadedDate}</td>
+          <td>${licenseType}</td>
+          <td>${recordTypeDisplay}</td>
+          <td>
+            <a href="#" class="icon-button" aria-label="View File">
+              <img src="assets/eye-icon.png" alt="" width="30" height="30">
+            </a>
+            <a href="#" class="icon-button" aria-label="Download File">
+              <img src="assets/download-certificate.png" alt="" width="30" height="30">
+            </a>
+            <a href="#" class="icon-button" aria-label="Print File">
+              <img src="assets/print-icon.png" alt="" width="30" height="30">
+            </a>
+            <a href="#" class="icon-button edit-document-btn" aria-label="Edit File Details">
+              <img src="assets/edit-icon.png" alt="" width="30" height="30">
+            </a>
+            <a href="#" class="icon-button delete-document-btn" aria-label="Delete File">
+              <img src="assets/icon-delete.png" alt="" width="30" height="30">
+            </a>
+          </td>
+        `;
+
+        // Add edit functionality to the new row
+        const editBtn = newRow.querySelector('.edit-document-btn');
+        editBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          openEditModal(newRow);
+        });
+
+        // Add delete functionality to the new row
+        const deleteBtn = newRow.querySelector('.delete-document-btn');
+        deleteBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          openDeleteModal(newRow, title);
+        });
+
+        tbody.appendChild(newRow);
+
+        // Update count
+        updateDocumentCount();
+
+        // Close modal and reset form
+        closeUploadModal();
+      });
+    }
+
+    // Function to update document count
+    function updateDocumentCount() {
+      const tbody = documentLockerTable.querySelector('tbody');
+      const rowCount = tbody.querySelectorAll('tr').length;
+      documentLockerCount.textContent = `Showing 1 - ${rowCount} of ${rowCount} Entries`;
+
+      if (rowCount === 0) {
+        documentLockerCount.textContent = 'Showing 0 - 0 of 0 Entries';
+      }
+    }
+
+    // Correspondence sub-tab switching
+    const correspondenceSubTabs = document.querySelectorAll('.horizontal-tab[data-correspondence-tab]');
+    const correspondenceSubTabContents = document.querySelectorAll('.correspondence-subtab-content');
+
+    correspondenceSubTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        const targetSubTab = this.dataset.correspondenceTab;
+
+        // Remove active class from all sub-tabs
+        correspondenceSubTabs.forEach(t => t.classList.remove('active'));
+
+        // Add active class to clicked sub-tab
+        this.classList.add('active');
+
+        // Hide all sub-tab contents
+        correspondenceSubTabContents.forEach(content => {
+          content.classList.remove('active');
+          content.setAttribute('hidden', '');
+        });
+
+        // Show selected sub-tab content
+        const targetContent = document.getElementById(`${targetSubTab}-subtab`);
+        if (targetContent) {
+          targetContent.classList.add('active');
+          targetContent.removeAttribute('hidden');
+        }
+      });
+    });
+
+    // Upload Letter Modal functionality
+    const uploadLetterBtn = document.getElementById('upload-letter-btn');
+    const uploadLetterModal = document.getElementById('upload-letter-modal');
+    const closeLetterModalBtn = document.getElementById('close-upload-letter-modal');
+    const cancelUploadLetterBtn = document.getElementById('cancel-upload-letter');
+    const uploadLetterForm = document.getElementById('upload-letter-form');
+    const lettersTable = document.getElementById('letters-table');
+    const lettersCount = document.getElementById('letters-count');
+    const letterRecordType = document.getElementById('letter-record-type');
+    const letterAssociatedRecordGroup = document.getElementById('letter-associated-record-group');
+    const letterAssociatedRecord = document.getElementById('letter-associated-record');
+    const letterReceivedDate = document.getElementById('letter-received-date');
+    const letterDeliveryStandard = document.getElementById('letter-delivery-standard');
+    const letterDeliveryCertified = document.getElementById('letter-delivery-certified');
+
+    // Associated Record options by type
+    const letterAssociatedRecordOptions = {
+      'License': ['ABC-123'],
+      'Application': ['900600200'],
+      'Case': ['CPT-101', 'ENF-587', 'INV-123']
+    };
+
+    if (uploadLetterBtn) {
+      uploadLetterBtn.addEventListener('click', function() {
+        uploadLetterModal.removeAttribute('hidden');
+        document.body.style.overflow = 'hidden';
+      });
+    }
+
+    // Handle Delivery Method change to enable/disable Received Date
+    if (letterDeliveryStandard) {
+      letterDeliveryStandard.addEventListener('change', function() {
+        if (this.checked) {
+          letterReceivedDate.disabled = true;
+          letterReceivedDate.value = '';
+        }
+      });
+    }
+
+    if (letterDeliveryCertified) {
+      letterDeliveryCertified.addEventListener('change', function() {
+        if (this.checked) {
+          letterReceivedDate.disabled = false;
+        }
+      });
+    }
+
+    // Handle Record Type change for letters
+    if (letterRecordType) {
+      letterRecordType.addEventListener('change', function() {
+        const recordType = this.value;
+
+        if (recordType && letterAssociatedRecordOptions[recordType]) {
+          letterAssociatedRecordGroup.style.display = 'block';
+          letterAssociatedRecord.innerHTML = '<option value="">Please Select</option>';
+          letterAssociatedRecordOptions[recordType].forEach(function(option) {
+            const optionElement = document.createElement('option');
+            optionElement.value = option;
+            optionElement.textContent = option;
+            letterAssociatedRecord.appendChild(optionElement);
+          });
+          letterAssociatedRecord.setAttribute('required', 'required');
+        } else {
+          letterAssociatedRecordGroup.style.display = 'none';
+          letterAssociatedRecord.removeAttribute('required');
+          letterAssociatedRecord.value = '';
+        }
+      });
+    }
+
+    function closeUploadLetterModal() {
+      uploadLetterModal.setAttribute('hidden', '');
+      document.body.style.overflow = '';
+      uploadLetterForm.reset();
+      letterAssociatedRecordGroup.style.display = 'none';
+      letterReceivedDate.disabled = true;
+      document.getElementById('letter-edit-index').value = '';
+    }
+
+    if (closeLetterModalBtn) {
+      closeLetterModalBtn.addEventListener('click', closeUploadLetterModal);
+    }
+
+    if (cancelUploadLetterBtn) {
+      cancelUploadLetterBtn.addEventListener('click', closeUploadLetterModal);
+    }
+
+    // Close modal when clicking outside
+    if (uploadLetterModal) {
+      uploadLetterModal.addEventListener('click', function(e) {
+        if (e.target === uploadLetterModal) {
+          closeUploadLetterModal();
+        }
+      });
+    }
+
+    // Handle letter form submission
+    if (uploadLetterForm) {
+      uploadLetterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Get form values
+        const visibility = document.querySelector('input[name="letter-visibility"]:checked').value;
+        const letterType = document.getElementById('letter-type').value;
+        const deliveryMethod = document.querySelector('input[name="letter-delivery-method"]:checked').value;
+        const mailedDateRaw = document.getElementById('letter-mailed-date').value.trim();
+        const receivedDateRaw = document.getElementById('letter-received-date').value.trim();
+        const licenseType = document.getElementById('letter-license-type').value || '-';
+        const recordType = document.getElementById('letter-record-type').value || '-';
+        const associatedRecord = document.getElementById('letter-associated-record').value || '-';
+        const trackingNumber = document.getElementById('letter-tracking-number').value || '-';
+        const deliveryAttempts = document.getElementById('letter-delivery-attempts').value || '0';
+        const letterStatus = document.getElementById('letter-status').value;
+        const deliveryNotes = document.getElementById('letter-delivery-notes').value || '';
+        const editIndex = document.getElementById('letter-edit-index').value;
+
+        // Get today's date for Generated Date
+        const today = new Date();
+        const generatedDate = (today.getMonth() + 1).toString().padStart(2, '0') + '/' +
+                             today.getDate().toString().padStart(2, '0') + '/' +
+                             today.getFullYear();
+
+        // Convert date format from YYYY-MM-DD to MM/DD/YYYY for display
+        function formatDateForDisplay(dateStr) {
+          if (!dateStr) return '-';
+          const [year, month, day] = dateStr.split('-');
+          return `${month}/${day}/${year}`;
+        }
+
+        const mailedDate = mailedDateRaw ? formatDateForDisplay(mailedDateRaw) : '-';
+        const receivedDate = receivedDateRaw ? formatDateForDisplay(receivedDateRaw) : '-';
+
+        // Combine Record Type and Associated Record for display
+        let recordTypeDisplay = recordType;
+        if (recordType !== '-' && associatedRecord !== '-') {
+          recordTypeDisplay = `${recordType}: ${associatedRecord}`;
+        }
+
+        // Add lock icon if Agency Only
+        const lockIcon = visibility === 'Agency Only' ? '<img src="assets/lock.png" alt="Agency Only" width="16" height="16" style="margin-right: 0.5rem; vertical-align: middle;">' : '';
+
+        const tbody = lettersTable.querySelector('tbody');
+
+        // Check if we're editing an existing row
+        if (editIndex !== '') {
+          const rowToEdit = tbody.rows[parseInt(editIndex)];
+          rowToEdit.innerHTML = `
+            <td>${lockIcon}${letterType}</td>
+            <td>${deliveryMethod}</td>
+            <td>${generatedDate}</td>
+            <td>${mailedDate}</td>
+            <td>${licenseType}</td>
+            <td>${recordTypeDisplay}</td>
+            <td><span class="status-${letterStatus.toLowerCase().replace(' ', '-')}">${letterStatus}</span></td>
+            <td style="white-space: nowrap;">
+              <a href="#" class="icon-button view-letter-info-btn" aria-label="View Information">
+                <img src="assets/eye-icon.png" alt="" width="30" height="30">
+              </a>
+              <a href="#" class="icon-button view-letter-btn" aria-label="View Letter">
+                <img src="assets/envelope-icon.png" alt="" width="30" height="30">
+              </a>
+              <a href="#" class="icon-button download-letter-btn" aria-label="Download Letter">
+                <img src="assets/download-certificate.png" alt="" width="30" height="30">
+              </a>
+              <a href="#" class="icon-button print-letter-btn" aria-label="Print Letter">
+                <img src="assets/print-icon.png" alt="" width="30" height="30">
+              </a>
+              <a href="edit-letter.html?id=${rowToEdit.dataset.id || ''}" class="icon-button edit-letter-btn" aria-label="Edit Letter">
+                <img src="assets/edit-icon.png" alt="" width="30" height="30">
+              </a>
+            </td>
+          `;
+
+          // Store data attributes (store in YYYY-MM-DD format for editing)
+          rowToEdit.dataset.visibility = visibility;
+          rowToEdit.dataset.letterType = letterType;
+          rowToEdit.dataset.deliveryMethod = deliveryMethod;
+          rowToEdit.dataset.mailedDate = mailedDateRaw;
+          rowToEdit.dataset.receivedDate = receivedDateRaw;
+          rowToEdit.dataset.licenseType = licenseType;
+          rowToEdit.dataset.recordType = recordType;
+          rowToEdit.dataset.associatedRecord = associatedRecord;
+          rowToEdit.dataset.trackingNumber = trackingNumber;
+          rowToEdit.dataset.deliveryAttempts = deliveryAttempts;
+          rowToEdit.dataset.letterStatus = letterStatus;
+          rowToEdit.dataset.deliveryNotes = deliveryNotes;
+
+          attachLetterRowHandlers(rowToEdit);
+
+          // Update count and reapply striping
+          updateLettersCount();
+          reapplyLetterStriping();
+
+          closeUploadLetterModal();
+          showSuccessAlert(`Letter "${letterType}" has been successfully updated.`);
+        } else {
+          // Hide no-data message if present
+          const noDataMessage = document.getElementById('no-letters-message');
+          if (noDataMessage) {
+            noDataMessage.style.display = 'none';
+          }
+
+          // Generate unique ID for this letter
+          const letterId = 'LETTER-' + Date.now();
+
+          // Create new table row
+          const newRow = document.createElement('tr');
+          newRow.innerHTML = `
+            <td>${lockIcon}${letterType}</td>
+            <td>${deliveryMethod}</td>
+            <td>${generatedDate}</td>
+            <td>${mailedDate}</td>
+            <td>${licenseType}</td>
+            <td>${recordTypeDisplay}</td>
+            <td><span class="status-${letterStatus.toLowerCase().replace(' ', '-')}">${letterStatus}</span></td>
+            <td style="white-space: nowrap;">
+              <a href="#" class="icon-button view-letter-info-btn" aria-label="View Information">
+                <img src="assets/eye-icon.png" alt="" width="30" height="30">
+              </a>
+              <a href="#" class="icon-button view-letter-btn" aria-label="View Letter">
+                <img src="assets/envelope-icon.png" alt="" width="30" height="30">
+              </a>
+              <a href="#" class="icon-button download-letter-btn" aria-label="Download Letter">
+                <img src="assets/download-certificate.png" alt="" width="30" height="30">
+              </a>
+              <a href="#" class="icon-button print-letter-btn" aria-label="Print Letter">
+                <img src="assets/print-icon.png" alt="" width="30" height="30">
+              </a>
+              <a href="edit-letter.html?id=${letterId}" class="icon-button edit-letter-btn" aria-label="Edit Letter">
+                <img src="assets/edit-icon.png" alt="" width="30" height="30">
+              </a>
+            </td>
+          `;
+
+          // Store data attributes (store in YYYY-MM-DD format for editing)
+          newRow.dataset.id = letterId;
+          newRow.dataset.visibility = visibility;
+          newRow.dataset.letterType = letterType;
+          newRow.dataset.deliveryMethod = deliveryMethod;
+          newRow.dataset.mailedDate = mailedDateRaw;
+          newRow.dataset.receivedDate = receivedDateRaw;
+          newRow.dataset.licenseType = licenseType;
+          newRow.dataset.recordType = recordType;
+          newRow.dataset.associatedRecord = associatedRecord;
+          newRow.dataset.trackingNumber = trackingNumber;
+          newRow.dataset.deliveryAttempts = deliveryAttempts;
+          newRow.dataset.letterStatus = letterStatus;
+          newRow.dataset.deliveryNotes = deliveryNotes;
+
+          tbody.appendChild(newRow);
+          attachLetterRowHandlers(newRow);
+
+          // Update count and reapply striping
+          updateLettersCount();
+          reapplyLetterStriping();
+
+          // Close modal and reset form
+          closeUploadLetterModal();
+          showSuccessAlert(`Letter "${letterType}" has been successfully added.`);
+        }
+      });
+    }
+
+    // Function to generate letter HTML from row data
+    function generateLetterHTML(row) {
+      const letterData = row.dataset;
+      const templateFields = JSON.parse(localStorage.getItem('letters') || '[]')
+        .find(letter => letter.id === letterData.id)?.templateFields || {};
+
+      // If no template fields, return a simple message
+      if (!templateFields || Object.keys(templateFields).length === 0) {
+        return '<p style="padding: 2rem; text-align: center;">No letter template data available for this letter.</p>';
+      }
+
+      // Generate the Arkansas State Police letter with background image overlay
+      return `
+        <div style="position: relative; width: 9in; min-height: 11in; background-image: url('assets/ar-state-police-blank.png'); background-size: cover; background-repeat: no-repeat; font-family: 'Times New Roman', serif;">
+          <!-- Date Spelled -->
+          <div style="position: absolute; top: 330px; left: 300px; font-size: 11pt;">
+            ${templateFields.date || '[Date]'}
+          </div>
+
+          <!-- Supervisor Address -->
+          <div style="position: absolute; top: 370px; left: 300px; font-size: 11pt; line-height: 1.4;">
+            ${templateFields.addressLine1 || ''}<br>
+            ${templateFields.addressLine2 ? templateFields.addressLine2 + '<br>' : ''}
+            ${templateFields.city || ''}, ${templateFields.state || ''} ${templateFields.zip || ''}
+          </div>
+
+          <!-- Dear Manager Name -->
+          <div style="position: absolute; top: 440px; left: 300px; font-size: 11pt;">
+            Dear ${templateFields.managerName || '[Manager Name]'}:
+          </div>
+
+          <!-- First Paragraph -->
+          <div style="position: absolute; top: 480px; left: 300px; right: 50px; font-size: 11pt; line-height: 1.5; text-align: justify;">
+            The Arkansas State Police Private Investigators, Private Security, and Alarm Installation/Monitoring Section has received the <strong>${templateFields.credentialName || '[Credential Name]'}</strong> <strong>${templateFields.applicationType || '[Application Type]'}</strong> application for <strong>${templateFields.contactName || '[Contact Name]'}</strong>.
+          </div>
+
+          <!-- Second Paragraph -->
+          <div style="position: absolute; top: 560px; left: 300px; right: 50px; font-size: 11pt; line-height: 1.5; text-align: justify;">
+            The application will be placed on hold since <strong>${templateFields.contactName || '[Contact Name]'}</strong>'s current credential is suspended. The <strong>${templateFields.applicationType || '[Application Type]'}</strong> application will be processed once the suspension has been lifted.
+          </div>
+
+          <!-- Third Paragraph -->
+          <div style="position: absolute; top: 640px; left: 300px; right: 50px; font-size: 11pt; line-height: 1.5; text-align: justify;">
+            <strong>${templateFields.contactName || '[Contact Name]'}</strong> <strong>cannot be employed</strong> in a position that requires a license, credential, or commission issued by the Arkansas Private Investigators, Private Security, and Alarm Installation/Monitoring Licensing Section during the suspension period.
+          </div>
+
+          <!-- Fourth Paragraph -->
+          <div style="position: absolute; top: 730px; left: 300px; right: 50px; font-size: 11pt; line-height: 1.5; text-align: justify;">
+            If you have any questions related to this matter, you may contact a member of the staff at 501-618-8600. Please refer to the file number at the bottom of the letter.
+          </div>
+
+          <!-- Sincerely -->
+          <div style="position: absolute; top: 800px; left: 300px; font-size: 11pt;">
+            Sincerely,
+          </div>
+
+          <!-- Signature -->
+          <div style="position: absolute; top: 830px; left: 300px;">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='60'%3E%3Ctext x='0' y='40' font-family='Brush Script MT, cursive' font-size='24' fill='%23333'>Michael Rodriguez%3C/text%3E%3C/svg%3E" alt="Signature" style="display: block; max-width: 200px;">
+          </div>
+
+          <!-- User Name and Contact Info -->
+          <div style="position: absolute; top: 900px; left: 300px; font-size: 10pt; line-height: 1.4;">
+            ${templateFields.userName || '[User Name]'}<br>
+            Administrative Coordinator<br>
+            PI & Security Licensing Section<br>
+            1 State Police Plaza Drive<br>
+            Little Rock, AR 72209<br>
+            ${templateFields.userEmail || '[User Email]'}<br>
+            (501) 618-8600<br>
+            (501) 618-8125 fax
+          </div>
+
+          <!-- CC Line -->
+          <div style="position: absolute; top: 1040px; left: 300px; font-size: 11pt;">
+            cc: ${templateFields.bgNumber || '[BG Number]'}
+          </div>
+
+          <!-- CERTIFIED -->
+          <div style="position: absolute; top: 1090px; left: 320px; font-size: 11pt; font-weight: bold;">
+            CERTIFIED
+          </div>
+        </div>
+      `;
+    }
+
+    // Function to attach event handlers to letter row
+    function attachLetterRowHandlers(row) {
+      const viewInfoBtn = row.querySelector('.view-letter-info-btn');
+      if (viewInfoBtn) {
+        viewInfoBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          openViewLetterInfoModal(row);
+        });
+      }
+
+      const viewLetterBtn = row.querySelector('.view-letter-btn');
+      if (viewLetterBtn) {
+        viewLetterBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+
+          // Create modal to view letter
+          const modal = document.createElement('div');
+          modal.className = 'modal-overlay';
+          modal.innerHTML = `
+            <div class="modal-content" style="max-width: 950px;">
+              <div class="modal-header">
+                <h2 class="modal-title">View Letter</h2>
+                <button type="button" class="modal-close" aria-label="Close modal">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="modal-body" style="font-family: 'Times New Roman', serif; line-height: 1.6;">
+                <div style="padding: 2rem; background: white;">
+                  ${generateLetterHTML(row)}
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="usa-button usa-button--secondary close-btn">Close</button>
+              </div>
+            </div>
+          `;
+
+          document.body.appendChild(modal);
+          document.body.style.overflow = 'hidden';
+
+          const closeModal = () => {
+            document.body.removeChild(modal);
+            document.body.style.overflow = '';
+          };
+
+          modal.querySelector('.modal-close').addEventListener('click', closeModal);
+          modal.querySelector('.close-btn').addEventListener('click', closeModal);
+          modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+          });
+        });
+      }
+
+      const downloadLetterBtn = row.querySelector('.download-letter-btn');
+      if (downloadLetterBtn) {
+        downloadLetterBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+
+          const letterHTML = generateLetterHTML(row);
+          const fullHTML = `
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <meta charset="UTF-8">
+              <title>Letter - ${row.dataset.letterType}</title>
+              <style>
+                body { font-family: 'Times New Roman', serif; line-height: 1.6; padding: 2rem; }
+              </style>
+            </head>
+            <body>
+              ${letterHTML}
+            </body>
+            </html>
+          `;
+
+          const blob = new Blob([fullHTML], { type: 'text/html' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = `Letter-${row.dataset.letterType}-${new Date().toISOString().split('T')[0]}.html`;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+        });
+      }
+
+      const printLetterBtn = row.querySelector('.print-letter-btn');
+      if (printLetterBtn) {
+        printLetterBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+
+          const letterHTML = generateLetterHTML(row);
+          const printWindow = window.open('', '', 'width=800,height=600');
+          printWindow.document.write(`
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <meta charset="UTF-8">
+              <title>Print Letter</title>
+              <style>
+                body { font-family: 'Times New Roman', serif; line-height: 1.6; padding: 2rem; }
+                @media print {
+                  body { padding: 0; }
+                }
+              </style>
+            </head>
+            <body>
+              ${letterHTML}
+            </body>
+            </html>
+          `);
+          printWindow.document.close();
+          printWindow.focus();
+          setTimeout(() => {
+            printWindow.print();
+          }, 250);
+        });
+      }
+
+    }
+
+    // View Letter Information Modal functionality
+    const viewLetterInfoModal = document.getElementById('view-letter-info-modal');
+    const closeViewLetterInfoModalBtn = document.getElementById('close-view-letter-info-modal');
+    const closeViewLetterInfoBtn = document.getElementById('close-view-letter-info-btn');
+
+    function openViewLetterInfoModal(row) {
+      // Convert date format from YYYY-MM-DD to MM/DD/YYYY for display
+      function formatDateForDisplay(dateStr) {
+        if (!dateStr || dateStr === '-') return '-';
+        const [year, month, day] = dateStr.split('-');
+        return `${month}/${day}/${year}`;
+      }
+
+      // Populate the modal with row data
+      document.getElementById('view-visibility').textContent = row.dataset.visibility || '-';
+      document.getElementById('view-letter-template').textContent = row.dataset.letterType || '-';
+      document.getElementById('view-delivery-method').textContent = row.dataset.deliveryMethod || '-';
+      document.getElementById('view-generated-date').textContent = formatDateForDisplay(row.dataset.generatedDate);
+      document.getElementById('view-mailed-date').textContent = formatDateForDisplay(row.dataset.mailedDate);
+
+      // Handle conditional display for Certified vs Standard
+      const deliveryMethod = row.dataset.deliveryMethod;
+      const receivedDateContainer = document.getElementById('view-received-date-container');
+      const trackingContainer = document.getElementById('view-tracking-container');
+
+      if (deliveryMethod === 'Certified') {
+        receivedDateContainer.style.display = 'block';
+        trackingContainer.style.display = 'grid';
+        document.getElementById('view-received-date').textContent = formatDateForDisplay(row.dataset.receivedDate);
+        document.getElementById('view-tracking-number').textContent = row.dataset.trackingNumber !== '-' ? row.dataset.trackingNumber : '-';
+        document.getElementById('view-delivery-attempts').textContent = row.dataset.deliveryAttempts || '0';
+      } else {
+        receivedDateContainer.style.display = 'none';
+        trackingContainer.style.display = 'none';
+      }
+
+      document.getElementById('view-license-type').textContent = row.dataset.licenseType !== '-' ? row.dataset.licenseType : '-';
+      document.getElementById('view-record-type').textContent = row.dataset.recordType !== '-' ? row.dataset.recordType : '-';
+      document.getElementById('view-associated-record').textContent = row.dataset.associatedRecord !== '-' ? row.dataset.associatedRecord : '-';
+      document.getElementById('view-delivery-notes').textContent = row.dataset.deliveryNotes || '-';
+
+      // Set status with color
+      const viewStatus = document.getElementById('view-status');
+      const status = row.dataset.letterStatus || '-';
+      viewStatus.textContent = status;
+      // Remove any existing status classes
+      viewStatus.className = '';
+      // Add the appropriate status class
+      if (status !== '-') {
+        viewStatus.classList.add('status-' + status.toLowerCase().replace(' ', '-'));
+      }
+
+      // Get template fields from localStorage
+      const templateFieldsContainer = document.getElementById('view-template-fields-container');
+      const letters = JSON.parse(localStorage.getItem('letters') || '[]');
+      const letter = letters.find(l => l.id === row.dataset.id);
+
+      if (letter && letter.templateFields && Object.keys(letter.templateFields).length > 0) {
+        const tf = letter.templateFields;
+        templateFieldsContainer.style.display = 'block';
+
+        document.getElementById('view-template-date').textContent = tf.date || '-';
+        document.getElementById('view-template-contact-name').textContent = tf.contactName || '-';
+        document.getElementById('view-template-credential-name').textContent = tf.credentialName || '-';
+        document.getElementById('view-template-application-type').textContent = tf.applicationType || '-';
+        document.getElementById('view-template-manager-name').textContent = tf.managerName || '-';
+
+        // Address fields
+        document.getElementById('view-template-address-line1').textContent = tf.addressLine1 || '-';
+        const addressLine2 = document.getElementById('view-template-address-line2');
+        if (tf.addressLine2) {
+          addressLine2.textContent = tf.addressLine2;
+          addressLine2.style.display = 'block';
+        } else {
+          addressLine2.style.display = 'none';
+        }
+
+        const cityStateZip = [tf.city, tf.state, tf.zip].filter(Boolean).join(', ');
+        document.getElementById('view-template-address-city-state-zip').textContent = cityStateZip || '-';
+
+        document.getElementById('view-template-user-name').textContent = tf.userName || '-';
+        document.getElementById('view-template-user-email').textContent = tf.userEmail || '-';
+        document.getElementById('view-template-bg-number').textContent = tf.bgNumber || '-';
+      } else {
+        templateFieldsContainer.style.display = 'none';
+      }
+
+      viewLetterInfoModal.removeAttribute('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeViewLetterInfoModal() {
+      viewLetterInfoModal.setAttribute('hidden', '');
+      document.body.style.overflow = '';
+    }
+
+    if (closeViewLetterInfoModalBtn) {
+      closeViewLetterInfoModalBtn.addEventListener('click', closeViewLetterInfoModal);
+    }
+
+    if (closeViewLetterInfoBtn) {
+      closeViewLetterInfoBtn.addEventListener('click', closeViewLetterInfoModal);
+    }
+
+    // Close modal when clicking outside
+    if (viewLetterInfoModal) {
+      viewLetterInfoModal.addEventListener('click', function(e) {
+        if (e.target === viewLetterInfoModal) {
+          closeViewLetterInfoModal();
+        }
+      });
+    }
+
+    // Function to open edit modal with existing data
+    function openEditLetterModal(row) {
+      const rowIndex = Array.from(row.parentNode.children).indexOf(row);
+
+      // Set visibility
+      if (row.dataset.visibility === 'Agency Only') {
+        document.getElementById('letter-visibility-agency-only').checked = true;
+      } else {
+        document.getElementById('letter-visibility-public').checked = true;
+      }
+
+      // Set letter type
+      document.getElementById('letter-type').value = row.dataset.letterType;
+
+      // Set delivery method
+      if (row.dataset.deliveryMethod === 'Certified') {
+        document.getElementById('letter-delivery-certified').checked = true;
+        letterReceivedDate.disabled = false;
+      } else {
+        document.getElementById('letter-delivery-standard').checked = true;
+        letterReceivedDate.disabled = true;
+      }
+
+      // Set dates (stored in YYYY-MM-DD format, perfect for date inputs)
+      document.getElementById('letter-mailed-date').value = (row.dataset.mailedDate && row.dataset.mailedDate !== '-') ? row.dataset.mailedDate : '';
+      document.getElementById('letter-received-date').value = (row.dataset.receivedDate && row.dataset.receivedDate !== '-') ? row.dataset.receivedDate : '';
+
+      // Set license type
+      document.getElementById('letter-license-type').value = row.dataset.licenseType !== '-' ? row.dataset.licenseType : '';
+
+      // Set record type and associated record
+      document.getElementById('letter-record-type').value = row.dataset.recordType !== '-' ? row.dataset.recordType : '';
+      if (row.dataset.recordType !== '-') {
+        letterAssociatedRecordGroup.style.display = 'block';
+        letterAssociatedRecord.innerHTML = '<option value="">Please Select</option>';
+        const recordType = row.dataset.recordType;
+        if (letterAssociatedRecordOptions[recordType]) {
+          letterAssociatedRecordOptions[recordType].forEach(function(option) {
+            const optionElement = document.createElement('option');
+            optionElement.value = option;
+            optionElement.textContent = option;
+            letterAssociatedRecord.appendChild(optionElement);
+          });
+        }
+        letterAssociatedRecord.value = row.dataset.associatedRecord !== '-' ? row.dataset.associatedRecord : '';
+      }
+
+      // Set tracking number and delivery attempts
+      document.getElementById('letter-tracking-number').value = row.dataset.trackingNumber !== '-' ? row.dataset.trackingNumber : '';
+      document.getElementById('letter-delivery-attempts').value = row.dataset.deliveryAttempts || '0';
+
+      // Set delivery notes
+      document.getElementById('letter-delivery-notes').value = row.dataset.deliveryNotes || '';
+
+      // Set status
+      document.getElementById('letter-status').value = row.dataset.letterStatus;
+
+      // Set edit index
+      document.getElementById('letter-edit-index').value = rowIndex;
+
+      // Open modal
+      uploadLetterModal.removeAttribute('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Function to update letters count
+    function updateLettersCount() {
+      const tbody = lettersTable.querySelector('tbody');
+      const noDataMessage = document.getElementById('no-letters-message');
+      const allRows = tbody.querySelectorAll('tr');
+      const dataRows = tbody.querySelectorAll('tr:not(#no-letters-message)');
+      const rowCount = dataRows.length;
+
+      if (rowCount === 0) {
+        lettersCount.textContent = 'Showing 0 - 0 of 0 Entries';
+        if (noDataMessage) {
+          noDataMessage.style.display = '';
+        }
+      } else {
+        lettersCount.textContent = `Showing 1 - ${rowCount} of ${rowCount} Entries`;
+        if (noDataMessage) {
+          noDataMessage.style.display = 'none';
+        }
+      }
+    }
+
+    // Function to reapply striping to letters table
+    function reapplyLetterStriping() {
+      const tbody = lettersTable.querySelector('tbody');
+      const dataRows = tbody.querySelectorAll('tr:not(#no-letters-message)');
+
+      dataRows.forEach((row, index) => {
+        // First row (index 0) should be white, second should be gray, etc.
+        if (index % 2 === 0) {
+          row.style.backgroundColor = '#fff';
+        } else {
+          row.style.backgroundColor = '#f0f0f0';
+        }
+      });
+    }
+
+    // Initialize letters count and apply striping
+    updateLettersCount();
+    reapplyLetterStriping();
+
+    // Load letters from localStorage on page load
+    function loadLettersFromStorage() {
+      const letters = JSON.parse(localStorage.getItem('letters') || '[]');
+      const tbody = lettersTable.querySelector('tbody');
+      const noDataMessage = document.getElementById('no-letters-message');
+
+      // Clear existing rows (except no-data message)
+      const existingRows = tbody.querySelectorAll('tr:not(#no-letters-message)');
+      existingRows.forEach(row => row.remove());
+
+      if (letters.length > 0) {
+        // Hide no-data message
+        if (noDataMessage) {
+          noDataMessage.style.display = 'none';
+        }
+
+        // Add each letter to the table
+        letters.forEach(letter => {
+          // Format dates for display
+          function formatDateForDisplay(dateStr) {
+            if (!dateStr) return '-';
+            const [year, month, day] = dateStr.split('-');
+            return `${month}/${day}/${year}`;
+          }
+
+          const generatedDate = formatDateForDisplay(letter.generatedDate);
+          const mailedDate = letter.mailedDate ? formatDateForDisplay(letter.mailedDate) : '-';
+
+          // Combine Record Type and Associated Record for display
+          let recordTypeDisplay = letter.recordType || '-';
+          if (letter.recordType !== '-' && letter.associatedRecord) {
+            recordTypeDisplay = `${letter.recordType}: ${letter.associatedRecord}`;
+          }
+
+          // Add lock icon if Agency Only
+          const lockIcon = letter.visibility === 'Agency Only' ? '<img src="assets/lock.png" alt="Agency Only" width="16" height="16" style="margin-right: 0.5rem; vertical-align: middle;">' : '';
+
+          // Create new table row
+          const newRow = document.createElement('tr');
+          newRow.innerHTML = `
+            <td>${lockIcon}${letter.letterType}</td>
+            <td>${letter.deliveryMethod}</td>
+            <td>${generatedDate}</td>
+            <td>${mailedDate}</td>
+            <td>${letter.licenseType}</td>
+            <td>${recordTypeDisplay}</td>
+            <td><span class="status-${letter.status.toLowerCase().replace(' ', '-')}">${letter.status}</span></td>
+            <td style="white-space: nowrap;">
+              <a href="#" class="icon-button view-letter-info-btn" aria-label="View Information">
+                <img src="assets/eye-icon.png" alt="" width="30" height="30">
+              </a>
+              <a href="#" class="icon-button view-letter-btn" aria-label="View Letter">
+                <img src="assets/envelope-icon.png" alt="" width="30" height="30">
+              </a>
+              <a href="#" class="icon-button download-letter-btn" aria-label="Download Letter">
+                <img src="assets/download-certificate.png" alt="" width="30" height="30">
+              </a>
+              <a href="#" class="icon-button print-letter-btn" aria-label="Print Letter">
+                <img src="assets/print-icon.png" alt="" width="30" height="30">
+              </a>
+              <a href="edit-letter.html?id=${letter.id}" class="icon-button edit-letter-btn" aria-label="Edit Letter">
+                <img src="assets/edit-icon.png" alt="" width="30" height="30">
+              </a>
+            </td>
+          `;
+
+          // Store data attributes
+          newRow.dataset.id = letter.id;
+          newRow.dataset.visibility = letter.visibility;
+          newRow.dataset.letterType = letter.letterType;
+          newRow.dataset.deliveryMethod = letter.deliveryMethod;
+          newRow.dataset.mailedDate = letter.mailedDate || '';
+          newRow.dataset.licenseType = letter.licenseType;
+          newRow.dataset.recordType = letter.recordType;
+          newRow.dataset.associatedRecord = letter.associatedRecord || '';
+          newRow.dataset.trackingNumber = letter.trackingNumber || '';
+          newRow.dataset.deliveryAttempts = letter.deliveryAttempts || '0';
+          newRow.dataset.letterStatus = letter.status;
+          newRow.dataset.deliveryNotes = letter.deliveryNotes || '';
+
+          tbody.appendChild(newRow);
+          attachLetterRowHandlers(newRow);
+        });
+
+        // Update count and striping
+        updateLettersCount();
+        reapplyLetterStriping();
+      } else {
+        // Show no-data message if no letters
+        if (noDataMessage) {
+          noDataMessage.style.display = '';
+        }
+        updateLettersCount();
+      }
+    }
+
+    // Check if we should show notification and activate Correspondence tab
+    if (localStorage.getItem('showLetterNotification') === 'true') {
+      // Activate Correspondence tab
+      const correspondenceTab = Array.from(document.querySelectorAll('.profile-tab')).find(tab =>
+        tab.textContent.trim() === 'Correspondence'
+      );
+
+      if (correspondenceTab) {
+        // Deactivate all tabs
+        document.querySelectorAll('.profile-tab').forEach(tab => tab.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+
+        // Activate Correspondence tab
+        correspondenceTab.classList.add('active');
+        const correspondencePanel = document.getElementById('correspondence-tab');
+        if (correspondencePanel) {
+          correspondencePanel.classList.add('active');
+        }
+
+        // Activate Letters sub-tab within Correspondence
+        const lettersSubTab = document.querySelector('.horizontal-tab[data-correspondence-tab="letters"]');
+        const lettersSubTabContent = document.getElementById('letters-subtab');
+
+        if (lettersSubTab && lettersSubTabContent) {
+          // Deactivate all correspondence sub-tabs
+          document.querySelectorAll('.horizontal-tab[data-correspondence-tab]').forEach(t => t.classList.remove('active'));
+          document.querySelectorAll('.correspondence-subtab-content').forEach(content => {
+            content.classList.remove('active');
+            content.setAttribute('hidden', '');
+          });
+
+          // Activate Letters sub-tab
+          lettersSubTab.classList.add('active');
+          lettersSubTabContent.classList.add('active');
+          lettersSubTabContent.removeAttribute('hidden');
+        }
+      }
+
+      // Show success notification
+      const notificationMessage = localStorage.getItem('letterNotificationMessage') || 'Letter has been successfully added.';
+      showSuccessAlert(notificationMessage);
+
+      // Clear the flags
+      localStorage.removeItem('showLetterNotification');
+      localStorage.removeItem('letterNotificationMessage');
+    }
+
+    // Load letters on page load
+    loadLettersFromStorage();
+  </script>
+
+</body>
+</html>

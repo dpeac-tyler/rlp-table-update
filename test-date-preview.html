@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date Question Preview Test</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body style="padding: 2rem;">
+  <h1>Date Question Preview Test</h1>
+
+  <h2>Test 1: Single Date</h2>
+  <div id="test1"></div>
+
+  <h2>Test 2: Date Range</h2>
+  <div id="test2"></div>
+
+  <h2>Test 3: Date Range with Instructions</h2>
+  <div id="test3"></div>
+
+  <script>
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    function renderDateField(q, index) {
+      const isRequired = q.required === 'y';
+      const borderStyle = 'border: 1px solid #dfe1e2; border-radius: 0.5rem; padding: 2rem;';
+
+      let fieldHtml = `<div style="${borderStyle} margin-bottom: 2rem; background-color: #fff;">`;
+
+      // Add instructions if present
+      if (q.instructions) {
+        fieldHtml += `
+          <div style="margin-bottom: 1.6rem;">
+            <p style="margin: 0 0 0.4rem 0; font-weight: 700; font-size: 1.6rem;">Instructions</p>
+            <p style="margin: 0; font-size: 1.6rem; color: #71767a;">${escapeHtml(q.instructions)}</p>
+          </div>
+        `;
+      }
+
+      fieldHtml += `
+        <label class="usa-label" for="dt-${index}">
+          ${escapeHtml(q.question)}
+          ${isRequired ? '<span class="field-required">Required</span>' : ''}
+        </label>
+      `;
+
+      // Show single date or date range based on dateRange property
+      if (q.dateRange === 'y') {
+        fieldHtml += `
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div>
+              <label class="usa-label" for="dt-start-${index}" style="margin-top: 0.5rem; font-size: 1.4rem;">Start Date</label>
+              <input class="usa-input" id="dt-start-${index}" name="dt-start-${index}" type="date" ${isRequired ? 'required' : ''}>
+            </div>
+            <div>
+              <label class="usa-label" for="dt-end-${index}" style="margin-top: 0.5rem; font-size: 1.4rem;">End Date</label>
+              <input class="usa-input" id="dt-end-${index}" name="dt-end-${index}" type="date" ${isRequired ? 'required' : ''}>
+            </div>
+          </div>
+        `;
+      } else {
+        fieldHtml += `
+          <input class="usa-input" id="dt-${index}" name="dt-${index}" type="date" ${isRequired ? 'required' : ''}>
+        `;
+      }
+
+      fieldHtml += `</div>`;
+      return fieldHtml;
+    }
+
+    // Test 1: Single Date
+    const test1Question = {
+      type: 'dt',
+      question: 'What is your birth date?',
+      required: 'y',
+      dateRange: 'n',
+      instructions: ''
+    };
+    document.getElementById('test1').innerHTML = renderDateField(test1Question, 1);
+
+    // Test 2: Date Range
+    const test2Question = {
+      type: 'dt',
+      question: 'What is your travel period?',
+      required: 'y',
+      dateRange: 'y',
+      instructions: ''
+    };
+    document.getElementById('test2').innerHTML = renderDateField(test2Question, 2);
+
+    // Test 3: Date Range with Instructions
+    const test3Question = {
+      type: 'dt',
+      question: 'When will the project take place?',
+      required: 'n',
+      dateRange: 'y',
+      instructions: 'Please provide the complete project timeline including start and end dates.'
+    };
+    document.getElementById('test3').innerHTML = renderDateField(test3Question, 3);
+  </script>
+</body>
+</html>

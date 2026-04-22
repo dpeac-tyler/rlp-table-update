@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Questions - RLP</title>
+  <!-- Custom RLP Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <div class="app-container">
+    <div class="header management">
+      <a class="usa-skipnav" href="#main-content">Skip to Main Content</a>
+
+      <header class="usa-header">
+        <div class="skinny-header-container">
+          <div class="grid-container">
+            <div class="welcome-agency usa-banner__header-text">
+              Welcome DNR! &nbsp;<a href="#"><u>Logout</u></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="border-bottom-2px border-base-lighter">
+        <div class="grid-container navigation">
+          <div class="grid-row">
+            <div class="tablet:grid-col-6 logo-flex">
+              <a class="agency-logo-link" href="index.html">
+                <img src="assets/il-logo.png" alt="Illinois Department of Natural Resources agency logo"
+                  class="agency-logo">
+              </a>
+              <a class="agency-name-link" href="index.html">
+                <div class="agency-name">Illinois Department of Natural Resources</div>
+              </a>
+            </div>
+            <div class="tablet:grid-col-6">
+              <nav class="grid-container">
+                <div class="grid-row header--nav-links">
+                  <div class="tablet:grid-col nav__item">
+                    <a class="usa-link" href="index.html">
+                      <img src="assets/rlp-logo.png" alt="RLP logo" class="margin-right-1" height="30">Home
+                    </a>
+                  </div>
+                  <div class="tablet:grid-col-auto nav__item">
+                    <a class="usa-link" href="search.html">
+                      <svg aria-hidden="true" focusable="false"
+                        class="svg-inline--fa fa-magnifying-glass fa-xl margin-right-1" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+                        <path fill="currentColor"
+                          d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z">
+                        </path>
+                      </svg>Search
+                    </a>
+                  </div>
+                  <div class="tablet:grid-col nav__item">
+                    <a class="usa-link" href="#" target="_blank">
+                      <svg aria-hidden="true" focusable="false" class="svg-inline--fa fa-life-ring fa-xl margin-right-1"
+                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+                        <path fill="currentColor"
+                          d="M367.2 412.5C335.9 434.9 297.5 448 256 448s-79.9-13.1-111.2-35.5l58-58c15.8 8.6 34 13.5 53.3 13.5s37.4-4.9 53.3-13.5l58 58zm90.7 .8c33.8-43.4 54-98 54-157.3s-20.2-113.9-54-157.3c9-12.5 7.9-30.1-3.4-41.3S425.8 45 413.3 54C369.9 20.2 315.3 0 256 0S142.1 20.2 98.7 54c-12.5-9-30.1-7.9-41.3 3.4S45 86.2 54 98.7C20.2 142.1 0 196.7 0 256s20.2 113.9 54 157.3c-9 12.5-7.9 30.1 3.4 41.3S86.2 467 98.7 458c43.4 33.8 98 54 157.3 54s113.9-20.2 157.3-54c12.5 9 30.1 7.9 41.3-3.4s12.4-28.8 3.4-41.3zm-45.5-46.1l-58-58c8.6-15.8 13.5-34 13.5-53.3s-4.9-37.4-13.5-53.3l58-58C434.9 176.1 448 214.5 448 256s-13.1 79.9-35.5 111.2zM367.2 99.5l-58 58c-15.8-8.6-34-13.5-53.3-13.5s-37.4 4.9-53.3 13.5l-58-58C176.1 77.1 214.5 64 256 64s79.9 13.1 111.2 35.5zM157.5 309.3l-58 58C77.1 335.9 64 297.5 64 256s13.1-79.9 35.5-111.2l58 58c-8.6 15.8-13.5 34-13.5 53.3s4.9 37.4 13.5 53.3zM208 256a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z">
+                        </path>
+                      </svg>Help
+                    </a>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main id="main-content" class="grid-container">
+      <div class="usa-step-indicator margin-top-4" aria-label="progress">
+        <ol class="usa-step-indicator__segments">
+          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
+            <span class="usa-step-indicator__segment-label">Application Details</span>
+          </li>
+          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
+            <span class="usa-step-indicator__segment-label">Applicant Information</span>
+          </li>
+          <li class="usa-step-indicator__segment usa-step-indicator__segment--current">
+            <span class="usa-step-indicator__segment-label">Question Builder</span>
+          </li>
+          <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">Conditions</span>
+          </li>
+          <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">Payment</span>
+          </li>
+          <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">Preview</span>
+          </li>
+          <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">License</span>
+          </li>
+          <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">Notification</span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="usa-step-indicator__header">
+        <h1 class="usa-step-indicator__heading">
+          <span class="usa-step-indicator__heading-counter">3</span>
+          <span class="usa-step-indicator__total-steps">of 8</span>
+          <span class="usa-step-indicator__heading-text">Question Builder</span>
+        </h1>
+      </div>
+
+      <div class="margin-top-4 app-builder-container">
+        <!-- Left sidebar - Step indicators -->
+        <div class="app-builder-sidebar">
+          <div class="usa-step-indicator usa-step-indicator--sidebar" aria-label="step progress">
+            <ol class="usa-step-indicator__segments">
+              <li class="usa-step-indicator__segment usa-step-indicator__segment--complete" style="cursor: pointer;" onclick="window.location.href='question-builder.html'">
+                <span class="usa-step-indicator__segment-label">Question Builder</span>
+              </li>
+              <div class="step-connector-line"></div>
+              <li class="usa-step-indicator__segment usa-step-indicator__segment--current">
+                <span class="usa-step-indicator__segment-label">Create Questions</span>
+              </li>
+              <div class="step-connector-line"></div>
+              <li class="usa-step-indicator__segment">
+                <span class="usa-step-indicator__segment-label">Review Questions</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Right content area -->
+        <div class="app-builder-content" id="mainBuilderContent">
+          <h1 class="app-builder-content__heading">Create Questions</h1>
+
+          <!-- Content will be added here -->
+          <p>Use the question builder below to create your questions. Choose the type(s) of questions you want to
+            include on your application and then provide the additional information that is necessary for each question.
+            Keep repeating the process until you have created all the necessary questions.</p>
+          <p>For each question, you have the following options:</p>
+          <p>Check “Required” if the user must answer the question. Table and Addresses/Repeatable Fields have different
+            settings to address “Required”</p>
+          <p>Check “Instructions” if you want to include more information that may be helpful for the user.</p>
+          <p><i>Required</i> - indicates a required field.</p>
+
+          <div class="section-indicator" data-section="3">
+            <fieldset class="usa-fieldset">
+              <legend class="usa-legend">Question Type</legend>
+              <label class="usa-label" for="questionType">Question Type</label>
+              <select class="usa-select" id="questionType" name="Question Type">
+                <option value="">Please Select</option>
+                <optgroup label="Question Type">
+                  <option value="Acknowledgment">Acknowledgment</option>
+                  <option value="Addresses / Repeatable Fields">Addresses / Repeatable Fields</option>
+                  <option value="Date / Date Range">Date / Date Range</option>
+                  <option value="Free Form">Free Form</option>
+                  <option value="Multiple Choice">Multiple Choice</option>
+                  <option value="Multi-Select">Multi-Select</option>
+                  <option value="Table">Table</option>
+                  <option value="Table (Row Labels)">Table (Row Labels)</option>
+                  <option value="Yes/No; Either/Or">Yes/No; Either/Or</option>
+                </optgroup>
+                <optgroup label="Form Builder">
+                  <option value="Form Builder">Form Builder</option>
+                </optgroup>  
+              </select>
+
+              <div id="formBuilderSection" style="display: none; margin-top: 2rem;">
+
+                <!-- Syntax Accordion -->
+                <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 2rem;">
+                  <h3 class="usa-accordion__heading">
+                    <button
+                      type="button"
+                      class="usa-accordion__button"
+                      aria-expanded="false"
+                      aria-controls="syntax-content"
+                      style="background-color: #fff;"
+                    >
+                      Quick Builder syntax reference
+                    </button>
+                  </h3>
+                  <div id="syntax-content" class="usa-accordion__content" hidden>
+                    <div class="usa-alert usa-alert--info" style="margin-top: 1rem; margin-bottom: 2rem;">
+                      <div class="usa-alert__body">
+                        <p class="usa-alert__text" style="margin: 0; font-size: 1.4rem;">
+                          <strong>Note:</strong> Questions are optional by default. Add <code>y</code> in the y/n field to make a question required. Empty or <code>n</code> = optional.
+                        </p>
+                      </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                      <!-- Column 1 -->
+                      <div>
+                        <div style="margin-bottom: 2rem;">
+                          <h4 style="font-weight: 700; font-size: 1.8rem; margin-bottom: 0.8rem;">Acknowledgement</h4>
+                          <code style="display: block; background-color: #f0f0f0; padding: 0.8rem; border-radius: 0.3rem; font-size: 1.4rem;">ack | statement | y/n | instructions</code>
+                          <p style="margin-top: 0.5rem; font-size: 1.3rem; color: #71767a;">Can be required or optional. Defaults to optional if y/n field is omitted.</p>
+                        </div>
+
+                        <div style="margin-bottom: 2rem;">
+                          <h4 style="font-weight: 700; font-size: 1.8rem; margin-bottom: 0.8rem;">Addresses / Repeatable Fields</h4>
+                          <code style="display: block; background-color: #f0f0f0; padding: 0.8rem; border-radius: 0.3rem; font-size: 1.4rem;">addr | question | y/n | repeat(y/n) | instructions</code>
+                          <p style="margin-top: 0.5rem; font-size: 1.3rem; color: #71767a;">repeat(y) allows multiple addresses, repeat(n) for single address. Repeat field is optional, defaults to repeat(n).</p>
+                        </div>
+
+                        <div style="margin-bottom: 2rem;">
+                          <h4 style="font-weight: 700; font-size: 1.8rem; margin-bottom: 0.8rem;">Date / Date Range</h4>
+                          <code style="display: block; background-color: #f0f0f0; padding: 0.8rem; border-radius: 0.3rem; font-size: 1.4rem;">dt | question | y/n | type(single/range) | instructions</code>
+                          <p style="margin-top: 0.5rem; font-size: 1.3rem; color: #71767a;">Type field is optional. type(single) = single date, type(range) = date range. Defaults to single.</p>
+                        </div>
+
+                        <div style="margin-bottom: 2rem;">
+                          <h4 style="font-weight: 700; font-size: 1.8rem; margin-bottom: 0.8rem;">Free Form</h4>
+                          <code style="display: block; background-color: #f0f0f0; padding: 0.8rem; border-radius: 0.3rem; font-size: 1.4rem;">ff | question | y/n | instructions | format(an/num) | length(s/m/l/xl)</code>
+                          <p style="margin-top: 0.5rem; font-size: 1.3rem; color: #71767a;">Format: an = alphanumeric, num = numeric | Length: s = short, m = medium, l = large, xl = extra large</p>
+                        </div>
+
+                        <div style="margin-bottom: 2rem;">
+                          <h4 style="font-weight: 700; font-size: 1.8rem; margin-bottom: 0.8rem;">Multiple Choice</h4>
+                          <code style="display: block; background-color: #f0f0f0; padding: 0.8rem; border-radius: 0.3rem; font-size: 1.4rem;">mc | question | y/n | choices(option1,option2,option3) | instructions</code>
+                          <p style="margin-top: 0.5rem; font-size: 1.3rem; color: #71767a;">Minimum 2 choices required. Use choices() wrapper.</p>
+                        </div>
+                      </div>
+
+                      <!-- Column 2 -->
+                      <div>
+                        <div style="margin-bottom: 2rem;">
+                          <h4 style="font-weight: 700; font-size: 1.8rem; margin-bottom: 0.8rem;">Multi-Select</h4>
+                          <code style="display: block; background-color: #f0f0f0; padding: 0.8rem; border-radius: 0.3rem; font-size: 1.4rem;">ms | question | y/n | choices(a,b,c,...) | min/max(x/y) | instructions</code>
+                          <p style="margin-top: 0.5rem; font-size: 1.3rem; color: #71767a;">Multiple checkboxes. Min/max field is optional (e.g., min/max(1/3) requires 1-3 selections). Minimum 2 choices required.</p>
+                        </div>
+
+                        <div style="margin-bottom: 2rem;">
+                          <h4 style="font-weight: 700; font-size: 1.8rem; margin-bottom: 0.8rem;">Table</h4>
+                          <code style="display: block; background-color: #f0f0f0; padding: 0.8rem; border-radius: 0.3rem; font-size: 1.4rem;">tbl | question | y/n | columns(Name,Age,Relationship) | rows(3) | instructions</code>
+                          <p style="margin-top: 0.5rem; font-size: 1.3rem; color: #71767a;">Minimum 2 columns required. Rows field is optional. Use rows(n) where n >= 1.</p>
+                        </div>
+
+                        <div style="margin-bottom: 2rem;">
+                          <h4 style="font-weight: 700; font-size: 1.8rem; margin-bottom: 0.8rem;">Table (Row Labels)</h4>
+                          <code style="display: block; background-color: #f0f0f0; padding: 0.8rem; border-radius: 0.3rem; font-size: 1.4rem;">tblr | question | y/n | rows(Label1,Label2,Label3) | columns(Header2,Header3) | instructions</code>
+                          <p style="margin-top: 0.5rem; font-size: 1.3rem; color: #71767a;">Structured data-entry grid. Row labels are agency-defined (first column), columns are input fields. Minimum 1 row label and 1 column required.</p>
+                        </div>
+
+                        <div style="margin-bottom: 2rem;">
+                          <h4 style="font-weight: 700; font-size: 1.8rem; margin-bottom: 0.8rem;">Yes / No</h4>
+                          <code style="display: block; background-color: #f0f0f0; padding: 0.8rem; border-radius: 0.3rem; font-size: 1.4rem;">yn | question | y/n | labels(option1,option2) | instructions</code>
+                          <p style="margin-top: 0.5rem; font-size: 1.3rem; color: #71767a;">Labels field is optional. Defaults to Yes/No if omitted.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <label class="usa-label" for="formBuilderInput">Form Builder input</label>
+                <textarea class="usa-textarea" id="formBuilderInput" name="formBuilderInput" rows="10" placeholder="ff | Legal business name | y | Enter full registered name | an | m" style="font-family: monospace; margin-top: 0.8rem;"></textarea>
+
+                <button type="button" class="usa-button" id="parseButton" style="margin-top: 1rem;">Build Questions</button>
+
+                <!-- Error List -->
+                <div id="errorSection" style="display: none; margin-top: 2rem;">
+                  <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Errors</h3>
+                  <div id="errorList"></div>
+                </div>
+
+                <!-- Preview Section -->
+                <div id="previewSection" style="display: none; margin-top: 2rem;">
+                  <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Built Questions</h3>
+                  <div id="previewList" style="background-color: #fff; padding: 1.6rem; margin-bottom: 1.6rem;">
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Free Form Section -->
+              <div id="freeFormSection" style="display: none; margin-top: 2rem;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; font-weight: 700;">Question Options:</h3>
+
+                <!-- Checkboxes -->
+                <div class="usa-checkbox" style="margin-bottom: 1rem;">
+                  <input class="usa-checkbox__input" id="ffRequired" type="checkbox" name="ffRequired" checked>
+                  <label class="usa-checkbox__label" for="ffRequired">Required</label>
+                </div>
+                <div class="usa-checkbox" style="margin-bottom: 2rem;">
+                  <input class="usa-checkbox__input" id="ffInstructions" type="checkbox" name="ffInstructions">
+                  <label class="usa-checkbox__label" for="ffInstructions">Instructions</label>
+                </div>
+
+                <!-- Question Text -->
+                <div class="usa-form-group" style="margin-bottom: 2rem;">
+                  <label class="usa-label" for="ffQuestion">What is your question? <span class="field-required">Required</span></label>
+                  <textarea class="usa-textarea" id="ffQuestion" name="ffQuestion" rows="3" maxlength="300"></textarea>
+                  <div style="text-align: right; font-size: 1.4rem; color: #71767a; margin-top: 0.5rem;">
+                    <span id="ffQuestionCounter">300 of 300 remaining</span>
+                  </div>
+                </div>
+
+                <!-- Format Select -->
+                <div class="usa-form-group" style="margin-bottom: 2rem;">
+                  <label class="usa-label" for="ffFormat">Format <span class="field-required">Required</span></label>
+                  <select class="usa-select" id="ffFormat" name="ffFormat">
+                    <option value="">Please Select</option>
+                    <option value="alphanumeric">Alpha/Numeric</option>
+                    <option value="numeric">Numeric</option>
+                  </select>
+                </div>
+
+                <!-- Response Length (shown when format is alphanumeric) -->
+                <div class="usa-form-group" id="ffResponseLengthGroup" style="display: none; margin-bottom: 2rem;">
+                  <label class="usa-label" for="ffResponseLength">Response Length <span class="field-required">Required</span></label>
+                  <select class="usa-select" id="ffResponseLength" name="ffResponseLength">
+                    <option value="">Please Select</option>
+                    <option value="small">Small (up to 70 characters)</option>
+                    <option value="medium">Medium (up to 300 characters)</option>
+                    <option value="large">Large (up to 1000 characters)</option>
+                    <option value="extralarge">X-Large (up to 5000 characters)</option>
+                    <option value="custom">Custom (user-entered character count)</option>
+                  </select>
+                </div>
+
+                <!-- Custom Length (shown when custom is selected) -->
+                <div id="ffCustomLengthGroup" style="display: none; margin-bottom: 2rem;">
+                  <p style="font-size: 1.6rem; margin-bottom: 1.5rem;">You may enter values between 1 and 5000 in the Min Length and Max Length fields.</p>
+                  <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                    <label class="usa-label" for="ffMinLength">Min Length</label>
+                    <input class="usa-input" id="ffMinLength" name="ffMinLength" type="number" min="1" max="5000">
+                  </div>
+                  <div class="usa-form-group">
+                    <label class="usa-label" for="ffMaxLength">Max Length <span class="field-required">Required</span></label>
+                    <input class="usa-input" id="ffMaxLength" name="ffMaxLength" type="number" min="1" max="5000">
+                  </div>
+                </div>
+
+                <!-- Format Options (shown when format is numeric) -->
+                <div class="usa-form-group" id="ffFormatOptionsGroup" style="display: none; margin-bottom: 2rem;">
+                  <label class="usa-label" for="ffFormatOptions">Format Options <span class="field-required">Required</span></label>
+                  <select class="usa-select" id="ffFormatOptions" name="ffFormatOptions">
+                    <option value="">Please Select</option>
+                    <option value="currency">Currency</option>
+                    <option value="decimal">Decimal</option>
+                    <option value="integer">Integer</option>
+                    <option value="percentage">Percentage</option>
+                  </select>
+                </div>
+
+                <!-- Currency Options -->
+                <div id="ffCurrencyGroup" style="display: none; margin-bottom: 2rem;">
+                  <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                    <label class="usa-label" for="ffCurrencyMin">Min Value</label>
+                    <input class="usa-input" id="ffCurrencyMin" name="ffCurrencyMin" type="number" value="0">
+                  </div>
+                  <div class="usa-form-group">
+                    <label class="usa-label" for="ffCurrencyMax">Max Value <span class="field-required">Required</span></label>
+                    <input class="usa-input" id="ffCurrencyMax" name="ffCurrencyMax" type="number" value="5000">
+                  </div>
+                </div>
+
+                <!-- Decimal Options -->
+                <div id="ffDecimalGroup" style="display: none; margin-bottom: 2rem;">
+                  <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                    <label class="usa-label" for="ffDecimalPlaces">Number of Decimal Places <span class="field-required">Required</span></label>
+                    <input class="usa-input" id="ffDecimalPlaces" name="ffDecimalPlaces" type="number" min="0">
+                  </div>
+                  <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                    <label class="usa-label" for="ffDecimalMin">Min Value</label>
+                    <input class="usa-input" id="ffDecimalMin" name="ffDecimalMin" type="number" value="0">
+                  </div>
+                  <div class="usa-form-group">
+                    <label class="usa-label" for="ffDecimalMax">Max Value <span class="field-required">Required</span></label>
+                    <input class="usa-input" id="ffDecimalMax" name="ffDecimalMax" type="number" value="5000">
+                  </div>
+                </div>
+
+                <!-- Integer Options -->
+                <div id="ffIntegerGroup" style="display: none; margin-bottom: 2rem;">
+                  <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                    <label class="usa-label" for="ffIntegerMin">Min Value</label>
+                    <input class="usa-input" id="ffIntegerMin" name="ffIntegerMin" type="number" value="0">
+                  </div>
+                  <div class="usa-form-group">
+                    <label class="usa-label" for="ffIntegerMax">Max Value <span class="field-required">Required</span></label>
+                    <input class="usa-input" id="ffIntegerMax" name="ffIntegerMax" type="number" value="5000">
+                  </div>
+                </div>
+
+                <!-- Percentage Options -->
+                <div id="ffPercentageGroup" style="display: none; margin-bottom: 2rem;">
+                  <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                    <label class="usa-label" for="ffPercentageDecimalPlaces">Number of Decimal Places <span class="field-required">Required</span></label>
+                    <input class="usa-input" id="ffPercentageDecimalPlaces" name="ffPercentageDecimalPlaces" type="number" value="0">
+                  </div>
+                  <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                    <label class="usa-label" for="ffPercentageMin">Min Value</label>
+                    <input class="usa-input" id="ffPercentageMin" name="ffPercentageMin" type="number" value="0">
+                  </div>
+                  <div class="usa-form-group">
+                    <label class="usa-label" for="ffPercentageMax">Max Value <span class="field-required">Required</span></label>
+                    <input class="usa-input" id="ffPercentageMax" name="ffPercentageMax" type="number" value="5000">
+                  </div>
+                </div>
+
+                <!-- Instructions Text (shown when Instructions checkbox is checked) -->
+                <div id="ffInstructionsGroup" style="display: none; margin-bottom: 2rem;">
+                  <label class="usa-label" for="ffInstructionsText">Instructions <span class="field-required">Required</span></label>
+                  <div class="mock-editor">
+                    <div class="mock-editor__toolbar">
+                      <button type="button" class="mock-editor__btn" title="Bold"><strong>B</strong></button>
+                      <button type="button" class="mock-editor__btn" title="Italic"><em>I</em></button>
+                      <button type="button" class="mock-editor__btn" title="Underline"><u>U</u></button>
+                      <span class="mock-editor__separator">|</span>
+                      <button type="button" class="mock-editor__btn" title="Numbered List">1.</button>
+                      <button type="button" class="mock-editor__btn" title="Bullet List">•</button>
+                      <span class="mock-editor__separator">|</span>
+                      <button type="button" class="mock-editor__btn" title="Link">🔗</button>
+                    </div>
+                    <textarea class="mock-editor__textarea" id="ffInstructionsText" name="ffInstructionsText" rows="6" maxlength="3000"></textarea>
+                  </div>
+                </div>
+
+                <!-- Clear Button -->
+                <div style="margin-top: 2rem; display: flex; justify-content: flex-end;">
+                  <button type="button" class="usa-button usa-button--accent-cool" id="clearFreeFormButton">Clear</button>
+                </div>
+              </div>
+
+              <!-- Yes/No Section -->
+              <div id="yesNoSection" style="display: none; margin-top: 2rem;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; font-weight: 700;">Question Options:</h3>
+
+                <!-- Checkboxes -->
+                <div class="usa-checkbox" style="margin-bottom: 1rem;">
+                  <input class="usa-checkbox__input" id="ynRequired" type="checkbox" name="ynRequired" checked>
+                  <label class="usa-checkbox__label" for="ynRequired">Required</label>
+                </div>
+                <div class="usa-checkbox" style="margin-bottom: 2rem;">
+                  <input class="usa-checkbox__input" id="ynInstructions" type="checkbox" name="ynInstructions">
+                  <label class="usa-checkbox__label" for="ynInstructions">Instructions</label>
+                </div>
+
+                <!-- Question Text -->
+                <div class="usa-form-group" style="margin-bottom: 2rem;">
+                  <label class="usa-label" for="ynQuestion">What is your question? <span class="field-required">Required</span></label>
+                  <textarea class="usa-textarea" id="ynQuestion" name="ynQuestion" rows="3" maxlength="500"></textarea>
+                  <div style="text-align: right; font-size: 1.4rem; color: #71767a; margin-top: 0.5rem;">
+                    <span id="ynQuestionCounter">500 of 500 remaining</span>
+                  </div>
+                </div>
+
+                <!-- Choice 1 -->
+                <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                  <label class="usa-label" for="ynChoice1">Choice 1 <span class="field-required">Required</span></label>
+                  <input class="usa-input" id="ynChoice1" name="ynChoice1" type="text">
+                </div>
+
+                <!-- Choice 2 -->
+                <div class="usa-form-group" style="margin-bottom: 2rem;">
+                  <label class="usa-label" for="ynChoice2">Choice 2 <span class="field-required">Required</span></label>
+                  <input class="usa-input" id="ynChoice2" name="ynChoice2" type="text">
+                </div>
+
+                <!-- Instructions Text (shown when Instructions checkbox is checked) -->
+                <div id="ynInstructionsGroup" style="display: none; margin-bottom: 2rem;">
+                  <label class="usa-label" for="ynInstructionsText">Instructions <span class="field-required">Required</span></label>
+                  <div class="mock-editor">
+                    <div class="mock-editor__toolbar">
+                      <button type="button" class="mock-editor__btn" title="Bold"><strong>B</strong></button>
+                      <button type="button" class="mock-editor__btn" title="Italic"><em>I</em></button>
+                      <button type="button" class="mock-editor__btn" title="Underline"><u>U</u></button>
+                      <span class="mock-editor__separator">|</span>
+                      <button type="button" class="mock-editor__btn" title="Numbered List">1.</button>
+                      <button type="button" class="mock-editor__btn" title="Bullet List">•</button>
+                      <span class="mock-editor__separator">|</span>
+                      <button type="button" class="mock-editor__btn" title="Link">🔗</button>
+                    </div>
+                    <textarea class="mock-editor__textarea" id="ynInstructionsText" name="ynInstructionsText" rows="6" maxlength="3000"></textarea>
+                  </div>
+                </div>
+
+                <!-- Clear Button -->
+                <div style="margin-top: 2rem; display: flex; justify-content: flex-end;">
+                  <button type="button" class="usa-button usa-button--accent-cool" id="clearYesNoButton">Clear</button>
+                </div>
+              </div>
+
+              <!-- Acknowledgement Section -->
+              <div id="acknowledgementSection" style="display: none; margin-top: 2rem;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; font-weight: 700;">Question Options:</h3>
+
+                <!-- Checkboxes -->
+                <div class="usa-checkbox" style="margin-bottom: 1rem;">
+                  <input class="usa-checkbox__input" id="ackRequired" type="checkbox" name="ackRequired" checked disabled>
+                  <label class="usa-checkbox__label" for="ackRequired">Required</label>
+                </div>
+                <div class="usa-checkbox" style="margin-bottom: 2rem;">
+                  <input class="usa-checkbox__input" id="ackInstructions" type="checkbox" name="ackInstructions">
+                  <label class="usa-checkbox__label" for="ackInstructions">Instructions</label>
+                </div>
+
+                <!-- Question Text -->
+                <div class="usa-form-group" style="margin-bottom: 2rem;">
+                  <label class="usa-label" for="ackQuestion">What is your question? <span class="field-required">Required</span></label>
+                  <textarea class="usa-textarea" id="ackQuestion" name="ackQuestion" rows="6" maxlength="5000"></textarea>
+                  <div style="text-align: right; font-size: 1.4rem; color: #71767a; margin-top: 0.5rem;">
+                    <span id="ackQuestionCounter">5000 of 5000 remaining</span>
+                  </div>
+                </div>
+
+                <!-- Instructions Text (shown when Instructions checkbox is checked) -->
+                <div id="ackInstructionsGroup" style="display: none; margin-bottom: 2rem;">
+                  <label class="usa-label" for="ackInstructionsText">Instructions <span class="field-required">Required</span></label>
+                  <div class="mock-editor">
+                    <div class="mock-editor__toolbar">
+                      <button type="button" class="mock-editor__btn" title="Bold"><strong>B</strong></button>
+                      <button type="button" class="mock-editor__btn" title="Italic"><em>I</em></button>
+                      <button type="button" class="mock-editor__btn" title="Underline"><u>U</u></button>
+                      <span class="mock-editor__separator">|</span>
+                      <button type="button" class="mock-editor__btn" title="Numbered List">1.</button>
+                      <button type="button" class="mock-editor__btn" title="Bullet List">•</button>
+                      <span class="mock-editor__separator">|</span>
+                      <button type="button" class="mock-editor__btn" title="Link">🔗</button>
+                    </div>
+                    <textarea class="mock-editor__textarea" id="ackInstructionsText" name="ackInstructionsText" rows="6" maxlength="3000"></textarea>
+                  </div>
+                </div>
+
+                <!-- Clear Button -->
+                <div style="margin-top: 2rem; display: flex; justify-content: flex-end;">
+                  <button type="button" class="usa-button usa-button--accent-cool" id="clearAcknowledgementButton">Clear</button>
+                </div>
+              </div>
+
+              <!-- Date / Date Range Section -->
+              <div id="dateSection" style="display: none; margin-top: 2rem;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; font-weight: 700;">Question Options:</h3>
+
+                <!-- Checkboxes -->
+                <div class="usa-checkbox" style="margin-bottom: 1rem;">
+                  <input class="usa-checkbox__input" id="dtRequired" type="checkbox" name="dtRequired" checked>
+                  <label class="usa-checkbox__label" for="dtRequired">Required</label>
+                </div>
+                <div class="usa-checkbox" style="margin-bottom: 1rem;">
+                  <input class="usa-checkbox__input" id="dtInstructions" type="checkbox" name="dtInstructions">
+                  <label class="usa-checkbox__label" for="dtInstructions">Instructions</label>
+                </div>
+                <div class="usa-checkbox" style="margin-bottom: 2rem;">
+                  <input class="usa-checkbox__input" id="dtDateRange" type="checkbox" name="dtDateRange">
+                  <label class="usa-checkbox__label" for="dtDateRange">Date Range Answer</label>
+                </div>
+
+                <!-- Question Text -->
+                <div class="usa-form-group" style="margin-bottom: 2rem;">
+                  <label class="usa-label" for="dtQuestion">What is your question? <span class="field-required">Required</span></label>
+                  <textarea class="usa-textarea" id="dtQuestion" name="dtQuestion" rows="3" maxlength="300"></textarea>
+                  <div style="text-align: right; font-size: 1.4rem; color: #71767a; margin-top: 0.5rem;">
+                    <span id="dtQuestionCounter">300 of 300 remaining</span>
+                  </div>
+                </div>
+
+                <!-- Instructions Text (shown when Instructions checkbox is checked) -->
+                <div id="dtInstructionsGroup" style="display: none; margin-bottom: 2rem;">
+                  <label class="usa-label" for="dtInstructionsText">Instructions <span class="field-required">Required</span></label>
+                  <div class="mock-editor">
+                    <div class="mock-editor__toolbar">
+                      <button type="button" class="mock-editor__btn" title="Bold"><strong>B</strong></button>
+                      <button type="button" class="mock-editor__btn" title="Italic"><em>I</em></button>
+                      <button type="button" class="mock-editor__btn" title="Underline"><u>U</u></button>
+                      <span class="mock-editor__separator">|</span>
+                      <button type="button" class="mock-editor__btn" title="Numbered List">1.</button>
+                      <button type="button" class="mock-editor__btn" title="Bullet List">•</button>
+                      <span class="mock-editor__separator">|</span>
+                      <button type="button" class="mock-editor__btn" title="Link">🔗</button>
+                    </div>
+                    <textarea class="mock-editor__textarea" id="dtInstructionsText" name="dtInstructionsText" rows="6" maxlength="3000"></textarea>
+                  </div>
+                </div>
+
+                <!-- Clear Button -->
+                <div style="margin-top: 2rem; display: flex; justify-content: flex-end;">
+                  <button type="button" class="usa-button usa-button--accent-cool" id="clearDateButton">Clear</button>
+                </div>
+              </div>
+
+              <!-- Multiple Choice Section -->
+              <div id="multipleChoiceSection" style="display: none; margin-top: 2rem;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; font-weight: 700;">Question Options:</h3>
+
+                <!-- Checkboxes -->
+                <div class="usa-checkbox" style="margin-bottom: 1rem;">
+                  <input class="usa-checkbox__input" id="mcRequired" type="checkbox" name="mcRequired" checked>
+                  <label class="usa-checkbox__label" for="mcRequired">Required</label>
+                </div>
+                <div class="usa-checkbox" style="margin-bottom: 2rem;">
+                  <input class="usa-checkbox__input" id="mcInstructions" type="checkbox" name="mcInstructions">
+                  <label class="usa-checkbox__label" for="mcInstructions">Instructions</label>
+                </div>
+
+                <!-- Question Text -->
+                <div class="usa-form-group" style="margin-bottom: 2rem;">
+                  <label class="usa-label" for="mcQuestion">What is your question? <span class="field-required">Required</span></label>
+                  <textarea class="usa-textarea" id="mcQuestion" name="mcQuestion" rows="3" maxlength="500"></textarea>
+                  <div style="text-align: right; font-size: 1.4rem; color: #71767a; margin-top: 0.5rem;">
+                    <span id="mcQuestionCounter">500 of 500 remaining</span>
+                  </div>
+                </div>
+
+                <!-- Choices Container -->
+                <div id="mcChoicesContainer">
+                  <!-- Choice 1 -->
+                  <div class="usa-form-group" style="margin-bottom: 1.5rem; position: relative;" data-choice-number="1">
+                    <label class="usa-label" for="mcChoice1">Choice 1 <span class="field-required">Required</span></label>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                      <input class="usa-input" id="mcChoice1" name="mcChoice1" type="text" style="flex: 1;">
+                      <button type="button" class="mc-delete-btn" style="display: none;" onclick="deleteMCChoice(1)">
+                        <img src="assets/icon-delete.png" alt="Delete" style="width: 24px; height: 24px;">
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Choice 2 -->
+                  <div class="usa-form-group" style="margin-bottom: 1.5rem; position: relative;" data-choice-number="2">
+                    <label class="usa-label" for="mcChoice2">Choice 2 <span class="field-required">Required</span></label>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                      <input class="usa-input" id="mcChoice2" name="mcChoice2" type="text" style="flex: 1;">
+                      <button type="button" class="mc-delete-btn" style="display: none;" onclick="deleteMCChoice(2)">
+                        <img src="assets/icon-delete.png" alt="Delete" style="width: 24px; height: 24px;">
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Add Choice Button -->
+                <div style="margin-bottom: 2rem;">
+                  <button type="button" class="usa-button usa-button--accent-warm" id="addMCChoiceButton">Add Choice</button>
+                </div>
+
+                <!-- Instructions Text (shown when Instructions checkbox is checked) -->
+                <div id="mcInstructionsGroup" style="display: none; margin-bottom: 2rem;">
+                  <label class="usa-label" for="mcInstructionsText">Instructions <span class="field-required">Required</span></label>
+                  <div class="mock-editor">
+                    <div class="mock-editor__toolbar">
+                      <button type="button" class="mock-editor__btn" title="Bold"><strong>B</strong></button>
+                      <button type="button" class="mock-editor__btn" title="Italic"><em>I</em></button>
+                      <button type="button" class="mock-editor__btn" title="Underline"><u>U</u></button>
+                      <span class="mock-editor__separator">|</span>
+                      <button type="button" class="mock-editor__btn" title="Numbered List">1.</button>
+                      <button type="button" class="mock-editor__btn" title="Bullet List">•</button>
+                      <span class="mock-editor__separator">|</span>
+                      <button type="button" class="mock-editor__btn" title="Link">🔗</button>
+                    </div>
+                    <textarea class="mock-editor__textarea" id="mcInstructionsText" name="mcInstructionsText" rows="6" maxlength="3000"></textarea>
+                  </div>
+                </div>
+
+                <!-- Clear Button -->
+                <div style="margin-top: 2rem; display: flex; justify-content: flex-end;">
+                  <button type="button" class="usa-button usa-button--accent-cool" id="clearMultipleChoiceButton">Clear</button>
+                </div>
+              </div>
+
+              <!-- Multi-Select Section -->
+              <div id="multiSelectSection" style="display: none; margin-top: 2rem;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; font-weight: 700;">Question Options:</h3>
+
+                <!-- Checkboxes -->
+                <div class="usa-checkbox" style="margin-bottom: 1rem;">
+                  <input class="usa-checkbox__input" id="msRequired" type="checkbox" name="msRequired" checked>
+                  <label class="usa-checkbox__label" for="msRequired">Required</label>
+                </div>
+                <div class="usa-checkbox" style="margin-bottom: 2rem;">
+                  <input class="usa-checkbox__input" id="msInstructions" type="checkbox" name="msInstructions">
+                  <label class="usa-checkbox__label" for="msInstructions">Instructions</label>
+                </div>
+
+                <!-- Question Text -->
+                <div class="usa-form-group" style="margin-bottom: 2rem;">
+                  <label class="usa-label" for="msQuestion">What is your question? <span class="field-required">Required</span></label>
+                  <textarea class="usa-textarea" id="msQuestion" name="msQuestion" rows="3" maxlength="500"></textarea>
+                  <div style="text-align: right; font-size: 1.4rem; color: #71767a; margin-top: 0.5rem;">
+                    <span id="msQuestionCounter">500 of 500 remaining</span>
+                  </div>
+                </div>
+
+                <!-- Choices Container -->
+                <div id="msChoicesContainer">
+                  <!-- Choice 1 -->
+                  <div class="usa-form-group" style="margin-bottom: 1.5rem; position: relative;" data-choice-number="1">
+                    <label class="usa-label" for="msChoice1">Choice 1 <span class="field-required">Required</span></label>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                      <input class="usa-input" id="msChoice1" name="msChoice1" type="text" style="flex: 1;">
+                      <button type="button" class="ms-delete-btn" style="display: none;" onclick="deleteMSChoice(1)">
+                        <img src="assets/icon-delete.png" alt="Delete" style="width: 24px; height: 24px;">
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Choice 2 -->
+                  <div class="usa-form-group" style="margin-bottom: 1.5rem; position: relative;" data-choice-number="2">
+                    <label class="usa-label" for="msChoice2">Choice 2 <span class="field-required">Required</span></label>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                      <input class="usa-input" id="msChoice2" name="msChoice2" type="text" style="flex: 1;">
+                      <button type="button" class="ms-delete-btn" style="display: none;" onclick="deleteMSChoice(2)">
+                        <img src="assets/icon-delete.png" alt="Delete" style="width: 24px; height: 24px;">
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Add Choice Button -->
+                <div style="margin-bottom: 2rem;">
+                  <button type="button" class="usa-button usa-button--accent-warm" id="addMSChoiceButton">Add Choice</button>
+                </div>
+
+                <!-- Instructions Text (shown when Instructions checkbox is checked) -->
+                <div id="msInstructionsGroup" style="display: none; margin-bottom: 2rem;">
+                  <label class="usa-label" for="msInstructionsText">Instructions <span class="field-required">Required</span></label>
+                  <div class="mock-editor">
+                    <div class="mock-editor__toolbar">
+                      <button type="button" class="mock-editor__btn" title="Bold"><strong>B</strong></button>
+                      <button type="button" class="mock-editor__btn" title="Italic"><em>I</em></button>
+                      <button type="button" class="mock-editor__btn" title="Underline"><u>U</u></button>
+                      <span class="mock-editor__separator">|</span>
+                      <button type="button" class="mock-editor__btn" title="Numbered List">1.</button>
+                      <button type="button" class="mock-editor__btn" title="Bullet List">•</button>
+                      <span class="mock-editor__separator">|</span>
+                      <button type="button" class="mock-editor__btn" title="Link">🔗</button>
+                    </div>
+                    <textarea class="mock-editor__textarea" id="msInstructionsText" name="msInstructionsText" rows="6" maxlength="3000"></textarea>
+                  </div>
+                </div>
+
+                <!-- Clear Button -->
+                <div style="margin-top: 2rem; display: flex; justify-content: flex-end;">
+                  <button type="button" class="usa-button usa-button--accent-cool" id="clearMultiSelectButton">Clear</button>
+                </div>
+              </div>
+
+              <!-- Table Section -->
+              <div id="tableSection" style="display: none; margin-top: 2rem;">
+                <p style="font-size: 1.6rem; margin-bottom: 1.5rem;">Question Options</p>
+
+                <!-- Checkboxes -->
+                <div class="usa-checkbox" style="margin-bottom: 2rem;">
+                  <input class="usa-checkbox__input" id="tblInstructions" type="checkbox" name="tblInstructions">
+                  <label class="usa-checkbox__label" for="tblInstructions">Instructions</label>
+                </div>
+
+                <!-- Question Text -->
+                <div class="usa-form-group" style="margin-bottom: 2rem;">
+                  <label class="usa-label" for="tblQuestion">What is your question? <span class="field-required">Required</span></label>
+                  <textarea class="usa-textarea" id="tblQuestion" name="tblQuestion" rows="3" maxlength="500"></textarea>
+                  <div style="text-align: right; font-size: 1.4rem; color: #71767a; margin-top: 0.5rem;">
+                    <span id="tblQuestionCounter">500 of 500 remaining</span>
+                  </div>
+                </div>
+
+                <!-- Headers Instruction -->
+                <p style="font-size: 1.6rem; margin-bottom: 1.5rem;">Enter your column header titles below (up to 6)</p>
+
+                <!-- Headers Container -->
+                <div id="tblHeadersContainer">
+                  <!-- Header 1 -->
+                  <div class="section-indicator section-indicator--small" data-section="1" data-header-number="1" style="background-color: #fff; padding: 2.4rem 5rem; border: 1px solid #dfe1e2; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+                      <h3 style="font-size: 1.8rem; font-weight: 700; margin: 0;">Header 1</h3>
+                      <button type="button" class="tbl-delete-header-btn" style="display: none;" onclick="deleteTblHeader(1)">
+                        <img src="assets/icon-delete.png" alt="Delete" style="width: 24px; height: 24px;">
+                      </button>
+                    </div>
+                    <hr style="border: none; border-top: 1px solid #dfe1e2; margin-bottom: 2rem;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                      <div class="usa-form-group">
+                        <label class="usa-label" for="tblHeader1">Header 1 <span class="field-required">Required</span></label>
+                        <input class="usa-input" id="tblHeader1" name="tblHeader1" type="text">
+                      </div>
+                      <div class="usa-form-group">
+                        <label class="usa-label" for="tblFormat1">Column Format <span class="field-required">Required</span></label>
+                        <select class="usa-select" id="tblFormat1" name="tblFormat1">
+                          <option value="">Please Select</option>
+                          <option value="alphanumeric">Alpha Numeric</option>
+                          <option value="date">Date Field</option>
+                          <option value="document">Document</option>
+                          <option value="numeric">Numeric</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Header 2 -->
+                  <div class="section-indicator section-indicator--small" data-section="2" data-header-number="2" style="background-color: #fff; padding: 2.4rem 5rem; border: 1px solid #dfe1e2; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+                      <h3 style="font-size: 1.8rem; font-weight: 700; margin: 0;">Header 2</h3>
+                      <button type="button" class="tbl-delete-header-btn" style="display: none;" onclick="deleteTblHeader(2)">
+                        <img src="assets/icon-delete.png" alt="Delete" style="width: 24px; height: 24px;">
+                      </button>
+                    </div>
+                    <hr style="border: none; border-top: 1px solid #dfe1e2; margin-bottom: 2rem;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                      <div class="usa-form-group">
+                        <label class="usa-label" for="tblHeader2">Header 2 <span class="field-required">Required</span></label>
+                        <input class="usa-input" id="tblHeader2" name="tblHeader2" type="text">
+                      </div>
+                      <div class="usa-form-group">
+                        <label class="usa-label" for="tblFormat2">Column Format <span class="field-required">Required</span></label>
+                        <select class="usa-select" id="tblFormat2" name="tblFormat2">
+                          <option value="">Please Select</option>
+                          <option value="alphanumeric">Alpha Numeric</option>
+                          <option value="date">Date Field</option>
+                          <option value="document">Document</option>
+                          <option value="numeric">Numeric</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Add Header Button -->
+                <div style="margin-bottom: 2rem;">
+                  <button type="button" class="usa-button usa-button--accent-warm" id="addTblHeaderButton">Add Header</button>
+                </div>
+
+                <!-- Number of Required Rows -->
+                <div class="usa-form-group" style="margin-bottom: 2rem;">
+                  <label class="usa-label" for="tblRequiredRows">Number of required rows <span class="field-required">Required</span></label>
+                  <input class="usa-input" id="tblRequiredRows" name="tblRequiredRows" type="number" min="0" max="30" value="0">
+                </div>
+
+                <!-- Instructions Text (shown when Instructions checkbox is checked) -->
+                <div id="tblInstructionsGroup" style="display: none; margin-bottom: 2rem;">
+                  <label class="usa-label" for="tblInstructionsText">Instructions <span class="field-required">Required</span></label>
+                  <div class="mock-editor">
+                    <div class="mock-editor__toolbar">
+                      <button type="button" class="mock-editor__btn" title="Bold"><strong>B</strong></button>
+                      <button type="button" class="mock-editor__btn" title="Italic"><em>I</em></button>
+                      <button type="button" class="mock-editor__btn" title="Underline"><u>U</u></button>
+                      <span class="mock-editor__separator">|</span>
+                      <button type="button" class="mock-editor__btn" title="Numbered List">1.</button>
+                      <button type="button" class="mock-editor__btn" title="Bullet List">•</button>
+                      <span class="mock-editor__separator">|</span>
+                      <button type="button" class="mock-editor__btn" title="Link">🔗</button>
+                    </div>
+                    <textarea class="mock-editor__textarea" id="tblInstructionsText" name="tblInstructionsText" rows="6" maxlength="3000"></textarea>
+                  </div>
+                </div>
+
+                <!-- Clear Button -->
+                <div style="margin-top: 2rem; display: flex; justify-content: flex-end;">
+                  <button type="button" class="usa-button usa-button--accent-cool" id="clearTableButton">Clear</button>
+                </div>
+              </div>
+
+              <!-- Table (Row Labels) Section -->
+              <div id="tableRowLabelsSection" style="display: none; margin-top: 2rem;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; font-weight: 700;">Question Options:</h3>
+
+                <!-- Instructions Checkbox -->
+                <div class="usa-checkbox" style="margin-bottom: 2rem;">
+                  <input class="usa-checkbox__input" id="tblrInstructions" type="checkbox" name="tblrInstructions">
+                  <label class="usa-checkbox__label" for="tblrInstructions">Instructions</label>
+                </div>
+
+                <!-- Question Text -->
+                <div class="usa-form-group" style="margin-bottom: 2rem;">
+                  <label class="usa-label" for="tblrQuestion">What is your question? <span class="field-required">Required</span></label>
+                  <textarea class="usa-textarea" id="tblrQuestion" name="tblrQuestion" rows="3" maxlength="500"></textarea>
+                  <div style="text-align: right; font-size: 1.4rem; color: #71767a; margin-top: 0.5rem;">
+                    <span id="tblrQuestionCounter">500 of 500 remaining</span>
+                  </div>
+                </div>
+
+                <!-- Row Label Column Requirements -->
+                <h2 style="font-size: 2.4rem; margin-bottom: 1.5rem; font-weight: 700;">Row Label Column Requirements</h2>
+
+                <div class="section-indicator section-indicator--small" data-section="1" style="background-color: #fff; padding: 2.4rem 5rem; border: 1px solid #dfe1e2; border-radius: 0.5rem; margin-bottom: 2rem;">
+                  <!-- Three Column Header Row -->
+                  <div style="display: grid; grid-template-columns: 1fr auto auto; gap: 2rem; margin-bottom: 1rem;">
+                    <div style="font-weight: 700; font-size: 1.6rem;">Header 1</div>
+                    <div style="font-weight: 700; font-size: 1.6rem;">Required</div>
+                    <div></div>
+                  </div>
+
+                  <hr style="border: none; border-top: 1px solid #dfe1e2; margin-bottom: 2rem;">
+
+                  <!-- Agency Defined Row Labels Checkbox -->
+                  <div class="usa-checkbox" style="margin-bottom: 2rem;">
+                    <input class="usa-checkbox__input" id="tblrAgencyDefined1" type="checkbox" name="tblrAgencyDefined1" checked>
+                    <label class="usa-checkbox__label" for="tblrAgencyDefined1">Agency Defined Row Labels</label>
+                  </div>
+
+                  <!-- Three Column Content Row - Header 1 -->
+                  <div style="display: grid; grid-template-columns: 1fr auto auto; gap: 2rem; align-items: start; margin-bottom: 2rem;">
+                    <div class="usa-form-group" style="margin: 0;">
+                      <label class="usa-label" for="tblrHeader1">Header 1 <span class="field-required">Required</span></label>
+                      <input class="usa-input" id="tblrHeader1" name="tblrHeader1" type="text">
+                    </div>
+                    <div style="padding-top: 3.2rem;">
+                      <input class="usa-checkbox__input" id="tblrRequired1" type="checkbox" name="tblrRequired1" checked>
+                      <label class="usa-checkbox__label" for="tblrRequired1" style="margin: 0;"></label>
+                    </div>
+                    <div></div>
+                  </div>
+
+                  <!-- Row Labels Container -->
+                  <div id="tblrRowLabelsContainer" style="margin-left: 4rem;">
+                    <!-- Row 1 Label -->
+                    <div style="display: grid; grid-template-columns: 1fr auto auto; gap: 2rem; align-items: start; margin-bottom: 1.5rem;" data-row-number="1">
+                      <div class="usa-form-group" style="margin: 0;">
+                        <label class="usa-label" for="tblrRowLabel1">Row 1 Label <span class="field-required">Required</span></label>
+                        <input class="usa-input" id="tblrRowLabel1" name="tblrRowLabel1" type="text">
+                      </div>
+                      <div style="padding-top: 3.2rem;">
+                        <input class="usa-checkbox__input" id="tblrRowRequired1" type="checkbox" name="tblrRowRequired1">
+                        <label class="usa-checkbox__label" for="tblrRowRequired1" style="margin: 0;"></label>
+                      </div>
+                      <div style="padding-top: 3.2rem;">
+                        <button type="button" class="tblr-delete-row-btn" style="display: none;" onclick="deleteTblrRow(1)">
+                          <img src="assets/icon-delete.png" alt="Delete" style="width: 24px; height: 24px;">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Add Row Button -->
+                  <div style="margin-left: 4rem; margin-top: 1rem;">
+                    <button type="button" class="usa-button usa-button--accent-warm" id="addTblrRowButton">Add Row</button>
+                  </div>
+                </div>
+
+                <!-- Additional Column Requirements -->
+                <h2 style="font-size: 2.4rem; margin-bottom: 1rem; font-weight: 700;">Additional Column Requirements</h2>
+                <p style="font-size: 1.6rem; margin-bottom: 1.5rem;">Enter your additional column details below.</p>
+
+                <div id="tblrHeadersContainer">
+                  <!-- Header 2 -->
+                  <div class="section-indicator section-indicator--small" data-section="2" data-header-number="2" style="background-color: #fff; padding: 2.4rem 5rem; border: 1px solid #dfe1e2; border-radius: 0.5rem; margin-bottom: 2rem;">
+                    <!-- Three Column Header Row -->
+                    <div style="display: grid; grid-template-columns: 1fr auto auto; gap: 2rem; margin-bottom: 1rem;">
+                      <div style="font-weight: 700; font-size: 1.6rem;">Header 2</div>
+                      <div style="font-weight: 700; font-size: 1.6rem;">Required</div>
+                      <div></div>
+                    </div>
+
+                    <hr style="border: none; border-top: 1px solid #dfe1e2; margin-bottom: 2rem;">
+
+                    <!-- Three Column Content Row -->
+                    <div style="display: grid; grid-template-columns: 1fr auto auto; gap: 2rem; align-items: start;">
+                      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                        <div class="usa-form-group" style="margin: 0;">
+                          <label class="usa-label" for="tblrHeader2">Header 2 <span class="field-required">Required</span></label>
+                          <input class="usa-input" id="tblrHeader2" name="tblrHeader2" type="text">
+                        </div>
+                        <div class="usa-form-group" style="margin: 0;">
+                          <label class="usa-label" for="tblrFormat2">Column Format <span class="field-required">Required</span></label>
+                          <select class="usa-select" id="tblrFormat2" name="tblrFormat2">
+                            <option value="">Please Select</option>
+                            <option value="alphanumeric">Alpha Numeric</option>
+                            <option value="numeric">Numeric</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div style="padding-top: 3.2rem;">
+                        <input class="usa-checkbox__input" id="tblrHeaderRequired2" type="checkbox" name="tblrHeaderRequired2" disabled>
+                        <label class="usa-checkbox__label" for="tblrHeaderRequired2" style="margin: 0;"></label>
+                      </div>
+                      <div style="padding-top: 3.2rem;">
+                        <button type="button" class="tblr-delete-header-btn" style="display: none;" onclick="deleteTblrHeader(2)">
+                          <img src="assets/icon-delete.png" alt="Delete" style="width: 24px; height: 24px;">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Add Header Button -->
+                <div style="margin-bottom: 2rem;">
+                  <button type="button" class="usa-button usa-button--accent-warm" id="addTblrHeaderButton">Add Header</button>
+                </div>
+
+                <!-- Row Requirements -->
+                <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; font-weight: 700;">Row Requirements</h3>
+                <div class="usa-form-group" style="margin-bottom: 2rem;">
+                  <label class="usa-label" for="tblrRequiredRows">Number of required rows <span class="field-required">Required</span></label>
+                  <input class="usa-input" id="tblrRequiredRows" name="tblrRequiredRows" type="number" min="0" value="0">
+                </div>
+
+                <!-- Aggregations -->
+                <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; font-weight: 700;">Aggregations</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                  <div class="usa-form-group" style="margin: 0;">
+                    <label class="usa-label" for="tblrColumnAggregations">Column Aggregations <span class="field-required">Required</span></label>
+                    <select class="usa-select" id="tblrColumnAggregations" name="tblrColumnAggregations">
+                      <option value="">Please Select</option>
+                      <option value="sum">Sum</option>
+                      <option value="none">None</option>
+                    </select>
+                  </div>
+                  <div class="usa-form-group" style="margin: 0;">
+                    <label class="usa-label" for="tblrRowAggregations">Row Aggregations <span class="field-required">Required</span></label>
+                    <select class="usa-select" id="tblrRowAggregations" name="tblrRowAggregations">
+                      <option value="">Please Select</option>
+                      <option value="sum">Sum</option>
+                      <option value="none">None</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Grand Total Checkbox -->
+                <div class="usa-checkbox" style="margin-bottom: 2rem;">
+                  <input class="usa-checkbox__input" id="tblrGrandTotal" type="checkbox" name="tblrGrandTotal">
+                  <label class="usa-checkbox__label" for="tblrGrandTotal">Grand Total</label>
+                </div>
+
+                <!-- Instructions Text (shown when Instructions checkbox is checked) -->
+                <div id="tblrInstructionsGroup" style="display: none; margin-bottom: 2rem;">
+                  <label class="usa-label" for="tblrInstructionsText">Instructions <span class="field-required">Required</span></label>
+                  <div class="mock-editor">
+                    <div class="mock-editor__toolbar">
+                      <button type="button" class="mock-editor__btn" title="Bold"><strong>B</strong></button>
+                      <button type="button" class="mock-editor__btn" title="Italic"><em>I</em></button>
+                      <button type="button" class="mock-editor__btn" title="Underline"><u>U</u></button>
+                      <span class="mock-editor__separator">|</span>
+                      <button type="button" class="mock-editor__btn" title="Numbered List">1.</button>
+                      <button type="button" class="mock-editor__btn" title="Bullet List">•</button>
+                      <span class="mock-editor__separator">|</span>
+                      <button type="button" class="mock-editor__btn" title="Link">🔗</button>
+                    </div>
+                    <textarea class="mock-editor__textarea" id="tblrInstructionsText" name="tblrInstructionsText" rows="6" maxlength="3000"></textarea>
+                  </div>
+                </div>
+
+                <!-- Clear Button -->
+                <div style="margin-top: 2rem; display: flex; justify-content: flex-end;">
+                  <button type="button" class="usa-button usa-button--accent-cool" id="clearTableRowLabelsButton">Clear</button>
+                </div>
+              </div>
+
+              <!-- Address / Repeatable Fields Section -->
+              <div id="addressSection" style="display: none; margin-top: 2rem;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; font-weight: 700;">Question Options:</h3>
+
+                <!-- Checkboxes -->
+                <div class="usa-checkbox" style="margin-bottom: 2rem;">
+                  <input class="usa-checkbox__input" id="addrInstructions" type="checkbox" name="addrInstructions">
+                  <label class="usa-checkbox__label" for="addrInstructions">Instructions</label>
+                </div>
+
+                <!-- Question Text -->
+                <div class="usa-form-group" style="margin-bottom: 2rem;">
+                  <label class="usa-label" for="addrQuestion">What is your question? <span class="field-required">Required</span></label>
+                  <textarea class="usa-textarea" id="addrQuestion" name="addrQuestion" rows="3" maxlength="500"></textarea>
+                  <div style="text-align: right; font-size: 1.4rem; color: #71767a; margin-top: 0.5rem;">
+                    <span id="addrQuestionCounter">500 of 500 remaining</span>
+                  </div>
+                </div>
+
+                <!-- Minimum Field-Sets Section -->
+                <div style="background-color: #fff; padding: 2.4rem; border: 1px solid #dfe1e2; border-radius: 0.5rem; margin-bottom: 2rem;">
+                  <div class="usa-form-group">
+                    <label class="usa-label" for="addrMinFieldSets">Set the MINIMUM number of field-sets required for this application (0 indicates the question is optional) <span class="field-required">Required</span></label>
+                    <select class="usa-select" id="addrMinFieldSets" name="addrMinFieldSets">
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Field Set Selections Section -->
+                <div style="background-color: #fff; padding: 2.4rem; border: 1px solid #dfe1e2; border-radius: 0.5rem; margin-bottom: 2rem;">
+                  <h3 style="font-size: 1.8rem; margin-bottom: 1rem; font-weight: 700;">Field Set Selections</h3>
+                  <p style="font-size: 1.6rem; margin-bottom: 1.5rem;">Choose your repeatable fields from the list provided below.</p>
+
+                  <!-- Business Information -->
+                  <h4 style="font-size: 1.6rem; margin-bottom: 1rem; font-weight: 700;">Business Information</h4>
+
+                  <!-- Grid Layout - Business Information -->
+                  <div style="display: grid; grid-template-columns: 60% 20% 20%; row-gap: 4rem; column-gap: 2rem; align-items: center; margin-bottom: 2rem;">
+                    <!-- Headers -->
+                    <div style="font-weight: 700; font-size: 1.6rem;">Title</div>
+                    <div style="font-weight: 700; font-size: 1.6rem;">Displayed</div>
+                    <div style="font-weight: 700; font-size: 1.6rem;">Required</div>
+
+                    <!-- Business Name Row -->
+                    <div style="font-size: 1.6rem;">Business Name</div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrBusinessNameDisplayed" type="checkbox" name="addrBusinessNameDisplayed">
+                      <label class="usa-checkbox__label" for="addrBusinessNameDisplayed" style="margin: 0;"></label>
+                    </div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrBusinessNameRequired" type="checkbox" name="addrBusinessNameRequired" disabled>
+                      <label class="usa-checkbox__label" for="addrBusinessNameRequired" style="margin: 0;"></label>
+                    </div>
+
+                    <!-- Position/Job Title Row -->
+                    <div style="font-size: 1.6rem;">Position/Job Title</div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrPositionDisplayed" type="checkbox" name="addrPositionDisplayed">
+                      <label class="usa-checkbox__label" for="addrPositionDisplayed" style="margin: 0;"></label>
+                    </div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrPositionRequired" type="checkbox" name="addrPositionRequired" disabled>
+                      <label class="usa-checkbox__label" for="addrPositionRequired" style="margin: 0;"></label>
+                    </div>
+
+                    <!-- Branch Name/Number Row -->
+                    <div style="font-size: 1.6rem;">Branch Name/Number</div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrBranchDisplayed" type="checkbox" name="addrBranchDisplayed">
+                      <label class="usa-checkbox__label" for="addrBranchDisplayed" style="margin: 0;"></label>
+                    </div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrBranchRequired" type="checkbox" name="addrBranchRequired" disabled>
+                      <label class="usa-checkbox__label" for="addrBranchRequired" style="margin: 0;"></label>
+                    </div>
+
+                    <!-- Doing Business As Row -->
+                    <div style="font-size: 1.6rem;">Doing Business As</div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrDbaDisplayed" type="checkbox" name="addrDbaDisplayed">
+                      <label class="usa-checkbox__label" for="addrDbaDisplayed" style="margin: 0;"></label>
+                    </div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrDbaRequired" type="checkbox" name="addrDbaRequired" disabled>
+                      <label class="usa-checkbox__label" for="addrDbaRequired" style="margin: 0;"></label>
+                    </div>
+
+                    <!-- Date Row -->
+                    <div style="font-size: 1.6rem;">Date</div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrDateDisplayed" type="checkbox" name="addrDateDisplayed">
+                      <label class="usa-checkbox__label" for="addrDateDisplayed" style="margin: 0;"></label>
+                    </div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrDateRequired" type="checkbox" name="addrDateRequired" disabled>
+                      <label class="usa-checkbox__label" for="addrDateRequired" style="margin: 0;"></label>
+                    </div>
+                  </div>
+
+                  <!-- Personal Information -->
+                  <h4 style="font-size: 1.6rem; margin-bottom: 1rem; font-weight: 700;">Personal Information</h4>
+
+                  <!-- Grid Layout - Personal Information -->
+                  <div style="display: grid; grid-template-columns: 60% 20% 20%; row-gap: 4rem; column-gap: 2rem; align-items: center; margin-bottom: 2rem;">
+                    <!-- Headers -->
+                    <div style="font-weight: 700; font-size: 1.6rem;">Title</div>
+                    <div style="font-weight: 700; font-size: 1.6rem;">Displayed</div>
+                    <div style="font-weight: 700; font-size: 1.6rem;">Required</div>
+
+                    <!-- Prefix Row -->
+                    <div style="font-size: 1.6rem;">Prefix</div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrPrefixDisplayed" type="checkbox" name="addrPrefixDisplayed">
+                      <label class="usa-checkbox__label" for="addrPrefixDisplayed" style="margin: 0;"></label>
+                    </div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrPrefixRequired" type="checkbox" name="addrPrefixRequired" disabled>
+                      <label class="usa-checkbox__label" for="addrPrefixRequired" style="margin: 0;"></label>
+                    </div>
+
+                    <!-- First Name Row -->
+                    <div style="font-size: 1.6rem;">First Name</div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrFirstNameDisplayed" type="checkbox" name="addrFirstNameDisplayed">
+                      <label class="usa-checkbox__label" for="addrFirstNameDisplayed" style="margin: 0;"></label>
+                    </div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrFirstNameRequired" type="checkbox" name="addrFirstNameRequired" disabled>
+                      <label class="usa-checkbox__label" for="addrFirstNameRequired" style="margin: 0;"></label>
+                    </div>
+
+                    <!-- Middle Name Row -->
+                    <div style="font-size: 1.6rem;">Middle Name</div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrMiddleNameDisplayed" type="checkbox" name="addrMiddleNameDisplayed">
+                      <label class="usa-checkbox__label" for="addrMiddleNameDisplayed" style="margin: 0;"></label>
+                    </div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrMiddleNameRequired" type="checkbox" name="addrMiddleNameRequired" disabled>
+                      <label class="usa-checkbox__label" for="addrMiddleNameRequired" style="margin: 0;"></label>
+                    </div>
+
+                    <!-- Last Name Row -->
+                    <div style="font-size: 1.6rem;">Last Name</div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrLastNameDisplayed" type="checkbox" name="addrLastNameDisplayed">
+                      <label class="usa-checkbox__label" for="addrLastNameDisplayed" style="margin: 0;"></label>
+                    </div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrLastNameRequired" type="checkbox" name="addrLastNameRequired" disabled>
+                      <label class="usa-checkbox__label" for="addrLastNameRequired" style="margin: 0;"></label>
+                    </div>
+
+                    <!-- Suffix Row -->
+                    <div style="font-size: 1.6rem;">Suffix</div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrSuffixDisplayed" type="checkbox" name="addrSuffixDisplayed">
+                      <label class="usa-checkbox__label" for="addrSuffixDisplayed" style="margin: 0;"></label>
+                    </div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrSuffixRequired" type="checkbox" name="addrSuffixRequired" disabled>
+                      <label class="usa-checkbox__label" for="addrSuffixRequired" style="margin: 0;"></label>
+                    </div>
+
+                    <!-- Maiden Name Row -->
+                    <div style="font-size: 1.6rem;">Maiden Name</div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrMaidenNameDisplayed" type="checkbox" name="addrMaidenNameDisplayed">
+                      <label class="usa-checkbox__label" for="addrMaidenNameDisplayed" style="margin: 0;"></label>
+                    </div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrMaidenNameRequired" type="checkbox" name="addrMaidenNameRequired" disabled>
+                      <label class="usa-checkbox__label" for="addrMaidenNameRequired" style="margin: 0;"></label>
+                    </div>
+                  </div>
+
+                  <!-- ID Information -->
+                  <h4 style="font-size: 1.6rem; margin-bottom: 1rem; font-weight: 700;">ID Information</h4>
+
+                  <!-- Grid Layout - ID Information -->
+                  <div style="display: grid; grid-template-columns: 60% 20% 20%; row-gap: 4rem; column-gap: 2rem; align-items: center; margin-bottom: 2rem;">
+                    <!-- Headers -->
+                    <div style="font-weight: 700; font-size: 1.6rem;">Title</div>
+                    <div style="font-weight: 700; font-size: 1.6rem;">Displayed</div>
+                    <div style="font-weight: 700; font-size: 1.6rem;">Required</div>
+
+                    <!-- Date of Birth Row -->
+                    <div style="font-size: 1.6rem;">Date of Birth</div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrDobDisplayed" type="checkbox" name="addrDobDisplayed">
+                      <label class="usa-checkbox__label" for="addrDobDisplayed" style="margin: 0;"></label>
+                    </div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrDobRequired" type="checkbox" name="addrDobRequired" disabled>
+                      <label class="usa-checkbox__label" for="addrDobRequired" style="margin: 0;"></label>
+                    </div>
+
+                    <!-- Social Security Number Row -->
+                    <div style="font-size: 1.6rem;">Social Security Number</div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrSsnDisplayed" type="checkbox" name="addrSsnDisplayed">
+                      <label class="usa-checkbox__label" for="addrSsnDisplayed" style="margin: 0;"></label>
+                    </div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrSsnRequired" type="checkbox" name="addrSsnRequired" disabled>
+                      <label class="usa-checkbox__label" for="addrSsnRequired" style="margin: 0;"></label>
+                    </div>
+
+                    <!-- Alias Row -->
+                    <div style="font-size: 1.6rem;">Alias</div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrAliasDisplayed" type="checkbox" name="addrAliasDisplayed">
+                      <label class="usa-checkbox__label" for="addrAliasDisplayed" style="margin: 0;"></label>
+                    </div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrAliasRequired" type="checkbox" name="addrAliasRequired" disabled>
+                      <label class="usa-checkbox__label" for="addrAliasRequired" style="margin: 0;"></label>
+                    </div>
+                  </div>
+
+                  <!-- Address Information -->
+                  <h4 style="font-size: 1.6rem; margin-bottom: 1rem; font-weight: 700;">Address Information</h4>
+
+                  <!-- Grid Layout - Address Information -->
+                  <div style="display: grid; grid-template-columns: 60% 20% 20%; row-gap: 4rem; column-gap: 2rem; align-items: center; margin-bottom: 2rem;">
+                    <!-- Headers -->
+                    <div style="font-weight: 700; font-size: 1.6rem;">Title</div>
+                    <div style="font-weight: 700; font-size: 1.6rem;">Displayed</div>
+                    <div style="font-weight: 700; font-size: 1.6rem;">Required</div>
+
+                    <!-- Address Line 1 Row -->
+                    <div style="font-size: 1.6rem;">Address Line 1</div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrLine1Displayed" type="checkbox" name="addrLine1Displayed">
+                      <label class="usa-checkbox__label" for="addrLine1Displayed" style="margin: 0;"></label>
+                    </div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrLine1Required" type="checkbox" name="addrLine1Required" disabled>
+                      <label class="usa-checkbox__label" for="addrLine1Required" style="margin: 0;"></label>
+                    </div>
+
+                    <!-- Address Line 2 Row -->
+                    <div style="font-size: 1.6rem;">Address Line 2</div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrLine2Displayed" type="checkbox" name="addrLine2Displayed">
+                      <label class="usa-checkbox__label" for="addrLine2Displayed" style="margin: 0;"></label>
+                    </div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrLine2Required" type="checkbox" name="addrLine2Required" disabled>
+                      <label class="usa-checkbox__label" for="addrLine2Required" style="margin: 0;"></label>
+                    </div>
+
+                    <!-- City/APO/DPO/FPO Row -->
+                    <div style="font-size: 1.6rem;">City/APO/DPO/FPO</div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrCityDisplayed" type="checkbox" name="addrCityDisplayed">
+                      <label class="usa-checkbox__label" for="addrCityDisplayed" style="margin: 0;"></label>
+                    </div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrCityRequired" type="checkbox" name="addrCityRequired" disabled>
+                      <label class="usa-checkbox__label" for="addrCityRequired" style="margin: 0;"></label>
+                    </div>
+
+                    <!-- State Row -->
+                    <div style="font-size: 1.6rem;">State</div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrStateDisplayed" type="checkbox" name="addrStateDisplayed">
+                      <label class="usa-checkbox__label" for="addrStateDisplayed" style="margin: 0;"></label>
+                    </div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrStateRequired" type="checkbox" name="addrStateRequired" disabled>
+                      <label class="usa-checkbox__label" for="addrStateRequired" style="margin: 0;"></label>
+                    </div>
+
+                    <!-- Zip Code Row -->
+                    <div style="font-size: 1.6rem;">Zip Code</div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrZipDisplayed" type="checkbox" name="addrZipDisplayed">
+                      <label class="usa-checkbox__label" for="addrZipDisplayed" style="margin: 0;"></label>
+                    </div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrZipRequired" type="checkbox" name="addrZipRequired" disabled>
+                      <label class="usa-checkbox__label" for="addrZipRequired" style="margin: 0;"></label>
+                    </div>
+
+                    <!-- County Row -->
+                    <div style="font-size: 1.6rem;">County</div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrCountyDisplayed" type="checkbox" name="addrCountyDisplayed">
+                      <label class="usa-checkbox__label" for="addrCountyDisplayed" style="margin: 0;"></label>
+                    </div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrCountyRequired" type="checkbox" name="addrCountyRequired" disabled>
+                      <label class="usa-checkbox__label" for="addrCountyRequired" style="margin: 0;"></label>
+                    </div>
+                  </div>
+
+                  <!-- Contact Information -->
+                  <h4 style="font-size: 1.6rem; margin-bottom: 1rem; font-weight: 700;">Contact Information</h4>
+
+                  <!-- Grid Layout - Contact Information -->
+                  <div style="display: grid; grid-template-columns: 60% 20% 20%; row-gap: 4rem; column-gap: 2rem; align-items: center; margin-bottom: 2rem;">
+                    <!-- Headers -->
+                    <div style="font-weight: 700; font-size: 1.6rem;">Title</div>
+                    <div style="font-weight: 700; font-size: 1.6rem;">Displayed</div>
+                    <div style="font-weight: 700; font-size: 1.6rem;">Required</div>
+
+                    <!-- Telephone Number Row -->
+                    <div style="font-size: 1.6rem;">Telephone Number</div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrTelephoneDisplayed" type="checkbox" name="addrTelephoneDisplayed">
+                      <label class="usa-checkbox__label" for="addrTelephoneDisplayed" style="margin: 0;"></label>
+                    </div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrTelephoneRequired" type="checkbox" name="addrTelephoneRequired" disabled>
+                      <label class="usa-checkbox__label" for="addrTelephoneRequired" style="margin: 0;"></label>
+                    </div>
+
+                    <!-- Alt. Telephone Number Row -->
+                    <div style="font-size: 1.6rem;">Alt. Telephone Number</div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrAltTelephoneDisplayed" type="checkbox" name="addrAltTelephoneDisplayed">
+                      <label class="usa-checkbox__label" for="addrAltTelephoneDisplayed" style="margin: 0;"></label>
+                    </div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrAltTelephoneRequired" type="checkbox" name="addrAltTelephoneRequired" disabled>
+                      <label class="usa-checkbox__label" for="addrAltTelephoneRequired" style="margin: 0;"></label>
+                    </div>
+
+                    <!-- Email Address Row -->
+                    <div style="font-size: 1.6rem;">Email Address</div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrEmailDisplayed" type="checkbox" name="addrEmailDisplayed">
+                      <label class="usa-checkbox__label" for="addrEmailDisplayed" style="margin: 0;"></label>
+                    </div>
+                    <div>
+                      <input class="usa-checkbox__input" id="addrEmailRequired" type="checkbox" name="addrEmailRequired" disabled>
+                      <label class="usa-checkbox__label" for="addrEmailRequired" style="margin: 0;"></label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Instructions Text (shown when Instructions checkbox is checked) -->
+                <div id="addrInstructionsGroup" style="display: none; margin-bottom: 2rem;">
+                  <label class="usa-label" for="addrInstructionsText">Instructions <span class="field-required">Required</span></label>
+                  <div class="mock-editor">
+                    <div class="mock-editor__toolbar">
+                      <button type="button" class="mock-editor__btn" title="Bold"><strong>B</strong></button>
+                      <button type="button" class="mock-editor__btn" title="Italic"><em>I</em></button>
+                      <button type="button" class="mock-editor__btn" title="Underline"><u>U</u></button>
+                      <span class="mock-editor__separator">|</span>
+                      <button type="button" class="mock-editor__btn" title="Numbered List">1.</button>
+                      <button type="button" class="mock-editor__btn" title="Bullet List">•</button>
+                      <span class="mock-editor__separator">|</span>
+                      <button type="button" class="mock-editor__btn" title="Link">🔗</button>
+                    </div>
+                    <textarea class="mock-editor__textarea" id="addrInstructionsText" name="addrInstructionsText" rows="6" maxlength="3000"></textarea>
+                  </div>
+                </div>
+
+                <!-- Clear Button -->
+                <div style="margin-top: 2rem; display: flex; justify-content: flex-end;">
+                  <button type="button" class="usa-button usa-button--accent-cool" id="clearAddressButton">Clear</button>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+
+          <div class="app-builder-button-container" style="justify-content: flex-end;">
+            <button type="button" class="usa-button usa-button--outline" style="margin-left: 10px;" id="mainPreviewButton">Preview</button>
+            <button type="button" class="usa-button" id="saveButton">Save</button>
+          </div>
+        </div>
+
+        <!-- Preview Page Content (hidden by default) -->
+        <div class="app-builder-content" id="previewPageContent" style="display: none;">
+          <h1 class="page-title page-title--underlined" style="font-size: 3rem; font-weight: 700; margin: 0 0 1rem 0; padding-bottom: 1rem;">Illinois Department of Natural Resources</h1>
+          <h2 style="font-size: 2.4rem; font-weight: 400; margin: 0 0 1.5rem 0;">Individual Original One Application - 0311</h2>
+          <p style="font-size: 1.6rem; margin-bottom: 2rem;"><strong>NOTE:</strong> The application is non-functioning. This is just a preview of your application specifics.</p>
+
+          <!-- Preview Questions Container -->
+          <div id="previewPageQuestions"></div>
+
+          <div class="app-builder-button-container" style="justify-content: flex-end;">
+            <button type="button" class="usa-button" id="closePreviewButton">Close</button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Success Notification -->
+  <div id="successNotification" class="notification">
+    <div class="notification-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+    </div>
+    <div class="notification-text" id="notificationText"></div>
+  </div>
+
+  <script src="js/question-builder.js"></script>
+</body>
+
+</html>

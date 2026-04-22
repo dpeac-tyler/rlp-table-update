@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Review Questions - RLP</title>
+  <!-- Custom RLP Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <div class="app-container">
+    <div class="header management">
+      <a class="usa-skipnav" href="#main-content">Skip to Main Content</a>
+
+      <header class="usa-header">
+        <div class="skinny-header-container">
+          <div class="grid-container">
+            <div class="welcome-agency usa-banner__header-text">
+              Welcome DNR! &nbsp;<a href="#"><u>Logout</u></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="border-bottom-2px border-base-lighter">
+        <div class="grid-container navigation">
+          <div class="grid-row">
+            <div class="tablet:grid-col-6 logo-flex">
+              <a class="agency-logo-link" href="index.html">
+                <img src="assets/il-logo.png" alt="Illinois Department of Natural Resources agency logo"
+                  class="agency-logo">
+              </a>
+              <a class="agency-name-link" href="index.html">
+                <div class="agency-name">Illinois Department of Natural Resources</div>
+              </a>
+            </div>
+            <div class="tablet:grid-col-6">
+              <nav class="grid-container">
+                <div class="grid-row header--nav-links">
+                  <div class="tablet:grid-col nav__item">
+                    <a class="usa-link" href="index.html">
+                      <img src="assets/rlp-logo.png" alt="RLP logo" class="margin-right-1" height="30">Home
+                    </a>
+                  </div>
+                  <div class="tablet:grid-col-auto nav__item">
+                    <a class="usa-link" href="search.html">
+                      <svg aria-hidden="true" focusable="false"
+                        class="svg-inline--fa fa-magnifying-glass fa-xl margin-right-1" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+                        <path fill="currentColor"
+                          d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z">
+                        </path>
+                      </svg>Search
+                    </a>
+                  </div>
+                  <div class="tablet:grid-col nav__item">
+                    <a class="usa-link" href="#" target="_blank">
+                      <svg aria-hidden="true" focusable="false" class="svg-inline--fa fa-life-ring fa-xl margin-right-1"
+                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+                        <path fill="currentColor"
+                          d="M367.2 412.5C335.9 434.9 297.5 448 256 448s-79.9-13.1-111.2-35.5l58-58c15.8 8.6 34 13.5 53.3 13.5s37.4-4.9 53.3-13.5l58 58zm90.7 .8c33.8-43.4 54-98 54-157.3s-20.2-113.9-54-157.3c9-12.5 7.9-30.1-3.4-41.3S425.8 45 413.3 54C369.9 20.2 315.3 0 256 0S142.1 20.2 98.7 54c-12.5-9-30.1-7.9-41.3 3.4S45 86.2 54 98.7C20.2 142.1 0 196.7 0 256s20.2 113.9 54 157.3c-9 12.5-7.9 30.1 3.4 41.3S86.2 467 98.7 458c43.4 33.8 98 54 157.3 54s113.9-20.2 157.3-54c12.5 9 30.1 7.9 41.3-3.4s12.4-28.8 3.4-41.3zm-45.5-46.1l-58-58c8.6-15.8 13.5-34 13.5-53.3s-4.9-37.4-13.5-53.3l58-58C434.9 176.1 448 214.5 448 256s-13.1 79.9-35.5 111.2zM367.2 99.5l-58 58c-15.8-8.6-34-13.5-53.3-13.5s-37.4 4.9-53.3 13.5l-58-58C176.1 77.1 214.5 64 256 64s79.9 13.1 111.2 35.5zM157.5 309.3l-58 58C77.1 335.9 64 297.5 64 256s13.1-79.9 35.5-111.2l58 58c-8.6 15.8-13.5 34-13.5 53.3s4.9 37.4 13.5 53.3zM208 256a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z">
+                        </path>
+                      </svg>Help
+                    </a>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main id="main-content" class="grid-container">
+      <div class="usa-step-indicator margin-top-4" aria-label="progress">
+        <ol class="usa-step-indicator__segments">
+          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
+            <span class="usa-step-indicator__segment-label">Application Details</span>
+          </li>
+          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
+            <span class="usa-step-indicator__segment-label">Applicant Information</span>
+          </li>
+          <li class="usa-step-indicator__segment usa-step-indicator__segment--current">
+            <span class="usa-step-indicator__segment-label">Question Builder</span>
+          </li>
+          <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">Conditions</span>
+          </li>
+          <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">Payment</span>
+          </li>
+          <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">Preview</span>
+          </li>
+          <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">License</span>
+          </li>
+          <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">Notification</span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="usa-step-indicator__header">
+        <h1 class="usa-step-indicator__heading">
+          <span class="usa-step-indicator__heading-counter">3</span>
+          <span class="usa-step-indicator__total-steps">of 8</span>
+          <span class="usa-step-indicator__heading-text">Question Builder</span>
+        </h1>
+      </div>
+
+      <div class="margin-top-4 app-builder-container">
+        <!-- Left sidebar - Step indicators -->
+        <div class="app-builder-sidebar">
+          <div class="usa-step-indicator usa-step-indicator--sidebar" aria-label="step progress">
+            <ol class="usa-step-indicator__segments">
+              <li class="usa-step-indicator__segment usa-step-indicator__segment--complete" style="cursor: pointer;" onclick="window.location.href='question-builder.html'">
+                <span class="usa-step-indicator__segment-label">Question Builder</span>
+              </li>
+              <div class="step-connector-line"></div>
+              <li class="usa-step-indicator__segment usa-step-indicator__segment--complete" style="cursor: pointer;" onclick="window.location.href='create-questions.html'">
+                <span class="usa-step-indicator__segment-label">Create Questions</span>
+              </li>
+              <div class="step-connector-line"></div>
+              <li class="usa-step-indicator__segment usa-step-indicator__segment--current">
+                <span class="usa-step-indicator__segment-label">Review Questions</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Right content area -->
+        <div class="app-builder-content">
+          <h1 class="app-builder-content__heading">Review Questions</h1>
+
+          <p class="app-builder-content__text">
+            Below is an interactive listing of your application's custom sections, descriptions, and questions. You can add more, edit, reorder, or delete them using the action icons below.
+          </p>
+
+          <p class="app-builder-content__text">
+            Sections, descriptions, and questions that are part of conditions cannot be changed. To change them, first go to the Conditions tab and remove any condition(s). Then, return to this page and make any edits. Finally, return to the Conditions tab and reapply any rules.
+          </p>
+
+          <!-- Icon Key -->
+          <div class="usa-accordion usa-accordion--bordered margin-top-2">
+            <h3 class="usa-accordion__heading">
+              <button
+                type="button"
+                class="usa-accordion__button"
+                aria-expanded="false"
+                aria-controls="icon-key-content"
+              >
+                Icon Key
+              </button>
+            </h3>
+            <div id="icon-key-content" class="usa-accordion__content usa-prose" hidden>
+              <p class="text-bold margin-0 margin-bottom-2">Options and Control Types</p>
+              <div class="icon-key-grid">
+                <div class="icon-key-item">
+                  <span style="background-color: #162e51; color: #fff; padding: 0.4rem 0.8rem; border-radius: 0.3rem; font-size: 1.2rem; font-weight: 700;">R</span>
+                  <span>- Required</span>
+                </div>
+                <div class="icon-key-item">
+                  <span style="background-color: #162e51; color: #fff; padding: 0.4rem 0.8rem; border-radius: 0.3rem; font-size: 1.2rem; font-weight: 700;">I</span>
+                  <span>- Instructions</span>
+                </div>
+                <div class="icon-key-item">
+                  <span style="background-color: #162e51; color: #fff; padding: 0.4rem 0.8rem; border-radius: 0.3rem; font-size: 1.2rem; font-weight: 700;">C</span>
+                  <span>- Conditional</span>
+                </div>
+                <div class="icon-key-item">
+                  <img src="assets/edit-icon.png" alt="" width="24" height="24">
+                  <span>- Edit</span>
+                </div>
+                <div class="icon-key-item">
+                  <span style="background-color: #162e51; color: #fff; padding: 0.4rem 0.8rem; border-radius: 0.3rem; font-size: 1.2rem;">↓</span>
+                  <span>- Move Down</span>
+                </div>
+                <div class="icon-key-item">
+                  <span style="background-color: #162e51; color: #fff; padding: 0.4rem 0.8rem; border-radius: 0.3rem; font-size: 1.2rem;">↑</span>
+                  <span>- Move Up</span>
+                </div>
+                <div class="icon-key-item">
+                  <img src="assets/icon-delete.png" alt="" width="24" height="24">
+                  <span>- Delete Row</span>
+                </div>
+              </div>
+
+              <hr style="border: none; border-top: 1px solid #dfe1e2; margin: 2rem 0;">
+
+              <p class="text-bold margin-0 margin-bottom-2">Question Types</p>
+              <div class="icon-key-grid">
+                <div class="icon-key-item">
+                  <img src="assets/question-type-acknowledgement.svg" alt="" width="25" height="25">
+                  <span>- Acknowledgement</span>
+                </div>
+                <div class="icon-key-item">
+                  <img src="assets/question-type-repeatable-fields.svg" alt="" width="25" height="25">
+                  <span>- Address/Repeatable Fields</span>
+                </div>
+                <div class="icon-key-item">
+                  <img src="assets/question-type-date.svg" alt="" width="25" height="25">
+                  <span>- Dates/Date Range</span>
+                </div>
+                <div class="icon-key-item">
+                  <img src="assets/question-type-free-form.svg" alt="" width="25" height="25">
+                  <span>- Free Form</span>
+                </div>
+                <div class="icon-key-item">
+                  <img src="assets/question-type-multiple-choice.svg" alt="" width="25" height="25">
+                  <span>- Multiple Choice</span>
+                </div>
+                <div class="icon-key-item">
+                  <img src="assets/question-type-multi-select.svg" alt="" width="25" height="25">
+                  <span>- Multi-Select</span>
+                </div>
+                <div class="icon-key-item">
+                  <img src="assets/question-type-table.svg" alt="" width="25" height="25">
+                  <span>- Table</span>
+                </div>
+                <div class="icon-key-item">
+                  <img src="assets/question-type-table-with-row-labels.svg" alt="" width="25" height="25">
+                  <span>- Table With Row Labels</span>
+                </div>
+                <div class="icon-key-item">
+                  <img src="assets/question-type-yes-no.svg" alt="" width="25" height="25">
+                  <span>- Yes/No; Either/Or</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Questions Table -->
+          <div class="questions-section">
+            <div class="questions-section__header">
+              <div class="questions-section__header-title">Question(s)</div>
+              <div class="questions-section__header-title">Options</div>
+              <div class="questions-section__header-title">Controls</div>
+            </div>
+
+            <!-- Question Items will go here -->
+            <div id="questionItems">
+              <!-- Placeholder for questions -->
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="app-builder-button-container" style="justify-content: space-between;">
+            <div style="display: flex; gap: 1rem;">
+              <button type="button" id="addSectionBtn" class="usa-button usa-button--accent-warm">Add Section</button>
+              <button type="button" id="addDescriptionBtn" class="usa-button usa-button--accent-warm">Add Description</button>
+            </div>
+            <button type="button" id="addQuestionBtn" class="usa-button usa-button--accent-warm">Add Question</button>
+          </div>
+
+          <div class="app-builder-button-container" style="justify-content: flex-end;">
+            <button type="button" id="previewQuestionsBtn" class="usa-button usa-button--outline" style="margin-left: 10px;">Preview</button>
+            <button type="button" class="usa-button">Save</button>
+          </div>
+        </div>
+
+        <!-- Preview Page (Hidden by default) -->
+        <div class="app-builder-content" id="previewPageContent" style="display: none;">
+          <h1 class="page-title page-title--underlined" style="font-size: 3rem; font-weight: 700; margin: 0 0 1rem 0; padding-bottom: 1rem;">Illinois Department of Natural Resources</h1>
+          <h2 style="font-size: 2.4rem; font-weight: 400; margin: 0 0 1.5rem 0;">Individual Original One Application - 0311</h2>
+          <p style="font-size: 1.6rem; margin-bottom: 2rem;"><strong>NOTE:</strong> The application is non-functioning. This is just a preview of your application specifics.</p>
+
+          <!-- Preview Questions Container -->
+          <div id="previewPageQuestions"></div>
+
+          <div class="app-builder-button-container" style="justify-content: flex-end;">
+            <button type="button" class="usa-button" id="closePreviewButton">Close</button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Document Upload Modal -->
+  <div id="document-upload-modal" class="modal-overlay" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Upload Document</h2>
+        <button type="button" class="modal-close" id="close-document-upload-modal" aria-label="Close modal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="document-upload-form">
+          <div class="usa-form-group margin-bottom-4">
+            <label class="usa-label" for="document-field-name" id="document-field-label">Field Name</label>
+            <input class="usa-input" id="document-field-name" name="document-field-name" type="text">
+          </div>
+
+          <div class="usa-form-group margin-bottom-4">
+            <label class="usa-label" for="document-file-upload">Upload File <span class="field-required">Required</span></label>
+            <p style="font-size: 1.4rem; color: #71767a; margin-bottom: 1rem;">File size and type limitations per attachment: 50 MB for txt, csv, png, jpg, jpeg, pdf, doc, xls, docx, xlsx</p>
+            <input class="usa-file-input" id="document-file-upload" name="document-file-upload" type="file" accept=".txt,.csv,.png,.jpg,.jpeg,.pdf,.doc,.xls,.docx,.xlsx" required>
+          </div>
+
+          <div class="usa-form-group margin-bottom-4">
+            <label class="usa-label" for="document-notes">Document Notes</label>
+            <textarea class="usa-textarea" id="document-notes" name="document-notes" maxlength="100" rows="3"></textarea>
+            <p style="font-size: 1.4rem; color: #71767a; margin-top: 0.5rem;">Maximum 100 characters</p>
+          </div>
+
+          <input type="hidden" id="document-question-index" value="">
+          <input type="hidden" id="document-header-index" value="">
+
+          <div class="modal-footer" style="padding-left: 0;">
+            <button type="submit" class="usa-button">Save</button>
+            <button type="button" class="usa-button usa-button--secondary" id="cancel-document-upload">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Notification -->
+  <div id="successNotification" class="notification">
+    <div class="notification-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+    </div>
+    <div class="notification-text" id="notificationText"></div>
+  </div>
+
+  <script>
+    // Load questions from localStorage on page load
+    let reviewQuestions = [];
+    let isAddingSection = false;
+    let isAddingDescription = false;
+
+    window.addEventListener('DOMContentLoaded', function() {
+      loadQuestions();
+      initAccordions();
+      initAddButtons();
+
+      // Check if we should show the question created notification
+      if (sessionStorage.getItem('showQuestionCreatedNotification') === 'true') {
+        sessionStorage.removeItem('showQuestionCreatedNotification');
+        showSuccessNotification('You have created a question successfully!');
+      }
+
+      // Check if we should show the question edited notification
+      if (sessionStorage.getItem('showQuestionEditedNotification') === 'true') {
+        sessionStorage.removeItem('showQuestionEditedNotification');
+        showSuccessNotification('Question updated successfully!');
+      }
+    });
+
+    // Accordion toggle functionality
+    function initAccordions() {
+      document.querySelectorAll('.usa-accordion__button').forEach(button => {
+        button.addEventListener('click', function() {
+          const expanded = this.getAttribute('aria-expanded') === 'true';
+          const content = document.getElementById(this.getAttribute('aria-controls'));
+
+          this.setAttribute('aria-expanded', !expanded);
+          content.hidden = expanded;
+        });
+      });
+    }
+
+    // Initialize Add buttons
+    function initAddButtons() {
+      document.getElementById('addSectionBtn').addEventListener('click', showAddSectionForm);
+      document.getElementById('addDescriptionBtn').addEventListener('click', showAddDescriptionForm);
+      document.getElementById('addQuestionBtn').addEventListener('click', function() {
+        window.location.href = 'create-questions.html';
+      });
+      document.getElementById('previewQuestionsBtn').addEventListener('click', showPreview);
+      document.getElementById('closePreviewButton').addEventListener('click', hidePreview);
+    }
+
+    function showPreview() {
+      // Get only questions (filter out sections and descriptions)
+      const questions = reviewQuestions.filter(item => item.type !== 'section' && item.type !== 'description');
+
+      if (questions.length === 0) {
+        alert('No questions to preview. Please add at least one question.');
+        return;
+      }
+
+      // Hide main content, show preview
+      document.querySelector('.app-builder-content:not(#previewPageContent)').style.display = 'none';
+      document.getElementById('previewPageContent').style.display = 'block';
+
+      // Render questions
+      const container = document.getElementById('previewPageQuestions');
+      container.innerHTML = questions.map((q, index) => renderFormField(q, index, true)).join('');
+
+      // Scroll to top
+      window.scrollTo(0, 0);
+    }
+
+    function hidePreview() {
+      // Show main content, hide preview
+      document.querySelector('.app-builder-content:not(#previewPageContent)').style.display = 'block';
+      document.getElementById('previewPageContent').style.display = 'none';
+
+      // Scroll to top
+      window.scrollTo(0, 0);
+    }
+
+    function renderFormField(q, index, bordered = false) {
+      const isRequired = q.required === 'y';
+      const borderStyle = bordered ? 'border: 1px solid #dfe1e2; border-radius: 0.5rem; padding: 2rem;' : 'padding: 1rem;';
+
+      // Handle Acknowledgement questions
+      if (q.type === 'ack') {
+        let fieldHtml = `<div style="${borderStyle} margin-bottom: 2rem; background-color: #fff;">`;
+
+        if (q.instructions) {
+          fieldHtml += `
+            <div style="margin-bottom: 1.6rem;">
+              <p style="margin: 0 0 0.4rem 0; font-weight: 700; font-size: 1.6rem;">Instructions</p>
+              <p style="margin: 0; font-size: 1.6rem; color: #71767a;">${escapeHtml(q.instructions)}</p>
+            </div>
+          `;
+        }
+
+        fieldHtml += `
+          <div class="usa-checkbox">
+            <input class="usa-checkbox__input" id="ack-${index}" type="checkbox" name="ack-${index}" required>
+            <label class="usa-checkbox__label" for="ack-${index}">
+              ${escapeHtml(q.question)}
+              <span class="field-required">Required</span>
+            </label>
+          </div>
+        `;
+
+        fieldHtml += `</div>`;
+        return fieldHtml;
+      }
+
+      // Handle Yes/No questions
+      if (q.type === 'yn') {
+        let fieldHtml = `<div style="${borderStyle} margin-bottom: 2rem; background-color: #fff;">`;
+
+        if (q.instructions) {
+          fieldHtml += `
+            <div style="margin-bottom: 1.6rem;">
+              <p style="margin: 0 0 0.4rem 0; font-weight: 700; font-size: 1.6rem;">Instructions</p>
+              <p style="margin: 0; font-size: 1.6rem; color: #71767a;">${escapeHtml(q.instructions)}</p>
+            </div>
+          `;
+        }
+
+        const choice1 = q.choice1 || 'Yes';
+        const choice2 = q.choice2 || 'No';
+
+        fieldHtml += `
+          <label class="usa-label">
+            ${escapeHtml(q.question)}
+            ${isRequired ? '<span class="field-required">Required</span>' : ''}
+          </label>
+          <div class="usa-radio">
+            <input class="usa-radio__input" id="yn-choice1-${index}" type="radio" name="yn-${index}" value="${escapeHtml(choice1)}" ${isRequired ? 'required' : ''}>
+            <label class="usa-radio__label" for="yn-choice1-${index}">${escapeHtml(choice1)}</label>
+          </div>
+          <div class="usa-radio">
+            <input class="usa-radio__input" id="yn-choice2-${index}" type="radio" name="yn-${index}" value="${escapeHtml(choice2)}" ${isRequired ? 'required' : ''}>
+            <label class="usa-radio__label" for="yn-choice2-${index}">${escapeHtml(choice2)}</label>
+          </div>
+        `;
+
+        fieldHtml += `</div>`;
+        return fieldHtml;
+      }
+
+      // Handle Date questions
+      if (q.type === 'dt') {
+        let fieldHtml = `<div style="${borderStyle} margin-bottom: 2rem; background-color: #fff;">`;
+
+        if (q.instructions) {
+          fieldHtml += `
+            <div style="margin-bottom: 1.6rem;">
+              <p style="margin: 0 0 0.4rem 0; font-weight: 700; font-size: 1.6rem;">Instructions</p>
+              <p style="margin: 0; font-size: 1.6rem; color: #71767a;">${escapeHtml(q.instructions)}</p>
+            </div>
+          `;
+        }
+
+        fieldHtml += `
+          <label class="usa-label" for="dt-${index}">
+            ${escapeHtml(q.question)}
+            ${isRequired ? '<span class="field-required">Required</span>' : ''}
+          </label>
+        `;
+
+        if (q.dateRange === 'y') {
+          fieldHtml += `
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div>
+                <label class="usa-label" for="dt-start-${index}" style="margin-top: 0.5rem; font-size: 1.4rem;">Start Date</label>
+                <input class="usa-input" id="dt-start-${index}" name="dt-start-${index}" type="date" ${isRequired ? 'required' : ''}>
+              </div>
+              <div>
+                <label class="usa-label" for="dt-end-${index}" style="margin-top: 0.5rem; font-size: 1.4rem;">End Date</label>
+                <input class="usa-input" id="dt-end-${index}" name="dt-end-${index}" type="date" ${isRequired ? 'required' : ''}>
+              </div>
+            </div>
+          `;
+        } else {
+          fieldHtml += `<input class="usa-input" id="dt-${index}" name="dt-${index}" type="date" ${isRequired ? 'required' : ''}>`;
+        }
+
+        fieldHtml += `</div>`;
+        return fieldHtml;
+      }
+
+      // Handle Multiple Choice questions
+      if (q.type === 'mc') {
+        let fieldHtml = `<div style="${borderStyle} margin-bottom: 2rem; background-color: #fff;">`;
+
+        if (q.instructions) {
+          fieldHtml += `
+            <div style="margin-bottom: 1.6rem;">
+              <p style="margin: 0 0 0.4rem 0; font-weight: 700; font-size: 1.6rem;">Instructions</p>
+              <p style="margin: 0; font-size: 1.6rem; color: #71767a;">${escapeHtml(q.instructions)}</p>
+            </div>
+          `;
+        }
+
+        fieldHtml += `
+          <label class="usa-label">
+            ${escapeHtml(q.question)}
+            ${isRequired ? '<span class="field-required">Required</span>' : ''}
+          </label>
+        `;
+
+        q.choices.forEach((choice, choiceIndex) => {
+          fieldHtml += `
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="mc-choice${choiceIndex}-${index}" type="radio" name="mc-${index}" value="${escapeHtml(choice)}" ${isRequired ? 'required' : ''}>
+              <label class="usa-radio__label" for="mc-choice${choiceIndex}-${index}">${escapeHtml(choice)}</label>
+            </div>
+          `;
+        });
+
+        fieldHtml += `</div>`;
+        return fieldHtml;
+      }
+
+      // Handle Multi-Select questions
+      if (q.type === 'ms') {
+        let fieldHtml = `<div style="${borderStyle} margin-bottom: 2rem; background-color: #fff;">`;
+
+        if (q.instructions) {
+          fieldHtml += `
+            <div style="margin-bottom: 1.6rem;">
+              <p style="margin: 0 0 0.4rem 0; font-weight: 700; font-size: 1.6rem;">Instructions</p>
+              <p style="margin: 0; font-size: 1.6rem; color: #71767a;">${escapeHtml(q.instructions)}</p>
+            </div>
+          `;
+        }
+
+        fieldHtml += `
+          <label class="usa-label">
+            ${escapeHtml(q.question)}
+            ${isRequired ? '<span class="field-required">Required</span>' : ''}
+          </label>
+        `;
+
+        q.choices.forEach((choice, choiceIndex) => {
+          fieldHtml += `
+            <div class="usa-checkbox">
+              <input class="usa-checkbox__input" id="ms-choice${choiceIndex}-${index}" type="checkbox" name="ms-${index}" value="${escapeHtml(choice)}" ${isRequired && choiceIndex === 0 ? 'required' : ''}>
+              <label class="usa-checkbox__label" for="ms-choice${choiceIndex}-${index}">${escapeHtml(choice)}</label>
+            </div>
+          `;
+        });
+
+        fieldHtml += `</div>`;
+        return fieldHtml;
+      }
+
+      // Handle Table questions
+      if (q.type === 'tbl') {
+        let fieldHtml = `
+          <div style="${borderStyle} margin-bottom: 2rem; background-color: #fff;">
+        `;
+
+        // Add question label
+        fieldHtml += `
+          <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; font-weight: 700;">
+            ${escapeHtml(q.question)}
+          </h3>
+        `;
+
+        // Add instructions if present
+        if (q.instructions) {
+          fieldHtml += `
+            <div style="margin-bottom: 1.6rem;">
+              <p style="margin: 0 0 0.4rem 0; font-weight: 700; font-size: 1.6rem;">Instructions</p>
+              <p style="margin: 0; font-size: 1.6rem; color: #71767a;">${escapeHtml(q.instructions)}</p>
+            </div>
+          `;
+        }
+
+        // Container with background color
+        fieldHtml += `
+          <div style="background-color: #f3f6f8; border: 1px solid #dfe1e2; border-radius: 0.5rem; padding: 4rem;">
+        `;
+
+        // Calculate column width percentage
+        const headerCount = q.headers.length;
+        const columnWidth = (100 / headerCount).toFixed(2);
+
+        // Build table
+        fieldHtml += `
+          <table class="usa-table usa-table--borderless" style="background-color: #fff; margin-bottom: 1.5rem;">
+            <thead>
+              <tr>
+        `;
+
+        // Add header columns
+        q.headers.forEach(header => {
+          fieldHtml += `
+                <th style="width: ${columnWidth}%;">${escapeHtml(header.title)}</th>
+          `;
+        });
+
+        fieldHtml += `
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="${headerCount}" style="text-align: center; padding: 2rem; color: #71767a;">No entries</td>
+              </tr>
+            </tbody>
+          </table>
+        `;
+
+        // Form inputs for adding rows (below the table)
+        q.headers.forEach((header, headerIndex) => {
+          const fieldId = `tbl-input-${index}-${headerIndex}`;
+
+          // Check if this column is a document upload
+          if (header.format === 'document') {
+            fieldHtml += `
+              <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                <label class="usa-label" for="${fieldId}">${escapeHtml(header.title)}</label>
+                <p style="font-size: 1.4rem; color: #71767a; margin-bottom: 1rem;">File size and type limitations per attachment: 50 MB for txt, csv, png, jpg, jpeg, pdf, doc, xls, docx, xlsx</p>
+                <button type="button" class="usa-button usa-button--outline" onclick="openDocumentUploadModal(${index}, ${headerIndex}, '${escapeHtml(header.title)}')">
+                  Upload
+                </button>
+                <span id="file-name-${index}-${headerIndex}" style="margin-left: 1rem; font-size: 1.4rem; color: #71767a;"></span>
+              </div>
+            `;
+          } else if (header.format === 'date') {
+            fieldHtml += `
+              <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                <label class="usa-label" for="${fieldId}">${escapeHtml(header.title)}</label>
+                <input class="usa-input date-input-custom" id="${fieldId}" name="${fieldId}" type="date">
+              </div>
+            `;
+          } else {
+            fieldHtml += `
+              <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                <label class="usa-label" for="${fieldId}">${escapeHtml(header.title)}</label>
+                <input class="usa-input" id="${fieldId}" name="${fieldId}" type="text">
+              </div>
+            `;
+          }
+        });
+
+        // Add buttons
+        fieldHtml += `
+          <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+            <button type="button" class="usa-button">Save & Add More</button>
+            <button type="button" class="usa-button">Save & Finish</button>
+          </div>
+        `;
+
+        // Close the background container
+        fieldHtml += `
+          </div>
+        `;
+
+        fieldHtml += `</div>`;
+        return fieldHtml;
+      }
+
+      // Handle Free Form questions (fallback)
+      const isTextarea = q.length === 'xl' || q.length === 'custom';
+      const inputType = q.format === 'num' ? 'number' : 'text';
+
+      let fieldHtml = `<div style="${borderStyle} margin-bottom: 2rem; background-color: #fff;">`;
+
+      if (q.instructions) {
+        fieldHtml += `
+          <div style="margin-bottom: 1.6rem;">
+            <p style="margin: 0 0 0.4rem 0; font-weight: 700; font-size: 1.6rem;">Instructions</p>
+            <p style="margin: 0; font-size: 1.6rem; color: #71767a;">${escapeHtml(q.instructions)}</p>
+          </div>
+        `;
+      }
+
+      fieldHtml += `
+        <label class="usa-label" for="ff-${index}">
+          ${escapeHtml(q.question)}
+          ${isRequired ? '<span class="field-required">Required</span>' : ''}
+        </label>
+      `;
+
+      if (isTextarea) {
+        fieldHtml += `<textarea class="usa-textarea" id="ff-${index}" name="ff-${index}" rows="5" ${isRequired ? 'required' : ''}></textarea>`;
+      } else {
+        fieldHtml += `<input class="usa-input" id="ff-${index}" name="ff-${index}" type="${inputType}" ${isRequired ? 'required' : ''}>`;
+      }
+
+      fieldHtml += `</div>`;
+      return fieldHtml;
+    }
+
+    function showAddSectionForm() {
+      if (isAddingSection) return;
+      isAddingSection = true;
+
+      const questionItems = document.getElementById('questionItems');
+      const formHtml = `
+        <div class="add-item-form" id="addSectionForm">
+          <div class="usa-form-group">
+            <label class="usa-label" for="sectionTitle">Section Title</label>
+            <input class="usa-input" id="sectionTitle" name="sectionTitle" type="text" />
+          </div>
+          <div class="add-item-form__buttons">
+            <button type="button" class="usa-button" onclick="saveSectionTitle()">Save</button>
+            <button type="button" class="usa-button usa-button--secondary-red" onclick="cancelAddSection()">Cancel</button>
+          </div>
+        </div>
+      `;
+      questionItems.insertAdjacentHTML('beforeend', formHtml);
+      document.getElementById('sectionTitle').focus();
+    }
+
+    function saveSectionTitle() {
+      const titleInput = document.getElementById('sectionTitle');
+      const title = titleInput.value.trim();
+
+      if (!title) {
+        alert('Please enter a section title.');
+        return;
+      }
+
+      reviewQuestions.push({
+        type: 'section',
+        title: title
+      });
+
+      const form = document.getElementById('addSectionForm');
+      if (form) form.remove();
+
+      isAddingSection = false;
+      saveAndRefresh();
+
+      showSuccessNotification('Section added successfully!');
+    }
+
+    function cancelAddSection() {
+      isAddingSection = false;
+      const form = document.getElementById('addSectionForm');
+      if (form) form.remove();
+    }
+
+    function showAddDescriptionForm() {
+      if (isAddingDescription) return;
+      isAddingDescription = true;
+
+      const questionItems = document.getElementById('questionItems');
+      const formHtml = `
+        <div class="add-item-form" id="addDescriptionForm">
+          <div class="usa-form-group">
+            <label class="usa-label" for="descriptionText">Description</label>
+            <div class="mock-editor">
+              <div class="mock-editor__toolbar">
+                <button type="button" class="mock-editor__btn" title="Bold"><strong>B</strong></button>
+                <button type="button" class="mock-editor__btn" title="Italic"><em>I</em></button>
+                <button type="button" class="mock-editor__btn" title="Underline"><u>U</u></button>
+                <span class="mock-editor__separator">|</span>
+                <button type="button" class="mock-editor__btn" title="Numbered List">1.</button>
+                <button type="button" class="mock-editor__btn" title="Bullet List">•</button>
+                <span class="mock-editor__separator">|</span>
+                <button type="button" class="mock-editor__btn" title="Link">🔗</button>
+              </div>
+              <textarea class="mock-editor__textarea" id="descriptionText" name="descriptionText" rows="6" maxlength="500"></textarea>
+            </div>
+          </div>
+          <div class="add-item-form__buttons">
+            <button type="button" class="usa-button" onclick="saveDescription()">Save</button>
+            <button type="button" class="usa-button usa-button--secondary-red" onclick="cancelAddDescription()">Cancel</button>
+          </div>
+        </div>
+      `;
+      questionItems.insertAdjacentHTML('beforeend', formHtml);
+      document.getElementById('descriptionText').focus();
+    }
+
+    function saveDescription() {
+      const textarea = document.getElementById('descriptionText');
+      const content = textarea ? textarea.value.trim() : '';
+
+      if (!content) {
+        alert('Please enter a description.');
+        return;
+      }
+
+      if (content.length > 500) {
+        alert('Description must be 500 characters or less.');
+        return;
+      }
+
+      reviewQuestions.push({
+        type: 'description',
+        content: content
+      });
+
+      const form = document.getElementById('addDescriptionForm');
+      if (form) form.remove();
+
+      isAddingDescription = false;
+      saveAndRefresh();
+
+      showSuccessNotification('Description added successfully!');
+    }
+
+    function cancelAddDescription() {
+      isAddingDescription = false;
+      const form = document.getElementById('addDescriptionForm');
+      if (form) form.remove();
+    }
+
+    function loadQuestions() {
+      // Try sessionStorage first, then localStorage
+      let storedQuestions = sessionStorage.getItem('reviewQuestions') || localStorage.getItem('reviewQuestions');
+      console.log('Loading questions from storage:', storedQuestions);
+
+      if (storedQuestions) {
+        try {
+          reviewQuestions = JSON.parse(storedQuestions);
+          console.log('Parsed questions:', reviewQuestions);
+          displayQuestions();
+        } catch (e) {
+          console.error('Error parsing questions:', e);
+          showNoQuestionsMessage();
+        }
+      } else {
+        console.log('No questions found in storage');
+        showNoQuestionsMessage();
+      }
+    }
+
+    function showNoQuestionsMessage() {
+      document.getElementById('questionItems').innerHTML = `
+        <div style="padding: 2rem; text-align: center; color: #71767a;">
+          <p>No questions to display. Return to Create Questions to build your questions.</p>
+        </div>
+      `;
+    }
+
+    function displayQuestions() {
+      const questionItems = document.getElementById('questionItems');
+
+      if (reviewQuestions.length === 0) {
+        questionItems.innerHTML = `
+          <div style="padding: 2rem; text-align: center; color: #71767a;">
+            <p>No questions to display. Return to Create Questions to build your questions.</p>
+          </div>
+        `;
+        return;
+      }
+
+      questionItems.innerHTML = reviewQuestions.map((item, index) => {
+        const itemNumber = index + 1;
+
+        // Handle Section
+        if (item.type === 'section') {
+          return `
+            <div class="question-row-container" data-question-number="${itemNumber}">
+              <div class="question-row-grid">
+
+                <!-- Question Column -->
+                <div class="question-row__question-col">
+                  <p class="question-row__section-text">${escapeHtml(item.title)}</p>
+                </div>
+
+                <!-- Options Column -->
+                <div class="question-row__options-col">
+                  <!-- Empty for sections -->
+                </div>
+
+                <!-- Controls Column -->
+                <div class="question-row__controls-col">
+                  <button type="button" onclick="editItem(${index})" class="question-row__control-btn" title="Edit">
+                    <img src="assets/edit-icon.png" alt="Edit">
+                  </button>
+                  <button type="button" onclick="moveDown(${index})" class="question-row__control-btn ${index === reviewQuestions.length - 1 ? 'question-row__control-btn--hidden' : ''}">↓</button>
+                  <button type="button" onclick="moveUp(${index})" class="question-row__control-btn ${index === 0 ? 'question-row__control-btn--hidden' : ''}">↑</button>
+                  <button type="button" onclick="deleteItem(${index})" class="question-row__control-btn" title="Delete">
+                    <img src="assets/icon-delete.png" alt="Delete">
+                  </button>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+
+        // Handle Description
+        if (item.type === 'description') {
+          return `
+            <div class="question-row-container" data-question-number="${itemNumber}">
+              <div class="question-row-grid">
+
+                <!-- Question Column -->
+                <div class="question-row__question-col">
+                  <p class="question-row__description-text">${escapeHtml(item.content)}</p>
+                </div>
+
+                <!-- Options Column -->
+                <div class="question-row__options-col">
+                  <!-- Empty for descriptions -->
+                </div>
+
+                <!-- Controls Column -->
+                <div class="question-row__controls-col">
+                  <button type="button" onclick="editItem(${index})" class="question-row__control-btn" title="Edit">
+                    <img src="assets/edit-icon.png" alt="Edit">
+                  </button>
+                  <button type="button" onclick="moveDown(${index})" class="question-row__control-btn ${index === reviewQuestions.length - 1 ? 'question-row__control-btn--hidden' : ''}">↓</button>
+                  <button type="button" onclick="moveUp(${index})" class="question-row__control-btn ${index === 0 ? 'question-row__control-btn--hidden' : ''}">↑</button>
+                  <button type="button" onclick="deleteItem(${index})" class="question-row__control-btn" title="Delete">
+                    <img src="assets/icon-delete.png" alt="Delete">
+                  </button>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+
+        // Handle Question
+        const isRequired = item.required === 'y';
+
+        // Determine question type icon
+        const questionType = item.type || item.questionType || 'ff';
+        let questionIcon = 'question-type-free-form.svg';
+        let questionIconAlt = 'Free Form';
+
+        if (questionType === 'ack') {
+          questionIcon = 'question-type-acknowledgement.svg';
+          questionIconAlt = 'Acknowledgement';
+        } else if (questionType === 'yn') {
+          questionIcon = 'question-type-yes-no.svg';
+          questionIconAlt = 'Yes/No; Either/Or';
+        } else if (questionType === 'dt') {
+          questionIcon = 'question-type-date.svg';
+          questionIconAlt = 'Date / Date Range';
+        } else if (questionType === 'mc') {
+          questionIcon = 'question-type-multiple-choice.svg';
+          questionIconAlt = 'Multiple Choice';
+        } else if (questionType === 'ms') {
+          questionIcon = 'question-type-multi-select.svg';
+          questionIconAlt = 'Multi-Select';
+        } else if (questionType === 'addr') {
+          questionIcon = 'question-type-repeatable-fields.svg';
+          questionIconAlt = 'Addresses / Repeatable Fields';
+        } else if (questionType === 'tbl') {
+          questionIcon = 'question-type-table.svg';
+          questionIconAlt = 'Table';
+        } else if (questionType === 'ff') {
+          questionIcon = 'question-type-free-form.svg';
+          questionIconAlt = 'Free Form';
+        }
+
+        return `
+          <div class="question-row-container" data-question-number="${itemNumber}">
+            <div class="question-row-grid">
+
+              <!-- Question Column -->
+              <div class="question-row__question-col">
+                <p class="question-row__question-text">${escapeHtml(item.question)}</p>
+              </div>
+
+              <!-- Options Column -->
+              <div class="question-row__options-col">
+                ${isRequired ? '<span class="question-row__badge">R</span>' : ''}
+                <span class="question-row__options-separator">|</span>
+                <img src="assets/${questionIcon}" alt="${questionIconAlt}" width="25" height="25">
+              </div>
+
+              <!-- Controls Column -->
+              <div class="question-row__controls-col">
+                <button type="button" onclick="editItem(${index})" class="question-row__control-btn" title="Edit">
+                  <img src="assets/edit-icon.png" alt="Edit">
+                </button>
+                <button type="button" onclick="moveDown(${index})" class="question-row__control-btn ${index === reviewQuestions.length - 1 ? 'question-row__control-btn--hidden' : ''}">↓</button>
+                <button type="button" onclick="moveUp(${index})" class="question-row__control-btn ${index === 0 ? 'question-row__control-btn--hidden' : ''}">↑</button>
+                <button type="button" onclick="deleteItem(${index})" class="question-row__control-btn" title="Delete">
+                  <img src="assets/icon-delete.png" alt="Delete">
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function moveUp(index) {
+      if (index > 0) {
+        [reviewQuestions[index], reviewQuestions[index - 1]] = [reviewQuestions[index - 1], reviewQuestions[index]];
+        saveAndRefresh();
+      }
+    }
+
+    function moveDown(index) {
+      if (index < reviewQuestions.length - 1) {
+        [reviewQuestions[index], reviewQuestions[index + 1]] = [reviewQuestions[index + 1], reviewQuestions[index]];
+        saveAndRefresh();
+      }
+    }
+
+    function editItem(index) {
+      const item = reviewQuestions[index];
+      if (item.type === 'section') {
+        alert('Edit section functionality will be implemented. Index: ' + index);
+      } else if (item.type === 'description') {
+        alert('Edit description functionality will be implemented. Index: ' + index);
+      } else {
+        // Edit question - store the question and its index, then navigate to create-questions
+        sessionStorage.setItem('editQuestionIndex', index);
+        sessionStorage.setItem('editQuestionData', JSON.stringify(item));
+        window.location.href = 'create-questions.html';
+      }
+    }
+
+    function deleteItem(index) {
+      const item = reviewQuestions[index];
+      let itemType = 'question';
+      if (item.type === 'section') itemType = 'section';
+      if (item.type === 'description') itemType = 'description';
+
+      if (confirm(`Are you sure you want to delete this ${itemType}?`)) {
+        reviewQuestions.splice(index, 1);
+        saveAndRefresh();
+      }
+    }
+
+    function saveAndRefresh() {
+      const questionsData = JSON.stringify(reviewQuestions);
+      localStorage.setItem('reviewQuestions', questionsData);
+      sessionStorage.setItem('reviewQuestions', questionsData);
+      displayQuestions();
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    function showSuccessNotification(message) {
+      const notification = document.getElementById('successNotification');
+      const notificationText = document.getElementById('notificationText');
+
+      notificationText.textContent = message;
+
+      // Show notification
+      notification.classList.add('show');
+
+      // Hide after 4 seconds
+      setTimeout(() => {
+        notification.classList.remove('show');
+        notification.classList.add('hide');
+
+        // Reset after animation completes
+        setTimeout(() => {
+          notification.classList.remove('hide');
+        }, 400);
+      }, 4000);
+    }
+
+    // Document Upload Modal Functions
+    function openDocumentUploadModal(questionIndex, headerIndex, fieldName) {
+      const modal = document.getElementById('document-upload-modal');
+      const fieldNameInput = document.getElementById('document-field-name');
+      const fieldNameLabel = document.getElementById('document-field-label');
+      const questionIndexInput = document.getElementById('document-question-index');
+      const headerIndexInput = document.getElementById('document-header-index');
+      const fileInput = document.getElementById('document-file-upload');
+      const notesTextarea = document.getElementById('document-notes');
+
+      // Set field label (but leave input empty)
+      fieldNameInput.value = '';
+      fieldNameLabel.textContent = fieldName;
+      questionIndexInput.value = questionIndex;
+      headerIndexInput.value = headerIndex;
+
+      // Reset file input and notes
+      fileInput.value = '';
+      notesTextarea.value = '';
+
+      // Show modal
+      modal.removeAttribute('hidden');
+    }
+
+    function closeDocumentUploadModal() {
+      const modal = document.getElementById('document-upload-modal');
+      modal.setAttribute('hidden', '');
+    }
+
+    // Modal event listeners
+    document.getElementById('close-document-upload-modal').addEventListener('click', closeDocumentUploadModal);
+    document.getElementById('cancel-document-upload').addEventListener('click', closeDocumentUploadModal);
+
+    // Click outside to close
+    document.getElementById('document-upload-modal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeDocumentUploadModal();
+      }
+    });
+
+    // Update field name input when file is selected
+    document.getElementById('document-file-upload').addEventListener('change', function(e) {
+      const fileInput = e.target;
+      const fieldNameInput = document.getElementById('document-field-name');
+
+      if (fileInput.files.length > 0) {
+        const fileName = fileInput.files[0].name;
+        fieldNameInput.value = fileName;
+      } else {
+        fieldNameInput.value = '';
+      }
+    });
+
+    // Handle form submission
+    document.getElementById('document-upload-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const fileInput = document.getElementById('document-file-upload');
+      const questionIndex = document.getElementById('document-question-index').value;
+      const headerIndex = document.getElementById('document-header-index').value;
+
+      if (fileInput.files.length > 0) {
+        const file = fileInput.files[0];
+        const fileName = file.name;
+        const fileSize = file.size;
+
+        // Check file size (50 MB = 52428800 bytes)
+        if (fileSize > 52428800) {
+          alert('File size exceeds 50 MB limit. Please choose a smaller file.');
+          return;
+        }
+
+        // Check file type
+        const allowedExtensions = ['txt', 'csv', 'png', 'jpg', 'jpeg', 'pdf', 'doc', 'xls', 'docx', 'xlsx'];
+        const fileExtension = fileName.split('.').pop().toLowerCase();
+
+        if (!allowedExtensions.includes(fileExtension)) {
+          alert('Invalid file type. Allowed types: ' + allowedExtensions.join(', '));
+          return;
+        }
+
+        // Display file name next to button
+        const fileNameDisplay = document.getElementById(`file-name-${questionIndex}-${headerIndex}`);
+        if (fileNameDisplay) {
+          fileNameDisplay.textContent = fileName;
+          fileNameDisplay.style.color = '#00a91c';
+          fileNameDisplay.style.fontWeight = '700';
+        }
+
+        // Show success notification
+        showSuccessNotification('Document uploaded successfully: ' + fileName);
+
+        // Close modal
+        closeDocumentUploadModal();
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Start New Application - RLP</title>
+<!-- Custom RLP Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <div class="header management">
+      <a class="usa-skipnav" href="#main-content">Skip to Main Content</a>
+
+      <header class="usa-header">
+        <div class="skinny-header-container">
+          <div class="grid-container">
+            <div class="welcome-agency usa-banner__header-text">
+              Welcome DNR! &nbsp;<a href="#"><u>Logout</u></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="border-bottom-2px border-base-lighter">
+        <div class="grid-container navigation">
+          <div class="grid-row">
+            <div class="tablet:grid-col-6 logo-flex">
+              <a class="agency-logo-link" href="index.html">
+                <img src="assets/il-logo.png"
+                     alt="Illinois Department of Natural Resources agency logo"
+                     class="agency-logo">
+              </a>
+              <a class="agency-name-link" href="index.html">
+                <div class="agency-name">Illinois Department of Natural Resources</div>
+              </a>
+            </div>
+            <div class="tablet:grid-col-6">
+              <nav class="grid-container">
+                <div class="grid-row header--nav-links">
+                  <div class="tablet:grid-col nav__item">
+                    <a class="usa-link" href="index.html">
+                      <img src="assets/rlp-logo.png"
+                           alt="RLP logo"
+                           class="margin-right-1"
+                           height="30">Home
+                    </a>
+                  </div>
+                  <div class="tablet:grid-col-auto nav__item">
+                    <a class="usa-link" href="search.html">
+                      <svg aria-hidden="true" focusable="false" class="svg-inline--fa fa-magnifying-glass fa-xl margin-right-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+                        <path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path>
+                      </svg>Search
+                    </a>
+                  </div>
+                  <div class="tablet:grid-col nav__item">
+                    <a class="usa-link" href="#" target="_blank">
+                      <svg aria-hidden="true" focusable="false" class="svg-inline--fa fa-life-ring fa-xl margin-right-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+                        <path fill="currentColor" d="M367.2 412.5C335.9 434.9 297.5 448 256 448s-79.9-13.1-111.2-35.5l58-58c15.8 8.6 34 13.5 53.3 13.5s37.4-4.9 53.3-13.5l58 58zm90.7 .8c33.8-43.4 54-98 54-157.3s-20.2-113.9-54-157.3c9-12.5 7.9-30.1-3.4-41.3S425.8 45 413.3 54C369.9 20.2 315.3 0 256 0S142.1 20.2 98.7 54c-12.5-9-30.1-7.9-41.3 3.4S45 86.2 54 98.7C20.2 142.1 0 196.7 0 256s20.2 113.9 54 157.3c-9 12.5-7.9 30.1 3.4 41.3S86.2 467 98.7 458c43.4 33.8 98 54 157.3 54s113.9-20.2 157.3-54c12.5 9 30.1 7.9 41.3-3.4s12.4-28.8 3.4-41.3zm-45.5-46.1l-58-58c8.6-15.8 13.5-34 13.5-53.3s-4.9-37.4-13.5-53.3l58-58C434.9 176.1 448 214.5 448 256s-13.1 79.9-35.5 111.2zM367.2 99.5l-58 58c-15.8-8.6-34-13.5-53.3-13.5s-37.4 4.9-53.3 13.5l-58-58C176.1 77.1 214.5 64 256 64s79.9 13.1 111.2 35.5zM157.5 309.3l-58 58C77.1 335.9 64 297.5 64 256s13.1-79.9 35.5-111.2l58 58c-8.6 15.8-13.5 34-13.5 53.3s4.9 37.4 13.5 53.3zM208 256a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z"></path>
+                      </svg>Help
+                    </a>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main id="main-content" class="grid-container">
+      <div class="usa-step-indicator margin-top-4" aria-label="progress">
+        <ol class="usa-step-indicator__segments">
+          <li class="usa-step-indicator__segment usa-step-indicator__segment--current">
+            <span class="usa-step-indicator__segment-label">Application Details</span>
+          </li>
+          <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">Applicant Information</span>
+          </li>
+          <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">Question Builder</span>
+          </li>
+          <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">Conditions</span>
+          </li>
+          <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">Payment</span>
+          </li>
+          <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">Preview</span>
+          </li>
+          <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">License</span>
+          </li>
+          <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">Notification</span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="usa-step-indicator__header">
+        <h1 class="usa-step-indicator__heading">
+          <span class="usa-step-indicator__heading-counter">1</span>
+          <span class="usa-step-indicator__total-steps">of 8</span>
+          <span class="usa-step-indicator__heading-text">Application Details</span>
+        </h1>
+      </div>
+
+      <div class="margin-top-4 app-builder-container">
+        <!-- Left sidebar - Step indicators -->
+        <div class="app-builder-sidebar">
+          <div class="usa-step-indicator usa-step-indicator--sidebar" aria-label="step progress">
+            <ol class="usa-step-indicator__segments">
+              <li class="usa-step-indicator__segment usa-step-indicator__segment--current">
+                <span class="usa-step-indicator__segment-label">Getting Started</span>
+              </li>
+              <div class="step-connector-line"></div>
+              <li class="usa-step-indicator__segment">
+                <span class="usa-step-indicator__segment-label">Application Type</span>
+              </li>
+              <div class="step-connector-line"></div>
+              <li class="usa-step-indicator__segment">
+                <span class="usa-step-indicator__segment-label">Title Information</span>
+              </li>
+              <div class="step-connector-line"></div>
+              <li class="usa-step-indicator__segment">
+                <span class="usa-step-indicator__segment-label">Form No., Deactivation & Search Terms</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Right content area -->
+        <div class="app-builder-content">
+          <h1 class="app-builder-content__heading">Getting Started</h1>
+
+          <p class="app-builder-content__text app-builder-content__text--lg-margin">
+            Ready to create an online license or permit application for your agency? Here's how to get started:
+          </p>
+
+          <h2 class="app-builder-content__subheading">First, a quick overview:</h2>
+
+          <p class="app-builder-content__text">
+            There are eight (8) tabs across the top of this page. These are the key sections you will complete to create your application. Each section includes step-by-step instructions of what you will need to do. You will also have the chance to review each section and make changes before moving on.
+          </p>
+
+          <p class="app-builder-content__text">
+            The navigation bar on the left shows where you're at in the process.
+          </p>
+
+          <p class="app-builder-content__text app-builder-content__text--lg-margin">
+            When you're done, you will be able to view the entire application as users will see it online.
+          </p>
+
+          <h2 class="app-builder-content__subheading">More information about each section:</h2>
+
+          <p class="app-builder-content__text">
+            <strong>1. Application Details</strong> - Choose your type of application, give your application a name, add an internal Form Number, provide a brief description, and include a URL where the user can find more information.
+          </p>
+          <p class="app-builder-content__text">
+            <strong>2. Applicant/Submitter/Entity Information.</strong> Determine the information you need to gather from the user.
+          </p>
+          <p class="app-builder-content__text">
+            <strong>3. Question Builder.</strong> Choose from different question types to create the questions you need to ask the user.
+          </p>
+          <p class="app-builder-content__text">
+            <strong>4. Conditions.</strong> Enter logic to show or hide subsequent questions and answers. This section is not required, but it may make your application simpler and easier for users to complete.
+          </p>
+           <p class="app-builder-content__text">
+            <strong>5. Payment.</strong> Indicate the price of the license or permit in this section.
+          </p>
+          <p class="app-builder-content__text">
+            <strong>6. Preview.</strong> Take a look and see what you've created and what your user will see.
+          </p>
+          <p class="app-builder-content__text">
+            <strong>7. License.</strong> Choose effective dates for a license or permit. Additionally, choose a certificate template if you would like a user to receive a certificate as proof of their license or permit.
+          </p>
+          <p class="app-builder-content__text">
+            <strong>8. Notification.</strong> Create a custom message that users will receive when their license or permit is issued.
+          </p>
+
+          <h2 class="app-builder-content__subheading">License and Application Type Selection</h2>
+          <p class="app-builder-content__text">First, lets start with selecting a license type and an application type. Then click the Next button.</p>
+          <p class="app-builder-content__text"><i>Required</i> - indicates a required field.</p>
+
+          <div class="app-builder-form-section">
+            <p class="app-builder-content__text" style="font-weight: 700;">Please select from the existing license types.</p>
+
+            <div class="margin-bottom-2">
+              <label class="usa-label" for="license-type">License Type <span class="field-required">Required</span></label>
+              <select class="usa-select" id="license-type" name="license-type" required>
+                <option value="">Please Select</option>
+                <option value="license-type-1">License Type 1</option>
+                <option value="license-type-2">License Type 2</option>
+                <option value="license-type-3">License Type 3</option>
+                <option value="license-type-4">License Type 4</option>
+                <option value="license-type-5">License Type 5</option>
+              </select>
+            </div>
+
+            <p class="app-builder-content__text" style="font-weight: 700;">Please select from the available application types.</p>
+
+            <div class="margin-bottom-2">
+              <label class="usa-label" for="application-type">Application Type <span class="field-required">Required</span></label>
+              <select class="usa-select" id="application-type" name="application-type" required>
+                <option value="">Please Select</option>
+                <option value="original-one">Original (One)</option>
+                <option value="original-many">Original (Many)</option>
+                <option value="renewal">Renewal</option>
+                <option value="maintenance-update">Maintenance/Update</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="app-builder-button-container">
+            <div></div>
+            <a href="application-type.html" class="usa-button">Next</a>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</body>
+</html>

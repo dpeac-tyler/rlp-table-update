@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Table Row Labels Preview Test</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body style="padding: 2rem;">
+  <h1>Table Row Labels Preview Test</h1>
+
+  <h2>Test 1: Basic tblr</h2>
+  <div id="test1"></div>
+
+  <h2>Test 2: tblr with Instructions</h2>
+  <div id="test2"></div>
+
+  <script>
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    function renderTBLRField(q, index) {
+      const isRequired = q.required === 'y';
+      const borderStyle = 'border: 1px solid #dfe1e2; border-radius: 0.5rem; padding: 2rem;';
+
+      let fieldHtml = `
+        <div style="${borderStyle} margin-bottom: 2rem; background-color: #fff;">
+      `;
+
+      // Add question label with subtle required indicator
+      fieldHtml += `
+        <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; font-weight: 700;">
+          ${escapeHtml(q.question)}
+          ${isRequired ? '<span style="font-size: 1.4rem; font-weight: 400; color: #71767a; margin-left: 0.5rem;">(Required)</span>' : ''}
+        </h3>
+      `;
+
+      // Add instructions if present (below the question)
+      if (q.instructions) {
+        fieldHtml += `
+          <div style="margin-bottom: 1.6rem;">
+            <p style="margin: 0 0 0.4rem 0; font-weight: 700; font-size: 1.6rem;">Instructions</p>
+            <p style="margin: 0; font-size: 1.6rem; color: #71767a;">${escapeHtml(q.instructions)}</p>
+          </div>
+        `;
+      }
+
+      // Container with background color
+      fieldHtml += `
+        <div style="background-color: #f3f6f8; border: 1px solid #dfe1e2; border-radius: 0.5rem; padding: 4rem;">
+      `;
+
+      // Calculate column widths - varied based on column count for better readability
+      const firstColumnWidth = 20; // Row labels column
+      const remainingWidth = 100 - firstColumnWidth;
+      const dataColumnWidth = (remainingWidth / q.columnHeaders.length).toFixed(2);
+
+      // Build table with improved borders
+      fieldHtml += `
+        <table class="usa-table" style="background-color: #fff; border: 2px solid #565c65; border-collapse: collapse;">
+          <thead>
+            <tr style="background-color: #e7f2f5;">
+              <th style="width: ${firstColumnWidth}%; background-color: #e7f2f5; border: 1px solid #a9aeb1; padding: 1.2rem; font-weight: 700;"></th>
+      `;
+
+      // Add column headers
+      q.columnHeaders.forEach(header => {
+        fieldHtml += `
+              <th style="width: ${dataColumnWidth}%; border: 1px solid #a9aeb1; padding: 1.2rem; font-weight: 700; text-align: left;">${escapeHtml(header.title)}</th>
+        `;
+      });
+
+      fieldHtml += `
+            </tr>
+          </thead>
+          <tbody>
+      `;
+
+      // Add rows with labels and input fields
+      q.rowLabels.forEach((row, rowIndex) => {
+        fieldHtml += `
+            <tr>
+              <td style="background-color: #f0f0f0; font-weight: 600; border: 1px solid #a9aeb1; padding: 1.2rem;">${escapeHtml(row.label)}</td>
+        `;
+
+        // Add input field for each column
+        q.columnHeaders.forEach((header, colIndex) => {
+          const fieldId = `tblr-${index}-row${rowIndex}-col${colIndex}`;
+          fieldHtml += `
+              <td style="border: 1px solid #a9aeb1; padding: 0.8rem;">
+                <input class="usa-input" id="${fieldId}" name="${fieldId}" type="text" style="margin: 0; width: 85%;">
+              </td>
+          `;
+        });
+
+        fieldHtml += `
+            </tr>
+        `;
+      });
+
+      fieldHtml += `
+          </tbody>
+        </table>
+      `;
+
+      // Close the background container
+      fieldHtml += `
+        </div>
+      `;
+
+      fieldHtml += `</div>`;
+      return fieldHtml;
+    }
+
+    // Test 1: Basic tblr
+    const test1Question = {
+      type: 'tblr',
+      question: 'Indicate monthly amounts',
+      required: 'y',
+      instructions: '',
+      agencyDefined: true,
+      rowLabelHeader: 'Row Label',
+      rowLabels: [
+        { label: 'Rent', required: false },
+        { label: 'Utilities', required: false },
+        { label: 'Food', required: false }
+      ],
+      columnHeaders: [
+        { title: 'Amount', format: 'alphanumeric' },
+        { title: 'Notes', format: 'alphanumeric' }
+      ]
+    };
+    document.getElementById('test1').innerHTML = renderTBLRField(test1Question, 1);
+
+    // Test 2: tblr with Instructions
+    const test2Question = {
+      type: 'tblr',
+      question: 'Project Timeline',
+      required: 'n',
+      instructions: 'Please provide start and end dates for each phase of the project.',
+      agencyDefined: true,
+      rowLabelHeader: 'Row Label',
+      rowLabels: [
+        { label: 'Phase 1', required: false },
+        { label: 'Phase 2', required: false },
+        { label: 'Phase 3', required: false },
+        { label: 'Phase 4', required: false }
+      ],
+      columnHeaders: [
+        { title: 'Start Date', format: 'alphanumeric' },
+        { title: 'End Date', format: 'alphanumeric' },
+        { title: 'Budget', format: 'alphanumeric' }
+      ]
+    };
+    document.getElementById('test2').innerHTML = renderTBLRField(test2Question, 2);
+  </script>
+</body>
+</html>
