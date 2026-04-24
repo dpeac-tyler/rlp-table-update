@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Application - Information Summary</title>
+  <!-- Custom RLP Styles -->
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/constituent.css" />
+</head>
+
+<body>
+  <div class="app-container">
+    <!-- Constituent Application Header -->
+    <div class="constituent-app-header">
+      <div class="constituent-app-header__left">
+        <img src="../assets/il-logo.png" alt="Illinois Department of Natural Resources logo"
+          class="constituent-app-header__logo">
+        <div class="constituent-app-header__agency">Illinois Department of Natural Resources</div>
+      </div>
+      <div class="constituent-app-header__right">
+        <span class="constituent-app-header__welcome">Welcome, Steve</span>
+        <span class="constituent-app-header__separator">|</span>
+        <span class="constituent-app-header__agency-name">Illinois Department of Natural Resources</span>
+        <span class="constituent-app-header__separator">|</span>
+        <a href="index.html" class="constituent-app-header__logout">Logout</a>
+      </div>
+    </div>
+
+    <main id="main-content" class="grid-container">
+      <!-- Progress Stepper -->
+      <div class="usa-step-indicator margin-top-4" aria-label="progress">
+        <ol class="usa-step-indicator__segments">
+          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
+            <span class="usa-step-indicator__segment-label">Information Collection</span>
+          </li>
+          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
+            <span class="usa-step-indicator__segment-label">Questions</span>
+          </li>
+          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
+            <span class="usa-step-indicator__segment-label">Document Upload</span>
+          </li>
+          <li class="usa-step-indicator__segment usa-step-indicator__segment--current">
+            <span class="usa-step-indicator__segment-label">Information Summary</span>
+          </li>
+          <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">Confirmation</span>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Step Header -->
+      <div class="usa-step-indicator__header">
+        <h1 class="usa-step-indicator__heading">
+          <span class="usa-step-indicator__heading-counter">4</span>
+          <span class="usa-step-indicator__total-steps">of 5</span>
+          <span class="usa-step-indicator__heading-text">Information Summary</span>
+        </h1>
+      </div>
+
+      <!-- Page Content -->
+      <div class="margin-top-4">
+        <!-- Page Title -->
+        <h1 class="page-title page-title--underlined">Review with document upload</h1>
+
+        <!-- Description -->
+        <p style="font-size: 1.6rem; margin-bottom: 2rem;">review with document upload</p>
+
+        <!-- Instructions Accordion -->
+        <div class="usa-accordion usa-accordion--bordered">
+          <h3 class="usa-accordion__heading">
+            <button type="button" class="usa-accordion__button" aria-expanded="false"
+              aria-controls="instructions-content">
+              Instructions
+            </button>
+          </h3>
+          <div id="instructions-content" class="usa-accordion__content usa-prose" hidden>
+            <p>Review with document upload</p>
+          </div>
+        </div>
+
+        <!-- Blue Bar Container -->
+        <div class="blue-bar-container">
+          <!-- Blue Header Bar -->
+          <div class="blue-bar-header">
+            Information Summary
+          </div>
+
+          <!-- Content Area -->
+          <div class="blue-bar-content">
+            <!-- Content will go here -->
+            <p>Here you can review the information entered in the application. Select Edit to make updates or changes to
+              the information entered. If everything looks good, select the action button below to continue with the
+              submission of your application.</p>
+              <h4>Application Information</h4>
+              <ul class="info-summary">
+                <li><span class="info-label">Agency:</span> Illinois Department of Natural Resources</li>
+                <li><span class="info-label">License Type:</span> DNR Individual (label)</li>
+                <li><span class="info-label">Application Type:</span> Original (Many Overlapping)</li>
+                <li><span class="info-label">Application Title:</span> Review with document upload</li>
+              </ul>
+
+              <h4>Personal Information</h4>
+              <ul class="info-summary">
+                <li><span class="info-label">First Name:</span> John</li>
+                <li><span class="info-label">Last Name:</span> Bones</li>
+              </ul>
+
+              <h4>Contact Information</h4>
+              <ul class="info-summary">
+                <li><span class="info-label">Phone Number:</span> (555) 555-5555</li>
+                <li><span class="info-label">Email Address:</span> jbones@gmail.com</li>
+              </ul>
+
+
+
+              <h4>Mailing Address</h4>
+              <ul class="info-summary">
+                <li><span class="info-label">Address Line 1:</span> 100 Congress Ave</li>
+                <li><span class="info-label">City:</span> Austin</li>
+                <li><span class="info-label">State:</span> TX</li>
+                <li><span class="info-label">Zip Code:</span> 78748</li>
+              </ul>
+              <button type="button" class="usa-button">Edit</button>
+
+              <h4>Questions</h4>
+              <div id="summary-table-container">
+                <!-- table question data will be inserted here -->
+              </div>
+              <a href="application-questions.html" class="usa-button">Edit</a>
+
+
+              <h4>Document Upload</h4>
+              <p>No documents have been uploaded</p>
+              <button type="button" class="usa-button">Edit</button>
+          </div>
+        </div>
+        <p>This service is provided by the State of Illinois. The price of this service includes funds that support the ongoing operations and enhancements of this system.</p>
+        <!-- Action Buttons -->
+        <div class="constituent-form-actions">
+          <button type="button" class="usa-button constituent-form-actions__cancel">Cancel</button>
+          <div class="constituent-form-actions__right">
+            <a href="application-document-upload.html" class="usa-button usa-button--outline">Back</a>
+            <button type="button" class="usa-button usa-button--accent-warm">Save and Exit</button>
+            <a href="application-confirmation.html" class="usa-button">Submit</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="constituent-footer-info">
+      <div class="constituent-footer-info__content">
+        <div>Illinois Department of Natural Resources</div>
+        <div>(555) 555-5555</div>
+        <div><a href="mailto:email@egov.com">email@egov.com</a></div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Utility function
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    // Accordion functionality
+    const accordionButtons = document.querySelectorAll('.usa-accordion__button');
+
+    accordionButtons.forEach(button => {
+      button.addEventListener('click', function () {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        const content = document.getElementById(this.getAttribute('aria-controls'));
+
+        this.setAttribute('aria-expanded', !expanded);
+        if (!expanded) {
+          content.removeAttribute('hidden');
+        } else {
+          content.setAttribute('hidden', '');
+        }
+      });
+    });
+
+    // Load and display table data from localStorage
+    window.addEventListener('DOMContentLoaded', function() {
+      const savedData = localStorage.getItem('employeeTableData');
+      const container = document.getElementById('summary-table-container');
+
+      console.log('Saved data:', savedData);
+
+      if (savedData) {
+        const tableData = JSON.parse(savedData);
+        console.log('Parsed table data:', tableData);
+
+        if (tableData.length > 0) {
+          let tableHtml = `
+            <div style="margin-bottom: 2rem;">
+              <p style="font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem;">Enter appriopriate employer information</p>
+              <table class="usa-table usa-table--borderless" style="background-color: #fff; margin-bottom: 1rem;">
+                <thead>
+                  <tr>
+                    <th style="width: 33.33%;">Employee Name</th>
+                    <th style="width: 33.33%;">Employee Title</th>
+                    <th style="width: 33.33%;">Employee Document</th>
+                  </tr>
+                </thead>
+                <tbody>
+          `;
+
+          tableData.forEach(row => {
+            const docLink = row.document ? `
+              <a href="#" onclick="event.preventDefault(); alert('Document: ${escapeHtml(row.document.fileName)}');" style="color: #005ea2; text-decoration: underline;">
+                ${escapeHtml(row.document.fileName)}
+                <svg style="width: 14px; height: 14px; margin-left: 0.3rem; vertical-align: middle;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            ` : '';
+
+            tableHtml += `
+              <tr>
+                <td style="padding: 1rem;">${escapeHtml(row.name)}</td>
+                <td style="padding: 1rem;">${escapeHtml(row.title)}</td>
+                <td style="padding: 1rem;">${docLink}</td>
+              </tr>
+            `;
+          });
+
+          tableHtml += `
+                </tbody>
+              </table>
+            </div>
+          `;
+
+          container.innerHTML = tableHtml;
+        } else {
+          container.innerHTML = '<p>No table data has been entered.</p>';
+        }
+      } else {
+        container.innerHTML = '<p>No table data has been entered.</p>';
+      }
+    });
+  </script>
+</body>
+
+</html>

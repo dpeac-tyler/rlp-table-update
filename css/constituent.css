@@ -1,0 +1,421 @@
+/* Constituent Portal Styles */
+
+/* Constituent Application Page - Remove max-width on step indicator */
+.usa-step-indicator__segment-label {
+  max-width: none;
+}
+
+/* Information Container */
+.information-container {
+  margin-top: 20px;
+  border: 1px solid #dfe1e2;
+  padding: 25px;
+}
+
+/* Form Action Buttons */
+.constituent-form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.constituent-form-actions__cancel {
+  background-color: #d54309;
+  color: white;
+}
+
+.constituent-form-actions__cancel:hover {
+  background-color: #b50909;
+}
+
+.constituent-form-actions__right {
+  display: flex;
+  gap: 10px;
+}
+
+/* Sub-step Indicator (no numbers, fixed width) */
+.sub-step-indicator {
+  display: flex;
+}
+
+.sub-step-indicator__segments {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 2px;
+}
+
+.sub-step-indicator__segment {
+  position: relative;
+  width: 240px;
+  padding-top: 1.2rem;
+}
+
+.sub-step-indicator__segment::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.8rem;
+  background-color: #c9c9c9;
+}
+
+.sub-step-indicator__segment--current::before {
+  background-color: #005ea2;
+}
+
+.sub-step-indicator__segment--complete::before {
+  background-color: #162e51;
+}
+
+.sub-step-indicator__segment-label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #71767a;
+  margin-top: 0.5rem;
+}
+
+.sub-step-indicator__segment--current .sub-step-indicator__segment-label {
+  color: #005ea2;
+  font-weight: 700;
+}
+
+.sub-step-indicator__segment--complete .sub-step-indicator__segment-label {
+  color: #162e51;
+  font-weight: 400;
+}
+
+/* Constituent Application Header */
+.constituent-app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #dfe1e2;
+}
+
+.constituent-app-header__left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.constituent-app-header__logo {
+  height: 80px;
+}
+
+.constituent-app-header__agency {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1b1b1b;
+}
+
+.constituent-app-header__right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.4rem;
+  color: #565c65;
+}
+
+.constituent-app-header__welcome {
+  font-weight: 700;
+}
+
+.constituent-app-header__separator {
+  color: #565c65;
+}
+
+.constituent-app-header__agency-name {
+  color: #565c65;
+}
+
+.constituent-app-header__logout {
+  color: #005ea2;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.constituent-app-header__logout:hover {
+  color: #1a4480;
+}
+
+
+/* Login Page */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #71767a;
+  padding: 2rem;
+}
+
+.login-card {
+  background-color: #ffffff;
+  max-width: 420px;
+  width: 100%;
+  padding: 4rem 3rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-card__logo {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.login-card__logo img {
+  height: 60px;
+}
+
+.login-card__title {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #1b1b1b;
+  margin: 0 0 2rem 0;
+  text-align: left;
+}
+
+.login-form__group {
+  margin-bottom: 2rem;
+}
+
+.login-form__label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #1b1b1b;
+  margin-bottom: 0.5rem;
+}
+
+.login-form__input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.6rem;
+  border: 1px solid #565c65;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+.login-form__input:focus {
+  outline: 2px solid #005ea2;
+  outline-offset: 0;
+}
+
+.login-form__forgot {
+  margin-bottom: 2rem;
+}
+
+.login-form__link {
+  color: #005ea2;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+.login-form__link:hover {
+  text-decoration: underline;
+}
+
+.login-form__button {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #005ea2;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.login-form__button:hover {
+  background-color: #1a4480;
+}
+
+.login-form__signup {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #1b1b1b;
+}
+
+/* Header */
+.constituent-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+}
+
+.constituent-header__logo img {
+  height: 50px;
+}
+
+.constituent-header__state {
+  font-size: 1.6rem;
+  color: #565c65;
+}
+
+/* Main Container */
+.constituent-main {
+  padding: 4rem 2rem;
+}
+
+/* Intro Text */
+.constituent-intro {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.constituent-intro--last {
+  margin-bottom: 3rem;
+}
+
+/* Tile Grid */
+.constituent-tile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 6rem;
+}
+
+.constituent-tile-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Individual Tile */
+.constituent-tile {
+  background-color: #f0f0f0;
+  padding: 2.3rem;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.constituent-tile__title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1b1b1b;
+  margin: 0 0 3rem 0;
+}
+
+.constituent-tile__text {
+  font-size: 1.6rem;
+  margin: 0 0 3rem 0;
+  color: #1b1b1b;
+}
+
+/* Footer Links (for index page) */
+.constituent-footer {
+  text-align: right;
+  font-size: 1.6rem;
+  margin-top: 4rem;
+}
+
+.constituent-footer__link {
+  color: #005ea2;
+  text-decoration: underline;
+  margin-right: 2rem;
+}
+
+.constituent-footer__link:last-child {
+  margin-right: 0;
+}
+
+/* Footer Info (for application page) */
+.constituent-footer-info {
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 0rem 0rem;
+  margin-top: 4rem;
+}
+
+.constituent-footer-info__content {
+  
+  margin: 0 auto;
+  text-align: right;
+  padding-right: 40px;
+  font-size: 1.6rem;
+  color: #1b1b1b;
+  line-height: 1.8;
+}
+
+.constituent-footer-info__content a {
+  color: #005ea2;
+  text-decoration: underline;
+}
+
+.constituent-footer-info__content a:hover {
+  color: #1a4480;
+}
+
+.usa-step-indicator__segments {
+  max-width: 106rem;
+}
+
+/* Table Question Container */
+.table-question-container {
+  background-color: #f3f6f8;
+  border: 1px solid #dfe1e2;
+  border-radius: 0.5rem;
+  padding: 4rem;
+}
+
+/* Blue Bar Container */
+.blue-bar-container {
+  margin-top: 20px;
+  border: 1px solid #dfe1e2;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.blue-bar-header {
+  background-color: #162e51;
+  color: #ffffff;
+  padding: 1.5rem 3rem;
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+
+.blue-bar-content {
+  background-color: #fff;
+  padding: 3rem;
+}
+
+.blue-bar-content__title {
+  font-size: 1.8rem;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+  color: #1b1b1b;
+}
+
+.blue-bar-content__text {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  color: #1b1b1b;
+  font-weight: bold;;
+}
+
+.document-upload-box {
+  background-color: #d9d9d9;
+  padding: 3rem;
+}
+
+.info-label {
+  font-weight: bold;
+}
+
+.info-summary {
+  list-style-type: none;
+}
+
+.info-summary li {
+  font-size: 16px;
+  line-height: 2;
+}

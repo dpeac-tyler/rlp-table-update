@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - RLP</title>
+  <!-- Custom RLP Styles -->
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/constituent.css" />
+</head>
+
+<body>
+  <div class="login-page">
+    <div class="login-card">
+      <!-- Logo -->
+      <div class="login-card__logo">
+        <img src="../assets/il-logo-constituent.png" alt="Illinois.gov logo">
+      </div>
+
+      <!-- Heading -->
+      <h1 class="login-card__title">Sign in with your username and password</h1>
+
+      <!-- Login Form -->
+      <form class="login-form" id="loginForm">
+        <!-- Username Field -->
+        <div class="login-form__group">
+          <label class="login-form__label" for="username">Username</label>
+          <input class="login-form__input" id="username" name="username" type="text" required>
+        </div>
+
+        <!-- Password Field -->
+        <div class="login-form__group">
+          <label class="login-form__label" for="password">Password</label>
+          <input class="login-form__input" id="password" name="password" type="password" required>
+        </div>
+
+        <!-- Forgot Password Link -->
+        <div class="login-form__forgot">
+          <a href="reset-password.html" class="login-form__link">Forgot your password?</a>
+        </div>
+
+        <!-- Sign In Button -->
+        <button type="submit" class="login-form__button">Sign In</button>
+
+        <!-- Sign Up Link -->
+        <div class="login-form__signup">
+          Need an account? <a href="create-account.html" class="login-form__link">Sign up</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Handle form submission
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Redirect to application page
+      window.location.href = 'application.html';
+    });
+  </script>
+</body>
+
+</html>

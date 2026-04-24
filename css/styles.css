@@ -2113,7 +2113,7 @@ select:focus {
 
 .usa-step-indicator__segment--complete .usa-step-indicator__segment-label {
   color: #1b1b1b;
-  font-weight: 700;
+  font-weight: normal;
 }
 
 /* Current/Active Step */

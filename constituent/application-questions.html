@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Application - Questions</title>
+  <!-- Custom RLP Styles -->
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/constituent.css" />
+</head>
+
+<body>
+  <div class="app-container">
+    <!-- Constituent Application Header -->
+    <div class="constituent-app-header">
+      <div class="constituent-app-header__left">
+        <img src="../assets/il-logo.png" alt="Illinois Department of Natural Resources logo" class="constituent-app-header__logo">
+        <div class="constituent-app-header__agency">Illinois Department of Natural Resources</div>
+      </div>
+      <div class="constituent-app-header__right">
+        <span class="constituent-app-header__welcome">Welcome, Steve</span>
+        <span class="constituent-app-header__separator">|</span>
+        <span class="constituent-app-header__agency-name">Illinois Department of Natural Resources</span>
+        <span class="constituent-app-header__separator">|</span>
+        <a href="index.html" class="constituent-app-header__logout">Logout</a>
+      </div>
+    </div>
+
+    <main id="main-content" class="grid-container">
+      <!-- Progress Stepper -->
+      <div class="usa-step-indicator margin-top-4" aria-label="progress">
+        <ol class="usa-step-indicator__segments">
+          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
+            <span class="usa-step-indicator__segment-label">Information Collection</span>
+          </li>
+          <li class="usa-step-indicator__segment usa-step-indicator__segment--current">
+            <span class="usa-step-indicator__segment-label">Questions</span>
+          </li>
+          <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">Document Upload</span>
+          </li>
+          <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">Information Summary</span>
+          </li>
+          <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">Confirmation</span>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Step Header -->
+      <div class="usa-step-indicator__header">
+        <h1 class="usa-step-indicator__heading">
+          <span class="usa-step-indicator__heading-counter">2</span>
+          <span class="usa-step-indicator__total-steps">of 5</span>
+          <span class="usa-step-indicator__heading-text">Questions</span>
+        </h1>
+      </div>
+
+      <!-- Page Content -->
+      <div class="margin-top-4">
+        <!-- Page Title -->
+        <h1 class="page-title page-title--underlined">Review with document upload</h1>
+
+        <!-- Description -->
+        <p style="font-size: 1.6rem; margin-bottom: 2rem;">review with document upload</p>
+
+        <!-- Instructions Accordion -->
+        <div class="usa-accordion usa-accordion--bordered">
+          <h3 class="usa-accordion__heading">
+            <button
+              type="button"
+              class="usa-accordion__button"
+              aria-expanded="true"
+              aria-controls="instructions-content"
+            >
+              Instructions
+            </button>
+          </h3>
+          <div id="instructions-content" class="usa-accordion__content usa-prose">
+            <p>Review with document upload</p>
+          </div>
+        </div>
+
+        <!-- Questions Container -->
+        <div class="information-container">
+          <!-- Sub-stepper -->
+          <div class="sub-step-indicator" aria-label="progress">
+            <ol class="sub-step-indicator__segments">
+              <li class="sub-step-indicator__segment sub-step-indicator__segment--current">
+                <span class="sub-step-indicator__segment-label">Page 1</span>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Sub-step Header -->
+          <div class="usa-step-indicator__header" style="margin-top: 2rem;">
+            <h2 class="usa-step-indicator__heading">
+              <span class="usa-step-indicator__heading-counter">1</span>
+              <span class="usa-step-indicator__total-steps">of 1</span>
+              <span class="usa-step-indicator__heading-text">Questions</span>
+            </h2>
+          </div>
+
+          <!-- Questions Section -->
+          <div style="margin-top: 20px;">
+            <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 2rem;">Questions</h3>
+
+            <!-- Table Question -->
+            <div style="margin-bottom: 2rem; background-color: #fff;">
+              <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; font-weight: 700;">
+                Enter appriopriate employer information
+              </h3>
+
+              <!-- Container with background color -->
+              <div class="table-question-container">
+
+                <!-- Icon Key Accordion -->
+                <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 2rem;">
+                  <h3 class="usa-accordion__heading">
+                    <button
+                      type="button"
+                      class="usa-accordion__button"
+                      aria-expanded="false"
+                      aria-controls="icon-key-content"
+                    >
+                      Icon Key
+                    </button>
+                  </h3>
+                  <div id="icon-key-content" class="usa-accordion__content usa-prose" hidden>
+                    <p class="text-bold margin-0 margin-bottom-2">Options and Control Types</p>
+                    <div class="icon-key-grid">
+                      <div class="icon-key-item">
+                        <img src="../assets/edit-icon.png" alt="" width="24" height="24">
+                        <span>- Edit</span>
+                      </div>
+                      <div class="icon-key-item">
+                        <img src="../assets/icon-delete.png" alt="" width="24" height="24">
+                        <span>- Delete</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Table -->
+                <table id="employee-table" class="usa-table usa-table--borderless" style="background-color: #fff; margin-bottom: 1.5rem;">
+                  <thead id="table-header">
+                    <tr>
+                      <th id="edit-column-header" style="width: 15%; display: none;">Edit</th>
+                      <th style="width: 28.33%;">Employee Name</th>
+                      <th style="width: 28.33%;">Employee Title</th>
+                      <th style="width: 28.33%;">Employee Document</th>
+                    </tr>
+                  </thead>
+                  <tbody id="table-body">
+                    <tr id="no-entries-row">
+                      <td colspan="3" style="text-align: center; padding: 2rem; color: #71767a;">No entries</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <!-- Form inputs for adding rows -->
+                <div id="table-form-inputs">
+                  <!-- Employee Name -->
+                  <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                    <label class="usa-label" for="employee-name">Employee Name</label>
+                    <input class="usa-input" id="employee-name" name="employee-name" type="text">
+                  </div>
+
+                  <!-- Employee Title -->
+                  <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                    <label class="usa-label" for="employee-title">Employee Title</label>
+                    <input class="usa-input" id="employee-title" name="employee-title" type="text">
+                  </div>
+
+                  <!-- Employee Document (Document Upload) -->
+                  <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                    <label class="usa-label" for="employee-document">Employee Document <span class="field-required">Required</span></label>
+                    <p style="font-size: 1.4rem; color: #71767a; margin-bottom: 1rem;">File size and type limitations per attachment: 50 MB for txt, csv, png, jpg, jpeg, pdf, doc, xls, docx, xlsx</p>
+
+                    <!-- Upload button -->
+                    <div id="upload-button-container">
+                      <button type="button" class="usa-button usa-button--outline" onclick="openDocumentUploadModal()">
+                        Upload
+                      </button>
+                    </div>
+
+                    <!-- Document display (hidden until file uploaded) -->
+                    <div id="document-display" style="display: none;">
+                      <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                        <input class="usa-input" id="file-name-input" type="text" disabled>
+                      </div>
+                      <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                        <label class="usa-label" for="file-notes">
+                          Document Notes
+                          <svg style="width: 16px; height: 16px; margin-left: 0.5rem; vertical-align: middle;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 16V12M12 8H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                          </svg>
+                        </label>
+                        <textarea class="usa-textarea" id="file-notes" rows="4" disabled style="background-color: #f0f0f0;"></textarea>
+                      </div>
+                      <button type="button" class="usa-button" onclick="deleteUploadedDocument()" style="background-color: #d54309; color: white;">
+                        Delete
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Action Buttons -->
+                  <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <button type="button" class="usa-button" onclick="saveAndAddMore()">Save & Add More</button>
+                    <button type="button" class="usa-button" onclick="saveAndFinish()">Save & Finish</button>
+                  </div>
+                </div>
+
+                <!-- Add More Button (hidden initially) -->
+                <div id="add-more-container" style="display: none;">
+                  <button type="button" class="usa-button" onclick="showFormInputs()">Add More</button>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="constituent-form-actions">
+          <button type="button" class="usa-button constituent-form-actions__cancel">Cancel</button>
+          <div class="constituent-form-actions__right">
+            <a href="application-mailing.html" class="usa-button usa-button--outline">Back</a>
+            <button type="button" class="usa-button usa-button--accent-warm">Save and Exit</button>
+            <a href="application-document-upload.html" class="usa-button">Save and Continue</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="constituent-footer-info">
+      <div class="constituent-footer-info__content">
+        <div>Illinois Department of Natural Resources</div>
+        <div>(555) 555-5555</div>
+        <div><a href="mailto:email@egov.com">email@egov.com</a></div>
+      </div>
+    </footer>
+
+    <!-- Success Notification -->
+    <div id="success-notification" class="notification">
+      <div class="notification-icon">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" fill="#00a91c"/>
+          <path d="M12 20l6 6 10-12" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="notification-text">Entry saved successfully!</div>
+    </div>
+
+    <!-- Document Upload Modal -->
+    <div id="document-upload-modal" class="modal-overlay" style="display: none;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Document Upload</h2>
+        </div>
+        <div class="modal-body">
+          <form id="document-upload-form">
+            <!-- Field Name (auto-populated with file name) -->
+            <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+              <label class="usa-label" for="modal-field-name">
+                <span id="modal-field-label">Employee Document</span>
+              </label>
+              <input class="usa-input" id="modal-field-name" name="modal-field-name" type="text">
+            </div>
+
+            <!-- File Upload Section -->
+            <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+              <!-- Upload Button (shown by default) -->
+              <div id="modal-upload-button-container">
+                <button type="button" class="usa-button" onclick="document.getElementById('modal-file-input').click()">
+                  Upload
+                </button>
+              </div>
+
+              <!-- Hidden file input -->
+              <input type="file" id="modal-file-input" style="display: none;" accept=".txt,.csv,.png,.jpg,.jpeg,.pdf,.doc,.xls,.docx,.xlsx">
+
+              <!-- Delete Button (hidden by default) -->
+              <div id="modal-delete-button-container" style="display: none;">
+                <button type="button" class="usa-button" onclick="clearModalFile()" style="background-color: #d54309; color: white;">
+                  Delete
+                </button>
+              </div>
+            </div>
+
+            <!-- Document Notes -->
+            <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+              <label class="usa-label" for="modal-document-notes">Document Notes</label>
+              <textarea class="usa-textarea" id="modal-document-notes" name="modal-document-notes" rows="3" maxlength="100"></textarea>
+              <div style="font-size: 1.4rem; color: #71767a; margin-top: 0.5rem;">Maximum 100 characters</div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="usa-button usa-button--outline" onclick="closeDocumentUploadModal()">Cancel</button>
+          <button type="button" class="usa-button" onclick="saveDocumentUpload()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Accordion functionality
+    const accordionButtons = document.querySelectorAll('.usa-accordion__button');
+
+    accordionButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        const content = document.getElementById(this.getAttribute('aria-controls'));
+
+        this.setAttribute('aria-expanded', !expanded);
+        if (!expanded) {
+          content.removeAttribute('hidden');
+        } else {
+          content.setAttribute('hidden', '');
+        }
+      });
+    });
+
+    // Table Data Storage
+    let tableData = [];
+    let editingRowIndex = null;
+    let currentDocumentData = null;
+
+    // Document Upload Modal Functions
+    let selectedFile = null;
+
+    function openDocumentUploadModal() {
+      document.getElementById('document-upload-modal').style.display = 'flex';
+      document.getElementById('modal-field-name').value = '';
+      document.getElementById('modal-document-notes').value = '';
+    }
+
+    function closeDocumentUploadModal() {
+      document.getElementById('document-upload-modal').style.display = 'none';
+      selectedFile = null;
+      document.getElementById('modal-file-input').value = '';
+      document.getElementById('modal-upload-button-container').style.display = 'block';
+      document.getElementById('modal-delete-button-container').style.display = 'none';
+    }
+
+    function clearModalFile() {
+      selectedFile = null;
+      document.getElementById('modal-file-input').value = '';
+      document.getElementById('modal-field-name').value = '';
+      document.getElementById('modal-upload-button-container').style.display = 'block';
+      document.getElementById('modal-delete-button-container').style.display = 'none';
+    }
+
+    function saveDocumentUpload() {
+      const fileName = document.getElementById('modal-field-name').value;
+      const notes = document.getElementById('modal-document-notes').value;
+
+      if (!selectedFile) {
+        alert('Please select a file to upload.');
+        return;
+      }
+
+      if (!fileName) {
+        alert('Please enter a file name.');
+        return;
+      }
+
+      // Show uploaded document display
+      document.getElementById('upload-button-container').style.display = 'none';
+      document.getElementById('document-display').style.display = 'block';
+      document.getElementById('file-name-input').value = fileName;
+      document.getElementById('file-notes').value = notes;
+
+      // Store document data
+      currentDocumentData = {
+        fileName: fileName,
+        notes: notes,
+        file: selectedFile
+      };
+
+      // Close modal
+      closeDocumentUploadModal();
+
+      // Show success notification
+      const notification = document.getElementById('success-notification');
+      const notificationText = notification.querySelector('.notification-text');
+      notificationText.textContent = 'Document uploaded successfully!';
+      showSuccessNotification();
+    }
+
+    function deleteUploadedDocument() {
+      if (confirm('Are you sure you want to delete this document?')) {
+        currentDocumentData = null;
+        document.getElementById('upload-button-container').style.display = 'block';
+        document.getElementById('document-display').style.display = 'none';
+        document.getElementById('file-name-input').value = '';
+        document.getElementById('file-notes').value = '';
+      }
+    }
+
+    // Table Management Functions
+    function showSuccessNotification() {
+      const notification = document.getElementById('success-notification');
+      notification.classList.add('show');
+      setTimeout(() => {
+        notification.classList.remove('show');
+        notification.classList.add('hide');
+      }, 3000);
+    }
+
+    function clearFormInputs() {
+      document.getElementById('employee-name').value = '';
+      document.getElementById('employee-title').value = '';
+      currentDocumentData = null;
+      selectedFile = null;
+      document.getElementById('upload-button-container').style.display = 'block';
+      document.getElementById('document-display').style.display = 'none';
+      document.getElementById('file-name-input').value = '';
+      document.getElementById('file-notes').value = '';
+      document.getElementById('modal-file-input').value = '';
+      editingRowIndex = null;
+    }
+
+    function renderTable() {
+      const tbody = document.getElementById('table-body');
+      const noEntriesRow = document.getElementById('no-entries-row');
+      const editColumnHeader = document.getElementById('edit-column-header');
+
+      if (tableData.length === 0) {
+        noEntriesRow.style.display = '';
+        editColumnHeader.style.display = 'none';
+        noEntriesRow.children[0].colSpan = 3;
+      } else {
+        noEntriesRow.style.display = 'none';
+        editColumnHeader.style.display = '';
+
+        // Clear existing rows except no-entries-row
+        Array.from(tbody.children).forEach(row => {
+          if (row.id !== 'no-entries-row') {
+            row.remove();
+          }
+        });
+
+        // Add rows
+        tableData.forEach((row, index) => {
+          const tr = document.createElement('tr');
+
+          // Create document link with external icon
+          const docLink = row.document ? `
+            <a href="#" onclick="event.preventDefault(); alert('Document: ${escapeHtml(row.document.fileName)}');" style="color: #005ea2; text-decoration: underline;">
+              ${escapeHtml(row.document.fileName)}
+              <svg style="width: 14px; height: 14px; margin-left: 0.3rem; vertical-align: middle;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          ` : '';
+
+          tr.innerHTML = `
+            <td style="padding: 1rem;">
+              <img src="../assets/edit-icon.png" alt="Edit" width="25" height="25" style="cursor: pointer; margin-right: 0.5rem;" onclick="editTableRow(${index})">
+              <img src="../assets/icon-delete.png" alt="Delete" width="25" height="25" style="cursor: pointer;" onclick="deleteTableRow(${index})">
+            </td>
+            <td style="padding: 1rem;">${escapeHtml(row.name)}</td>
+            <td style="padding: 1rem;">${escapeHtml(row.title)}</td>
+            <td style="padding: 1rem;">${docLink}</td>
+          `;
+          tbody.appendChild(tr);
+        });
+      }
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    function saveAndAddMore() {
+      const name = document.getElementById('employee-name').value.trim();
+      const title = document.getElementById('employee-title').value.trim();
+
+      if (!name || !title || !currentDocumentData) {
+        alert('Please fill in all fields and upload a document.');
+        return;
+      }
+
+      const rowData = {
+        name: name,
+        title: title,
+        document: currentDocumentData
+      };
+
+      if (editingRowIndex !== null) {
+        tableData[editingRowIndex] = rowData;
+      } else {
+        tableData.push(rowData);
+      }
+
+      // Save to localStorage
+      localStorage.setItem('employeeTableData', JSON.stringify(tableData));
+
+      renderTable();
+      clearFormInputs();
+      showSuccessNotification();
+    }
+
+    function saveAndFinish() {
+      const name = document.getElementById('employee-name').value.trim();
+      const title = document.getElementById('employee-title').value.trim();
+
+      if (!name || !title || !currentDocumentData) {
+        alert('Please fill in all fields and upload a document.');
+        return;
+      }
+
+      const rowData = {
+        name: name,
+        title: title,
+        document: currentDocumentData
+      };
+
+      if (editingRowIndex !== null) {
+        tableData[editingRowIndex] = rowData;
+      } else {
+        tableData.push(rowData);
+      }
+
+      // Save to localStorage
+      localStorage.setItem('employeeTableData', JSON.stringify(tableData));
+
+      renderTable();
+      clearFormInputs();
+
+      // Hide form inputs and show Add More button
+      document.getElementById('table-form-inputs').style.display = 'none';
+      document.getElementById('add-more-container').style.display = 'block';
+
+      showSuccessNotification();
+    }
+
+    function showFormInputs() {
+      document.getElementById('table-form-inputs').style.display = 'block';
+      document.getElementById('add-more-container').style.display = 'none';
+    }
+
+    function editTableRow(index) {
+      editingRowIndex = index;
+      const row = tableData[index];
+
+      // Show form inputs if hidden
+      showFormInputs();
+
+      // Populate form with row data
+      document.getElementById('employee-name').value = row.name;
+      document.getElementById('employee-title').value = row.title;
+
+      if (row.document) {
+        currentDocumentData = row.document;
+        document.getElementById('upload-button-container').style.display = 'none';
+        document.getElementById('document-display').style.display = 'block';
+        document.getElementById('file-name-input').value = row.document.fileName;
+        document.getElementById('file-notes').value = row.document.notes;
+      }
+
+      // Scroll to form
+      document.getElementById('table-form-inputs').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function deleteTableRow(index) {
+      if (confirm('Are you sure you want to delete this row?')) {
+        tableData.splice(index, 1);
+        // Update localStorage
+        localStorage.setItem('employeeTableData', JSON.stringify(tableData));
+        renderTable();
+        showSuccessNotification();
+      }
+    }
+
+    // Load data from localStorage on page load
+    window.addEventListener('DOMContentLoaded', function() {
+      const savedData = localStorage.getItem('employeeTableData');
+      if (savedData) {
+        tableData = JSON.parse(savedData);
+        renderTable();
+      }
+    });
+
+    // File input change handler
+    document.getElementById('modal-file-input').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (file) {
+        // Validate file size (50 MB max)
+        const maxSize = 50 * 1024 * 1024;
+        if (file.size > maxSize) {
+          alert('File size exceeds 50 MB limit.');
+          e.target.value = '';
+          return;
+        }
+
+        // Validate file type
+        const allowedTypes = ['txt', 'csv', 'png', 'jpg', 'jpeg', 'pdf', 'doc', 'xls', 'docx', 'xlsx'];
+        const fileExtension = file.name.split('.').pop().toLowerCase();
+        if (!allowedTypes.includes(fileExtension)) {
+          alert('Invalid file type. Allowed types: txt, csv, png, jpg, jpeg, pdf, doc, xls, docx, xlsx');
+          e.target.value = '';
+          return;
+        }
+
+        selectedFile = file;
+        document.getElementById('modal-field-name').value = file.name;
+        document.getElementById('modal-upload-button-container').style.display = 'none';
+        document.getElementById('modal-delete-button-container').style.display = 'block';
+      }
+    });
+  </script>
+</body>
+
+</html>

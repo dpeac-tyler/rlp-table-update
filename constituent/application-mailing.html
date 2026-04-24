@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Application - Mailing Address</title>
+  <!-- Custom RLP Styles -->
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/constituent.css" />
+</head>
+
+<body>
+  <div class="app-container">
+    <!-- Constituent Application Header -->
+    <div class="constituent-app-header">
+      <div class="constituent-app-header__left">
+        <img src="../assets/il-logo.png" alt="Illinois Department of Natural Resources logo" class="constituent-app-header__logo">
+        <div class="constituent-app-header__agency">Illinois Department of Natural Resources</div>
+      </div>
+      <div class="constituent-app-header__right">
+        <span class="constituent-app-header__welcome">Welcome, Steve</span>
+        <span class="constituent-app-header__separator">|</span>
+        <span class="constituent-app-header__agency-name">Illinois Department of Natural Resources</span>
+        <span class="constituent-app-header__separator">|</span>
+        <a href="index.html" class="constituent-app-header__logout">Logout</a>
+      </div>
+    </div>
+
+    <main id="main-content" class="grid-container">
+      <!-- Progress Stepper -->
+      <div class="usa-step-indicator margin-top-4" aria-label="progress">
+        <ol class="usa-step-indicator__segments">
+          <li class="usa-step-indicator__segment usa-step-indicator__segment--current">
+            <span class="usa-step-indicator__segment-label">Information Collection</span>
+          </li>
+          <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">Questions</span>
+          </li>
+          <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">Document Upload</span>
+          </li>
+          <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">Information Summary</span>
+          </li>
+          <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">Confirmation</span>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Step Header -->
+      <div class="usa-step-indicator__header">
+        <h1 class="usa-step-indicator__heading">
+          <span class="usa-step-indicator__heading-counter">1</span>
+          <span class="usa-step-indicator__total-steps">of 5</span>
+          <span class="usa-step-indicator__heading-text">Information Collection</span>
+        </h1>
+      </div>
+
+      <!-- Page Content -->
+      <div class="margin-top-4">
+        <!-- Page Title -->
+        <h1 class="page-title page-title--underlined">Review with document upload</h1>
+
+        <!-- Description -->
+        <p style="font-size: 1.6rem; margin-bottom: 2rem;">Review with document upload</p>
+
+        <!-- Instructions Accordion -->
+        <div class="usa-accordion usa-accordion--bordered">
+          <h3 class="usa-accordion__heading">
+            <button
+              type="button"
+              class="usa-accordion__button"
+              aria-expanded="true"
+              aria-controls="instructions-content"
+            >
+              Instructions
+            </button>
+          </h3>
+          <div id="instructions-content" class="usa-accordion__content usa-prose">
+            <p>Review with document upload</p>
+          </div>
+        </div>
+
+        <!-- Information Collection Container -->
+        <div class="information-container">
+          <!-- Sub-stepper -->
+          <div class="sub-step-indicator" aria-label="progress">
+            <ol class="sub-step-indicator__segments">
+              <li class="sub-step-indicator__segment sub-step-indicator__segment--complete">
+                <span class="sub-step-indicator__segment-label">Personal Information</span>
+              </li>
+              <li class="sub-step-indicator__segment sub-step-indicator__segment--complete">
+                <span class="sub-step-indicator__segment-label">Contact Information</span>
+              </li>
+              <li class="sub-step-indicator__segment sub-step-indicator__segment--current">
+                <span class="sub-step-indicator__segment-label">Mailing Address</span>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Sub-step Header -->
+          <div class="usa-step-indicator__header" style="margin-top: 2rem;">
+            <h2 class="usa-step-indicator__heading">
+              <span class="usa-step-indicator__heading-counter">3</span>
+              <span class="usa-step-indicator__total-steps">of 3</span>
+              <span class="usa-step-indicator__heading-text">Mailing Address</span>
+            </h2>
+          </div>
+
+          <!-- Mailing Address Form -->
+          <div style="margin-top: 20px;">
+            <!-- Address Line 1 -->
+            <div class="usa-form-group" style="margin-bottom: 2.2rem;">
+              <label class="usa-label" for="address">Address Line 1 <span class="field-required">Required</span></label>
+              <input class="usa-input" id="address" name="address" type="text" required>
+            </div>
+
+            <!-- City -->
+            <div class="usa-form-group" style="margin-bottom: 2.2rem;">
+              <label class="usa-label" for="city">City <span class="field-required">Required</span></label>
+              <input class="usa-input" id="city" name="city" type="text" required>
+            </div>
+
+            <!-- State -->
+            <div class="usa-form-group" style="margin-bottom: 2.2rem;">
+              <label class="usa-label" for="state">State <span class="field-required">Required</span></label>
+              <select class="usa-select" id="state" name="state" required>
+                <option value="">- Select -</option>
+                <option value="IL">Illinois</option>
+              </select>
+            </div>
+
+            <!-- ZIP Code -->
+            <div class="usa-form-group" style="margin-bottom: 2.2rem;">
+              <label class="usa-label" for="zip">Zip Code <span class="field-required">Required</span></label>
+              <input class="usa-input" id="zip" name="zip" type="text" required>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="constituent-form-actions">
+          <button type="button" class="usa-button constituent-form-actions__cancel">Cancel</button>
+          <div class="constituent-form-actions__right">
+            <a href="application-contact.html" class="usa-button usa-button--outline">Back</a>
+            <button type="button" class="usa-button usa-button--accent-warm">Save and Exit</button>
+            <a href="application-questions.html" class="usa-button">Save and Continue</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="constituent-footer-info">
+      <div class="constituent-footer-info__content">
+        <div>Illinois Department of Natural Resources</div>
+        <div>(555) 555-5555</div>
+        <div><a href="mailto:email@egov.com">email@egov.com</a></div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Accordion functionality
+    const accordionButtons = document.querySelectorAll('.usa-accordion__button');
+
+    accordionButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        const content = document.getElementById(this.getAttribute('aria-controls'));
+
+        this.setAttribute('aria-expanded', !expanded);
+        if (!expanded) {
+          content.removeAttribute('hidden');
+        } else {
+          content.setAttribute('hidden', '');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

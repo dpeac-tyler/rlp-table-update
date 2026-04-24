@@ -284,7 +284,7 @@
   <div id="document-upload-modal" class="modal-overlay" hidden>
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal-title">Upload Document</h2>
+        <h2 class="modal-title">Document Upload</h2>
         <button type="button" class="modal-close" id="close-document-upload-modal" aria-label="Close modal">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -301,13 +301,18 @@
           <div class="usa-form-group margin-bottom-4">
             <label class="usa-label" for="document-file-upload">Upload File <span class="field-required">Required</span></label>
             <p style="font-size: 1.4rem; color: #71767a; margin-bottom: 1rem;">File size and type limitations per attachment: 50 MB for txt, csv, png, jpg, jpeg, pdf, doc, xls, docx, xlsx</p>
-            <input class="usa-file-input" id="document-file-upload" name="document-file-upload" type="file" accept=".txt,.csv,.png,.jpg,.jpeg,.pdf,.doc,.xls,.docx,.xlsx" required>
+            <input id="document-file-upload" name="document-file-upload" type="file" accept=".txt,.csv,.png,.jpg,.jpeg,.pdf,.doc,.xls,.docx,.xlsx" required style="display: none;">
+            <button type="button" class="usa-button" id="upload-file-button">Upload</button>
           </div>
 
           <div class="usa-form-group margin-bottom-4">
             <label class="usa-label" for="document-notes">Document Notes</label>
             <textarea class="usa-textarea" id="document-notes" name="document-notes" maxlength="100" rows="3"></textarea>
             <p style="font-size: 1.4rem; color: #71767a; margin-top: 0.5rem;">Maximum 100 characters</p>
+          </div>
+
+          <div id="delete-document-container" style="display: none; margin-bottom: 2rem;">
+            <button type="button" class="usa-button usa-button--secondary" id="delete-document-button" style="background-color: #d54309; color: white;">Delete</button>
           </div>
 
           <input type="hidden" id="document-question-index" value="">
@@ -650,10 +655,33 @@
               <div class="usa-form-group" style="margin-bottom: 1.5rem;">
                 <label class="usa-label" for="${fieldId}">${escapeHtml(header.title)}</label>
                 <p style="font-size: 1.4rem; color: #71767a; margin-bottom: 1rem;">File size and type limitations per attachment: 50 MB for txt, csv, png, jpg, jpeg, pdf, doc, xls, docx, xlsx</p>
-                <button type="button" class="usa-button usa-button--outline" onclick="openDocumentUploadModal(${index}, ${headerIndex}, '${escapeHtml(header.title)}')">
-                  Upload
-                </button>
-                <span id="file-name-${index}-${headerIndex}" style="margin-left: 1rem; font-size: 1.4rem; color: #71767a;"></span>
+
+                <!-- Upload button (shown when no file uploaded) -->
+                <div id="upload-button-container-${index}-${headerIndex}">
+                  <button type="button" class="usa-button usa-button--outline" onclick="openDocumentUploadModal(${index}, ${headerIndex}, '${escapeHtml(header.title)}')">
+                    Upload
+                  </button>
+                </div>
+
+                <!-- Document display (hidden until file uploaded) -->
+                <div id="document-display-${index}-${headerIndex}" style="display: none;">
+                  <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                    <input class="usa-input" id="file-name-input-${index}-${headerIndex}" type="text" disabled>
+                  </div>
+                  <div class="usa-form-group" style="margin-bottom: 1.5rem;">
+                    <label class="usa-label" for="file-notes-${index}-${headerIndex}">
+                      Document Notes
+                      <svg style="width: 16px; height: 16px; margin-left: 0.5rem; vertical-align: middle;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 16V12M12 8H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                    </label>
+                    <textarea class="usa-textarea" id="file-notes-${index}-${headerIndex}" rows="4" disabled style="background-color: #f0f0f0;"></textarea>
+                  </div>
+                  <button type="button" class="usa-button" onclick="deleteUploadedDocument(${index}, ${headerIndex})" style="background-color: #d54309; color: white;">
+                    Delete
+                  </button>
+                </div>
               </div>
             `;
           } else if (header.format === 'date') {
@@ -1096,6 +1124,8 @@
       const headerIndexInput = document.getElementById('document-header-index');
       const fileInput = document.getElementById('document-file-upload');
       const notesTextarea = document.getElementById('document-notes');
+      const deleteContainer = document.getElementById('delete-document-container');
+      const uploadButton = document.getElementById('upload-file-button');
 
       // Set field label (but leave input empty)
       fieldNameInput.value = '';
@@ -1107,12 +1137,21 @@
       fileInput.value = '';
       notesTextarea.value = '';
 
+      // Hide delete button and show upload button
+      deleteContainer.style.display = 'none';
+      uploadButton.style.display = 'inline-block';
+
       // Show modal
       modal.removeAttribute('hidden');
     }
 
     function closeDocumentUploadModal() {
       const modal = document.getElementById('document-upload-modal');
+      const deleteContainer = document.getElementById('delete-document-container');
+
+      // Hide delete button when closing
+      deleteContainer.style.display = 'none';
+
       modal.setAttribute('hidden', '');
     }
 
@@ -1127,18 +1166,80 @@
       }
     });
 
+    // Upload button triggers file input
+    document.getElementById('upload-file-button').addEventListener('click', function() {
+      document.getElementById('document-file-upload').click();
+    });
+
     // Update field name input when file is selected
     document.getElementById('document-file-upload').addEventListener('change', function(e) {
       const fileInput = e.target;
       const fieldNameInput = document.getElementById('document-field-name');
+      const deleteContainer = document.getElementById('delete-document-container');
+      const uploadButton = document.getElementById('upload-file-button');
 
       if (fileInput.files.length > 0) {
         const fileName = fileInput.files[0].name;
         fieldNameInput.value = fileName;
+        // Show delete button
+        deleteContainer.style.display = 'block';
+        // Hide upload button
+        uploadButton.style.display = 'none';
       } else {
         fieldNameInput.value = '';
+        // Hide delete button
+        deleteContainer.style.display = 'none';
+        // Show upload button
+        uploadButton.style.display = 'inline-block';
       }
     });
+
+    // Handle delete button click
+    document.getElementById('delete-document-button').addEventListener('click', function() {
+      const fileInput = document.getElementById('document-file-upload');
+      const fieldNameInput = document.getElementById('document-field-name');
+      const deleteContainer = document.getElementById('delete-document-container');
+      const uploadButton = document.getElementById('upload-file-button');
+
+      // Clear the file input
+      fileInput.value = '';
+      fieldNameInput.value = '';
+
+      // Hide delete button
+      deleteContainer.style.display = 'none';
+
+      // Show upload button again
+      uploadButton.style.display = 'inline-block';
+    });
+
+    // Function to delete uploaded document from review page
+    function deleteUploadedDocument(questionIndex, headerIndex) {
+      // Hide document display
+      const documentDisplay = document.getElementById(`document-display-${questionIndex}-${headerIndex}`);
+      if (documentDisplay) {
+        documentDisplay.style.display = 'none';
+      }
+
+      // Show upload button container
+      const uploadButtonContainer = document.getElementById(`upload-button-container-${questionIndex}-${headerIndex}`);
+      if (uploadButtonContainer) {
+        uploadButtonContainer.style.display = 'block';
+      }
+
+      // Clear file name input and notes
+      const fileNameInput = document.getElementById(`file-name-input-${questionIndex}-${headerIndex}`);
+      if (fileNameInput) {
+        fileNameInput.value = '';
+      }
+
+      const fileNotesTextarea = document.getElementById(`file-notes-${questionIndex}-${headerIndex}`);
+      if (fileNotesTextarea) {
+        fileNotesTextarea.value = '';
+      }
+
+      // Show success notification
+      showSuccessNotification('Document deleted successfully');
+    }
 
     // Handle form submission
     document.getElementById('document-upload-form').addEventListener('submit', function(e) {
@@ -1168,12 +1269,31 @@
           return;
         }
 
-        // Display file name next to button
-        const fileNameDisplay = document.getElementById(`file-name-${questionIndex}-${headerIndex}`);
-        if (fileNameDisplay) {
-          fileNameDisplay.textContent = fileName;
-          fileNameDisplay.style.color = '#00a91c';
-          fileNameDisplay.style.fontWeight = '700';
+        // Get document notes
+        const documentNotes = document.getElementById('document-notes').value;
+
+        // Hide upload button container
+        const uploadButtonContainer = document.getElementById(`upload-button-container-${questionIndex}-${headerIndex}`);
+        if (uploadButtonContainer) {
+          uploadButtonContainer.style.display = 'none';
+        }
+
+        // Show document display
+        const documentDisplay = document.getElementById(`document-display-${questionIndex}-${headerIndex}`);
+        if (documentDisplay) {
+          documentDisplay.style.display = 'block';
+        }
+
+        // Populate file name input
+        const fileNameInput = document.getElementById(`file-name-input-${questionIndex}-${headerIndex}`);
+        if (fileNameInput) {
+          fileNameInput.value = fileName;
+        }
+
+        // Populate document notes
+        const fileNotesTextarea = document.getElementById(`file-notes-${questionIndex}-${headerIndex}`);
+        if (fileNotesTextarea) {
+          fileNotesTextarea.value = documentNotes;
         }
 
         // Show success notification

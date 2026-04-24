@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Existing Account Login - RLP</title>
+  <!-- Custom RLP Styles -->
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/constituent.css" />
+</head>
+
+<body>
+  <div class="app-container">
+    <!-- Simple header with logo and State of Illinois -->
+    <div class="constituent-header">
+      <div class="constituent-header__logo">
+        <img src="../assets/il-logo-constituent.png" alt="Illinois.gov logo">
+      </div>
+      <div class="constituent-header__state">
+        State of Illinois
+      </div>
+    </div>
+
+    <main class="grid-container constituent-main">
+      <!-- Page Title with Underline -->
+      <h1 class="page-title page-title--underlined">Existing Account Login</h1>
+
+      <!-- Introductory Text -->
+      <p class="constituent-intro">The Agency has indicated this application requires an account.</p>
+      <p class="constituent-intro">To log in to your existing account select from the options below. You may also create an account.</p>
+      <p class="constituent-intro constituent-intro--last">Please use Chrome or Firefox for the best RLP experience.</p>
+
+      <!-- Two Column Grid with Tiles -->
+      <div class="constituent-tile-grid">
+        <!-- Left Column -->
+        <div class="constituent-tile-column">
+          <!-- Tile 1: Know Your Username -->
+          <div class="constituent-tile">
+            <h2 class="constituent-tile__title">Know Your Username?</h2>
+            <div>
+              <button type="button" class="usa-button" onclick="window.location.href='login.html'">
+                Login
+              </button>
+            </div>
+          </div>
+
+          <!-- Tile 2: Forgot Your Password -->
+          <div class="constituent-tile">
+            <h2 class="constituent-tile__title">Forgot Your Password?</h2>
+            <div>
+              <button type="button" class="usa-button" onclick="window.location.href='reset-password.html'">
+                Reset Password
+              </button>
+            </div>
+          </div>
+
+          <!-- Tile 3: Don't have an account -->
+          <div class="constituent-tile">
+            <h2 class="constituent-tile__title">Don't have an account?</h2>
+            <div>
+              <button type="button" class="usa-button" onclick="window.location.href='create-account.html'">
+                Create Account
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="constituent-tile-column">
+          <!-- Tile 4: Forgot Your Username -->
+          <div class="constituent-tile">
+            <h2 class="constituent-tile__title">Forgot Your Username?</h2>
+            <div>
+              <button type="button" class="usa-button" onclick="window.location.href='recover-username.html'">
+                Recover Username
+              </button>
+            </div>
+          </div>
+
+          <!-- Tile 5: Need to activate an account -->
+          <div class="constituent-tile">
+            <h2 class="constituent-tile__title">Need to activate an account?</h2>
+            <p class="constituent-tile__text">Click the Send Activation Link button for a new account.</p>
+            <div>
+              <button type="button" class="usa-button" onclick="window.location.href='activation.html'">
+                Send Activation Link
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="constituent-footer">
+        <a href="tel:123456789" class="constituent-footer__link">123456789</a>
+        <a href="mailto:elp@illinois.gov" class="constituent-footer__link">elp@illinois.gov</a>
+        <a href="#" class="constituent-footer__link">RLP Support</a>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>

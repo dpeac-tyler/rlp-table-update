@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Application - Confirmation</title>
+  <!-- Custom RLP Styles -->
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/constituent.css" />
+</head>
+
+<body>
+  <div class="app-container">
+    <!-- Constituent Application Header -->
+    <div class="constituent-app-header">
+      <div class="constituent-app-header__left">
+        <img src="../assets/il-logo.png" alt="Illinois Department of Natural Resources logo" class="constituent-app-header__logo">
+        <div class="constituent-app-header__agency">Illinois Department of Natural Resources</div>
+      </div>
+      <div class="constituent-app-header__right">
+        <span class="constituent-app-header__welcome">Welcome, Steve</span>
+        <span class="constituent-app-header__separator">|</span>
+        <span class="constituent-app-header__agency-name">Illinois Department of Natural Resources</span>
+        <span class="constituent-app-header__separator">|</span>
+        <a href="index.html" class="constituent-app-header__logout">Logout</a>
+      </div>
+    </div>
+
+    <main id="main-content" class="grid-container">
+      <!-- Progress Stepper -->
+      <div class="usa-step-indicator margin-top-4" aria-label="progress">
+        <ol class="usa-step-indicator__segments">
+          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
+            <span class="usa-step-indicator__segment-label">Information Collection</span>
+          </li>
+          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
+            <span class="usa-step-indicator__segment-label">Questions</span>
+          </li>
+          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
+            <span class="usa-step-indicator__segment-label">Document Upload</span>
+          </li>
+          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
+            <span class="usa-step-indicator__segment-label">Information Summary</span>
+          </li>
+          <li class="usa-step-indicator__segment usa-step-indicator__segment--current">
+            <span class="usa-step-indicator__segment-label">Confirmation</span>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Step Header -->
+      <div class="usa-step-indicator__header">
+        <h1 class="usa-step-indicator__heading">
+          <span class="usa-step-indicator__heading-counter">5</span>
+          <span class="usa-step-indicator__total-steps">of 5</span>
+          <span class="usa-step-indicator__heading-text">Confirmation</span>
+        </h1>
+      </div>
+
+      <!-- Page Content -->
+      <div class="margin-top-4">
+        <!-- Page Title -->
+        <h1 class="page-title page-title--underlined">Review with document upload</h1>
+
+        <!-- Description -->
+        <p style="font-size: 1.6rem; margin-bottom: 2rem;">review with document upload</p>
+
+        <!-- Instructions Accordion -->
+        <div class="usa-accordion usa-accordion--bordered">
+          <h3 class="usa-accordion__heading">
+            <button
+              type="button"
+              class="usa-accordion__button"
+              aria-expanded="false"
+              aria-controls="instructions-content"
+            >
+              Instructions
+            </button>
+          </h3>
+          <div id="instructions-content" class="usa-accordion__content usa-prose" hidden>
+            <p>Review with document upload</p>
+          </div>
+        </div>
+
+        <!-- Blue Bar Container 1: Confirmation -->
+        <div class="blue-bar-container">
+          <div class="blue-bar-header">
+            Confirmation
+          </div>
+          <div class="blue-bar-content">
+            <p style="font-size: 1.6rem; line-height: 1.6;">Congratulations! You have completed your submission. Confirmation information is shown below. You may print this page as proof of your submission by selecting Print Receipt.</p>
+          </div>
+        </div>
+
+        <!-- Blue Bar Container 2: What's Next? -->
+        <div class="blue-bar-container" style="margin-top: 20px;">
+          <div class="blue-bar-header">
+            What's Next?
+          </div>
+          <div class="blue-bar-content">
+            <p style="font-size: 1.6rem; line-height: 1.6; margin-bottom: 1rem;">You will receive an email with support information related to this submission. Support information is also shown at the bottom of this page.</p>
+            <p style="font-size: 1.6rem; line-height: 1.6; margin: 0;">Your certificate/permit/license is undergoing review. You will receive notification from noreply@lnpweb.com when the review is complete.</p>
+          </div>
+        </div>
+
+        <!-- Blue Bar Container 3: Transaction Summary -->
+        <div class="blue-bar-container" style="margin-top: 20px;">
+          <div class="blue-bar-header">
+            Transaction Summary
+          </div>
+          <div class="blue-bar-content">
+            <!-- Content will go here -->
+            <button type="button" class="usa-button">Print Receipt</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="constituent-footer-info">
+      <div class="constituent-footer-info__content">
+        <div>Illinois Department of Natural Resources</div>
+        <div>(555) 555-5555</div>
+        <div><a href="mailto:email@egov.com">email@egov.com</a></div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Accordion functionality
+    const accordionButtons = document.querySelectorAll('.usa-accordion__button');
+
+    accordionButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        const content = document.getElementById(this.getAttribute('aria-controls'));
+
+        this.setAttribute('aria-expanded', !expanded);
+        if (!expanded) {
+          content.removeAttribute('hidden');
+        } else {
+          content.setAttribute('hidden', '');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
