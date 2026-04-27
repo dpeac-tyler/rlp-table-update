@@ -191,17 +191,7 @@
                       <div class="usa-form-group" style="margin-bottom: 1.5rem;">
                         <input class="usa-input" id="file-name-input" type="text" disabled>
                       </div>
-                      <div class="usa-form-group" style="margin-bottom: 1.5rem;">
-                        <label class="usa-label" for="file-notes">
-                          Document Notes
-                          <svg style="width: 16px; height: 16px; margin-left: 0.5rem; vertical-align: middle;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                            <path d="M12 16V12M12 8H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                          </svg>
-                        </label>
-                        <textarea class="usa-textarea" id="file-notes" rows="4" disabled style="background-color: #f0f0f0;"></textarea>
-                      </div>
-                      <button type="button" class="usa-button" onclick="deleteUploadedDocument()" style="background-color: #d54309; color: white;">
+<button type="button" class="usa-button" onclick="deleteUploadedDocument()" style="background-color: #d54309; color: white;">
                         Delete
                       </button>
                     </div>
@@ -294,12 +284,6 @@
               </div>
             </div>
 
-            <!-- Document Notes -->
-            <div class="usa-form-group" style="margin-bottom: 1.5rem;">
-              <label class="usa-label" for="modal-document-notes">Document Notes</label>
-              <textarea class="usa-textarea" id="modal-document-notes" name="modal-document-notes" rows="3" maxlength="100"></textarea>
-              <div style="font-size: 1.4rem; color: #71767a; margin-top: 0.5rem;">Maximum 100 characters</div>
-            </div>
           </form>
         </div>
         <div class="modal-footer">
@@ -339,7 +323,6 @@
     function openDocumentUploadModal() {
       document.getElementById('document-upload-modal').style.display = 'flex';
       document.getElementById('modal-field-name').value = '';
-      document.getElementById('modal-document-notes').value = '';
     }
 
     function closeDocumentUploadModal() {
@@ -360,7 +343,6 @@
 
     function saveDocumentUpload() {
       const fileName = document.getElementById('modal-field-name').value;
-      const notes = document.getElementById('modal-document-notes').value;
 
       if (!selectedFile) {
         alert('Please select a file to upload.');
@@ -376,12 +358,10 @@
       document.getElementById('upload-button-container').style.display = 'none';
       document.getElementById('document-display').style.display = 'block';
       document.getElementById('file-name-input').value = fileName;
-      document.getElementById('file-notes').value = notes;
 
       // Store document data
       currentDocumentData = {
         fileName: fileName,
-        notes: notes,
         file: selectedFile
       };
 
@@ -401,7 +381,6 @@
         document.getElementById('upload-button-container').style.display = 'block';
         document.getElementById('document-display').style.display = 'none';
         document.getElementById('file-name-input').value = '';
-        document.getElementById('file-notes').value = '';
       }
     }
 
@@ -423,7 +402,6 @@
       document.getElementById('upload-button-container').style.display = 'block';
       document.getElementById('document-display').style.display = 'none';
       document.getElementById('file-name-input').value = '';
-      document.getElementById('file-notes').value = '';
       document.getElementById('modal-file-input').value = '';
       editingRowIndex = null;
     }
@@ -566,7 +544,6 @@
         document.getElementById('upload-button-container').style.display = 'none';
         document.getElementById('document-display').style.display = 'block';
         document.getElementById('file-name-input').value = row.document.fileName;
-        document.getElementById('file-notes').value = row.document.notes;
       }
 
       // Scroll to form
