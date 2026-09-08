@@ -268,6 +268,7 @@
               </select>
             </div>
           </div>
+          ${tblDocumentFieldsHtml(headerNumber, header)}
         `;
 
         container.appendChild(headerDiv);
@@ -659,6 +660,68 @@
     // Track current header count for Table
     let tblHeaderCount = 2;
 
+    // Document Type / Sub Type options for Table columns using the Document format.
+    // Keep the type list in sync with the static Document Type selects in create-questions.html.
+    const TBL_DOCUMENT_SUB_TYPES = {
+      'Affidavit': ['Affidavit of Support', 'Notarized Statement', 'Sworn Affidavit'],
+      'Court Document': ['Court Order', 'Discovery Document', 'Judgment or Decree', 'Subpoena'],
+      'Disclosure Document': ['Conflict of Interest Disclosure', 'Financial Interest Disclosure', 'Ownership Disclosure'],
+      'Financial Statement': ['Balance Sheet', 'Bank Statement', 'Profit and Loss Statement'],
+      'Identification': ['Driver\'s License', 'Passport', 'State ID Card'],
+      'Professional Credential': ['Certificate of Completion', 'Degree or Transcript', 'Out-of-State License']
+    };
+
+    // Build the Document Type options
+    function tblDocTypeOptionsHtml(selected) {
+      return Object.keys(TBL_DOCUMENT_SUB_TYPES).map(type =>
+        `<option value="${escapeHtml(type)}" ${type === selected ? 'selected' : ''}>${escapeHtml(type)}</option>`
+      ).join('');
+    }
+
+    // Build the Document Sub Type options for the chosen Document Type
+    function tblDocSubTypeOptionsHtml(type, selected) {
+      const subTypes = TBL_DOCUMENT_SUB_TYPES[type] || [];
+      return subTypes.map(subType =>
+        `<option value="${escapeHtml(subType)}" ${subType === selected ? 'selected' : ''}>${escapeHtml(subType)}</option>`
+      ).join('');
+    }
+
+    // Build the "Document N" block that shows under a header when its format is Document
+    function tblDocumentFieldsHtml(headerNumber, doc) {
+      const docType = (doc && doc.docType) || '';
+      const docSubType = (doc && doc.docSubType) || '';
+      const docRequired = doc && doc.docRequired === 'y';
+      const show = (doc && doc.format === 'document') ? 'block' : 'none';
+
+      return `
+        <!-- Document details (shown when Column Format = Document) -->
+        <div id="tblDocumentFields${headerNumber}" style="display: ${show};">
+          <h3 style="font-size: 1.8rem; font-weight: 700; margin: 2.4rem 0 1rem;">Document ${headerNumber}</h3>
+          <hr style="border: none; border-top: 1px solid #dfe1e2; margin-bottom: 2rem;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr auto; gap: 2rem; align-items: end;">
+            <div class="usa-form-group" style="margin: 0;">
+              <label class="usa-label" for="tblDocType${headerNumber}">Document Type <span class="field-required">Required</span></label>
+              <select class="usa-select" id="tblDocType${headerNumber}" name="tblDocType${headerNumber}">
+                <option value="">Please Select</option>
+                ${tblDocTypeOptionsHtml(docType)}
+              </select>
+            </div>
+            <div class="usa-form-group" style="margin: 0;">
+              <label class="usa-label" for="tblDocSubType${headerNumber}">Document Sub Type</label>
+              <select class="usa-select" id="tblDocSubType${headerNumber}" name="tblDocSubType${headerNumber}">
+                <option value="">Please Select</option>
+                ${tblDocSubTypeOptionsHtml(docType, docSubType)}
+              </select>
+            </div>
+            <div class="usa-checkbox" style="margin: 0; padding-bottom: 1rem;">
+              <input class="usa-checkbox__input" id="tblDocRequired${headerNumber}" type="checkbox" name="tblDocRequired${headerNumber}" ${docRequired ? 'checked' : ''}>
+              <label class="usa-checkbox__label" for="tblDocRequired${headerNumber}">Required</label>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
     // Add Header button handler
     document.getElementById('addTblHeaderButton').addEventListener('click', function() {
       if (tblHeaderCount >= 6) {
@@ -699,39 +762,7 @@
             </select>
           </div>
         </div>
-        <!-- Document-specific fields (hidden by default) -->
-        <div id="tblDocumentFields${tblHeaderCount}" style="display: none; margin-top: 2rem;">
-          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem;">
-            <div class="usa-form-group">
-              <label class="usa-label" for="tblDocType${tblHeaderCount}">Document Type <span class="field-required">Required</span></label>
-              <select class="usa-select" id="tblDocType${tblHeaderCount}" name="tblDocType${tblHeaderCount}">
-                <option value="">Please Select</option>
-                <option value="type1">Document Type 1</option>
-                <option value="type2">Document Type 2</option>
-                <option value="type3">Document Type 3</option>
-                <option value="type4">Document Type 4</option>
-                <option value="type5">Document Type 5</option>
-              </select>
-            </div>
-            <div class="usa-form-group">
-              <label class="usa-label" for="tblDocSubType${tblHeaderCount}">Document Sub Type <span class="field-required">Required</span></label>
-              <select class="usa-select" id="tblDocSubType${tblHeaderCount}" name="tblDocSubType${tblHeaderCount}">
-                <option value="">Please Select</option>
-                <option value="subtype1">Document Sub Type 1</option>
-                <option value="subtype2">Document Sub Type 2</option>
-                <option value="subtype3">Document Sub Type 3</option>
-                <option value="subtype4">Document Sub Type 4</option>
-                <option value="subtype5">Document Sub Type 5</option>
-              </select>
-            </div>
-            <div class="usa-form-group">
-              <div class="usa-checkbox" style="margin-top: 3.2rem;">
-                <input class="usa-checkbox__input" id="tblDocRequired${tblHeaderCount}" type="checkbox" name="tblDocRequired${tblHeaderCount}">
-                <label class="usa-checkbox__label" for="tblDocRequired${tblHeaderCount}">Required Document</label>
-              </div>
-            </div>
-          </div>
-        </div>
+        ${tblDocumentFieldsHtml(tblHeaderCount)}
       `;
 
       container.appendChild(headerDiv);
@@ -749,13 +780,21 @@
       }
     });
 
-    // Show/hide document-specific fields when column format changes
+    // Show/hide document fields when column format changes, and refresh sub types when type changes
     document.getElementById('tblHeadersContainer').addEventListener('change', function(e) {
       if (e.target.matches('select[id^="tblFormat"]')) {
         const num = e.target.id.replace('tblFormat', '');
         const docFields = document.getElementById(`tblDocumentFields${num}`);
         if (docFields) {
           docFields.style.display = e.target.value === 'document' ? 'block' : 'none';
+        }
+      }
+
+      if (e.target.matches('select[id^="tblDocType"]')) {
+        const num = e.target.id.replace('tblDocType', '');
+        const subTypeSelect = document.getElementById(`tblDocSubType${num}`);
+        if (subTypeSelect) {
+          subTypeSelect.innerHTML = '<option value="">Please Select</option>' + tblDocSubTypeOptionsHtml(e.target.value, '');
         }
       }
     });
@@ -805,6 +844,8 @@
           const docFields = header.querySelector('[id^="tblDocumentFields"]');
           if (docFields) {
             docFields.id = `tblDocumentFields${newNumber}`;
+            const docHeading = docFields.querySelector('h3');
+            if (docHeading) { docHeading.textContent = `Document ${newNumber}`; }
             const docTypeSelect = docFields.querySelector('select[id^="tblDocType"]');
             const docTypeLabel = docFields.querySelector('label[for^="tblDocType"]');
             const docSubTypeSelect = docFields.querySelector('select[id^="tblDocSubType"]');
@@ -1549,39 +1590,7 @@
               </select>
             </div>
           </div>
-          <!-- Document-specific fields (hidden by default) -->
-          <div id="tblDocumentFields1" style="display: none; margin-top: 2rem;">
-            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem;">
-              <div class="usa-form-group">
-                <label class="usa-label" for="tblDocType1">Document Type <span class="field-required">Required</span></label>
-                <select class="usa-select" id="tblDocType1" name="tblDocType1">
-                  <option value="">Please Select</option>
-                  <option value="type1">Document Type 1</option>
-                  <option value="type2">Document Type 2</option>
-                  <option value="type3">Document Type 3</option>
-                  <option value="type4">Document Type 4</option>
-                  <option value="type5">Document Type 5</option>
-                </select>
-              </div>
-              <div class="usa-form-group">
-                <label class="usa-label" for="tblDocSubType1">Document Sub Type <span class="field-required">Required</span></label>
-                <select class="usa-select" id="tblDocSubType1" name="tblDocSubType1">
-                  <option value="">Please Select</option>
-                  <option value="subtype1">Document Sub Type 1</option>
-                  <option value="subtype2">Document Sub Type 2</option>
-                  <option value="subtype3">Document Sub Type 3</option>
-                  <option value="subtype4">Document Sub Type 4</option>
-                  <option value="subtype5">Document Sub Type 5</option>
-                </select>
-              </div>
-              <div class="usa-form-group">
-                <div class="usa-checkbox" style="margin-top: 3.2rem;">
-                  <input class="usa-checkbox__input" id="tblDocRequired1" type="checkbox" name="tblDocRequired1">
-                  <label class="usa-checkbox__label" for="tblDocRequired1">Required Document</label>
-                </div>
-              </div>
-            </div>
-          </div>
+          ${tblDocumentFieldsHtml(1)}
         </div>
 
         <!-- Header 2 -->
@@ -1609,39 +1618,7 @@
               </select>
             </div>
           </div>
-          <!-- Document-specific fields (hidden by default) -->
-          <div id="tblDocumentFields2" style="display: none; margin-top: 2rem;">
-            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem;">
-              <div class="usa-form-group">
-                <label class="usa-label" for="tblDocType2">Document Type <span class="field-required">Required</span></label>
-                <select class="usa-select" id="tblDocType2" name="tblDocType2">
-                  <option value="">Please Select</option>
-                  <option value="type1">Document Type 1</option>
-                  <option value="type2">Document Type 2</option>
-                  <option value="type3">Document Type 3</option>
-                  <option value="type4">Document Type 4</option>
-                  <option value="type5">Document Type 5</option>
-                </select>
-              </div>
-              <div class="usa-form-group">
-                <label class="usa-label" for="tblDocSubType2">Document Sub Type <span class="field-required">Required</span></label>
-                <select class="usa-select" id="tblDocSubType2" name="tblDocSubType2">
-                  <option value="">Please Select</option>
-                  <option value="subtype1">Document Sub Type 1</option>
-                  <option value="subtype2">Document Sub Type 2</option>
-                  <option value="subtype3">Document Sub Type 3</option>
-                  <option value="subtype4">Document Sub Type 4</option>
-                  <option value="subtype5">Document Sub Type 5</option>
-                </select>
-              </div>
-              <div class="usa-form-group">
-                <div class="usa-checkbox" style="margin-top: 3.2rem;">
-                  <input class="usa-checkbox__input" id="tblDocRequired2" type="checkbox" name="tblDocRequired2">
-                  <label class="usa-checkbox__label" for="tblDocRequired2">Required Document</label>
-                </div>
-              </div>
-            </div>
-          </div>
+          ${tblDocumentFieldsHtml(2)}
         </div>
       `;
       tblHeaderCount = 2;
@@ -2078,10 +2055,24 @@
           return null;
         }
 
-        headers.push({
+        const header = {
           title: headerTitle,
           format: headerFormat
-        });
+        };
+
+        // Document columns also capture Document Type / Sub Type and whether they are required
+        if (headerFormat === 'document') {
+          const docType = document.getElementById(`tblDocType${headerNumber}`).value;
+          if (!docType) {
+            alert(`Please select a Document Type for Document ${headerNumber}.`);
+            return null;
+          }
+          header.docType = docType;
+          header.docSubType = document.getElementById(`tblDocSubType${headerNumber}`).value;
+          header.docRequired = document.getElementById(`tblDocRequired${headerNumber}`).checked ? 'y' : 'n';
+        }
+
+        headers.push(header);
       }
 
       // Get required rows
